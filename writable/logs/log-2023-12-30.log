@@ -1,0 +1,66 @@
+CRITICAL - 2023-12-30 05:29:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 05:29:12 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:03:32 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('57', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:06:23 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:06:24 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('57', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:06:38 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:07:34 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:07:39 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:08:45 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:12:14 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('56', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 11:13:12 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('58', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

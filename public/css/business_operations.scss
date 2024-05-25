@@ -1,0 +1,62 @@
+.business_operations_content{
+	.fixed_sidebar{
+		width: 15%;
+		height: 100vh;
+		position: fixed;
+		font-size: 14px;
+		top: 0;
+		left: 0;
+		background: #2e2e30;
+		box-sizing: border-box;
+
+			.m_box{
+				margin-top: 66px;
+
+				hr{
+					color: white;
+					margin: 0.5rem 0;
+				}
+				ul{
+					list-style: none;
+					padding: 5px 10px 5px 10px;
+					margin: 0;
+					li{
+						padding: 3px 5px;
+						color: white;
+						cursor: pointer;
+    					border-radius: 5px;
+    					display: flex;
+
+    					i{
+    						display: block;
+    						margin-right: 5px;
+    						color: #7f7f7f;
+    					}
+
+    					.lead_icon{
+    						display: block;
+    						margin-right: 5px;
+    						width: 10px;
+						    height: 10px; 
+						    border-radius: 30px;
+    					}
+					}
+					li:hover{
+						background: #ffffff36;
+					}
+				}
+				.m_head{
+					display: flex;
+				    color: white; 
+				    padding: 3px 15px;
+				    justify-content: space-between;
+					h6{
+						font-weight: 400;
+					} 
+					a{
+						color: white;
+					}
+				}
+			}
+	}
+}

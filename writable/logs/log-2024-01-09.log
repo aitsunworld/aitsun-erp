@@ -1,0 +1,527 @@
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:28 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:29 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:29:29 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:52 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:52 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:52 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:52 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:52 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:52 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:53 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:53 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:53 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:53 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:58 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:58 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:58 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:58 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:58 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:58 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:59 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:59 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:59 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:34:59 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:34 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:34 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:34 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:34 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:34 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:34 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:35 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:35 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:35 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:35:35 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:11 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:11 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:11 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:11 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:11 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:12 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:12 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:12 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:12 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 03:56:12 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:09:31 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:13:00 --> Undefined variable $branches
+in APPPATH\Views\main_menu.php on line 57.
+ 1 APPPATH\Views\main_menu.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $branches', 'APPPATH\\Views\\main_menu.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\main_menu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main_menu', [], true)
+ 5 APPPATH\Controllers\Home.php(135): view('main_menu')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 04:14:38 --> Undefined variable $Companies
+in APPPATH\Controllers\Home.php on line 90.
+ 1 APPPATH\Controllers\Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Companies', 'APPPATH\\Controllers\\Home.php', 90)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 05:24:57 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('branch_manager/change_branch_ajax/22', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 05:26:00 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('branch_manager/change_branch_ajax/23', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 06:14:09 --> Undefined array key "trigger-modal"
+in APPPATH\Views\footer.php on line 509.
+ 1 APPPATH\Views\footer.php(509): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "trigger-modal"', 'APPPATH\\Views\\footer.php', 509)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Branch_manager.php(67): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Branch_manager->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Branch_manager))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 06:14:30 --> Undefined array key "trigger-modal"
+in APPPATH\Views\footer.php on line 509.
+ 1 APPPATH\Views\footer.php(509): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "trigger-modal"', 'APPPATH\\Views\\footer.php', 509)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Branch_manager.php(67): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Branch_manager->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Branch_manager))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 06:57:30 --> Unclosed '{' on line 22
+in APPPATH\Controllers\Business_operations.php on line 71.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Business_operations.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Business_operations')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Business_operations')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Business_operations', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 06:57:59 --> Unclosed '{' on line 22
+in APPPATH\Controllers\Business_operations.php on line 71.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Business_operations.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Business_operations')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Business_operations')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Business_operations', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:50:23 --> Undefined variable $conf
+in APPPATH\Views\business_operations\dashboard.php on line 48.
+ 1 APPPATH\Views\business_operations\dashboard.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conf', 'APPPATH\\Views\\business_operations\\dashboard.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\business_operations\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('business_operations/dashboard', [], true)
+ 5 APPPATH\Controllers\Business_operations.php(62): view('business_operations/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Business_operations->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Business_operations))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:50:37 --> Undefined variable $conf
+in APPPATH\Views\business_operations\dashboard.php on line 55.
+ 1 APPPATH\Views\business_operations\dashboard.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conf', 'APPPATH\\Views\\business_operations\\dashboard.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\business_operations\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('business_operations/dashboard', [], true)
+ 5 APPPATH\Controllers\Business_operations.php(62): view('business_operations/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Business_operations->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Business_operations))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:52:06 --> Undefined variable $uri
+in APPPATH\Views\business_operations\dashboard.php on line 45.
+ 1 APPPATH\Views\business_operations\dashboard.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uri', 'APPPATH\\Views\\business_operations\\dashboard.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\business_operations\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('business_operations/dashboard', [], true)
+ 5 APPPATH\Controllers\Business_operations.php(62): view('business_operations/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Business_operations->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Business_operations))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

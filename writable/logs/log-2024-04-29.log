@@ -1,0 +1,223 @@
+CRITICAL - 2024-04-29 04:43:15 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 360.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->all_transactions()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 04:43:29 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 360.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->all_transactions()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 04:43:55 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 263.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 04:56:30 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 458.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(458): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 458)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:00:45 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 458.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(458): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 458)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:10:24 --> Undefined array key "datetime"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 143.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datetime"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 143)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:11:00 --> Undefined array key "invoice_id"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 151.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "invoice_id"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:41:04 --> Undefined array key "datetime"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 143.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datetime"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 143)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:51:33 --> Undefined array key "datetime"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 143.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datetime"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 143)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:52:48 --> Undefined array key "bill_type"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 159.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bill_type"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 159)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:56:17 --> Undefined variable $di
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 159.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $di', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 159)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:56:35 --> Undefined array key "bill_type"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 180.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bill_type"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:57:55 --> Undefined variable $total_amount
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 184.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(184): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_amount', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 184)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:58:31 --> Undefined array key "bill_type"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 191.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bill_type"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 191)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:59:25 --> Undefined array key "bill_type"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 191.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bill_type"', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 191)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 05:59:52 --> Undefined variable $total_sum
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 224.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_sum', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 224)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(496): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 08:16:29 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 360.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->all_transactions()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 08:38:03 --> Undefined array key "id "
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 104.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id "', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(508): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 09:15:37 --> syntax error, unexpected variable "$profitOrLoss", expecting "," or ";"
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 208.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 3 APPPATH\Controllers\Aitsun_special_reports.php(508): view('aitsun_special_reports/bill-wise-profit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 09:23:18 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 09:23:22 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 10:18:55 --> Undefined variable $totalpl
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 221.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalpl', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 221)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(508): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 10:33:30 --> Undefined variable $cmpuser
+in APPPATH\Views\aitsun_special_reports\bill-wise-profit.php on line 236.
+ 1 APPPATH\Views\aitsun_special_reports\bill-wise-profit.php(236): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cmpuser', 'APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php', 236)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\bill-wise-profit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/bill-wise-profit', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(508): view('aitsun_special_reports/bill-wise-profit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->bill_wise_profit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,872 @@
+CRITICAL - 2023-12-21 04:21:30 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:23:00 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:23:07 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:23:22 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:23:53 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:25:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:25:22 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:25:33 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:25:54 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:26:13 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:30:47 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:31:12 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:31:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:31:52 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('3', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:34:53 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:35:11 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:35:39 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('4', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:39:29 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:39:44 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:40:40 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:41:21 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:41:33 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:42:09 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:42:32 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:43:11 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('9', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:43:30 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:43:42 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:44:44 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:44:57 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:45:33 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:45:45 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:50:00 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('12', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:50:16 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('12', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:50:42 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:50:48 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:52:54 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:53:51 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('14', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:54:24 --> Undefined array key "in_unit"
+in APPPATH\Controllers\Sales.php on line 924.
+ 1 APPPATH\Controllers\Sales.php(924): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "in_unit"', 'APPPATH\\Controllers\\Sales.php', 924)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('14')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 04:54:59 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('14', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:00:24 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('13', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:00:32 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('13', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:01:22 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('17', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:01:56 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('17', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:02:08 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:02:21 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:02:39 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:09:22 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:10:09 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:39:27 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:39:57 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:41:18 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:44:06 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 05:53:54 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:02:37 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:03:08 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:03:19 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:04:24 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('8', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:04:30 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('8', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:04:37 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:07:24 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:08:07 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:08:19 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:08:28 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:08:37 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:08:54 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:09:15 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:09:35 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:09:38 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:09:50 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:10:21 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:10:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:11:07 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:11:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:12:51 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:16:01 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:16:49 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:16:51 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:17:13 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:22:38 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:23:42 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('18', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:24:14 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:24:17 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:24:27 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:24:33 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:25:21 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:25:38 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:25:46 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:29:23 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('18', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:29:29 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('18', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:29:56 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('19', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:30:18 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:31:02 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:34:37 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:35:50 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 06:55:16 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:10:21 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:10:33 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:10:49 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:20:48 --> syntax error, unexpected token "*"
+in APPPATH\Controllers\Products.php on line 213.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Products.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Products')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Products', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:21:03 --> Undefined property: App\Controllers\Products::$db
+in APPPATH\Controllers\Products.php on line 212.
+ 1 APPPATH\Controllers\Products.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Products::$db', 'APPPATH\\Controllers\\Products.php', 212)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:22:53 --> Undefined property: App\Controllers\Products::$db
+in APPPATH\Controllers\Products.php on line 212.
+ 1 APPPATH\Controllers\Products.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Products::$db', 'APPPATH\\Controllers\\Products.php', 212)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:23:15 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::union()
+in APPPATH\Controllers\Products.php on line 221.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:25:25 --> Undefined variable $result
+in APPPATH\Controllers\Products.php on line 227.
+ 1 APPPATH\Controllers\Products.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Products.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:25:40 --> Cannot use object of type mysqli as array
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 4 APPPATH\Controllers\Products.php(240): view('products/products_transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:26:23 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+in APPPATH\Controllers\Products.php on line 225.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:27:19 --> Cannot use object of type stdClass as array
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 4 APPPATH\Controllers\Products.php(240): view('products/products_transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:28:16 --> Undefined property: stdClass::$invoice_id
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 APPPATH\Views\products\products_transactions.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$invoice_id', 'APPPATH\\Views\\products\\products_transactions.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 5 APPPATH\Controllers\Products.php(240): view('products/products_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:28:50 --> Undefined variable $query
+in APPPATH\Controllers\Products.php on line 229.
+ 1 APPPATH\Controllers\Products.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\Products.php', 229)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:29:30 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Products.php on line 230.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:30:01 --> Undefined property: stdClass::$invoice_id
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 APPPATH\Views\products\products_transactions.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$invoice_id', 'APPPATH\\Views\\products\\products_transactions.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 5 APPPATH\Controllers\Products.php(242): view('products/products_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:31:09 --> Undefined property: stdClass::$invoice_id
+in APPPATH\Controllers\Products.php on line 230.
+ 1 APPPATH\Controllers\Products.php(230): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$invoice_id', 'APPPATH\\Controllers\\Products.php', 230)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:31:39 --> Undefined property: stdClass::$invoice_id
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 APPPATH\Views\products\products_transactions.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$invoice_id', 'APPPATH\\Views\\products\\products_transactions.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 5 APPPATH\Controllers\Products.php(242): view('products/products_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:32:03 --> Cannot use object of type stdClass as array
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 4 APPPATH\Controllers\Products.php(242): view('products/products_transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:32:17 --> Cannot use object of type stdClass as array
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 4 APPPATH\Controllers\Products.php(242): view('products/products_transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:33:09 --> Cannot use object of type stdClass as array
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 4 APPPATH\Controllers\Products.php(242): view('products/products_transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:34:25 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:34:27 --> Cannot use object of type stdClass as array
+in APPPATH\Views\products\products_transactions.php on line 95.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 4 APPPATH\Controllers\Products.php(242): view('products/products_transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-21 09:10:35 --> mysqli_sql_exception: The used SELECT statements have a different number of columns in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\app\Controllers\Products.php(225): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+#6 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-21 09:10:35 --> The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `invoice_items`
+ LIMIT 10) `uwrp0`
+UNION SELECT * FROM (SELECT * FROM `stock_adjust_table`) `uwrp1`', [], false)
+ 2 APPPATH\Controllers\Products.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-21 09:11:27 --> mysqli_sql_exception: The used SELECT statements have a different number of columns in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\app\Controllers\Products.php(225): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+#6 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-21 09:11:27 --> The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `invoice_items`
+WHERE `product_id` = :product_id:
+ LIMIT 10) `uwrp0`
+UNION SELECT * FROM (SELECT * FROM `stock_adjust_table` WHERE `product_id` = \'17\') `uwrp1`', [...], false)
+ 2 APPPATH\Controllers\Products.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-21 09:11:51 --> mysqli_sql_exception: The used SELECT statements have a different number of columns in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM (...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\app\Controllers\Products.php(225): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+#6 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-21 09:11:51 --> The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT *
+FROM `invoice_items`
+WHERE `product_id` = :product_id:
+ LIMIT 10) `uwrp0`
+UNION SELECT * FROM (SELECT * FROM `stock_adjust_table` WHERE `product_id` = \'17\') `uwrp1`', [...], false)
+ 2 APPPATH\Controllers\Products.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:12:07 --> Undefined variable $product_id
+in APPPATH\Views\products\products_transactions.php on line 20.
+ 1 APPPATH\Views\products\products_transactions.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_id', 'APPPATH\\Views\\products\\products_transactions.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 5 APPPATH\Controllers\Products.php(223): view('products/products_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:18:42 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:21:27 --> Undefined variable $proid
+in APPPATH\Views\products\products_transactions.php on line 217.
+ 1 APPPATH\Views\products\products_transactions.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proid', 'APPPATH\\Views\\products\\products_transactions.php', 217)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 5 APPPATH\Controllers\Products.php(231): view('products/products_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:30:47 --> Undefined array key "quantity"
+in APPPATH\Views\products\products_transactions.php on line 251.
+ 1 APPPATH\Views\products\products_transactions.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "quantity"', 'APPPATH\\Views\\products\\products_transactions.php', 251)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 5 APPPATH\Controllers\Products.php(231): view('products/products_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:31:59 --> round(): Argument #2 ($precision) must be of type int, string given
+in APPPATH\Helpers\apanel_helper.php on line 262.
+ 1 APPPATH\Helpers\apanel_helper.php(262): round(0, 'round_of_value')
+ 2 APPPATH\Views\products\products_transactions.php(250): aitsun_round('100', 'round_of_value')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\products\\products_transactions.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('products/products_transactions', [], true)
+ 6 APPPATH\Controllers\Products.php(231): view('products/products_transactions', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->products_transactions('17')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

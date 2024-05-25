@@ -1,0 +1,201 @@
+const {app, BrowserWindow, ipcMain, screen} = require('electron');
+const path = require("path");
+const {PosPrinter} = require("electron-pos-printer");
+
+const { SerialPort } = require('serialport'); 
+const { ReadlineParser } = require('@serialport/parser-readline');
+const {Readline} = require('@serialport/parser-readline')
+
+const app_name = app.getName()
+
+const createWindow = () => {
+    const size = screen.getPrimaryDisplay().size;
+    console.log(size);
+    const win = new BrowserWindow({
+        width: 800,
+        height: 600,
+        show: false,
+        webPreferences: { 
+            nodeIntegration: false, // is default value after Electron v5
+            contextIsolation: true, // protect against prototype pollution
+            enableRemoteModule: false, // turn off remote
+            devTools: true,
+            preload: path.join(__dirname, "preload.js") // use a preload script
+        },
+        icon: path.join(__dirname, 'public/app_icon.png')
+    })
+
+    var splash = new BrowserWindow({
+        width: 500, 
+        height: 300, 
+        show:true,
+        transparent: true, 
+        frame: false, 
+        alwaysOnTop: true 
+    });
+
+    splash.loadFile('src/splash.html');
+    splash.center();
+
+
+
+    // win.setMenuBarVisibility(false)
+    // win.loadFile('index.html');
+    // win.loadURL('https://webeecafe.com/')
+    win.loadURL('https://control.utechoman.com/testing/w_scale')
+    // win.loadURL('https://aitsun.net/apanel/')
+    win.center();
+
+
+    setTimeout(function () {
+        splash.close();
+        win.show();
+    }, 5000);
+    // open deve tools
+    win.webContents.openDevTools();
+
+    win.on('close', function(e) {
+        const choice = require('electron').dialog.showMessageBoxSync(this,
+            {
+                type: 'question',
+                buttons: ['Yes', 'No'],
+                title: 'Aitsun  ERP',
+                message: 'Are you sure you want to quit?'
+            });
+        if (choice === 1) {
+                e.preventDefault();
+        }
+    });
+
+}
+
+app.whenReady().then(() => {
+    createWindow();
+});
+
+// ipcMain.on('test-print', testPrint);
+
+ipcMain.on('test-print', (event,arg) => {
+    
+
+    const data = JSON.parse(arg[0]);
+
+    try {
+        PosPrinter.print(data, arg[1])
+            .then(() => console.log('done'))
+            .catch((error) => {
+                console.error(error);
+            });
+    } catch (e) {
+        console.log(PosPrinter)
+        console.log(e);
+    }
+
+})
+
+
+ipcMain.on('bar-print', (event,arg) => {
+    
+
+    const data = JSON.parse(arg[0]);
+
+    try {
+        PosPrinter.print(data, arg[1])
+            .then(() => console.log('done'))
+            .catch((error) => {
+                console.error(error);
+            });
+    } catch (e) {
+        console.log(PosPrinter)
+        console.log(e);
+    }
+
+})
+
+
+ipcMain.on('get-weight', (event,arg) => {
+  
+        const port = new SerialPort({ 
+            path: 'COM4', 
+            baudRate: 9600,
+            dataBits: 7,
+            stopBits: 1,
+            parity: 'even',
+            bufferSize: 1024
+      
+        },true)
+
+
+        
+
+        port.open(function(err) { 
+            var wresult=[];
+            port.on('data', function(data) { 
+                setTimeout(() => {
+                    if(port.isOpen){
+                        port.close();
+                        var weiresult=wresult;
+                        new_weiresult=weiresult.splice(0, 1);
+                        newreeeee=weiresult.slice(0, 7);
+
+                        
+                        var weightdata='';
+
+                        for(var i=0; i<=newreeeee.length-1; i++){
+                            weightdata+=newreeeee[i];
+                        }
+ 
+                        event.sender.send('get-weight',weightdata); 
+
+                        console.log(wresult);
+                    }
+                  }, "2000")
+
+                const buf2 = Buffer.from(data)
+                let wArray = buf2.toString('utf8');
+                
+                
+                wresult.push(wArray);
+ 
+
+                
+
+               
+
+                 
+           
+                
+            });
+ 
+
+            
+             
+
+            
+        });
+ 
+    
+
+
+})
+
+
+// ipcMain.on('close-weight', (event,arg) => {
+//     const myserialport = new SerialPort({ 
+//         path: 'COM4', 
+//         baudRate: 9600,
+//         dataBits: 7,
+//         stopBits: 1,
+//         parity: 'even',
+//         bufferSize: 1024
+  
+//     },true)
+
+//     myserialport.open(function(err) { 
+//         myserialport.close(function (err) {
+//             console.log('port closed', err);
+//         });
+//     })
+   
+    
+// });

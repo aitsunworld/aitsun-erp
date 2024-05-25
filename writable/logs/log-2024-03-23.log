@@ -1,0 +1,580 @@
+CRITICAL - 2024-03-23 09:01:00 --> syntax error, unexpected single-quoted string "financial_year", expecting "function" or "const"
+in APPPATH\Models\UserModel.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 3 APPPATH\Controllers\Customers.php(334): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->details('10471')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 09:03:37 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 09:28:29 --> syntax error, unexpected token "protected", expecting end of file
+in APPPATH\Models\Main_item_party_table.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Main_item_party_table.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Main_item_party_table')
+ 3 APPPATH\Validation\UserRules.php(9): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Main_item_party_table')
+ 4 SYSTEMPATH\Validation\Validation.php(312): App\Validation\UserRules->validateUser('11111111', 'email,password', [...], null, 'password')
+ 5 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '11111111', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Users.php(48): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->login()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 09:56:12 --> Undefined variable $Main_item_party_table
+in APPPATH\Controllers\Company.php on line 171.
+ 1 APPPATH\Controllers\Company.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Main_item_party_table', 'APPPATH\\Controllers\\Company.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Company->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Company))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:07:28 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:16:22 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:20:27 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:20:44 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:24:23 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:25:58 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:26:24 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:28:05 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:28:32 --> Undefined array key "year_end"
+in APPPATH\Helpers\auth_helper.php on line 69.
+ 1 APPPATH\Helpers\auth_helper.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_end"', 'APPPATH\\Helpers\\auth_helper.php', 69)
+ 2 APPPATH\Controllers\Settings.php(584): company_year_end('36')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 10:58:10 --> Class "Item_party_meta_1" not found
+in APPPATH\Helpers\auth_helper.php on line 59.
+ 1 APPPATH\Controllers\Settings.php(584): company_year_end('38')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:02:44 --> Class "Item_party_meta_1" not found
+in APPPATH\Helpers\auth_helper.php on line 59.
+ 1 APPPATH\Controllers\Settings.php(584): company_year_end('38')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:05:15 --> Undefined array key "aitsun_user"
+in APPPATH\Helpers\auth_helper.php on line 100.
+ 1 APPPATH\Helpers\auth_helper.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "aitsun_user"', 'APPPATH\\Helpers\\auth_helper.php', 100)
+ 2 APPPATH\Views\dashboard.php(123): is_aitsun('38')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Home.php(141): view('dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:28:30 --> Undefined array key "date_of_birth"
+in APPPATH\Views\settings\account_settings.php on line 126.
+ 1 APPPATH\Views\settings\account_settings.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "date_of_birth"', 'APPPATH\\Views\\settings\\account_settings.php', 126)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 5 APPPATH\Controllers\Settings.php(74): view('settings/account_settings')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:29:49 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(58): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:29:49 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `main_item_party_table`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Settings.php(58): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:31:57 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(58): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:31:57 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `main_item_party_table`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+AND `item_party_meta_1`.`main_id` = :item_party_meta_1.main_id:
+AND `item_party_meta_2`.`main_id` = :item_party_meta_2.main_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Settings.php(58): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:32:42 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(58): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:32:42 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `main_item_party_table`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+AND `item_party_meta_1`.`main_id` = :item_party_meta_1.main_id:
+AND `item_party_meta_2`.`main_id` = :item_party_meta_2.main_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Settings.php(58): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:34:24 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(59): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:34:24 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `main_item_party_table`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+AND `item_party_meta_1`.`main_id` = :item_party_meta_1.main_id:
+AND `item_party_meta_2`.`main_id` = :item_party_meta_2.main_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Settings.php(59): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:34:59 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(79): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:36:06 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(61): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:36:06 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `main_item_party_table`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+AND `item_party_meta_1`.`main_id` = :item_party_meta_1.main_id:
+AND `item_party_meta_2`.`main_id` = :item_party_meta_2.main_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Settings.php(61): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:36:24 --> mysqli_sql_exception: Not unique table/alias: 'item_party_meta_2' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(63): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:36:24 --> Not unique table/alias: 'item_party_meta_2'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `item_party_meta_2`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+AND `item_party_meta_1`.`main_id` = :item_party_meta_1.main_id:
+AND `item_party_meta_2`.`main_id` = :item_party_meta_2.main_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Settings.php(63): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-23 11:36:41 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Settings.php(63): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Settings->index()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-23 11:36:41 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `item_party_meta_1`.*, `item_party_meta_2`.*
+FROM `main_item_party_table`
+LEFT JOIN `item_party_meta_1` ON `item_party_meta_1`.`main_id` = `main_item_party_table`.`id`
+LEFT JOIN `item_party_meta_2` ON `item_party_meta_2`.`main_id` = `main_item_party_table`.`id`
+WHERE `id` = :id:
+AND `item_party_meta_1`.`main_id` = :item_party_meta_1.main_id:
+AND `item_party_meta_2`.`main_id` = :item_party_meta_2.main_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Settings.php(63): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:39:21 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(83): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:39:30 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(83): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:41:02 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(83): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:43:18 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(195): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(83): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:45:30 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:46:19 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:46:46 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:48:07 --> Undefined array key "date_of_birth"
+in APPPATH\Views\settings\account_settings.php on line 126.
+ 1 APPPATH\Views\settings\account_settings.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "date_of_birth"', 'APPPATH\\Views\\settings\\account_settings.php', 126)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 5 APPPATH\Controllers\Settings.php(83): view('settings/account_settings')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:49:13 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:50:15 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:51:32 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:53:11 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 11:55:13 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 12:00:37 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 12:01:53 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-23 12:02:05 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5010.
+ 1 APPPATH\Helpers\apanel_helper.php(5010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5010)
+ 2 APPPATH\Helpers\apanel_helper.php(4972): company('2')
+ 3 APPPATH\Views\settings\account_settings.php(196): now_time('2')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\account_settings.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/account_settings', [], true)
+ 7 APPPATH\Controllers\Settings.php(86): view('settings/account_settings')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

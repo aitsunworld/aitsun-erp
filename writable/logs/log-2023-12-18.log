@@ -1,0 +1,1707 @@
+CRITICAL - 2023-12-18 03:56:10 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 03:56:47 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 03:56:47 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 03:59:36 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:01:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:04:16 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:04:40 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:04:42 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:05:07 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:05:12 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('27', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:05:14 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('27', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:05:58 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:06:31 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:07:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:07:41 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:07:57 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:08:35 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:09:06 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:09:51 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:10:00 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:10:52 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:11:02 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:11:05 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:11:20 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:12:08 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('29', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:15:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Fees_and_payments.php on line 2141.
+ 1 APPPATH\Controllers\Fees_and_payments.php(2141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Fees_and_payments.php', 2141)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Fees_and_payments->payments('28')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fees_and_payments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:16:09 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:16:27 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:17:03 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('1', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:17:05 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:17:42 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('2', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:18:29 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('3', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:18:31 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:18:47 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:18:58 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('3', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:19:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('4', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:19:08 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('4', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:19:55 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:19:55 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:20:47 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('4', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:21:05 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('5', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:21:50 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('5', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:22:00 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('5', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:22:04 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('7', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:24:13 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:24:36 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('7', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:25:08 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('8', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:25:24 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('8', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:25:43 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('8', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:25:51 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:25:53 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:29:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:29:34 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('9', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:30:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('9', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:30:19 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('9', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:30:30 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('9', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:30:53 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:31:14 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('2', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:31:30 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:32:28 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:32:37 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:32:48 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:04 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:13 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:13 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:16 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:25 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:35 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:52 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:33:53 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:34:00 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('11', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:34:12 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('15', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:34:15 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Payments.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payments->get_receipt('15', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:35:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:35:27 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('12', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:35:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:35:54 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('13', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:37:39 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('14', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:37:49 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:37:49 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('13', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:38:11 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:38:54 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('12', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:39:23 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('10', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:39:32 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('7', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:41:31 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('15', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:41:34 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('15', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:41:58 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('16', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:42:18 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('17', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:42:26 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:42:51 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:43:04 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:43:28 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:43:37 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('20', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:44:03 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('21', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:44:08 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:44:41 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:45:34 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('19', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:45:47 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('22', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:46:10 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('22', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:46:51 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('23', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:47:09 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('22', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:47:12 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('22', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:47:36 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('24', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:47:39 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('24', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:48:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('25', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:48:39 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('26', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:48:45 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('25', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:48:57 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:49:04 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:49:15 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:49:26 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:49:37 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:54:58 --> Undefined array key "final_closing_value"
+in APPPATH\Views\reports\stock_report.php on line 133.
+ 1 APPPATH\Views\reports\stock_report.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "final_closing_value"', 'APPPATH\\Views\\reports\\stock_report.php', 133)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stock_report.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('reports/stock_report', [], true)
+ 5 APPPATH\Controllers\Reports.php(1570): view('reports/stock_report', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:59:46 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:03:34 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('27', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:04:27 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:05:16 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:08:08 --> syntax error, unexpected token "}"
+in APPPATH\Helpers\apanel_helper.php on line 625.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:25:47 --> Undefined variable $get_account
+in APPPATH\Helpers\apanel_helper.php on line 658.
+ 1 APPPATH\Helpers\apanel_helper.php(658): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $get_account', 'APPPATH\\Helpers\\apanel_helper.php', 658)
+ 2 APPPATH\Views\reports\stock_report.php(135): stock_value_product('8')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\stock_report.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('reports/stock_report', [], true)
+ 6 APPPATH\Controllers\Reports.php(1570): view('reports/stock_report', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:37:25 --> syntax error, unexpected token "<"
+in APPPATH\Helpers\apanel_helper.php on line 627.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:37:40 --> Undefined variable $pro
+in APPPATH\Helpers\apanel_helper.php on line 624.
+ 1 APPPATH\Helpers\apanel_helper.php(624): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pro', 'APPPATH\\Helpers\\apanel_helper.php', 624)
+ 2 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:40:39 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:40:49 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:41:33 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('29', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 05:41:45 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:20:08 --> Undefined variable $InvoiceitemsModel
+in APPPATH\Helpers\apanel_helper.php on line 637.
+ 1 APPPATH\Helpers\apanel_helper.php(637): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $InvoiceitemsModel', 'APPPATH\\Helpers\\apanel_helper.php', 637)
+ 2 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:20:09 --> Undefined variable $InvoiceitemsModel
+in APPPATH\Helpers\apanel_helper.php on line 637.
+ 1 APPPATH\Helpers\apanel_helper.php(637): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $InvoiceitemsModel', 'APPPATH\\Helpers\\apanel_helper.php', 637)
+ 2 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:20:09 --> Undefined variable $InvoiceitemsModel
+in APPPATH\Helpers\apanel_helper.php on line 637.
+ 1 APPPATH\Helpers\apanel_helper.php(637): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $InvoiceitemsModel', 'APPPATH\\Helpers\\apanel_helper.php', 637)
+ 2 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:20:10 --> Undefined variable $InvoiceitemsModel
+in APPPATH\Helpers\apanel_helper.php on line 637.
+ 1 APPPATH\Helpers\apanel_helper.php(637): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $InvoiceitemsModel', 'APPPATH\\Helpers\\apanel_helper.php', 637)
+ 2 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:24:14 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:24:38 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:25:49 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('29', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:26:00 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('29', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:26:03 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:26:12 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:26:38 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:38:52 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:39:01 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('27', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:39:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('27', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:02:33 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:02:38 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:02:45 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('28', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:06 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('30', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:10 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:11 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:03:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:04:49 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:04:49 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:04:50 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:04:50 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:04:50 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:04:51 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:17 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:17 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:17 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:18 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:18 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:18 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:19 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:19 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:19 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:05:26 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 673.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:07:10 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:09:03 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:09:04 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:09:05 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Views\footer.php(3): update_final_closing_value(9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Reports.php(1571): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->stock_reports()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:10:49 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:12:25 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:13:15 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('31', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:14:18 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('32', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:14:44 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('33', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:15:06 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:15:16 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('33', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:15:25 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('33', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:16:52 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('34', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:17:17 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('35', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:17:53 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('36', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:18:36 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('37', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:19:11 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('38', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:24:29 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('33', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:24:58 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('39', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 07:25:24 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('40', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:15:45 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('40', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:16:26 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('41', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:16:38 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('42', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:17:23 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:17:33 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('43', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:24:27 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('products/update_product/9', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:26:11 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Controllers\Accounting_library.php(161): update_final_closing_value('10')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:26:15 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Controllers\Accounting_library.php(161): update_final_closing_value('10')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:26:16 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:27:20 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('44', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:27:23 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('44', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:27:23 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Controllers\Accounting_library.php(161): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:27:25 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Controllers\Accounting_library.php(161): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:29:04 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:30:19 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:30:53 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Controllers\Accounting_library.php(161): update_final_closing_value('12')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:30:54 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 647.
+ 1 APPPATH\Controllers\Accounting_library.php(161): update_final_closing_value('12')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:34:15 --> syntax error, unexpected variable "$all_customers"
+in APPPATH\Controllers\Accounting_library.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Accounting_library.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Accounting_library')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Accounting_library')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Accounting_library', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:34:19 --> syntax error, unexpected variable "$all_customers"
+in APPPATH\Controllers\Accounting_library.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Accounting_library.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Accounting_library')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Accounting_library')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Accounting_library', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:34:20 --> syntax error, unexpected variable "$all_customers"
+in APPPATH\Controllers\Accounting_library.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Accounting_library.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Accounting_library')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Accounting_library')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Accounting_library', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:34:21 --> syntax error, unexpected variable "$all_customers"
+in APPPATH\Controllers\Accounting_library.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Accounting_library.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Accounting_library')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Accounting_library')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Accounting_library', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:34:21 --> syntax error, unexpected variable "$all_customers"
+in APPPATH\Controllers\Accounting_library.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Accounting_library.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Accounting_library')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Accounting_library')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Accounting_library', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:34:34 --> syntax error, unexpected variable "$all_customers"
+in APPPATH\Controllers\Accounting_library.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Accounting_library.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Accounting_library')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Accounting_library')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Accounting_library', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:40:37 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:40:50 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('45', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:11 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:12 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:13 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:14 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:15 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:19 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('45', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:21 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:23 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('45', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:23 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:25 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:26 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:28 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:30 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('45', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:30 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:32 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:33 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('45', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:33 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:35 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:41:36 --> Division by zero
+in APPPATH\Helpers\apanel_helper.php on line 652.
+ 1 APPPATH\Controllers\Accounting_library.php(43): update_final_closing_value('11')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Accounting_library->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounting_library))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:42:46 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:43:22 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:47:40 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:50:38 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('46', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 08:50:41 --> Class "Dompdf\Dompdf" not found
+in APPPATH\Controllers\Invoices.php on line 456.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('46', 'view')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:11:30 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:17:28 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:18:34 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:19:59 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:24:01 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:24:15 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:24:26 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:31:12 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:31:45 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:32:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 09:32:33 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

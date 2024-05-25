@@ -1,0 +1,247 @@
+CRITICAL - 2024-04-22 03:23:31 --> Undefined variable $newName
+in APPPATH\Controllers\Testing.php on line 42.
+ 1 APPPATH\Controllers\Testing.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $newName', 'APPPATH\\Controllers\\Testing.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 03:24:39 --> Undefined variable $originalName
+in APPPATH\Controllers\Testing.php on line 53.
+ 1 APPPATH\Controllers\Testing.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $originalName', 'APPPATH\\Controllers\\Testing.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 03:39:40 --> Undefined variable $count
+in APPPATH\Controllers\Testing.php on line 54.
+ 1 APPPATH\Controllers\Testing.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count', 'APPPATH\\Controllers\\Testing.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 03:42:12 --> Undefined variable $count
+in APPPATH\Controllers\Testing.php on line 63.
+ 1 APPPATH\Controllers\Testing.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count', 'APPPATH\\Controllers\\Testing.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 04:00:18 --> Undefined array key "starting_row"
+in APPPATH\Controllers\Testing.php on line 66.
+ 1 APPPATH\Controllers\Testing.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "starting_row"', 'APPPATH\\Controllers\\Testing.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:27:34 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('testing', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:51:49 --> Undefined variable $last_row
+in APPPATH\Controllers\Import_and_export.php on line 1045.
+ 1 APPPATH\Controllers\Import_and_export.php(1045): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $last_row', 'APPPATH\\Controllers\\Import_and_export.php', 1045)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:52:03 --> Undefined variable $importmsg2
+in APPPATH\Controllers\Import_and_export.php on line 1048.
+ 1 APPPATH\Controllers\Import_and_export.php(1048): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $importmsg2', 'APPPATH\\Controllers\\Import_and_export.php', 1048)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:52:19 --> Undefined variable $import_report
+in APPPATH\Controllers\Import_and_export.php on line 1054.
+ 1 APPPATH\Controllers\Import_and_export.php(1054): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $import_report', 'APPPATH\\Controllers\\Import_and_export.php', 1054)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:52:43 --> Undefined variable $resubmit_form
+in APPPATH\Controllers\Import_and_export.php on line 1057.
+ 1 APPPATH\Controllers\Import_and_export.php(1057): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resubmit_form', 'APPPATH\\Controllers\\Import_and_export.php', 1057)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:53:03 --> Undefined variable $resubmit_form
+in APPPATH\Controllers\Import_and_export.php on line 1057.
+ 1 APPPATH\Controllers\Import_and_export.php(1057): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resubmit_form', 'APPPATH\\Controllers\\Import_and_export.php', 1057)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:53:20 --> Undefined variable $count
+in APPPATH\Controllers\Import_and_export.php on line 1060.
+ 1 APPPATH\Controllers\Import_and_export.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count', 'APPPATH\\Controllers\\Import_and_export.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 05:54:00 --> Undefined variable $count
+in APPPATH\Controllers\Import_and_export.php on line 1060.
+ 1 APPPATH\Controllers\Import_and_export.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count', 'APPPATH\\Controllers\\Import_and_export.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:16:56 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:34:33 --> syntax error, unexpected variable "$element", expecting ")"
+in APPPATH\Controllers\Import_and_export.php on line 188.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Import_and_export.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Import_and_export')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Import_and_export')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Import_and_export', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:39:50 --> Undefined variable $row
+in APPPATH\Controllers\Import_and_export.php on line 183.
+ 1 APPPATH\Controllers\Import_and_export.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Controllers\\Import_and_export.php', 183)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->export()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:42:08 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:44:04 --> syntax error, unexpected token "as", expecting ")"
+in APPPATH\Controllers\Import_and_export.php on line 174.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Import_and_export.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Import_and_export')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Import_and_export')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Import_and_export', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:44:23 --> syntax error, unexpected token "as", expecting ")"
+in APPPATH\Controllers\Import_and_export.php on line 174.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Import_and_export.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Import_and_export')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Import_and_export')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Import_and_export', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 06:52:45 --> Undefined variable $import_report
+in APPPATH\Controllers\Import_and_export.php on line 684.
+ 1 APPPATH\Controllers\Import_and_export.php(684): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $import_report', 'APPPATH\\Controllers\\Import_and_export.php', 684)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 07:04:24 --> Undefined variable $redi
+in APPPATH\Views\import_and_exports\import_report_product.php on line 75.
+ 1 APPPATH\Views\import_and_exports\import_report_product.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $redi', 'APPPATH\\Views\\import_and_exports\\import_report_product.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\import_and_exports\\import_report_product.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('import_and_exports/import_report_product', [], true)
+ 5 APPPATH\Controllers\Import_and_export.php(363): view('import_and_exports/import_report_product')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 08:24:44 --> Undefined variable $prodata
+in APPPATH\Controllers\Import_and_export.php on line 468.
+ 1 APPPATH\Controllers\Import_and_export.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prodata', 'APPPATH\\Controllers\\Import_and_export.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 08:25:16 --> Undefined variable $prodata
+in APPPATH\Controllers\Import_and_export.php on line 483.
+ 1 APPPATH\Controllers\Import_and_export.php(483): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prodata', 'APPPATH\\Controllers\\Import_and_export.php', 483)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:26:51 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-22 09:29:37 --> mysqli_sql_exception: Column 'pro_in' cannot be null in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\aitsun-erp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\aitsun-erp\app\Controllers\Import_and_export.php(546): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+#10 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-22 09:29:37 --> Column 'pro_in' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `main_item_party_table` (`company_id`, `product_name`, `slug`, `unit`, `sub_unit`, `conversion_unit_rate`, `mrp`, `sale_margin`, `purchase_margin`, `price`, `tax`, `description`, `opening_balance`, `at_price`, `closing_balance`, `final_closing_value`, `final_closing_value_fifo`, `purchased_price`, `category`, `sub_category`, `brand`, `barcode`, `product_code`, `pro_in`, `batch_no`, `bin_location`, `sale_tax`, `purchase_tax`, `product_method`, `added_by`, `main_type`, `financial_year`, `created_by`, `user_token`, `product_name_with_category`, `created_at`) VALUES (:company_id:, :product_name:, :slug:, :unit:, :sub_unit:, :conversion_unit_rate:, :mrp:, :sale_margin:, :purchase_margin:, :price:, :tax:, :description:, :opening_balance:, :at_price:, :closing_balance:, :final_closing_value:, :final_closing_value_fifo:, :purchased_price:, :category:, :sub_category:, :brand:, :barcode:, :product_code:, :pro_in:, :batch_no:, :bin_location:, :sale_tax:, :purchase_tax:, :product_method:, :added_by:, :main_type:, :financial_year:, :created_by:, :user_token:, :product_name_with_category:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Import_and_export.php(546): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:48:16 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:07:25 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:07:46 --> Undefined variable $u_type
+in APPPATH\Controllers\Import_and_export.php on line 590.
+ 1 APPPATH\Controllers\Import_and_export.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $u_type', 'APPPATH\\Controllers\\Import_and_export.php', 590)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:41:20 --> syntax error, unexpected variable "$product_method_options"
+in APPPATH\Controllers\Import_and_export.php on line 640.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Import_and_export.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Import_and_export')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Import_and_export')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Import_and_export', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

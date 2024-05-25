@@ -1,0 +1,58 @@
+CRITICAL - 2024-04-16 09:47:24 --> Undefined array key "total"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 189.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 189)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(137): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 09:48:09 --> Undefined array key "total"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 189.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 189)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(137): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 09:51:41 --> Undefined variable $total_amount
+in APPPATH\Views\aitsun_special_reports\sale.php on line 192.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_amount', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 192)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(137): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 09:52:27 --> Undefined array key "from"
+in APPPATH\Controllers\Reports.php on line 409.
+ 1 APPPATH\Controllers\Reports.php(409): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Reports.php', 409)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->sales_report()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 09:54:46 --> Undefined variable $total_due_amount
+in APPPATH\Views\aitsun_special_reports\sale.php on line 207.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(207): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_due_amount', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 207)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(137): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 10:16:40 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 94.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

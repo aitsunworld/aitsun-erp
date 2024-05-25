@@ -1,0 +1,240 @@
+ERROR - 2024-03-13 04:47:56 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'aitsun_app_db' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'aitsun_app_db', 3306, '', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#8 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'aitsun_app_db' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2024-03-13 04:47:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'aitsun_app_db'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`
+WHERE `email` = :email:
+AND `deleted` = :deleted:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Users.php(46): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->login()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-13 04:47:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'aitsun_app_db' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'aitsun_app_db', 3306, '', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#8 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'aitsun_app_db' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2024-03-13 04:47:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'aitsun_app_db'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`
+WHERE `email` = :email:
+AND `deleted` = :deleted:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Users.php(46): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->login()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-13 04:48:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'aitsun_erp_db' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'aitsun_erp_db', 3306, '', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#8 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'aitsun_erp_db' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2024-03-13 04:48:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'aitsun_erp_db'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`
+WHERE `email` = :email:
+AND `deleted` = :deleted:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Users.php(46): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->login()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-13 04:49:53 --> mysqli_sql_exception: Table 'aitsun_app_db.customers' doesn't exist in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#8 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 {main}
+CRITICAL - 2024-03-13 04:49:55 --> Table 'aitsun_app_db.customers' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`
+WHERE `email` = :email:
+AND `deleted` = :deleted:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Users.php(46): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->login()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-13 04:52:57 --> mysqli_sql_exception: Table 'aitsun_app_db.customers' doesn't exist in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', Array, NULL, 'password')
+#8 C:\xampp\htdocs\aitsun-erp\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\aitsun-erp\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\aitsun-erp\app\Controllers\Users.php(46): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Users->login()
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 {main}
+CRITICAL - 2024-03-13 04:52:57 --> Table 'aitsun_app_db.customers' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`
+WHERE `email` = :email:
+AND `deleted` = :deleted:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\UserRules.php(10): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(312): App\Validation\UserRules->validateUser('12345678', 'email,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Users.php(46): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->login()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

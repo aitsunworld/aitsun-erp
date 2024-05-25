@@ -1,0 +1,16 @@
+CRITICAL - 2023-11-27 10:50:48 --> Undefined array key "return"
+in APPPATH\Helpers\apanel_helper.php on line 2028.
+ 1 APPPATH\Helpers\apanel_helper.php(2028): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "return"', 'APPPATH\\Helpers\\apanel_helper.php', 2028)
+ 2 APPPATH\Controllers\Testing.php(50): send_sms(1, 'dfdfdfdf', 8943868855)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-27 10:58:13 --> Undefined array key "return"
+in APPPATH\Helpers\apanel_helper.php on line 2028.
+ 1 APPPATH\Helpers\apanel_helper.php(2028): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "return"', 'APPPATH\\Helpers\\apanel_helper.php', 2028)
+ 2 APPPATH\Controllers\Testing.php(50): send_sms(1, 'dfdfdfdf', 8943868855)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,44 @@
+CRITICAL - 2024-05-15 04:15:57 --> Undefined variable $myid
+in APPPATH\Views\pos\create.php on line 219.
+ 1 APPPATH\Views\pos\create.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $myid', 'APPPATH\\Views\\pos\\create.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 5 APPPATH\Controllers\Pos.php(99): view('pos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 05:38:12 --> Undefined array key "view_type"
+in APPPATH\Views\pos\create.php on line 65.
+ 1 APPPATH\Views\pos\create.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "view_type"', 'APPPATH\\Views\\pos\\create.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 5 APPPATH\Controllers\Pos.php(99): view('pos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 05:38:41 --> Undefined variable $myid
+in APPPATH\Views\pos\create.php on line 72.
+ 1 APPPATH\Views\pos\create.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $myid', 'APPPATH\\Views\\pos\\create.php', 72)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 5 APPPATH\Controllers\Pos.php(99): view('pos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 06:14:45 --> Undefined variable $view_method
+in APPPATH\Views\pos\create.php on line 243.
+ 1 APPPATH\Views\pos\create.php(243): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_method', 'APPPATH\\Views\\pos\\create.php', 243)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 5 APPPATH\Controllers\Pos.php(99): view('pos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

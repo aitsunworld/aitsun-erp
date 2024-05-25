@@ -1,0 +1,349 @@
+CRITICAL - 2024-05-22 05:54:47 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 05:55:41 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 05:55:43 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:04:26 --> Call to undefined function current_financial_year()
+in APPPATH\Views\pos\create.php on line 203.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 4 APPPATH\Controllers\Pos.php(100): view('pos/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:02 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:02 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:14 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:14 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:20 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:20 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:27 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:33 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:38 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:42 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:05:46 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:08:03 --> Call to undefined function current_financial_year()
+in APPPATH\Views\invoices\new_create_invoice.php on line 1075.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 4 APPPATH\Controllers\Invoices.php(726): view('invoices/new_create_invoice', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:14:43 --> Undefined array key "payment_type_value"
+in APPPATH\Controllers\Sales.php on line 157.
+ 1 APPPATH\Controllers\Sales.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_type_value"', 'APPPATH\\Controllers\\Sales.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:22:56 --> Undefined array key "payment_type_value"
+in APPPATH\Controllers\Sales.php on line 157.
+ 1 APPPATH\Controllers\Sales.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_type_value"', 'APPPATH\\Controllers\\Sales.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:23:08 --> Call to undefined function current_financial_year()
+in APPPATH\Views\invoices\invoices_all.php on line 525.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoices_all', [], true)
+ 4 APPPATH\Controllers\Invoices.php(152): view('invoices/invoices_all', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->sales()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:26:29 --> Call to undefined function current_financial_year()
+in APPPATH\Views\voucher_entries\add.php on line 500.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('voucher_entries/add', [], true)
+ 4 APPPATH\Controllers\Voucher_entries.php(333): view('voucher_entries/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->add('add', 'receipt')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:27:15 --> Call to undefined function current_financial_year()
+in APPPATH\Views\voucher_entries\add.php on line 500.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('voucher_entries/add', [], true)
+ 4 APPPATH\Controllers\Voucher_entries.php(333): view('voucher_entries/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->add('add', 'receipt')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:28:28 --> Call to undefined function current_financial_year()
+in APPPATH\Views\voucher_entries\all_entries.php on line 189.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('voucher_entries/all_entries', [], true)
+ 4 APPPATH\Controllers\Voucher_entries.php(99): view('voucher_entries/all_entries', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:29:30 --> Call to undefined function current_financial_year()
+in APPPATH\Views\voucher_entries\voucher_details.php on line 62.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('voucher_entries/voucher_details', [], true)
+ 4 APPPATH\Controllers\Voucher_entries.php(517): view('voucher_entries/voucher_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->details('55')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:30:57 --> Undefined array key "payment_type_value"
+in APPPATH\Controllers\Sales.php on line 157.
+ 1 APPPATH\Controllers\Sales.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_type_value"', 'APPPATH\\Controllers\\Sales.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:31:03 --> Call to undefined function current_financial_year()
+in APPPATH\Views\invoices\invoice_details.php on line 133.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 4 APPPATH\Controllers\Invoices.php(203): view('invoices/invoice_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('1947')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:35:36 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:35:36 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:35:44 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 06:35:44 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 07:20:16 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 78.
+ 1 APPPATH\Controllers\Sales.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 07:20:30 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 78.
+ 1 APPPATH\Controllers\Sales.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:22:07 --> Undefined array key "cash_amount"
+in APPPATH\Controllers\Sales.php on line 59.
+ 1 APPPATH\Controllers\Sales.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cash_amount"', 'APPPATH\\Controllers\\Sales.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:28:46 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1948')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:30:53 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1948')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:31:24 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1948')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:32:14 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1948')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:35:02 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1948')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:35:17 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1948')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:36:57 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1949')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:37:10 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Sales.php on line 520.
+ 1 APPPATH\Controllers\Sales.php(520): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('1949')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 08:49:07 --> Invalid file: "invoices/invoice_templates/pos_invoice.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invoices/invoice_templates/pos_invoice.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_templates/pos_invoice', [], true)
+ 3 APPPATH\Controllers\Invoices.php(1947): view('invoices/invoice_templates/pos_invoice', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_pos_invoice('1949')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 11:26:52 --> Undefined array key "pos_focus_element"
+in APPPATH\Helpers\apanel_helper.php on line 4844.
+ 1 APPPATH\Helpers\apanel_helper.php(4844): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pos_focus_element"', 'APPPATH\\Helpers\\apanel_helper.php', 4844)
+ 2 APPPATH\Views\pos\create.php(109): get_setting('10', 'pos_focus_element')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\create.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 6 APPPATH\Controllers\Pos.php(100): view('pos/create', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 11:28:22 --> Call to undefined function current_financial_year()
+in APPPATH\Views\pos\create.php on line 203.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 4 APPPATH\Controllers\Pos.php(100): view('pos/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 11:30:25 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 11:30:25 --> Neither gd-lib or imagick are installed!
+in FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php on line 22.
+ 1 APPPATH\Controllers\Generate_barcode.php(73): Picqer\Barcode\BarcodeGeneratorPNG->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

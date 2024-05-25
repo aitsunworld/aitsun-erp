@@ -1,0 +1,26 @@
+.appointments_table{
+	width: 100%;
+
+	.ap_tr{
+		border-bottom: 1px solid #b3b3b3;
+		.duration{
+			text-align: center;
+			.time-span{
+				font-weight: bold;
+			}
+			.time-head{
+
+			}
+		}
+		
+		.res_per_img{
+			width: 40px;
+		    height: 40px;
+		    border-radius: 7px;
+		}
+	}
+
+	.app_padding{
+		padding: 40px 0;
+	}
+}

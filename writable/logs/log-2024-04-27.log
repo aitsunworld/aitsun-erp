@@ -1,0 +1,263 @@
+CRITICAL - 2024-04-27 06:10:22 --> Invalid file: "aitsun_special_reports/purchase.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('aitsun_special_reports/purchase.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/purchase', [], true)
+ 3 APPPATH\Controllers\Aitsun_special_reports.php(218): view('aitsun_special_reports/purchase', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->purchase()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 06:55:36 --> Undefined array key "from"
+in APPPATH\Controllers\Reports.php on line 61.
+ 1 APPPATH\Controllers\Reports.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Reports.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 06:55:59 --> Undefined array key "from"
+in APPPATH\Controllers\Reports.php on line 61.
+ 1 APPPATH\Controllers\Reports.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Reports.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 06:56:03 --> Undefined array key "from"
+in APPPATH\Controllers\Reports.php on line 61.
+ 1 APPPATH\Controllers\Reports.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Reports.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 07:07:07 --> Undefined array key "invoice_type"
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 146.
+ 1 APPPATH\Views\aitsun_special_reports\daybook.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "invoice_type"', 'APPPATH\\Views\\aitsun_special_reports\\daybook.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\daybook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 07:07:21 --> Undefined variable $total_amount
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 149.
+ 1 APPPATH\Views\aitsun_special_reports\daybook.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_amount', 'APPPATH\\Views\\aitsun_special_reports\\daybook.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\daybook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 08:39:09 --> Undefined array key "total"
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 289.
+ 1 APPPATH\Views\aitsun_special_reports\daybook.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'APPPATH\\Views\\aitsun_special_reports\\daybook.php', 289)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\daybook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 08:56:48 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 08:56:50 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 08:58:04 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 08:59:07 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:00:55 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:01:25 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:02:38 --> Unsupported operand types: string + string
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 296.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 4 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:04:38 --> Undefined variable $total_sum
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 297.
+ 1 APPPATH\Views\aitsun_special_reports\daybook.php(297): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_sum', 'APPPATH\\Views\\aitsun_special_reports\\daybook.php', 297)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\daybook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:05:21 --> Undefined variable $total_sum
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 297.
+ 1 APPPATH\Views\aitsun_special_reports\daybook.php(297): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_sum', 'APPPATH\\Views\\aitsun_special_reports\\daybook.php', 297)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\daybook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:13:42 --> syntax error, unexpected token "}", expecting "elseif" or "else" or "endif"
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 387.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 3 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:28:50 --> syntax error, unexpected token "else"
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 332.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 3 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 09:50:37 --> syntax error, unexpected token "(", expecting ":"
+in APPPATH\Views\aitsun_special_reports\daybook.php on line 161.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/daybook', [], true)
+ 3 APPPATH\Controllers\Aitsun_special_reports.php(314): view('aitsun_special_reports/daybook', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:01:42 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 263.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:02:04 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 263.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:02:06 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 263.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:02:07 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 263.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:02:08 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 263.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 263)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->day_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:08:29 --> Undefined array key "from"
+in APPPATH\Controllers\Voucher_entries.php on line 53.
+ 1 APPPATH\Controllers\Voucher_entries.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Voucher_entries.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:09:59 --> Undefined array key "to"
+in APPPATH\Controllers\Voucher_entries.php on line 54.
+ 1 APPPATH\Controllers\Voucher_entries.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "to"', 'APPPATH\\Controllers\\Voucher_entries.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:10:13 --> Undefined array key "from"
+in APPPATH\Controllers\Voucher_entries.php on line 53.
+ 1 APPPATH\Controllers\Voucher_entries.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Voucher_entries.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:36:37 --> Undefined array key "from"
+in APPPATH\Controllers\Reports.php on line 61.
+ 1 APPPATH\Controllers\Reports.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Reports.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 10:36:47 --> Undefined array key "from"
+in APPPATH\Controllers\Reports.php on line 61.
+ 1 APPPATH\Controllers\Reports.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Reports.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 11:01:44 --> Undefined variable $total_sum
+in APPPATH\Views\aitsun_special_reports\all_transactions.php on line 348.
+ 1 APPPATH\Views\aitsun_special_reports\all_transactions.php(348): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_sum', 'APPPATH\\Views\\aitsun_special_reports\\all_transactions.php', 348)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\all_transactions.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/all_transactions', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(411): view('aitsun_special_reports/all_transactions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->all_transactions()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,172 @@
+CRITICAL - 2024-04-21 03:45:27 --> Undefined array key "invoice_id"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 134.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "invoice_id"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 134)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 03:45:56 --> Undefined array key "datetime"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 137.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datetime"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 137)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 03:47:12 --> Undefined array key "invoice_id"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 140.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "invoice_id"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 140)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 03:49:13 --> Undefined array key "invoice_id"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 140.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "invoice_id"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 140)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 03:50:12 --> Undefined array key "invoice_id"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 141.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "invoice_id"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 141)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 03:51:10 --> Undefined array key "payment_type"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 183.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_type"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 03:53:39 --> Undefined array key "payment_type"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 183.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_type"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(127): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:44:17 --> Undefined array key "from"
+in APPPATH\Controllers\Aitsun_special_reports.php on line 92.
+ 1 APPPATH\Controllers\Aitsun_special_reports.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Controllers\\Aitsun_special_reports.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:45:23 --> Undefined array key "from"
+in APPPATH\Views\aitsun_special_reports\sale.php on line 7.
+ 1 APPPATH\Views\aitsun_special_reports\sale.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "from"', 'APPPATH\\Views\\aitsun_special_reports\\sale.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_special_reports\\sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_special_reports/sale', [], true)
+ 5 APPPATH\Controllers\Aitsun_special_reports.php(133): view('aitsun_special_reports/sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_special_reports->sale()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_special_reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:47:20 --> Undefined variable $email
+in APPPATH\Helpers\apanel_helper.php on line 169.
+ 1 APPPATH\Helpers\apanel_helper.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Helpers\\apanel_helper.php', 169)
+ 2 APPPATH\Controllers\E_mailer.php(61): isGmailAccount('rajbharath@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\E_mailer->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_mailer))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:22:33 --> Undefined variable $importmsg
+in APPPATH\Controllers\Import_and_export.php on line 1079.
+ 1 APPPATH\Controllers\Import_and_export.php(1079): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $importmsg', 'APPPATH\\Controllers\\Import_and_export.php', 1079)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->import_parties()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:36:57 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('import_and_export/import_parties', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:37:02 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('import_and_export/import_parties', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:46:51 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 06:54:01 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Import_and_export.php on line 1089.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Import_and_export.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Import_and_export')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Import_and_export')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Import_and_export', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 09:16:10 --> Undefined array key "last_filename"
+in APPPATH\Controllers\Testing.php on line 45.
+ 1 APPPATH\Controllers\Testing.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "last_filename"', 'APPPATH\\Controllers\\Testing.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 09:18:01 --> Undefined array key "last_filename"
+in APPPATH\Controllers\Testing.php on line 45.
+ 1 APPPATH\Controllers\Testing.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "last_filename"', 'APPPATH\\Controllers\\Testing.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 09:18:12 --> Undefined array key "last_filename"
+in APPPATH\Controllers\Testing.php on line 45.
+ 1 APPPATH\Controllers\Testing.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "last_filename"', 'APPPATH\\Controllers\\Testing.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 09:18:52 --> Undefined array key "last_filename"
+in APPPATH\Controllers\Testing.php on line 45.
+ 1 APPPATH\Controllers\Testing.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "last_filename"', 'APPPATH\\Controllers\\Testing.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

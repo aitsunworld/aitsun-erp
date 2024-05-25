@@ -1,0 +1,91 @@
+CRITICAL - 2024-05-12 04:28:37 --> Invalid file: "pos/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pos/index.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 3 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:29:29 --> Invalid file: "pos/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pos/index.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 3 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:31:01 --> Undefined variable $view_type
+in APPPATH\Views\pos\index.php on line 17.
+ 1 APPPATH\Views\pos\index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_type', 'APPPATH\\Views\\pos\\index.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 5 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:31:20 --> Undefined variable $view_type
+in APPPATH\Views\pos\index.php on line 17.
+ 1 APPPATH\Views\pos\index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_type', 'APPPATH\\Views\\pos\\index.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 5 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:32:01 --> Undefined variable $view_type
+in APPPATH\Views\pos\index.php on line 17.
+ 1 APPPATH\Views\pos\index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_type', 'APPPATH\\Views\\pos\\index.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 5 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:32:13 --> Undefined variable $view_type
+in APPPATH\Views\pos\index.php on line 76.
+ 1 APPPATH\Views\pos\index.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_type', 'APPPATH\\Views\\pos\\index.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 5 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:32:37 --> Undefined variable $view_type
+in APPPATH\Views\pos\index.php on line 93.
+ 1 APPPATH\Views\pos\index.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_type', 'APPPATH\\Views\\pos\\index.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/index', [], true)
+ 5 APPPATH\Controllers\Pos.php(63): view('pos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 04:59:01 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-12 09:00:29 --> syntax error, unexpected token ";"
+in APPPATH\Views\pos\create.php on line 37.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pos/create', [], true)
+ 3 APPPATH\Controllers\Pos.php(106): view('pos/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

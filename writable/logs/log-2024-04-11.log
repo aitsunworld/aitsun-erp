@@ -1,0 +1,147 @@
+ERROR - 2024-04-11 03:55:03 --> mysqli_sql_exception: Unknown column 'applicable' in 'where clause' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Voucher_entries.php(628): CodeIgniter\BaseModel->findAll(10)
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Voucher_entries->display_particulars()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-11 03:55:03 --> Unknown column 'applicable' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `main_item_party_table`
+WHERE   (
+`group_head` LIKE :group_head: ESCAPE \'!\'
+OR  `display_name` LIKE :display_name: ESCAPE \'!\'
+ )
+AND `parent_id` != :parent_id:
+AND `parent_id` != :parent_id.1:
+AND `parent_id` = :parent_id.2:
+AND `parent_id` = :parent_id.3:
+AND `main_type` != :main_type:
+AND `company_id` = :company_id:
+AND `financial_year` = :financial_year:
+AND `deleted` = :deleted:
+AND `applicable` = :applicable:
+ORDER BY `id` DESC
+ LIMIT 10', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(10, 0)
+ 4 APPPATH\Controllers\Voucher_entries.php(628): CodeIgniter\BaseModel->findAll(10)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->display_particulars()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:03:48 --> Undefined array key "is_static_journal"
+in APPPATH\Helpers\accounting_helper.php on line 1408.
+ 1 APPPATH\Helpers\accounting_helper.php(1408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_static_journal"', 'APPPATH\\Helpers\\accounting_helper.php', 1408)
+ 2 APPPATH\Controllers\Settings.php(665): add_base_accounting_heads('2', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:06:35 --> Undefined array key "is_static_journal"
+in APPPATH\Helpers\accounting_helper.php on line 1406.
+ 1 APPPATH\Helpers\accounting_helper.php(1406): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_static_journal"', 'APPPATH\\Helpers\\accounting_helper.php', 1406)
+ 2 APPPATH\Controllers\Settings.php(665): add_base_accounting_heads('3', '3')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->start_new_financial_year()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:48:51 --> Uninitialized string offset 0
+in APPPATH\Controllers\Voucher_entries.php on line 993.
+ 1 APPPATH\Controllers\Voucher_entries.php(993): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'APPPATH\\Controllers\\Voucher_entries.php', 993)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->update_voucher('5')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:49:07 --> Uninitialized string offset 0
+in APPPATH\Controllers\Voucher_entries.php on line 757.
+ 1 APPPATH\Controllers\Voucher_entries.php(757): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'APPPATH\\Controllers\\Voucher_entries.php', 757)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->insert_voucher()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:51:16 --> Uninitialized string offset 0
+in APPPATH\Controllers\Voucher_entries.php on line 757.
+ 1 APPPATH\Controllers\Voucher_entries.php(757): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'APPPATH\\Controllers\\Voucher_entries.php', 757)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->insert_voucher()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:56:31 --> Uninitialized string offset 0
+in APPPATH\Controllers\Voucher_entries.php on line 993.
+ 1 APPPATH\Controllers\Voucher_entries.php(993): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'APPPATH\\Controllers\\Voucher_entries.php', 993)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->update_voucher('8')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 05:13:24 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5118.
+ 1 APPPATH\Helpers\apanel_helper.php(5118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5118)
+ 2 APPPATH\Controllers\Voucher_entries.php(794): user_data('C:\\xampp\\htdocs\\aitsun-erp', 'closing_balance')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->insert_voucher()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 05:14:03 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5118.
+ 1 APPPATH\Helpers\apanel_helper.php(5118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5118)
+ 2 APPPATH\Controllers\Voucher_entries.php(794): user_data('C:\\xampp\\htdocs\\aitsun-erp', 'closing_balance')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Voucher_entries->insert_voucher()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Voucher_entries))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 06:17:18 --> Array to string conversion
+in APPPATH\Controllers\Reports.php on line 1036.
+ 1 APPPATH\Controllers\Reports.php(1036): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Reports.php', 1036)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->bank_book()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 06:52:13 --> Trying to access array offset on value of type null
+in APPPATH\Views\fees\challan_design.php on line 95.
+ 1 APPPATH\Views\fees\challan_design.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\fees\\challan_design.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\fees\\challan_design.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('fees/challan_design', [], true)
+ 5 APPPATH\Controllers\Fees_and_payments.php(1460): view('fees/challan_design', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Fees_and_payments->get_challan('5', 'view')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fees_and_payments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 06:54:04 --> syntax error, unexpected token ")"
+in APPPATH\Views\reports\bank_book.php on line 195.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('reports/bank_book', [], true)
+ 3 APPPATH\Controllers\Reports.php(1106): view('reports/bank_book', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->bank_book()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 07:26:26 --> Class "App\Controllers\Item_party_meta_1" not found
+in APPPATH\Controllers\Testing.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 07:27:06 --> Undefined variable $data
+in APPPATH\Controllers\Testing.php on line 44.
+ 1 APPPATH\Controllers\Testing.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Testing.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 07:27:14 --> Undefined variable $data
+in APPPATH\Controllers\Testing.php on line 44.
+ 1 APPPATH\Controllers\Testing.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Testing.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Testing->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Testing))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
