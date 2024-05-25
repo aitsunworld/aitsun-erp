@@ -3686,3 +3686,14 @@ body {
 .no-wrap th,.no-wrap td{
     white-space: nowrap!important;   
 }  
+
+.blnk_sp{
+    border: 0;
+    background: #f1f1f1;
+}
+.blnk_sp:hover{
+    cursor: pointer;
+}
+.form-control:focus {
+    cursor: text;
+}

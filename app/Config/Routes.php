@@ -54,8 +54,11 @@ $routes->get('/users/get_all_transport_fees_of_student/(:any)', 'Users::get_all_
 $routes->get('/users/get_all_transport_locations/(:any)', 'Users::get_all_transport_locations/$1'); 
  
 ////////// Parties /////////////
-$routes->get('/appoinments', 'Appoinments::index');
-$routes->get('/appointments/create', 'Appoinments::create');
+$routes->get('/appointments', 'Appointments::index');
+$routes->get('/appointments/create', 'Appointments::create');
+$routes->get('/appointments/resources', 'Appointments::resources');
+$routes->post('/appointments/add_resources', 'Appointments::add_resources');
+$routes->post('/appointments/update_resources/(:any)', 'Appointments::update_resources/$1');
 
 
 

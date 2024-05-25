@@ -423,7 +423,7 @@
 
 <?php  
     if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())== 'appoinments') {
+       if ($uri->getSegment(sn3())>= 'appointments') {
 ?>
     <script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
 <?php    

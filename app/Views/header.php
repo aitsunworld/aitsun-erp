@@ -44,7 +44,7 @@
 
     <?php  
         if ($uri->getTotalSegments()>sn2()) {
-           if ($uri->getSegment(sn3())== 'appoinments') {
+           if ($uri->getSegment(sn3())== 'appointments') {
     ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/appoinments.css') ?>?ver=<?= style_version(); ?>">
     <?php    
