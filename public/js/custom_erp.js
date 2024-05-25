@@ -1,4 +1,15 @@
 $(document).ready(function(){
+
+     var currentpageUrl = window.location.href;
+
+    $('a').each(function() {
+        if (this.href == currentpageUrl) {
+            if (this.href!='') {
+                $(this).addClass('active');
+            }
+            
+        }
+    });
     
     $(document).on('keydown','input[type="number"]',function(event) {
         

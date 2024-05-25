@@ -1,9 +1,6 @@
  
 
-</main>
-        
-        
-        
+</main> 
 
         <input type="hidden" id="csrf_token" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>"/>
         <input type="hidden" id="app_state" value="<?= APP_STATE ?>"/>
@@ -121,7 +118,7 @@
 
         <?php if ($uri->getTotalSegments()>sn2()) { ?> 
         <?php if ($uri->getSegment(sn3()) == 'crm' || $uri->getSegment(sn4()) == 'tasks' || $uri->getSegment(sn3()) == 'purchase_confirmation') { ?>
-        <script src="<?= base_url('public'); ?>/js/crm.js?v=<?= script_version(); ?>"></script>
+            <script src="<?= base_url('public'); ?>/js/crm.js?v=<?= script_version(); ?>"></script>
         <?php }; ?>
         <?php } ?>
 
@@ -423,7 +420,7 @@
 
 <?php  
     if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())== 'appoinments') {
+       if ($uri->getSegment(sn3())== 'appointments') {
 ?>
     <script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
 <?php    

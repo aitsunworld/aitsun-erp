@@ -145,7 +145,7 @@
                 return $app_status;
         }
 
-        function is_appoinments($company){
+        function is_appointments($company){
                 $Companies = new Companies;
                 $UserModel = new Main_item_party_table;
                 $MainCompanies = new MainCompanies;

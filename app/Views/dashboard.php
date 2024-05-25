@@ -83,10 +83,10 @@
         <?php endif ?>
 
  
-        <?php if (is_appoinments(company($user['id']))): ?>  
-        <a class="menu_icon href_loader text-dark cursor-pointer" href="<?= base_url('appoinments') ?>">
+        <?php if (is_appointments(company($user['id']))): ?>  
+        <a class="menu_icon href_loader text-dark cursor-pointer" href="<?= base_url('appointments') ?>">
             <img src="<?= base_url('public/images/menu_icons/appoinments.webp') ?>" class="menu_img">
-            <div class="menu-title">Appoinments</div>
+            <div class="menu-title">Appointments</div>
         </a> 
         <?php endif ?> 
       

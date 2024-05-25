@@ -11,9 +11,12 @@
                 <li class="breadcrumb-item">
                     <a href="<?= base_url(); ?>" class="href_loader"><i class="bx bx-home-alt text-aitsun-red"></i></a>
                 </li>
+                <li class="breadcrumb-item">
+                    <a href="<?= base_url('appointments'); ?>" class="href_loader">Appointments</a>
+                </li>
              
                 <li class="breadcrumb-item active" aria-current="page">
-                    <b class="page_heading text-dark">Appointments</b>
+                    <b class="page_heading text-dark">Book persons</b>
                 </li>
             </ol>
         </nav>
@@ -33,58 +36,7 @@
     </div>
 </div>
 <!-- ////////////////////////// TOP BAR END ///////////////////////// -->
-<?php 
-    function appoints(){
-        $arrr=[
-            [
-                'name'=>'Dental department',
-                'duration'=>'30:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=1',
-                        'name'=>'Nazriya Nazim'
-                    
-                ],
-                'meetings'=>'2',
-                'total_meetings'=>'36',
-            ],
-            [
-                'name'=>'Orthopedic surgeon',
-                'duration'=>'1:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=11',
-                        'name'=>'Ganesh Bhat'
-                  
-                ],
-                'meetings'=>'45',
-                'total_meetings'=>'150',
-            ],
-            [
-                'name'=>'Cardiothoracic Department',
-                'duration'=>'15:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=3',
-                        'name'=>'Murali Kumar'
-                    
-                ],
-                'meetings'=>'0',
-                'total_meetings'=>'10',
-            ],
-            [
-                'name'=>'Plastic surgeon',
-                'duration'=>'9:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=4',
-                        'name'=>'John Abrahm'
-                   
-                ],
-                'meetings'=>'6',
-                'total_meetings'=>'25',
-            ]
-
-        ];
-        return $arrr;
-    }
- ?>
+ 
 <!-- ////////////////////////// TOOL BAR START ///////////////////////// -->
 <div class="toolbar d-flex justify-content-between">
     <div class="d-flex">
@@ -146,60 +98,77 @@
 <!-- ////////////////////////// MAIN PAGE START ///////////////////////// -->
 <div class="sub_main_page_content">
     <div class="aitsun-row"> 
- 
-        <table class="appointments_table">
-            <?php $slno=0; foreach (appoints() as $aps): $slno++; ?> 
-            <tr class="ap_tr" style="background: <?php echo ($slno % 2 == 0) ? "white" : "#ffffff54"; ?>;">
-                <td>
-                    <h6><?= $aps['name'] ?></h6>
-                </td>
-                <td>
-                    <div class="duration">
-                        <div class="time-span"><?= $aps['duration'] ?> minutes</div>
-                        <div class="time-head">Duration</div>
+        <?php 
+            $active_date=get_date_format(now_time($user['id']),'Y-m-d'); 
+            if ($_GET) {
+                if (isset($_GET['date'])) {
+                    if (!empty($_GET['date'])) {
+                        if (strtotime($_GET['date'])) {
+                            $active_date=$_GET['date'];
+                        } 
+                    }
+                }
+            }
+        ?>  
+        <div class="col-md-6">
+            <div class="booking_calendar ">
+                <input type="date" name="" class="d-none" value="<?= $active_date; ?>" id="calendar_date_selector">
+            </div>
+
+            <div class="timings">
+
+                <div class="row">
+                    <?php 
+                        $start_time = new DateTime('09:00');
+                        $end_time = new DateTime('18:00'); 
+                        $interval = new DateInterval('PT30M'); 
+                        $timings = new DatePeriod($start_time, $interval, $end_time->add($interval));
+                    ?>
+                    <div class="col-md-12">
+                        <select class="appointment_selector">
+                            <option>Select an appointment</option>
+                            <option>Eye test</option>
+                            <option>Dental checkup</option>
+                        </select>
                     </div>
-                </td>
-                <td>
-                    <div class="d-flex">
-                        <img src="<?= $aps['images']['url'] ?>" class="me-2 res_per_img"> 
-                        <div class="my-auto"><?= $aps['images']['name'] ?></div>
+
+                    <div class="col-md-12">
+                        <h6>Timings:</h6>
                     </div>
-                </td>
-                <td>
-                    <div class="duration">
-                        <div class="time-span"><?= $aps['meetings'] ?> meetings</div>
-                        <div class="time-head">Scheduled</div>
-                    </div>
-                </td>
-                <td>
-                    <div class="duration">
-                        <div class="time-span"><?= $aps['total_meetings'] ?> Total meetings</div>
-                        <div class="time-head">(Last 30 days)</div>
-                    </div>
-                </td>
-                <td class="app_padding">
-                    <div class="dropdown dropdown-animated ">
-                        <a class="text-dark cursor-pointer font-size-footer ms-2 my-auto " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bx bx-cog"></i> Action
-                        </a>
-                        <div class="dropdown-menu" style="">  
-                            <a class="dropdown-item href_loader" href="http://localhost/aitsun-erp/products/manufacture/create_raw_materials/18675">
-                                <span class="">Orders</span>
-                            </a>
-                            <a class="dropdown-item href_loader" href="http://localhost/aitsun-erp/products/manufacture/create_raw_materials/18675">
-                                <span class="">Sales</span>
-                            </a> 
-                            <a class="dropdown-item href_loader" href="http://localhost/aitsun-erp/products/manufacture/create_raw_materials/18675">
-                                <span class="">Session report</span>
-                            </a> 
+                    <?php foreach ($timings as $time): ?>
+                        <div class="col-md-3">
+                            <div class="time_box">
+                                <?= $time->format('H:i') ?>
+                            </div>
                         </div>
-                    </div>
-                
-                </td>
-            </tr>
-            <?php endforeach ?>
-        </table>
-        
+                    <?php endforeach ?> 
+                </div>
+            </div>
+        </div>
+
+        <div class="booking_details col-md-6">
+            <h5>Today's Booking</h5>
+            <div class="w-100">
+                <table class="erp_table booking_table">
+                    <thead>
+                        <tr>
+                            <th>Appointment title</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Team selection meeting</td>
+                            <td>9:00AM to 11:00AM</td>
+                        </tr>
+                        <tr>
+                            <td>Team selection meeting</td>
+                            <td>9:00AM to 11:00AM</td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </div>
+        </div> 
 
     </div>
 </div>
@@ -219,5 +188,59 @@
 </div> 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/minified/polyfiller.js"></script>
 
+<script type="text/javascript">
+  
+    webshim.setOptions('forms-ext', {
+        replaceUI: 'auto',
+        types: 'date',
+        date: {
+            startView: 2,
+            inlinePicker: true,
+            classes: 'hide-inputbtns'
+        }
+    });
+    webshim.setOptions('forms', {
+        lazyCustomMessages: true
+    });
+    //start polyfilling
+    webshim.polyfill('forms forms-ext');
+
+    //only last example using format display
+    $(function () {
+
+        $('.format-date').each(function () {
+
+            var $display = $('.date-display', this);
+            $(this).on('change', function (e) {
+                //webshim.format will automatically format date to according to webshim.activeLang or the browsers locale
+                var localizedDate = webshim.format.date($.prop(e.target, 'value'));
+                $display.html(localizedDate);
+            });
+        });
+    });
+
+    function auto_grow(element) {
+            element.style.height = "5px";
+            element.style.height = (element.scrollHeight)+"px";
+        }
+ $(document).on('change','#calendar_date_selector',function(){
+        var loc = location.href;
+        var sortval = $('#calendar_date_selector').val();
+          
+        var key='date';
+
+         
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = loc.indexOf('?') !== -1 ? "&" : "?";
+        if (loc.match(re)) {
+          location.href=loc.replace(re, '$1' + key + "=" + sortval + '$2');
+        }
+        else {
+          location.href=loc + separator + key + "=" + sortval;
+        }
+    });
+      
+    </script> 
  

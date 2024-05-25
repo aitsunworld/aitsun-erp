@@ -25,7 +25,7 @@ class Appoinments extends BaseController
             $user=$UserModel->where('id',$myid)->first();
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
             
-            if (is_appoinments(company($user['id']))==1) {
+            if (is_appointments(company($user['id']))==1) {
             
                 $etqry = $CompanySettings2->where('company_id',company($myid))->first();
                 $data = [
@@ -58,7 +58,7 @@ class Appoinments extends BaseController
             $user=$UserModel->where('id',$myid)->first();
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
             
-            if (is_appoinments(company($user['id']))==1) {
+            if (is_appointments(company($user['id']))==1) {
             
                 $etqry = $CompanySettings2->where('company_id',company($myid))->first();
                 $data = [
@@ -77,5 +77,40 @@ class Appoinments extends BaseController
             return redirect()->to(base_url('users/login'));
         }
     }
+
+
+    public function book_persons(){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $CompanySettings2= new CompanySettings2;
+            $myid=session()->get('id');
+            $con = array( 
+                'id' => session()->get('id') 
+            );
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+            
+            if (is_appointments(company($user['id']))==1) {
+            
+                $etqry = $CompanySettings2->where('company_id',company($myid))->first();
+                $data = [
+                    'title' => 'Aitsun ERP- Book persons',
+                    'user' => $user, 
+                ];
+               
+                echo view('header',$data);
+                echo view('appointments/book_persons', $data);
+                echo view('footer'); 
+
+            }else{
+            return redirect()->to(base_url('users/login'));
+        }
+        }else{
+            return redirect()->to(base_url('users/login'));
+        }
+    }
+
+    
     
 }
