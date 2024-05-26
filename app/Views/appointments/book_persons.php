@@ -115,7 +115,7 @@
                 <input type="date" name="" class="d-none" value="<?= $active_date; ?>" id="calendar_date_selector">
             </div>
 
-            <div class="timings">
+            <div class="timings pb-5">
 
                 <div class="row">
                     <?php 
