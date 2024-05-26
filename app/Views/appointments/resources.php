@@ -66,8 +66,10 @@
        
 
     </div>
-
-    <a type="button" data-bs-toggle="modal" data-bs-target="#resourcesmodel" class="text-dark font-size-footer ms-2 my-auto"> <span class="my-auto">+ New</span></a>
+    <div>
+    <a type="button" data-bs-toggle="modal" data-bs-target="#resourcesmodel" class=" font-size-footer ms-2 my-auto btn-back" style="padding: 3px 10px;"> <span class="my-auto">+ New</span></a>
+    <button class="aitsun-btn-sm btn-danger my-auto btn-sm d-none rounded-nav" id="deletereallbtn"  >Delete</button> 
+    </div> 
 </div>
 <!-- ////////////////////////// TOOL BAR END ///////////////////////// -->
 
@@ -146,8 +148,8 @@
                         <th class="sorticon">Appointment Resource</th>
                         <th class="sorticon">Capacity</th>
                         <th class="sorticon">Description</th>
-                        <th class="sorticon text-center" style="width:100px;" data-tableexport-display="none">
-                            <i id="deleteinvoiceCheckAll" class="select ml-2 bx bx-plus-circle" style="font-size:20px; color: #0075ff;">
+                        <th class="sorticon text-center" style="width:75px;" data-tableexport-display="none">
+                            <i id="deleteresourcesCheckAll" class="select ml-2 bx bx-plus-circle" style="font-size:20px; color: white;">
                         </th>
                     </tr>
                  
@@ -172,8 +174,10 @@
                         <td><p class="d-none"><?= $p_data['description']; ?></p>
                             <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-description-<?= $p_data['id']; ?>" data-resource_id="<?= $p_data['id']; ?>" name="description" value="<?= $p_data['description']; ?>" data-r_element="description">
                         </td>
-                        <td>
-                            
+                        <td class="big_check text-center" data-tableexport-display="none">
+                            <div class="form-group mb-0">
+                                <input type="checkbox" class="checkbox checkBoxresourcesAll checkingrollbox" name="delete_all_resources[]" value="<?= $p_data['id']; ?>" data-inid="<?= $p_data['id']; ?>" >
+                            </div>
                         </td>
                     </tr>
 

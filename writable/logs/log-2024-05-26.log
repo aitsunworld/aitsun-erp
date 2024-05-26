@@ -31,3 +31,32 @@ AND `deleted` = :deleted:', [...], false)
  6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
  7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-26 04:38:36 --> Undefined variable $di
+in APPPATH\Views\appointments\resources.php on line 177.
+ 1 APPPATH\Views\appointments\resources.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $di', 'APPPATH\\Views\\appointments\\resources.php', 177)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\resources.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/resources', [], true)
+ 5 APPPATH\Controllers\Appointments.php(194): view('appointments/resources', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->resources()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-26 04:50:49 --> Undefined variable $ft
+in APPPATH\Views\appointments\resources.php on line 71.
+ 1 APPPATH\Views\appointments\resources.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ft', 'APPPATH\\Views\\appointments\\resources.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\resources.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/resources', [], true)
+ 5 APPPATH\Controllers\Appointments.php(194): view('appointments/resources', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->resources()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-26 05:27:04 --> Undefined variable $fees_id
+in APPPATH\Controllers\Appointments.php on line 275.
+ 1 APPPATH\Controllers\Appointments.php(275): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fees_id', 'APPPATH\\Controllers\\Appointments.php', 275)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->delete_resource('8,7')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
