@@ -54,10 +54,11 @@ $routes->get('/users/get_all_transport_fees_of_student/(:any)', 'Users::get_all_
 $routes->get('/users/get_all_transport_locations/(:any)', 'Users::get_all_transport_locations/$1'); 
  
 ////////// Parties /////////////
-$routes->get('/appointments', 'Appoinments::index');
-$routes->get('/appointments/create', 'Appoinments::create');
-$routes->get('/appointments/book_persons', 'Appoinments::book_persons');
-
+$routes->get('/appointments', 'Appointments::index');
+$routes->get('/appointments/create', 'Appointments::create');
+$routes->get('/appointments/resources', 'Appointments::resources');
+$routes->post('/appointments/add_resources', 'Appointments::add_resources');
+$routes->post('/appointments/update_resources/(:any)', 'Appointments::update_resources/$1');
 
 
 
@@ -87,7 +88,6 @@ $routes->post('/pos/open_session', 'Pos::open_session');
 $routes->get('/pos/close_register', 'Pos::close_register');
 $routes->post('/pos/change_pos_mode/(:any)', 'Pos::change_pos_mode/$1');
 $routes->get('/pos/orders', 'Pos::orders');
-
   
 
 ////////// Inventories /////////////

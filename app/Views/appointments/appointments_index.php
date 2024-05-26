@@ -107,7 +107,21 @@
 
         <a href="<?= base_url('parties_category') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
 
-        <a href="<?= base_url('parties_category') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-cog"></i> <span class="my-auto">Configuration</span></a>
+
+
+        <div class="dropdown  my-auto me-2">
+            <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-calendar"></i> Configuration
+            </a>
+            <div class="dropdown-menu" style="">  
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">
+                    <span class="">Resources</span>
+                </a>
+                 
+            </div>
+        </div> 
+
+
     </div>
 
     <a href="<?= base_url('appointments/create') ?>" class=" btn-back font-size-footer my-auto ms-2 href_loader"> <span class="">+ New Appointment</span></a>
