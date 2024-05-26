@@ -146,7 +146,9 @@
                         <th class="sorticon">Appointment Resource</th>
                         <th class="sorticon">Capacity</th>
                         <th class="sorticon">Description</th>
-                        <th class="">Action</th>
+                        <th class="sorticon text-center" style="width:100px;" data-tableexport-display="none">
+                            <i id="deleteinvoiceCheckAll" class="select ml-2 bx bx-plus-circle" style="font-size:20px; color: #0075ff;">
+                        </th>
                     </tr>
                  
                  </thead>
@@ -170,13 +172,16 @@
                         <td><p class="d-none"><?= $p_data['description']; ?></p>
                             <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-description-<?= $p_data['id']; ?>" data-resource_id="<?= $p_data['id']; ?>" name="description" value="<?= $p_data['description']; ?>" data-r_element="description">
                         </td>
+                        <td>
+                            
+                        </td>
                     </tr>
 
                     <?php endforeach ?>
 
                     <?php if ($i==0): ?>
                         <tr>
-                            <td colspan="9"><h6 class="p-4 text-center text-danger">No Resources Found... </h6></td>
+                            <td colspan="4"><h6 class="p-4 text-center text-danger">No Resources Found... </h6></td>
                         </tr>
                     <?php endif ?>
                      
