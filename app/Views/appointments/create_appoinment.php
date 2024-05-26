@@ -83,7 +83,7 @@
                    
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Duration</label>
-                        <input type="time" class="form-control modal_inpu" name="duration" id="duration">
+                        <input type="text" class="form-control modal_inpu duration_input" name="duration" id="duration"  >
                        </div>
 
                         <div class=" col-md-6 mb-2"> 
@@ -125,6 +125,11 @@
                         <input type="time" class="form-control modal_inpu" name="hours_before" id="hours_before">
                        </div>
 
+                       <div class=" col-md-6 mb-2"> 
+                        <label for="input-1" class="modal_lab">Scheduling (Max in days)</label>
+                        <input type="text" class="form-control modal_inpu" name="hours_before" id="hours_before">
+                       </div>
+
                        
 
                       
@@ -137,7 +142,7 @@
 
                        <div class=" col-md-6 mb-2"> 
                             <div class="d-block">
-                                <label for="input-1" class="modal_lab me-3">Assignment method</label>
+                                <label for="input-1" class="modal_lab me-3 mb-2">Assignment method</label>
                     
                                 <div class="form-check me-3">
                                   <input class="form-check-input" type="radio" name="assign_method" id="assign_method1" value="0" checked>
@@ -163,8 +168,10 @@
                 </div>
 
             <div class="col-md-6">
-                
+               
             </div>
+
+            <div ></div>
                
 
             </div>
@@ -189,4 +196,6 @@
     </div>
 </div> 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
+
+
  

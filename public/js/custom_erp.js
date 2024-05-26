@@ -10,6 +10,41 @@ $(document).ready(function(){
             
     //     }
     // });
+
+    
+     $(document).on('blur','.duration_input',function() {
+        
+       const value = $(this).val().trim();
+
+        // Check for empty or invalid input (non-numeric characters)
+        if (value === "" || isNaN(parseFloat(value))) {
+          $(this).val("01:00"); // Set default value for invalid input
+          return;
+        }
+
+        // Split the input by colon (:)
+        const parts = value.split(":");
+
+        // Extract hours and minutes (handle edge cases)
+        let hours = parseInt(parts[0] || 0, 10); // Default to 0 hours
+        let minutes = parseInt(parts[1] || 0, 10); // No decimal conversion (for handling 66)
+
+        // Handle invalid minutes (negative)
+        minutes = Math.max(0, minutes); // Clamp minutes to minimum 0
+
+        // Handle exceeding 60 minutes
+        if (minutes >= 60) {
+          hours += Math.floor(minutes / 60);
+          minutes = minutes % 60;
+        }
+
+        // Format hours and minutes with leading zeros
+        hours = hours.toString().padStart(2, "0");
+        minutes = minutes.toString().padStart(2, 0).slice(0, 2); // Ensure only two digits for minutes
+
+        // Update the input field with the formatted value
+        $(this).val(`${hours}:${minutes}`);
+    });
     
     $(document).on('keydown','input[type="number"]',function(event) {
         
