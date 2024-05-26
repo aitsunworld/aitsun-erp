@@ -4,6 +4,18 @@ body{
   font-weight: 300;
   font-size: 13px;
 }
+.w-65{
+    width: 65%!important;
+}
+.toolbar a.active{
+    color: #d5265d !important;
+}
+
+.toolbar .dropdown-item.active, .dropdown-item:active{
+    color: #fff !important;
+    text-decoration: none;
+    background-color: #d5265d;
+}
 
 .nointernetbody{
     position: fixed;

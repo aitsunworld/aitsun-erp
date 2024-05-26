@@ -24,3 +24,128 @@
 		padding: 40px 0;
 	}
 }
+
+.booking_calendar{
+	z-index: 1; 
+	position: relative;
+
+	.input-picker .ws-picker-header>button{
+		color: #d5265d;
+	}
+	abbr[title], abbr[data-original-title]{
+		color: #d5265d;
+	}
+	.input-picker .picker-list td>button:hover, .input-picker .picker-list td>button.checked-value{
+		background: #d5265d;
+	}
+
+
+	.picker-grid th abbr{
+
+		width: 100%; 
+	    border-radius: 10px;
+	    display: flex;
+	    border: 1px solid rgb(213 38 93 / 22%);
+	    justify-content: center;
+	    align-items: center;
+	    padding: 5px 0;
+
+	}
+
+	.picker-grid tbody button{
+
+		width: 100%; 
+	    border-radius: 10px;
+	    display: flex;
+	    border: 1px solid rgb(0 0 0 / 22%);
+	    justify-content: center;
+	    align-items: center;
+	    padding: 21px;
+
+	}
+
+	.input-picker .picker-list td>button:hover, .input-picker .picker-list td>button.checked-value{
+		border-radius: 10px;
+	}
+	.ws-po-box{
+		border: none;
+		background:transparent;
+		padding-left: 0;
+	}
+
+	.input-picker .ws-picker-controls>button {
+	    box-sizing: content-box;
+	    border: .07692em solid #d5265d38;
+	    padding: 0;
+	    /* width: 1.84615em; */
+	    height: 1.84615em;
+	    background: #fff;
+	    z-index: 1;
+	    color: #333;
+	    border-radius: 10px;
+	    width: 75px;
+	}
+
+	.input-picker .ws-button-row>button {
+	    border: .07692em solid #d5265d38;
+	    background-color: white!important; 
+	    background-image:none;
+	    transition: border-color 200ms linear;
+	    float: left;
+	    width: 75px;
+	    border-radius: 10px;
+	}
+
+	.input-picker .ws-button-row>button.ws-empty{
+		float: right!important;
+	}
+	.input-picker .picker-list{
+		background: transparent;
+	}
+
+	.input-picker .prev-controls, .input-picker .ws-po-box[dir=rtl] .next-controls {
+	    left: 0; 
+	}
+}
+
+.timings{
+	width: 100%;
+	.appointment_selector{
+		width: 100%;
+	    height: 40px;
+	    margin-top: 15px;
+	    border-radius: 10px;
+	    margin-bottom: 10px;
+	    padding: 0 10px;
+	    border: 1px solid #d1d1d1;
+	    &:focus{
+	    	outline: none;
+	    }
+	}
+
+	.time_box{
+		text-align: center;
+	    padding: 4px 5px;
+	    background: white;
+	    border: 1px solid #d1d1d1;
+	    margin-bottom: 5px;
+	    border-radius: 5px;
+
+	    &.active,&:hover{
+	    	background: #d5265d;
+    		color: white;
+    		cursor: pointer;
+	    }
+	}
+}
+
+.booking_details{
+	padding-bottom: 50px;
+    padding-left: 15px; 
+	.booking_table{ 
+	 
+		th,td{
+				padding: 0 10px;
+			}
+	}
+}

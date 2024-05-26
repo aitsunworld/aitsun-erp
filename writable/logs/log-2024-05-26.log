@@ -1,0 +1,33 @@
+CRITICAL - 2024-05-26 04:33:27 --> Call to undefined function App\Controllers\is_appoinments()
+in APPPATH\Controllers\Appointments.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-26 04:34:13 --> mysqli_sql_exception: Table 'aitsun_app_db.resources' doesn't exist in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\aitsun-erp\app\Controllers\Appointments.php(142): CodeIgniter\BaseModel->paginate(20)
+#7 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Appointments->resources()
+#8 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-26 04:34:13 --> Table 'aitsun_app_db.resources' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `resources`
+WHERE `company_id` = :company_id:
+AND `deleted` = :deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Appointments.php(142): CodeIgniter\BaseModel->paginate(20)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->resources()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
