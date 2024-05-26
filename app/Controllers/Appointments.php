@@ -247,4 +247,33 @@ class Appointments extends BaseController
            
         }
     }
+
+
+    public function delete_resource($rs_id=""){
+        if (!empty($rs_id)) {
+            $myid=session()->get('id');
+            $ResourcesModel= new ResourcesModel();
+
+            $acti=activated_year(company($myid));
+            
+             $multyiple = explode(',', $rs_id);
+
+             foreach ($multyiple as $inid) {
+
+                $data=[
+                    'deleted'=>1,
+                ];
+
+                
+                $ResourcesModel->update($inid,$data);
+
+             }
+
+            session()->setFlashdata('pu_msg', 'Deleted successfully');
+         
+            if (count($multyiple)>=1) {
+                return redirect()->to(base_url('appointments/resources'));
+            } 
+        }
+    }
 }

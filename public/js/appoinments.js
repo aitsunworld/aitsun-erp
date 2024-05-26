@@ -86,6 +86,64 @@ $(document).ready(function() {
 
 
 
+    $(document).on('click','#deleteresourcesCheckAll',function () {
+        var thisbox=$(this);
+        if ($(thisbox).hasClass('select')) {
+            $(".checkBoxresourcesAll").prop('checked', true);
+            $(thisbox).removeClass('select');
+        }else{
+            $(".checkBoxresourcesAll").prop('checked', false);
+             $(thisbox).addClass('select');
+        }
+
+        var checkedNum = $('input[name="delete_all_resources[]"]:checked').length;
+        if (checkedNum>=1) {
+            $('#deletereallbtn').removeClass('d-none');
+        }else{
+            $('#deletereallbtn').addClass('d-none');
+        }
+        
+    });
+
+
+
+    $(document).on('click','.checkBoxresourcesAll',function(e){ 
+        var checkedNum = $('input[name="delete_all_resources[]"]:checked').length;
+        if (checkedNum>=1) {
+            $('#deletereallbtn').removeClass('d-none');
+        }else{
+            $('#deletereallbtn').addClass('d-none');
+        }
+    });
+
+    $(document).on('click','#deletereallbtn',function(){
+
+      
+        var val = []; 
+        $('input[name="delete_all_resources[]"]:checked').each(function(i){
+          val[i] = $(this).val();
+
+        }); 
+        
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You cant retrive this after delete",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Yes, Delete!",
+            closeOnConfirm: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = base_url()+"/appointments/delete_resource/"+val; 
+            }
+        });
+       
+       
+    });
+
+
+
 
     function show_success_msg(type,message,title) {
          Lobibox.notify(type, {
