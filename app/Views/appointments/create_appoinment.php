@@ -69,7 +69,7 @@
 <!-- ////////////////////////// MAIN PAGE START ///////////////////////// -->
 <div class="sub_main_page_content">
     <div class="aitsun-row"> 
-        <form method="post" id="add_cust_form" action="<?= base_url('appointments/save_appointments'); ?>" class="w-100">
+        <form method="post" id="add_appointment_form" action="<?= base_url('appointments/save_appointments'); ?>" class="w-100">
             
             <?= csrf_field(); ?> 
             <div class="row">
@@ -78,17 +78,17 @@
                      <div class="row"> 
                        <div class=" col-md-12 mb-2"> 
                         <label for="input-1" class="modal_lab">Appointment title</label>
-                        <input type="text" class="form-control modal_inpu" name="title" id="title">
+                        <input type="text" class="form-control modal_inpu" name="appointment_title" id="appointment_title">
                        </div>
                    
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Duration</label>
-                        <input type="text" class="form-control modal_inpu duration_input" name="duration" id="duration"  >
+                        <input type="text" class="form-control modal_inpu duration_input" name="duration" id="duration" value="01:00" >
                        </div>
 
                         <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Allow cancelling (Until hours before)</label>
-                        <input type="time" class="form-control modal_inpu" name="allow_cancelling_before" id="allow_cancelling_before">
+                        <input type="text" class="form-control modal_inpu duration_input" name="allow_cancelling_before" id="allow_cancelling_before" value="01:00">
                        </div>
 
                        <div class=" col-md-12 mb-2"> 
@@ -96,38 +96,67 @@
                                 <label for="input-1" class="modal_lab me-3">Availabilty on</label>
                     
                                 <div class="form-check me-3">
-                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on1" value="0" checked>
+                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on1" value="users" checked>
                                   <label class="form-check-label" for="availability_on1">
                                     Users
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on2" value="1">
+                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on2" value="resources">
                                   <label class="form-check-label" for="availability_on2">
                                     Resources
                                   </label>
                                 </div>
                             </div>
                        </div>
-                        <div class=" col-md-6 mb-2"> 
-                        <label for="input-1" class="modal_lab">Person</label>
-                        <input type="text" class="form-control modal_inpu" name="person" id="person">
-                       </div>
 
-                       <div class=" col-md-6 mb-2"> 
-                        <label for="input-1" class="modal_lab">Resource</label>
-                        <input type="text" class="form-control modal_inpu" name="resource" id="resource">
-                       </div>
+                        
+
+                       
+
+                        <div class="form-group col-md-12 mb-2 remove_person">
+                            <label for="person">Person </label>
+                            
+                            <div class="aitsun_select position-relative">
+                                                   
+                                <input type="text" class="form-control d-none" data-select_url="<?= base_url('selectors/all_staffs'); ?>">
+                                <a class="select_close d-none"><i class="bx bx-x"></i></a>
+                     
+                                <select class="form-select" name="person" id="person">
+                                    <option value="">Select Person</option> 
+                                   
+                                </select>
+                                <div class="aitsun_select_suggest">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12 mb-2 remove_resource d-none">
+                            <label for="resource">Resource </label>
+                            
+                            <div class="aitsun_select position-relative">
+                                                   
+                                <input type="text" class="form-control d-none" data-select_url="<?= base_url('selectors/all_resources'); ?>">
+                                <a class="select_close d-none"><i class="bx bx-x"></i></a>
+                     
+                                <select class="form-select" name="resource" id="resource">
+                                    <option value="">Select Resource</option> 
+                                   
+                                </select>
+                                <div class="aitsun_select_suggest">
+                                </div>
+                            </div>
+                        </div>
 
 
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Scheduling (Min hours before)</label>
-                        <input type="time" class="form-control modal_inpu" name="hours_before" id="hours_before">
+                        <input type="text" class="form-control modal_inpu duration_input" name="hours_before" id="hours_before" value="01:00">
                        </div>
 
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Scheduling (Max in days)</label>
-                        <input type="text" class="form-control modal_inpu" name="hours_before" id="hours_before">
+                        <input type="number" class="form-control modal_inpu" name="days_before" id="days_before" value="15">
                        </div>
 
                        
@@ -165,18 +194,67 @@
                             </div>
                        </div> 
                     </div> 
+
+                    <div class="pt-3">
+                        <button type="button" id="save_appointment" class="aitsun-primary-btn w-25">Save</button>
+                    </div>
                 </div>
 
             <div class="col-md-6">
+                <div class="row"> 
+                   <div class=" col-md-12 mb-2"> 
+                        <label for="input-1" class="modal_lab">Schedule</label>
+ 
+                        <div class="form-group col-md-12 d-none-on-bill ">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th class="align-content-center">Every</th>
+                                <th class="align-content-center" style="width: 135px;">From</th>
+                                <th class="align-content-center" style="width: 135px;" colspan="2">To</th>
+                              </tr>
+                            </thead>
+                            <tbody class="after-add-more-schedule">
+                                <tr class="after-add-more-schedule-tr">
+                                  <td>
+                                    <select name="week[]" class="form-select position-relative" id="week">
+                                        <option value="1">Monday</option>
+                                        <option value="2">Tuesday</option>
+                                        <option value="3">Wednesday</option>
+                                        <option value="4">Thursday</option>
+                                        <option value="5">Friday</option>
+                                        <option value="6">Saturday</option>
+                                        <option value="7">Sunday</option>
+                                    </select> 
+                                  </td>
+                                  <td>
+                                    <input type="time" name="from[]" class="form-control" id="from" value="09:00">
+                                  </td>
+                                  <td style="width:135px;"><input type="time" name="to[]" class="form-control" id="to" value="15:00"></td>
+                                  <td class="change text-center" style="width:25px;"><a class="btn btn-danger btn-sm no_load  remove-schedule text-white"><b>-</b></a></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="4" class="p-0"><button class="no_load btn btn-dark w-100 add-more-schedule  btn-sm" type="button"><b>+</b></button></th>
+                                </tr>
+                                
+                            </tfoot>
+                          </table>
+                      </div>
+             
+
+
+
+
+                   </div>
+               </div>
                
             </div>
 
-            <div ></div>
                
 
             </div>
-   
-
 
         </form>  
     </div>
@@ -185,17 +263,7 @@
 
 
 
-<!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
-<div class="sub_footer_bar d-flex justify-content-between">
-    <div>
-        <a href="<?= base_url('app_info') ?>" class="href_loader text-dark font-size-footer"><i class="bx bx-info-circle"></i> <span class="my-auto">App info</span></a>
-        <a href="<?= base_url('tutorial_coming_soon') ?>" class="href_loader text-dark font-size-footer"><i class="bx bx-right-arrow ms-2"></i> <span class="my-auto">Tutorial</span></a>
-    </div>
-    <div class="aitsun_pagination">  
-      
-    </div>
-</div> 
-<!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
+
 
 
  

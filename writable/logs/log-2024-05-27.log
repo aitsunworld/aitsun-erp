@@ -1,0 +1,455 @@
+CRITICAL - 2024-05-27 03:54:51 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:02 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:04 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('as')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:04 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:04 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:04 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:05 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:05 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:05 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:06 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('as')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:06 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:35 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('r')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:35 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('ro')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:35 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('roo')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:36 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('room')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:38 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('roo')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:39 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('ro')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:39 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('r')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:40 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('h')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:40 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('ha')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:40 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('hal')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:42 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('hall')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:49 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('hal')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:49 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('ha')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:49 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('h')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:50 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:50 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('as')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:50 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:50 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:50 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:55 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:55 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:55 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:55 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('as')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:55 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:55 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:20 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:21 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:22 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:23 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfa')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfas')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('as')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:27 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:29 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:30 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:30 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfasf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:30 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfas')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:30 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsfa')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:30 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfsf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:30 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asfs')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:31 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('asf')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:31 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('as')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:31 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:53:40 --> Undefined array key "display_name"
+in APPPATH\Controllers\Selectors.php on line 405.
+ 1 APPPATH\Controllers\Selectors.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Controllers\\Selectors.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Selectors->all_resources('a')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Selectors))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 10:43:17 --> time() expects exactly 0 arguments, 1 given
+in APPPATH\Views\appointments\create_appoinment.php on line 228.
+ 1 APPPATH\Views\appointments\create_appoinment.php(228): time('H:i')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\create_appoinment.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/create_appoinment', [], true)
+ 5 APPPATH\Controllers\Appointments.php(110): view('appointments/create_appoinment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 10:43:28 --> time() expects exactly 0 arguments, 1 given
+in APPPATH\Views\appointments\create_appoinment.php on line 228.
+ 1 APPPATH\Views\appointments\create_appoinment.php(228): time('H:i:s')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\create_appoinment.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/create_appoinment', [], true)
+ 5 APPPATH\Controllers\Appointments.php(110): view('appointments/create_appoinment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 11:20:22 --> Undefined array key "week"
+in APPPATH\Controllers\Appointments.php on line 400.
+ 1 APPPATH\Controllers\Appointments.php(400): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "week"', 'APPPATH\\Controllers\\Appointments.php', 400)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_appointments()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

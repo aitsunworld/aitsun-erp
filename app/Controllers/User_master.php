@@ -93,7 +93,7 @@ class User_master extends BaseController
 
 				$emailphone=strip_tags($this->request->getVar('staff_email'));
 
-				 $f_org=0;
+				 $f_org=$org;
 
 		            if (strip_tags($this->request->getVar('u_type'))=='admin') {
 		            	$f_org=$org;

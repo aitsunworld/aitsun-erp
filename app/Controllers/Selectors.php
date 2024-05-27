@@ -6,7 +6,8 @@ use App\Models\ProductsModel;
 use App\Models\BookModel; 
 use App\Models\Classtablemodel; 
 use App\Models\AccountingModel; 
-use App\Models\Main_item_party_table; 
+use App\Models\Main_item_party_table;
+use App\Models\ResourcesModel; 
 
 
 class Selectors extends BaseController {
@@ -333,6 +334,75 @@ class Selectors extends BaseController {
                 foreach ($starray as $li) {
                     $sc++;
                     $lis.='<li class="select_li" data-value="'.$li['id'].'" data-text="'.$li['group_head'].'">'.$li['group_head'].'</li>';
+                }
+                if ($sc<1) {
+                    $lis.='<li class="text-center">No result</li>';
+                }
+                $lis.='</ul>';
+
+                echo $lis;
+
+            }
+        } 
+    }
+
+
+    public function all_staffs($search_text=''){
+        if (!empty($search_text)) { 
+            $session=session(); 
+            if($session->has('isLoggedIn')){ 
+
+                $UserModel=new Main_item_party_table;
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+              
+                
+
+                $UserModel->like('display_name',$search_text,'both');
+                $starray=$UserModel->where('company_id', company($myid))->where('deleted',0)->where('u_type','staff')->findAll();
+
+                $lis='';
+                $lis.='<ul>'; 
+                $sc=0;
+                foreach ($starray as $li) {
+                    $sc++;
+                    $lis.='<li class="select_li" data-value="'.$li['id'].'" data-text="'.$li['display_name'].'">'.$li['display_name'].'</li>';
+                }
+                if ($sc<1) {
+                    $lis.='<li class="text-center">No result</li>';
+                }
+                $lis.='</ul>';
+
+                echo $lis;
+
+            }
+        } 
+    }
+
+    public function all_resources($search_text=''){
+        if (!empty($search_text)) { 
+            $session=session(); 
+            if($session->has('isLoggedIn')){ 
+
+                $ResourcesModel=new ResourcesModel;
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+              
+                
+
+                $ResourcesModel->like('appointment_resource',$search_text,'both');
+                $starray=$ResourcesModel->where('company_id', company($myid))->where('deleted',0)->findAll();
+
+                $lis='';
+                $lis.='<ul>'; 
+                $sc=0;
+                foreach ($starray as $li) {
+                    $sc++;
+                    $lis.='<li class="select_li" data-value="'.$li['id'].'" data-text="'.$li['appointment_resource'].'">'.$li['appointment_resource'].'</li>';
                 }
                 if ($sc<1) {
                     $lis.='<li class="text-center">No result</li>';
