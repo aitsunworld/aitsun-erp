@@ -11,7 +11,11 @@ use App\Models\ReviewsModel;
 use App\Models\ClientsModel;
 use App\Models\Main_item_party_table;
 use App\Models\ResourcesModel;
+use App\Models\AppointmentsTimings;
 
+use CodeIgniter\I18n\Time;
+use DateInterval;
+use DatePeriod;
 
 class Appointments extends BaseController
 {  
@@ -110,6 +114,90 @@ class Appointments extends BaseController
         }else{
             return redirect()->to(base_url('users/login'));
         }
+    }
+
+    public function get_booking_form(){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $CompanySettings2= new CompanySettings2;
+            $myid=session()->get('id');
+            $con = array( 
+                'id' => session()->get('id') 
+            );
+            $user=$UserModel->where('id',$myid)->first(); 
+            
+            if (is_appointments(company($user['id']))==1) {
+             
+                $data = [
+                    'title' => 'form',
+                    'user' => $user, 
+                ];
+                
+                echo view('appointments/booking_form', $data);
+               
+
+            }else{
+             
+            }
+        }else{
+             
+        }
+    }
+    
+
+    public function get_timings($app_id=0){
+        $time_result='<div class="col-md-12 text-aitsun-red text-start">Timings not available<br>Choose other date/other appointment</div>';
+        $session=session();
+        if($session->has('isLoggedIn')){
+            if (!empty($app_id)) { 
+                $myid=session()->get('id');
+                $AppointmentsTimings=new AppointmentsTimings;
+                $selected_date=now_time($myid);
+
+                if ($_GET) {
+                    if (isset($_GET['date'])) {
+                        if (!empty($_GET['date'])) {
+                            if (isValidDate($_GET['date'])) {
+                                $selected_date=$_GET['date'];
+                            }
+                        }
+                    }
+                }
+                
+                $week_of_selected_date=get_date_format($selected_date,'w');
+                // echo $week_of_selected_date; 
+
+                $timings=$AppointmentsTimings->where('appointment_id',$app_id)->where('week',$week_of_selected_date)->findAll();
+                $timing_box=[];
+                foreach ($timings as $tm) {
+                    $start_time = new Time($tm['from']);
+                    $end_time = new Time($tm['to']); 
+                     
+                    $interval = new DateInterval('PT30M'); 
+                    $result_time= new DatePeriod($start_time, $interval, $end_time->add($interval));
+                    foreach ($result_time as $rt) {   
+                        array_push($timing_box, $rt->format('H:i'));
+                    }
+                    
+                }
+ 
+                $time_result='';
+                $timing_box=array_unique($timing_box);
+                sort($timing_box);
+
+                foreach ($timing_box as $time) {
+                    $time_result.='<div class="col-md-3">';
+                     $time_result.='<input type="radio" class="time_box_radio" name="time" id="time'.str_replace(':','',$time).'">'; 
+                    $time_result.='<label class="time_box" data-time="'.$time.'" for="time'.str_replace(':','',$time).'">';
+                    $time_result.=get_date_format($time,'h:i A');
+                    $time_result.='</label>';
+                   
+                    $time_result.='</div>'; 
+                } 
+            }
+        }
+        echo  $time_result;
     }
 
 

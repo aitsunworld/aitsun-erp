@@ -1,4 +1,40 @@
-$(document).ready(function() {
+$(document).ready(function() { 
+
+    $(document).on('click','.time_box',function(){
+        $('#booking_modal').modal('show');
+        $.ajax({
+            type: 'GET',
+            url: base_url()+'appointments/get_booking_form', 
+            beforeSend: function() { 
+            },
+            success: function(response) {
+                $('#booking_form').html(response); 
+            }
+            
+        });
+    });
+
+    $(document).on('change','#appointment_selector',function(){
+        var app_id=$(this).val();
+        var app_date=$('#calendar_date_selector').val();
+        
+        if (app_id!='') {
+            $.ajax({
+                type: 'GET',
+                url: base_url()+'appointments/get_timings/'+app_id+'?date='+app_date, 
+                beforeSend: function() {
+                    $('#timing_box').html('<div class="col-md-12 timing_loader">Checking times...<i class="bx bx-loader bx-spin"></i></div>');
+                },
+                success: function(response) {
+                    $('#timing_box').html(response); 
+                }
+                
+            });
+        }else{
+            $('#timing_box').html('<div class="col-md-12 text-aitsun-red text-start">Choose appointment for timings</div>');
+        }
+        
+    });
 
     $(document).on('click', '#add_resources', function() {
         var form_data = new FormData($('#add_resources_form')[0]);

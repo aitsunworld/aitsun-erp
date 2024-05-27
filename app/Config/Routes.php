@@ -61,7 +61,10 @@ $routes->post('/appointments/add_resources', 'Appointments::add_resources');
 $routes->post('/appointments/update_resources/(:any)', 'Appointments::update_resources/$1');
 $routes->get('/appointments/book_persons', 'Appointments::book_persons');
 $routes->get('/appointments/delete_resource/(:any)', 'Appointments::delete_resource/$1');
+$routes->get('/appointments/get_timings/(:any)', 'Appointments::get_timings/$1');
+$routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
 
+ 
 
 
 ////////// Parties /////////////

@@ -115,39 +115,50 @@
                 <input type="date" name="" class="d-none" value="<?= $active_date; ?>" id="calendar_date_selector">
             </div>
 
-            <div class="timings pb-5">
+            <form class="timings pb-5">
 
                 <div class="row">
-                    <?php 
-                        $start_time = new DateTime('09:00');
-                        $end_time = new DateTime('18:00'); 
-                        $interval = new DateInterval('PT30M'); 
-                        $timings = new DatePeriod($start_time, $interval, $end_time->add($interval));
-                    ?>
+                   
                     <div class="col-md-12">
-                        <select class="appointment_selector">
-                            <option>Select an appointment</option>
-                            <option>Eye test</option>
-                            <option>Dental checkup</option>
+                        <select class="appointment_selector" id="appointment_selector">
+                            <option value="">Select an appointment</option>
+                            <?php foreach (appointments_array(company($user['id'])) as $apn): ?>
+                                <option value="<?= $apn['id'] ?>"><?= $apn['title'] ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
 
                     <div class="col-md-12">
                         <h6>Timings:</h6>
+                        <div class="row" id="timing_box">
+                             <div class="col-md-12 text-aitsun-red text-start">Choose appointment for timings</div>
+                        </div>  
                     </div>
-                    <?php foreach ($timings as $time): ?>
-                        <div class="col-md-3">
-                            <div class="time_box">
-                                <?= $time->format('H:i') ?>
-                            </div>
-                        </div>
-                    <?php endforeach ?> 
+
                 </div>
-            </div>
+
+                <div class="modal customer_modal fade" id="booking_modal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <div class="d-flex">
+                            <h5 class="modal-title">Internal Note</h5>
+                          </div>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start" id="booking_form">
+                          
+
+                        </div> 
+                      </div>
+                    </div>
+                </div>
+
+            </form>
         </div>
 
         <div class="booking_details col-md-6">
-            <h5>Today's Booking</h5>
+            <h5>Today's Booking - <?= get_date_format($active_date,'d M Y, l') ?></h5>
             <div class="w-100">
                 <table class="erp_table booking_table">
                     <thead>

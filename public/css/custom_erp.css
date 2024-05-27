@@ -17,6 +17,13 @@ body{
     background-color: #d5265d;
 }
 
+.btn-erp-medium {
+    background: #cf2057;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+}
+
 .nointernetbody{
     position: fixed;
     top: 0;

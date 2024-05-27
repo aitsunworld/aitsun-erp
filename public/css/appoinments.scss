@@ -135,8 +135,22 @@
 	    	background: #d5265d;
     		color: white;
     		cursor: pointer;
-	    }
+	    } 
+		
 	}
+
+	.time_box_radio {
+	    display: none;
+	}
+
+	.time_box_radio:checked ~ .time_box {
+    	background: #d5265d; 
+    	color: white; 
+    }
+
+	 
+
+	  
 }
 
 .booking_details{
@@ -147,5 +161,11 @@
 		th,td{
 				padding: 0 10px;
 			}
+	}
+}
+
+.timing_loader{
+	i{
+		color: #d5265d;
 	}
 }
