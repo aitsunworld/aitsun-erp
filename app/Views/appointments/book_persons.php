@@ -122,7 +122,7 @@
                     <div class="col-md-12" style="padding-right: 30px;">
                         <select class="appointment_selector" id="appointment_selector" >
                             <option value="">Select an appointment</option>
-                            <?php foreach (appointments_array(company($user['id'])) as $apn): ?>
+                            <?php foreach ($appointments_array as $apn): ?>
                                 <option value="<?= $apn['id'] ?>"><?= $apn['title'] ?></option>
                             <?php endforeach ?>
                         </select>
@@ -190,7 +190,13 @@
                                     <div class="d-flex">
                                        <b><?= user_data($bk['customer'],'display_name') ?></b> 
                                        <i class="bx bx-arrow-back d-block mx-2" style="transform: rotate(180deg);"></i> 
-                                       <b class="text-success"><?= user_data($bk['person_id'],'display_name') ?></b>
+                                       <b class="text-success">
+                                        <?php if ($bk['booking_type']=='person'): ?>
+                                            <?= user_data($bk['person_id'],'display_name') ?>
+                                        <?php else: ?>
+                                            <?= resource_data($bk['resource_id'],'appointment_resource') ?>
+                                        <?php endif ?> 
+                                        </b>
                                     </div>
                                     <div class="d-flex">
                                         <div class="book_type my-auto me-2">

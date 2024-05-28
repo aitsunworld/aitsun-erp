@@ -61,7 +61,7 @@ class Appointments extends BaseController
         }
     }
 
-    public function book_persons(){
+    public function book_persons($book_type='person'){
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
@@ -86,13 +86,23 @@ class Appointments extends BaseController
                         }
                     }
                 }
+
+                $AppointmentsModel=new AppointmentsModel;
+                if ($book_type=='person') {
+                    $AppointmentsModel->where('availability_on',0);
+                }elseif($book_type=='resource'){
+                    $AppointmentsModel->where('availability_on',1);
+                }
+                $appointments_array=$AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','desc')->findAll();
             
                 $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->where('deleted',0)->findAll();
                 
                 $data = [
                     'title' => 'Aitsun ERP- Book person',
                     'user' => $user, 
-                    'todays_booking'=>$todays_booking
+                    'todays_booking'=>$todays_booking,
+                    'book_type'=>$book_type,
+                    'appointments_array'=>$appointments_array
                 ];
                
                 echo view('header',$data);
@@ -495,7 +505,7 @@ class Appointments extends BaseController
             $resources_data = [ 
                 'company_id' => company($myid), 
                 'booking_name'=> strip_tags($this->request->getVar('booking_name')), 
-                'booking_type'=> 'person',
+                'booking_type'=> $booking_type,
                 'resource_id'=> $resource_id,
                 'person_id'=> $person_id,
                 'customer'=> strip_tags($this->request->getVar('customer_id')),
@@ -512,14 +522,37 @@ class Appointments extends BaseController
             if ($booking_id>0) { 
                $resources_data['id'] = $booking_id;
             }
-             
+            
+            $book_result=[];
 
-            if ($AppointmentsBookings->save($resources_data)) {
-                echo 1;
+            if ($this->check_booking_availabilty($resources_data)=='available') {
+                if ($AppointmentsBookings->save($resources_data)) {
+                    $book_result=[
+                        'result'=>1,
+                        'message'=>'Booking completed!'
+                    ];
+                }else{
+                    $book_result=[
+                        'result'=>0,
+                        'message'=>'Failed!, Try again!'
+                    ];
+                }
             }else{
-                echo 0;
+                $book_result=[
+                    'result'=>0,
+                    'message'=>'Plot not available'
+                ];
             }
+            
         }
+
+        echo json_encode($book_result);
+    }
+
+    private function check_booking_availabilty($booking_data){
+        $availabilty_result='available';
+        // $availabilty_result='not_available';
+        return $availabilty_result;
     }
 
      public function save_appointments(){

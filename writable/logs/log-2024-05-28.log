@@ -209,3 +209,96 @@ in APPPATH\Controllers\Appointments.php on line 440.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:33:45 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 2475.
+ 1 APPPATH\Helpers\apanel_helper.php(2475): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 2475)
+ 2 APPPATH\Views\appointments\appointments_index.php(128): user_profile_pic('0')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\appointments_index.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/appointments_index', [], true)
+ 6 APPPATH\Controllers\Appointments.php(53): view('appointments/appointments_index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:33:50 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 2475.
+ 1 APPPATH\Helpers\apanel_helper.php(2475): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 2475)
+ 2 APPPATH\Views\appointments\appointments_index.php(128): user_profile_pic('0')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\appointments_index.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/appointments_index', [], true)
+ 6 APPPATH\Controllers\Appointments.php(53): view('appointments/appointments_index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:34:01 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 2475.
+ 1 APPPATH\Helpers\apanel_helper.php(2475): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 2475)
+ 2 APPPATH\Views\appointments\appointments_index.php(128): user_profile_pic('0')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\appointments_index.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/appointments_index', [], true)
+ 6 APPPATH\Controllers\Appointments.php(53): view('appointments/appointments_index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:37:18 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(172): user_data('0', 'profile_pic')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(99): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:38:19 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(193): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(99): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:39:12 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(193): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(99): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:44:52 --> Undefined variable $appointments_array
+in APPPATH\Controllers\Appointments.php on line 99.
+ 1 APPPATH\Controllers\Appointments.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $appointments_array', 'APPPATH\\Controllers\\Appointments.php', 99)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons('resource')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:44:53 --> Undefined variable $appointments_array
+in APPPATH\Controllers\Appointments.php on line 99.
+ 1 APPPATH\Controllers\Appointments.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $appointments_array', 'APPPATH\\Controllers\\Appointments.php', 99)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:45:17 --> Undefined variable $company_id
+in APPPATH\Controllers\Appointments.php on line 91.
+ 1 APPPATH\Controllers\Appointments.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $company_id', 'APPPATH\\Controllers\\Appointments.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

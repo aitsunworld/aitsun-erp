@@ -4,6 +4,7 @@ $(document).ready(function() {
     
     $(document).on('click','.save_booking',function(){ 
         var this_btn=$(this);
+        var this_btn_html=$(this).html();
         var save_type=$(this).data('save_type');
         if (save_type=='edit') {
             var booking_id=$('#booking_id').val();
@@ -57,9 +58,17 @@ $(document).ready(function() {
                   $(this_btn).html('<span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span> Booking...');  
                },
                 success:function(response) {
-                  show_success_msg('success','Booking completed!');
-                  $(this_btn).prop('disabled', false);
-                  location.reload();
+                    response=JSON.parse(response);
+                    if (response['result']==1) {
+                        show_success_msg('success','Booking completed!');
+                        $(this_btn).prop('disabled', false);
+                        location.reload();
+                    }else{
+                        $(this_btn).prop('disabled', false);
+                        $(this_btn).html(this_btn_html);  
+                        show_success_msg('error',response['message']);
+                    }
+                  
                },
                error:function(response){
                 alert(JSON.stringify(response));
