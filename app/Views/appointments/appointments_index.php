@@ -33,58 +33,7 @@
     </div>
 </div>
 <!-- ////////////////////////// TOP BAR END ///////////////////////// -->
-<?php 
-    function appoints(){
-        $arrr=[
-            [
-                'name'=>'Dental department',
-                'duration'=>'30:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=1',
-                        'name'=>'Nazriya Nazim'
-                    
-                ],
-                'meetings'=>'2',
-                'total_meetings'=>'36',
-            ],
-            [
-                'name'=>'Orthopedic surgeon',
-                'duration'=>'1:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=11',
-                        'name'=>'Ganesh Bhat'
-                  
-                ],
-                'meetings'=>'45',
-                'total_meetings'=>'150',
-            ],
-            [
-                'name'=>'Cardiothoracic Department',
-                'duration'=>'15:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=3',
-                        'name'=>'Murali Kumar'
-                    
-                ],
-                'meetings'=>'0',
-                'total_meetings'=>'10',
-            ],
-            [
-                'name'=>'Plastic surgeon',
-                'duration'=>'9:00',
-                'images'=>[ 
-                        'url'=>'https://i.pravatar.cc/150?img=4',
-                        'name'=>'John Abrahm'
-                   
-                ],
-                'meetings'=>'6',
-                'total_meetings'=>'25',
-            ]
 
-        ];
-        return $arrr;
-    }
- ?>
 <!-- ////////////////////////// TOOL BAR START ///////////////////////// -->
 <div class="toolbar d-flex justify-content-between">
     <div class="d-flex">
@@ -174,12 +123,12 @@
                     </div>
                 </td>
                 <td>
-                    <?php if ($aps['availability_on']=='users'): ?>
+                    <?php if ($aps['availability_on']=='0'): ?>
                         <div class="d-flex">
                             <img src="<?= user_profile_pic($aps['person']); ?>" class="me-2 res_per_img"> 
                             <div class="my-auto"><?= user_name($aps['person']) ?></div>
                         </div>
-                    <?php elseif ($aps['availability_on']=='resources'): ?>
+                    <?php elseif ($aps['availability_on']=='1'): ?>
                          <div class="d-flex">
                             <img src="<?= resource_pic($aps['resource']); ?>" class="me-2 res_per_img"> 
                             <div class="my-auto"><?= resource_data($aps['resource'],'appointment_resource') ?></div>
@@ -205,7 +154,7 @@
                             <i class="bx bx-cog"></i> Action
                         </a>
                         <div class="dropdown-menu" style="">  
-                            <a class="dropdown-item href_loader" href="">
+                            <a class="dropdown-item href_loader" href="<?= base_url('appointments/create/'.$aps['id']); ?>">
                                 <span class="">Edit</span>
                             </a>
                             <a class="dropdown-item delete_appointment" data-deleteurl="<?= base_url('appointments/delete_appointment'); ?>/<?= $aps['id']; ?>">
