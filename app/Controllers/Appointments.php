@@ -536,4 +536,32 @@ class Appointments extends BaseController
             }
         }
     }
+
+    public function delete_appointment($apid=0)
+    {
+        $AppointmentsModel = new AppointmentsModel();
+        $AppointmentsTimings= new AppointmentsTimings();
+        $myid=session()->get('id');
+        
+
+        if ($this->request->getMethod() == 'post') {
+               
+                $deledata=[
+                    'deleted'=>1,
+                ];
+
+                if ($AppointmentsModel->update($apid,$deledata)) {
+
+                    foreach (appointment_timings_array($apid) as $apt){
+                        $AppointmentsTimings->delete($apt);
+                    }
+                    
+                };
+
+                
+        }else{
+            return redirect()->to(base_url('appointments'));
+        }
+
+    }
 }
