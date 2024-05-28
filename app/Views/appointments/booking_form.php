@@ -5,11 +5,11 @@
         $booking_name=$ap_data['booking_name'];
         $customer=$ap_data['customer'];
         $from_date=get_date_format($ap_data['book_from'],'Y-m-d');
-        $from_time=get_date_format($ap_data['book_from'],'h:i:s');
+        $from_time=get_date_format($ap_data['book_from'],'H:i:s');
         $to_date=get_date_format($ap_data['book_to'],'Y-m-d'); 
         $duration=$ap_data['duration'];
-        $newTime =get_date_format($ap_data['book_to'],'h:i:s'); 
-        $note='';
+        $newTime =get_date_format($ap_data['book_to'],'H:i:s'); 
+        $note=$ap_data['note'];
         $save_type='edit';
     }else{
         $booking_name=appointments_data(strip_tags($appointment_id),'title');
