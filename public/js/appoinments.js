@@ -211,12 +211,18 @@ $(document).ready(function() {
                 beforeSend: function() {
                     $('#add_resources').html('Saving...<i class="bx bx-loader bx-spin"></i>');
                 },
-                success: function(response) {
-                    $('#add_resources').html('Save');
-                    $('#add_resources_form')[0].reset();
-                    show_success_msg('success', 'Added successfully!', 'Saved!');
-
-                    $('#add_resources').prop('disabled', false);
+                success: function(result) {
+                    if ($.trim(result)=='1') {
+                        $('#add_resources').html('Save');
+                        $('#add_resources_form')[0].reset();
+                        show_success_msg('success', 'Added successfully!', 'Saved!');
+                        $('#add_resources').prop('disabled', false);
+                    }else{
+                        $('#add_resources').prop('disabled', false);
+                        $('#add_resources').html('Save');
+                        show_failed_msg('error', 'File size exceeds the 300 KB limit', 'Failed!');
+                    }
+                    
                 },
                 
                 
@@ -484,8 +490,10 @@ $(document).ready(function() {
                 if ($.trim(result)==1) {
                     $('#add_appointment_form')[0].reset();
                     show_success_msg('success', 'Added successfully!', 'Saved!');
-                    $("#resource").val('').trigger('change');
-                    $("#person").val('').trigger('change');
+                    if ($('#appointment_id').length === 0) {
+                        $("#resource").val('').trigger('change');
+                        $("#person").val('').trigger('change');
+                    }
                     
                 }
 

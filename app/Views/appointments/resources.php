@@ -108,6 +108,11 @@
                 <div class="row">
 
                     <div class="form-group col-md-12 mb-2">
+                        <label class="font-weight-semibold" for="resource_img">Image</label>
+                          <input type="file" accept="image/*" class="form-control" name="resource_img" style="padding: 6px;">
+                    </div>
+
+                    <div class="form-group col-md-12 mb-2">
                         <label for="appointment_resource">Appointment Resource  </label>
                         <input type="text" class="form-control" name="appointment_resource" id="appointment_resource" >
                     </div>

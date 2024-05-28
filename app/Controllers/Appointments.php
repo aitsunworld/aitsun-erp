@@ -39,7 +39,17 @@ class Appointments extends BaseController
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
             
             if (is_appointments(company($user['id']))==1) {
-                
+
+
+                if ($_GET) {
+                    if (isset($_GET['appointment'])) {
+                        if (!empty($_GET['appointment'])) {
+                            $AppointmentsModel->like('title', $_GET['appointment'], 'both'); 
+                        }
+                    }
+                    
+             
+                }
                 $app_data = $AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->paginate(6);
 
                 $data = [
@@ -360,16 +370,37 @@ class Appointments extends BaseController
         if ($this->request->getMethod() == 'post'){
                 $myid=session()->get('id');
                 $ResourcesModel= new ResourcesModel();
-                
-                $resources_data = [
-                    'appointment_resource' => strip_tags($this->request->getVar('appointment_resource')),
-                    'company_id' => company($myid),
-                    'capacity' => strip_tags($this->request->getVar('capacity')),
-                    'description' => strip_tags($this->request->getVar('description')),
-                    
-                 ];
-                $ResourcesModel->save($resources_data);
-        }
+
+                $img = $this->request->getFile('resource_img');
+                $imagePath = '';
+
+                if ($img->isValid() && !$img->hasMoved()) {
+                    if ($img->getSize() <= 307200) { // 300 KB = 300 * 1024 bytes = 307200 bytes
+                        $newName = $img->getRandomName(); // Generate a random name for the image
+                        $img->move(ROOTPATH . 'public/image/users', $newName); // Move the image to the custom directory
+                        $imagePath = 'image/users/' . $img->getName(); // Get the relative path of the uploaded image
+
+                        $resources_data = [
+                            'image'=>strip_tags($imagePath),
+                            'appointment_resource' => strip_tags($this->request->getVar('appointment_resource')),
+                            'company_id' => company($myid),
+                            'capacity' => strip_tags($this->request->getVar('capacity')),
+                            'description' => strip_tags($this->request->getVar('description')),
+                            
+                         ];
+
+                         if ($ResourcesModel->save($resources_data)) {
+                                echo 1; // Success
+                            } else {
+                                echo 0; // Error saving data
+                            }
+                        } else {
+                        echo 0; // File size exceeds the 300 KB limit
+                    }
+                } else {
+                    echo 0; // Invalid file or file already moved
+                }
+            }
     }
 
     public function update_resources($rsoid=""){
@@ -495,6 +526,8 @@ class Appointments extends BaseController
                 $myid=session()->get('id');
                 $AppointmentsModel= new AppointmentsModel();
                 $AppointmentsTimings= new AppointmentsTimings();
+
+                $appointment_id = $this->request->getVar('appointment_id');
                 
                 $apt_data = [
                     'company_id' => company($myid),
@@ -512,11 +545,24 @@ class Appointments extends BaseController
                     'assign_method' => strip_tags($this->request->getVar('assign_method')),
                     
                  ];
-                ;
-                if ($AppointmentsModel->save($apt_data)) {
+                
+
+                if ($appointment_id) {
+                    // Update existing appointment
+                    $AppointmentsModel->update($appointment_id, $apt_data);
+                    $apoid = $appointment_id;
+                } else {
+                    // Add new appointment
+                    $AppointmentsModel->save($apt_data);
+                    $apoid = $AppointmentsModel->insertID();
+                }
+
                     
-                    $apoid=$AppointmentsModel->insertID(); 
-                    echo 1;
+                    // foreach (appointment_timings_array($apoid) as $atms){
+                    //     $AdditionalfieldsModel->delete($atms);
+                    // }
+
+                    $AppointmentsTimings->where('appointment_id', $apoid)->delete();
                     if (!empty($_POST["week"])) {
                         foreach ($_POST["week"] as $i => $value ) {
                             $from=trim(strip_tags($_POST["from"][$i]));
@@ -537,10 +583,9 @@ class Appointments extends BaseController
                         
                     }
                 }
-
+                echo 1;
                      
 
-            }
         }
     }
 

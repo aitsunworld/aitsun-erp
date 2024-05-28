@@ -315,3 +315,50 @@ in APPPATH\Views\appointments\create_appoinment.php on line 131.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:36:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\appointments\create_appoinment.php on line 131.
+ 1 APPPATH\Views\appointments\create_appoinment.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\appointments\\create_appoinment.php', 131)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\create_appoinment.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/create_appoinment', [], true)
+ 5 APPPATH\Controllers\Appointments.php(139): view('appointments/create_appoinment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 06:41:44 --> Trying to access array offset on value of type null
+in APPPATH\Views\appointments\create_appoinment.php on line 131.
+ 1 APPPATH\Views\appointments\create_appoinment.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\appointments\\create_appoinment.php', 131)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\create_appoinment.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/create_appoinment', [], true)
+ 5 APPPATH\Controllers\Appointments.php(139): view('appointments/create_appoinment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 07:19:27 --> Trying to access array offset on value of type null
+in APPPATH\Views\appointments\create_appoinment.php on line 226.
+ 1 APPPATH\Views\appointments\create_appoinment.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\appointments\\create_appoinment.php', 226)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\create_appoinment.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/create_appoinment', [], true)
+ 5 APPPATH\Controllers\Appointments.php(139): view('appointments/create_appoinment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 07:31:35 --> Undefined variable $AdditionalfieldsModel
+in APPPATH\Controllers\Appointments.php on line 531.
+ 1 APPPATH\Controllers\Appointments.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $AdditionalfieldsModel', 'APPPATH\\Controllers\\Appointments.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_appointments()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 07:31:57 --> Undefined variable $AdditionalfieldsModel
+in APPPATH\Controllers\Appointments.php on line 531.
+ 1 APPPATH\Controllers\Appointments.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $AdditionalfieldsModel', 'APPPATH\\Controllers\\Appointments.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_appointments()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
