@@ -66,6 +66,7 @@ $routes->get('/appointments/get_timings/(:any)', 'Appointments::get_timings/$1')
 $routes->get('/appointments/get_booking_form/(:any)/(:any)/(:any)', 'Appointments::get_booking_form/$1/$2/$3');
 $routes->get('/appointments/get_booking_edit_form/(:any)', 'Appointments::get_booking_edit_form/$1');
 $routes->post('/appointments/save_booking/(:any)', 'Appointments::save_booking/$1');
+$routes->get('/appointments/delete_booking/(:any)', 'Appointments::delete_booking/$1');
 
 $routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
 $routes->post('/appointments/save_appointments', 'Appointments::save_appointments');

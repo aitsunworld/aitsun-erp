@@ -87,7 +87,7 @@ class Appointments extends BaseController
                     }
                 }
             
-                $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->findAll();
+                $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->where('deleted',0)->findAll();
                 
                 $data = [
                     'title' => 'Aitsun ERP- Book person',
@@ -231,7 +231,7 @@ class Appointments extends BaseController
                 foreach ($timings as $tm) {
                     $start_time = new Time($tm['from']);
                     $end_time = new Time($tm['to']); 
-                     
+                        
                     $interval = new DateInterval('PT30M'); 
                     $result_time= new DatePeriod($start_time, $interval, $end_time->add($interval));
                     foreach ($result_time as $rt) {   
@@ -240,11 +240,15 @@ class Appointments extends BaseController
                     
                 }
  
-                $time_result='';
+                
                 $timing_box=array_unique($timing_box);
                 sort($timing_box);
-
+                $tim_count=count($timing_box);
+                if ($tim_count>0) {
+                    $time_result='';
+                }
                 foreach ($timing_box as $time) {
+                    
                     $time_result.='<div class="col-md-3">';
                      $time_result.='<input type="radio" class="time_box_radio" name="time" id="time'.str_replace(':','',$time).'">'; 
                     $time_result.='<label class="time_box" data-time="'.$time.'" for="time'.str_replace(':','',$time).'">';
@@ -423,6 +427,35 @@ class Appointments extends BaseController
         }
     }
 
+
+
+    public function delete_booking($booking_id=0){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $AppointmentsBookings= new AppointmentsBookings();
+            $myid=session()->get('id');
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+                    
+            if (is_appointments(company($user['id']))==1) {
+                $resources_data = [ 
+                    'id' => $booking_id,  
+                    'deleted' => 1,
+                ];
+
+                if ($AppointmentsBookings->save($resources_data)) {
+                    echo 1;
+                }else{
+                    echo 0;
+                }
+            }else{
+                echo 0;
+            }
+        }else{
+            echo 0;
+        }  
+    }
 
 
     public function save_booking($booking_id=0){ 
