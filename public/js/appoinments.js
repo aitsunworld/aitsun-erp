@@ -388,16 +388,16 @@ $(document).ready(function() {
         var days_before=$.trim($('#days_before').val());
 
 
-        var availability_method='users';
+        var availability_method='0';
 
         var approve=true;
  
         if ($("#availability_on2").prop("checked")) {
 
-                availability_method='resources';
+                availability_method='1';
         }
 
-        if (availability_method=='users') {
+        if (availability_method=='0') {
 
             if (appointment_title=='') {
                 show_failed_msg('error','','Appointment title is required!');

@@ -108,11 +108,10 @@ class Appointments extends BaseController
     }
 
 
-    public function create(){
+    public function create($appointment_id = null){
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
-            $CompanySettings2= new CompanySettings2;
             $myid=session()->get('id');
             $con = array( 
                 'id' => session()->get('id') 
@@ -122,12 +121,20 @@ class Appointments extends BaseController
             
             if (is_appointments(company($user['id']))==1) {
             
-                $etqry = $CompanySettings2->where('company_id',company($myid))->first();
                 $data = [
                     'title' => 'Aitsun ERP- create Appoinments',
-                    'user' => $user, 
+                    'user' => $user,
+                    'appointment' => null, 
                 ];
-               
+                
+                if ($appointment_id) {
+                    $AppointmentsModel = new AppointmentsModel();
+                    $data['appointment'] = $AppointmentsModel->where('id', $appointment_id)->first();
+                    if (!$data['appointment']) {
+                        return redirect()->to(base_url('appointments'));
+                    }
+                }
+
                 echo view('header',$data);
                 echo view('appointments/create_appoinment', $data);
                 echo view('footer'); 

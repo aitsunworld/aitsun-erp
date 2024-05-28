@@ -72,23 +72,27 @@
         <form method="post" id="add_appointment_form" action="<?= base_url('appointments/save_appointments'); ?>" class="w-100">
             
             <?= csrf_field(); ?> 
+
+            <?php if (isset($appointment) && $appointment): ?>
+                <input type="hidden" name="appointment_id" value="<?= $appointment['id']; ?>">
+            <?php endif; ?>
             <div class="row">
                 
                 <div class="col-md-6">
                      <div class="row"> 
                        <div class=" col-md-12 mb-2"> 
                         <label for="input-1" class="modal_lab">Appointment title</label>
-                        <input type="text" class="form-control modal_inpu" name="appointment_title" id="appointment_title">
+                        <input type="text" class="form-control modal_inpu" name="appointment_title" id="appointment_title" value="<?= $appointment['title'] ?? ''; ?>">
                        </div>
                    
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Duration</label>
-                        <input type="text" class="form-control modal_inpu duration_input" name="duration" id="duration" value="01:00" >
+                        <input type="text" class="form-control modal_inpu duration_input" name="duration" id="duration" value="<?= $appointment['duration'] ?? '01:00'; ?>" >
                        </div>
 
                         <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Allow cancelling (Until hours before)</label>
-                        <input type="text" class="form-control modal_inpu duration_input" name="allow_cancelling_before" id="allow_cancelling_before" value="01:00">
+                        <input type="text" class="form-control modal_inpu duration_input" name="allow_cancelling_before" id="allow_cancelling_before" value="<?= $appointment['allow_cancelling_before'] ?? '01:00'; ?>">
                        </div>
 
                        <div class=" col-md-12 mb-2"> 
@@ -96,13 +100,13 @@
                                 <label for="input-1" class="modal_lab me-3">Availabilty on</label>
                     
                                 <div class="form-check me-3">
-                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on1" value="users" checked>
+                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on1" value="0" <?= ($appointment['availability_on'] ?? '0') == '1' ? 'checked' : 'checked'; ?>>
                                   <label class="form-check-label" for="availability_on1">
                                     Users
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on2" value="resources">
+                                  <input class="form-check-input" type="radio" name="availability_on" id="availability_on2" value="1" <?= ($appointment['availability_on'] ?? '1') == '0' ? 'checked' : ''; ?>>
                                   <label class="form-check-label" for="availability_on2">
                                     Resources
                                   </label>
@@ -114,7 +118,7 @@
 
                        
 
-                        <div class="form-group col-md-12 mb-2 remove_person">
+                        <div class="form-group col-md-12 mb-2 remove_person <?= ($appointment['availability_on'] ?? '1') == '0' ? 'd-none' : ''; ?>">
                             <label for="person">Person </label>
                             
                             <div class="aitsun_select position-relative">
@@ -124,6 +128,7 @@
                      
                                 <select class="form-select" name="person" id="person">
                                     <option value="">Select Person</option> 
+                                    
                                    
                                 </select>
                                 <div class="aitsun_select_suggest">
@@ -131,7 +136,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12 mb-2 remove_resource d-none">
+                        <div class="form-group col-md-12 mb-2 remove_resource <?= ($appointment['availability_on'] ?? '0') == '1' ? 'd-none' : ''; ?>">
                             <label for="resource">Resource </label>
                             
                             <div class="aitsun_select position-relative">
@@ -151,12 +156,12 @@
 
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Scheduling (Min hours before)</label>
-                        <input type="text" class="form-control modal_inpu duration_input" name="hours_before" id="hours_before" value="01:00">
+                        <input type="text" class="form-control modal_inpu duration_input" name="hours_before" id="hours_before" value="<?= $appointment['hours_before'] ?? '01:00'; ?>">
                        </div>
 
                        <div class=" col-md-6 mb-2"> 
                         <label for="input-1" class="modal_lab">Scheduling (Max in days)</label>
-                        <input type="number" class="form-control modal_inpu" name="days_before" id="days_before" value="15">
+                        <input type="number" class="form-control modal_inpu" name="days_before" id="days_before" value="<?= $appointment['days_before'] ?? '15'; ?>">
                        </div>
 
                        
@@ -164,7 +169,7 @@
                       
                        <div class=" col-md-12 mb-2">                  
                         <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" role="switch" id="is_image_show" name="is_image_show">
+                          <input class="form-check-input" type="checkbox" role="switch" id="is_image_show" name="is_image_show" <?= isset($appointment['is_image_show']) && $appointment['is_image_show'] ? 'checked' : ''; ?>>
                           <label class="form-check-label" for="is_image_show">Show image</label>
                         </div>
                        </div>
@@ -174,19 +179,19 @@
                                 <label for="input-1" class="modal_lab me-3 mb-2">Assignment method</label>
                     
                                 <div class="form-check me-3">
-                                  <input class="form-check-input" type="radio" name="assign_method" id="assign_method1" value="0" checked>
+                                  <input class="form-check-input" type="radio" name="assign_method" id="assign_method1" value="0" <?= ($appointment['assign_method'] ?? '0') == '0' ? 'checked' : ''; ?>>
                                   <label class="form-check-label" for="assign_method1">
                                     Pick Person/Resource then Time
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="assign_method" id="assign_method2" value="1">
+                                  <input class="form-check-input" type="radio" name="assign_method" id="assign_method2" value="1" <?= ($appointment['assign_method'] ?? '') == '1' ? 'checked' : ''; ?>>
                                   <label class="form-check-label" for="assign_method2">
                                     Select Time then Person/Resource
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="assign_method" id="assign_method3" value="2">
+                                  <input class="form-check-input" type="radio" name="assign_method" id="assign_method3" value="2" <?= ($appointment['assign_method'] ?? '') == '2' ? 'checked' : ''; ?>>
                                   <label class="form-check-label" for="assign_method3">
                                     Select Time then auto-assign
                                   </label>

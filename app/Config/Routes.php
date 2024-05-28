@@ -56,6 +56,7 @@ $routes->get('/users/get_all_transport_locations/(:any)', 'Users::get_all_transp
 ////////// Parties /////////////
 $routes->get('/appointments', 'Appointments::index');
 $routes->get('/appointments/create', 'Appointments::create');
+$routes->get('/appointments/create/(:any)', 'Appointments::create/$1');
 $routes->get('/appointments/resources', 'Appointments::resources');
 $routes->post('/appointments/add_resources', 'Appointments::add_resources');
 $routes->post('/appointments/update_resources/(:any)', 'Appointments::update_resources/$1');
