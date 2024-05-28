@@ -115,12 +115,12 @@
                 <input type="date" name="" class="d-none" value="<?= $active_date; ?>" id="calendar_date_selector">
             </div>
 
-            <form class="timings pb-5">
-
+            <form class="timings pb-5" id="booking_form">
+                <?= csrf_field() ?>
                 <div class="row">
                    
-                    <div class="col-md-12">
-                        <select class="appointment_selector" id="appointment_selector">
+                    <div class="col-md-12" style="padding-right: 30px;">
+                        <select class="appointment_selector" id="appointment_selector" >
                             <option value="">Select an appointment</option>
                             <?php foreach (appointments_array(company($user['id'])) as $apn): ?>
                                 <option value="<?= $apn['id'] ?>"><?= $apn['title'] ?></option>
@@ -142,11 +142,11 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <div class="d-flex">
-                            <h5 class="modal-title">Internal Note</h5>
+                            <h5 class="modal-title">Book a person</h5>
                           </div>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body text-start" id="booking_form">
+                        <div class="modal-body text-start" id="booking_form_div">
                           
 
                         </div> 
@@ -158,26 +158,71 @@
         </div>
 
         <div class="booking_details col-md-6">
-            <h5>Today's Booking - <?= get_date_format($active_date,'d M Y, l') ?></h5>
-            <div class="w-100">
-                <table class="erp_table booking_table">
-                    <thead>
-                        <tr>
-                            <th>Appointment title</th>
-                            <th>Time</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Team selection meeting</td>
-                            <td>9:00AM to 11:00AM</td>
-                        </tr>
-                        <tr>
-                            <td>Team selection meeting</td>
-                            <td>9:00AM to 11:00AM</td>
-                        </tr>
-                    </tbody> 
-                </table>
+            <h5><?= ($active_date==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today\'s':''; ?> Booking - <?= get_date_format($active_date,'d M Y, l') ?></h5>
+            <div class="w-100 book_list">
+                <?php foreach ($todays_booking as $bk): ?> 
+                   
+                    <div class="bg-white booking_item p-1 mb-2">
+                        <div class="d-flex justify-content-between"> 
+                            <div class="d-flex">
+                                <div class="me-2">
+                                    <?php 
+                                        $profile_image='default.webp';
+                                        if ($bk['booking_type']=='person') {
+                                            if (!empty(trim(user_data($bk['person_id'],'profile_pic')))) {
+                                                $profile_image=user_data($bk['person_id'],'profile_pic');
+                                            }
+                                        }else{
+                                            if (!empty(trim(resource_data($bk['resource_id'],'image')))) {
+                                                $profile_image=resource_data($bk['resource_id'],'image');
+                                            }
+                                        }
+                                    ?>
+                                 
+                                    <img src="<?= base_url('public/uploads/users') ?>/<?= $profile_image ?>">
+                                  
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">
+                                        <?= $bk['booking_name'] ?> 
+                                        <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i></a>
+                                    </h6>
+                                    <div class="d-flex">
+                                       <b><?= user_data($bk['customer'],'display_name') ?></b> 
+                                       <i class="bx bx-arrow-back d-block mx-2" style="transform: rotate(180deg);"></i> 
+                                       <b class="text-success"><?= user_data($bk['person_id'],'display_name') ?></b>
+                                    </div>
+                                    <div class="book_type">
+                                        <?php if ($bk['booking_type']=='person'): ?>
+                                            <i class="bx bx-time"></i> Scheduled 
+                                        <?php else: ?>
+                                            <i class="bx bx-check-square"></i> Booked 
+                                        <?php endif ?>
+                                        > <?= $bk['duration'] ?> hrs
+                                    </div>
+                                  
+                                    <div>
+                                        <div>
+                                            <small class="me-3">Booked on: <?= get_date_format($bk['datetime'],'d M Y h:i A') ?></small>  
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule_box">
+                                <div class="timeto"> 
+                                    <div>
+                                        <?= (get_date_format($bk['book_from'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_from'],'d M'); ?> - <?= get_date_format($bk['book_from'],'h:i A') ?>
+                                    </div>
+                                    <div><i class="bx bx-down-arrow"></i></div>
+                                    <div>
+                                        <?= (get_date_format($bk['book_to'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_to'],'d M'); ?> - <?= get_date_format($bk['book_to'],'h:i A') ?>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
             </div>
         </div> 
 

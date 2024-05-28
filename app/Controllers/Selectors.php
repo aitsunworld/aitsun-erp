@@ -148,7 +148,10 @@ class Selectors extends BaseController {
                     $lis.='<li class="select_li" data-value="'.$li['id'].'" data-text="'.$li['display_name'].'">'.$li['display_name'].'</li>';
                 }
                 if ($sc<1) {
-                    $lis.='<li class="text-center">No result</li>';
+                    $lis.='<li class="text-center bg-success">
+                        <a data-tranname="'.$search_text.'" id="tranname" class="d-block add_new_party_from_selector tranname ml-5 text-white">
+                            <i class="bx bx-plus"></i> New party - <b>"'.$search_text.'"</b>
+                        </a></li>';
                 }
                 $lis.='</ul>';
 

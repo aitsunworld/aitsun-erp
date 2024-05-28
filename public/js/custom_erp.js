@@ -115,6 +115,50 @@ $(document).ready(function(){
         });
     });
 
+    
+    $(document).on('click','.add_new_party_from_selector',function(){
+        var cus_name=$(this).data('tranname'); 
+
+        var this_elem=$(this); 
+         
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+        $.ajax({
+            type: 'POST',
+            url: base_url()+'customers/add_party_from_selector',
+            data:{
+                cus_name:cus_name,
+                [csrfName]: csrfHash
+            },
+             beforeSend: function() {
+                 
+                
+            },
+            success: function(response) {
+              
+                if ($.trim(response)=='limit_reached') {
+                    show_failed_msg('error','User limit reached!');
+                }else if($.trim(response)==0){
+                    show_failed_msg('error','Failed! try again.');
+                }else{ 
+                    $(this_elem).parents().siblings('.aitsun_select select').html('<option value="'+response+'">'+cus_name+'</option>');
+                    $(this_elem).parents().siblings('.aitsun_select select').removeClass("d-none");  
+                    $(this_elem).parents().siblings('.aitsun_select select').addClass("d-block");  
+
+                    $(this_elem).parents().siblings('.aitsun_select input').addClass("d-none");  
+                    $(this_elem).parents().siblings('.aitsun_select input').removeClass("d-block"); 
+                    $(this_elem).parents().siblings('.select_close').addClass("d-none");  
+                    $(this_elem).parents().siblings('.select_close').removeClass("d-block"); 
+                     
+                    $(this_elem).parents('.aitsun_select_suggest').html('');
+                }
+
+             
+            }
+        });
+    });
+
      $(document).on('click','#generate_ap_code',function(){
 
 

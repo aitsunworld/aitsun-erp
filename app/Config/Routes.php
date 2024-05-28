@@ -62,8 +62,9 @@ $routes->post('/appointments/update_resources/(:any)', 'Appointments::update_res
 $routes->get('/appointments/book_persons', 'Appointments::book_persons');
 $routes->get('/appointments/delete_resource/(:any)', 'Appointments::delete_resource/$1');
 $routes->get('/appointments/get_timings/(:any)', 'Appointments::get_timings/$1');
-$routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
-
+$routes->get('/appointments/get_booking_form/(:any)/(:any)/(:any)', 'Appointments::get_booking_form/$1/$2/$3');
+$routes->get('/appointments/get_booking_edit_form/(:any)', 'Appointments::get_booking_edit_form/$1');
+$routes->post('/appointments/save_booking', 'Appointments::save_booking');
  
 
 
@@ -71,7 +72,9 @@ $routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form')
 $routes->get('/customers', 'Customers::index'); 
 $routes->get('/customers/add', 'Customers::add'); 
 $routes->get('/customers/add_customer_form', 'Customers::add_customer_form'); 
-$routes->post('/customers/save_customer', 'Customers::save_customer'); 
+$routes->post('/customers/save_customer', 'Customers::save_customer');
+$routes->post('/customers/add_party_from_selector', 'Customers::add_party_from_selector');
+ 
 $routes->get('/customers/details/(:any)', 'Customers::details/$1'); 
 $routes->post('/customers/details/(:any)', 'Customers::details/$1'); 
 $routes->get('/customers/delete/(:any)', 'Customers::delete/$1'); 

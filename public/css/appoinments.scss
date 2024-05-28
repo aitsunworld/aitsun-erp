@@ -146,10 +146,7 @@
 	.time_box_radio:checked ~ .time_box {
     	background: #d5265d; 
     	color: white; 
-    }
-
-	 
-
+    } 
 	  
 }
 
@@ -159,13 +156,52 @@
 	.booking_table{ 
 	 
 		th,td{
-				padding: 0 10px;
-			}
+			padding: 0 10px;
+		}
 	}
 }
 
 .timing_loader{
 	i{
 		color: #d5265d;
+	}
+}
+
+.book_list{
+	.booking_item{
+		border-radius: 10px;
+		height: 100px;
+		img{
+			border-radius: 7px;
+		    width: 100%;
+		    min-width: 70px;
+		    height: 92px;
+		    object-fit: cover;
+		}
+		.book_type{
+			background: #519b53;
+		    font-size: 10px;
+		    color: white;
+		    width: max-content;
+		    padding: 2px 5px;
+		    border-radius: 5px;
+		    margin-top: 4px;
+		}
+
+		.schedule_box{
+			.timeto{
+				text-align: center;
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    height: 100%;
+			    background: green;
+			    color: white;
+			    padding: 10px;
+			    border-radius: 6px;
+			    font-weight: 400;
+			}
+		}
+
 	}
 }

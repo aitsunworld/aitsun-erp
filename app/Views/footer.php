@@ -4,6 +4,23 @@
         
         
         
+       <div class="fade modal modal-fullscreen fade" id="add_new_party_from_selector"  aria-hidden="true">
+        <div class=" modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">New party</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class=" px-0 py-1">
+                <!-- //////////////FORMMMMM/////////////////// -->
+                  
+                  <!-- //////////////FORMMMMM/////////////////// -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <input type="hidden" id="csrf_token" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>"/>
         <input type="hidden" id="app_state" value="<?= APP_STATE ?>"/>

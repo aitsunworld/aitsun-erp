@@ -1,0 +1,230 @@
+CRITICAL - 2024-05-27 04:13:21 --> A non-numeric value encountered
+in APPPATH\Views\appointments\booking_form.php on line 36.
+ 1 APPPATH\Views\appointments\booking_form.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\appointments\\booking_form.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\booking_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/booking_form', [], true)
+ 5 APPPATH\Controllers\Appointments.php(139): view('appointments/booking_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->get_booking_form('2024-05-31', '01:30')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:16:39 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:34:11 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:34:13 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:35:21 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:36:13 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:36:39 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:36:40 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:36:49 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:37:34 --> Undefined variable $insert_user
+in APPPATH\Controllers\Customers.php on line 364.
+ 1 APPPATH\Controllers\Customers.php(364): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $insert_user', 'APPPATH\\Controllers\\Customers.php', 364)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->add_party_from_selector()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:38:19 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:40:07 --> Undefined variable $myid
+in APPPATH\Views\appointments\book_persons.php on line 119.
+ 1 APPPATH\Views\appointments\book_persons.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $myid', 'APPPATH\\Views\\appointments\\book_persons.php', 119)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 5 APPPATH\Controllers\Appointments.php(75): view('appointments/book_persons', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 06:41:05 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Customers.php on line 347.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 07:30:52 --> Class "App\Controllers\AppointmentsBookings" not found
+in APPPATH\Controllers\Appointments.php on line 376.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_booking()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:42:46 --> Undefined variable $bk
+in APPPATH\Views\appointments\book_persons.php on line 166.
+ 1 APPPATH\Views\appointments\book_persons.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bk', 'APPPATH\\Views\\appointments\\book_persons.php', 166)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 5 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:42:59 --> Undefined variable $bk
+in APPPATH\Views\appointments\book_persons.php on line 166.
+ 1 APPPATH\Views\appointments\book_persons.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bk', 'APPPATH\\Views\\appointments\\book_persons.php', 166)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 5 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:43:10 --> Undefined variable $bk
+in APPPATH\Views\appointments\book_persons.php on line 166.
+ 1 APPPATH\Views\appointments\book_persons.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bk', 'APPPATH\\Views\\appointments\\book_persons.php', 166)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 5 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:58:27 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(181): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:59:38 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(181): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:59:52 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(181): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 09:59:53 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(181): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 10:01:52 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(178): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 10:10:18 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5146.
+ 1 APPPATH\Helpers\apanel_helper.php(5146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5146)
+ 2 APPPATH\Views\appointments\book_persons.php(178): user_data('0', 'display_name')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\book_persons.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/book_persons', [], true)
+ 6 APPPATH\Controllers\Appointments.php(79): view('appointments/book_persons', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

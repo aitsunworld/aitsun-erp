@@ -12,6 +12,8 @@ use App\Models\ClientsModel;
 use App\Models\Main_item_party_table;
 use App\Models\ResourcesModel;
 use App\Models\AppointmentsTimings;
+use App\Models\AppointmentsBookings;
+
 
 use CodeIgniter\I18n\Time;
 use DateInterval;
@@ -56,6 +58,7 @@ class Appointments extends BaseController
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
             $CompanySettings2= new CompanySettings2;
+            $AppointmentsBookings= new AppointmentsBookings;
             $myid=session()->get('id');
             $con = array( 
                 'id' => session()->get('id') 
@@ -64,11 +67,24 @@ class Appointments extends BaseController
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
             
             if (is_appointments(company($user['id']))==1) {
+                $active_date=get_date_format(now_time($myid),'Y-m-d'); 
+                
+                if ($_GET) {
+                    if (isset($_GET['date'])) {
+                        if (!empty($_GET['date'])) {
+                            if (strtotime($_GET['date'])) {
+                                $active_date=$_GET['date'];
+                            } 
+                        }
+                    }
+                }
             
-                $etqry = $CompanySettings2->where('company_id',company($myid))->first();
+                $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->findAll();
+                
                 $data = [
                     'title' => 'Aitsun ERP- Book person',
                     'user' => $user, 
+                    'todays_booking'=>$todays_booking
                 ];
                
                 echo view('header',$data);
@@ -116,7 +132,7 @@ class Appointments extends BaseController
         }
     }
 
-    public function get_booking_form(){
+    public function get_booking_form($date='',$time='',$appointment_id=''){
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
@@ -132,6 +148,38 @@ class Appointments extends BaseController
                 $data = [
                     'title' => 'form',
                     'user' => $user, 
+                    'date'=>$date,
+                    'time'=>$time,
+                    'appointment_id'=>$appointment_id
+                ];
+                
+                echo view('appointments/booking_form', $data);
+               
+
+            }
+        }
+    }
+
+    
+    public function get_booking_edit_form($booking_id=''){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $CompanySettings2= new CompanySettings2;
+            $myid=session()->get('id');
+            $con = array( 
+                'id' => session()->get('id') 
+            );
+            $user=$UserModel->where('id',$myid)->first(); 
+            
+            if (is_appointments(company($user['id']))==1) {
+             
+                $data = [
+                    'title' => 'form',
+                    'user' => $user, 
+                    'date'=>$date,
+                    'time'=>$time,
+                    'appointment_id'=>$appointment_id
                 ];
                 
                 echo view('appointments/booking_form', $data);
@@ -364,4 +412,59 @@ class Appointments extends BaseController
             } 
         }
     }
+
+
+
+
+    public function save_booking(){ 
+        if ($this->request->getMethod() == 'post'){
+            $myid=session()->get('id');
+            $AppointmentsBookings= new AppointmentsBookings(); 
+            $book_from='';
+            $book_to='';
+
+            $book_from_date=strip_tags($this->request->getVar('book_from_date'));
+            $book_from_time=strip_tags($this->request->getVar('book_from_time'));
+            $book_to_date=strip_tags($this->request->getVar('book_to_date'));
+            $book_to_time=strip_tags($this->request->getVar('book_to_time'));
+            $book_from=$book_from_date.' '.$book_from_time;
+            $book_to=$book_to_date.' '.$book_to_time;
+
+
+            $person_id=0;
+            $resource_id=0;
+            $booking_type='person';
+
+            if (appointments_data(strip_tags($this->request->getVar('appointment_id')),'availability_on')==0) {
+                $person_id=appointments_data(strip_tags($this->request->getVar('appointment_id')),'person');
+            }else{
+                $resource_id=appointments_data(strip_tags($this->request->getVar('appointment_id')),'resource');
+                $booking_type='resource';
+            }
+
+            $resources_data = [ 
+                'company_id' => company($myid), 
+                'booking_name'=> strip_tags($this->request->getVar('booking_name')), 
+                'booking_type'=> 'person',
+                'resource_id'=> $resource_id,
+                'person_id'=> $person_id,
+                'customer'=> strip_tags($this->request->getVar('customer_id')),
+                'book_from'=> $book_from,
+                'book_to'=> $book_to,
+                'appointment_id'=> strip_tags($this->request->getVar('appointment_id')),
+                'duration'=> strip_tags($this->request->getVar('duration')),
+                'booked_by'=> $myid,
+                'datetime'=> now_time($myid),
+                'note'=> strip_tags($this->request->getVar('note')),
+                'deleted' => 0,
+            ];
+
+            if ($AppointmentsBookings->save($resources_data)) {
+                echo 1;
+            }else{
+                echo 0;
+            }
+        }
+    }
+
 }

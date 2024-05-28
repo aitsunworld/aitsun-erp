@@ -325,6 +325,102 @@ class Customers extends BaseController
         }
     }
 
+    
+    public function add_party_from_selector()
+    {
+        $session=session();
+        $UserModel=new Main_item_party_table;   
+
+
+        if ($session->has('isLoggedIn')){
+
+            $myid=session()->get('id');
+            $con = array( 
+                'id' => session()->get('id') 
+            );
+            $user=$UserModel->where('id',$myid)->first();
+
+            if (isset($_POST['cus_name'])) {
+
+                if (total_user(company($myid))>=user_limit(company($myid))) {
+                   echo 'limit_reached';
+                }else{
+  
+                    $customer_data = [
+                        'company_id'=>company($myid),
+                        'display_name'=>strip_tags($this->request->getVar('cus_name')),
+                        'u_type'=>'customer',
+                        'created_at'=>now_time($myid),
+                        'serial_no'=>serial_no_customer(company($myid)), 
+                        'main_type'=>'user' 
+                       
+                    ];
+
+   
+
+
+                    if ($UserModel->save($customer_data)) { 
+                        $insidd=$UserModel->insertID();
+
+                        
+ 
+
+                        ////////////////////////CREATE ACTIVITY LOG//////////////
+                            $log_data=[
+                                'user_id'=>$myid,
+                                'action'=>'New '.strip_tags('customer').' <b>'.strip_tags($this->request->getVar('cus_name')).'</b> added(from selector).',
+                                'ip'=>get_client_ip(),
+                                'mac'=>GetMAC(),
+                                'created_at'=>now_time($myid),
+                                'updated_at'=>now_time($myid),
+                                'company_id'=>company($myid),
+                            ];
+
+                            add_log($log_data);
+                        ////////////////////////END ACTIVITY LOG/////////////////
+
+
+                        // [[[[[[[[[[[[[[[[[[[[[[[[[NOTIFICATION]]]]]]]]]]]]]]]]]]]]]]]]]
+                            $title='New '.strip_tags('customer').' <b>'.strip_tags($this->request->getVar('cus_name')).'</b> added(from selector).';
+                            $message='';
+                            $url=base_url().'/customers'; 
+                            $icon=notification_icons('user');
+                            $userid='all';
+                            $nread=0;
+                            $for_who='admin';
+                            $notid='user';
+                            // notify($title,$message,$url,$icon,$userid,$nread,$for_who,$notid); 
+                        // [[[[[[[[[[[[[[[[[[[[[[[[[NOTIFICATION]]]]]]]]]]]]]]]]]]]]]]]]]
+
+                        // [[[[[[[[[[[[[[[[[[[[[[[[[NOTIFICATION]]]]]]]]]]]]]]]]]]]]]]]]]
+                            $title='New '.strip_tags('customer').' <b>'.strip_tags($this->request->getVar('cus_name')).'</b> added(from selector).';
+                            $message='';
+                            $url=base_url().'/customers'; 
+                            $icon=notification_icons('user');
+                            $userid='all';
+                            $nread=0;
+                            $for_who='staff';
+                            $notid='user';
+                            // notify($title,$message,$url,$icon,$userid,$nread,$for_who,$notid); 
+                        // [[[[[[[[[[[[[[[[[[[[[[[[[NOTIFICATION]]]]]]]]]]]]]]]]]]]]]]]
+
+
+                            echo $insidd;
+
+                      
+
+                    }else{
+                         echo 0;
+                    }
+
+ 
+
+            }
+
+        }
+    }
+}
+
     public function details($cusval=""){
         $session=session();
         $Main_item_party_table=new Main_item_party_table;   

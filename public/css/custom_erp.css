@@ -142,7 +142,7 @@ a{
     position: fixed;
     width: 100%;
     left: 0;
-    top: 4vh; 
+    top: 29px; 
     z-index: 2;
     padding: 5px 15px 5px 15px;
     background: white;
@@ -2381,6 +2381,7 @@ input.search-control-2::placeholder {
     border-radius: 0 0 5px 5px;
     position: absolute;
     width: 100%;
+    top: 35px;
     box-shadow: 0px 2px 6px 0px #d9d9d9;
     z-index: 1;
 }

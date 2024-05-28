@@ -4,6 +4,6 @@ use CodeIgniter\Model;
 
 class ResourcesModel extends Model{
   protected $table = 'resources';
-  protected $allowedFields = ['company_id','appointment_resource','capacity','description','deleted'];
+  protected $allowedFields = ['company_id','appointment_resource','capacity','description','deleted','image'];
 }
  
