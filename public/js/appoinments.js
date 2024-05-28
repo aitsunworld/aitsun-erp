@@ -4,6 +4,13 @@ $(document).ready(function() {
     
     $(document).on('click','.save_booking',function(){ 
         var this_btn=$(this);
+        var save_type=$(this).data('save_type');
+        if (save_type=='edit') {
+            var booking_id=$('#booking_id').val();
+        }else{
+            var booking_id=0;
+        }
+        
         var booking_name=$.trim($('#booking_name').val());
         var booking_party=$('#booking_party').val();
         var duration=$('#duration').val();
@@ -44,7 +51,7 @@ $(document).ready(function() {
             // $(this_btn).prop('disabled', true);
             $.ajax({
                 type: "POST", 
-                url: base_url()+'appointments/save_booking',
+                url: base_url()+'appointments/save_booking/'+booking_id,
                 data: $('#booking_form').serialize(),
                 beforeSend:function(){  
                   $(this_btn).html('<span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span> Booking...');  

@@ -192,13 +192,16 @@
                                        <i class="bx bx-arrow-back d-block mx-2" style="transform: rotate(180deg);"></i> 
                                        <b class="text-success"><?= user_data($bk['person_id'],'display_name') ?></b>
                                     </div>
-                                    <div class="book_type">
-                                        <?php if ($bk['booking_type']=='person'): ?>
-                                            <i class="bx bx-time"></i> Scheduled 
-                                        <?php else: ?>
-                                            <i class="bx bx-check-square"></i> Booked 
-                                        <?php endif ?>
-                                        > <?= $bk['duration'] ?> hrs
+                                    <div class="d-flex">
+                                        <div class="book_type my-auto me-2">
+                                            <?php if ($bk['booking_type']=='person'): ?>
+                                                <i class="bx bx-time"></i> Scheduled 
+                                            <?php else: ?>
+                                                <i class="bx bx-check-square"></i> Booked 
+                                            <?php endif ?>
+                                            > <?= $bk['duration'] ?> hrs
+                                        </div>
+                                        <span class="my-auto" style="font-size: 10px;">> <?= appointments_data(strip_tags($bk['appointment_id']),'title') ?></span>
                                     </div>
                                   
                                     <div>

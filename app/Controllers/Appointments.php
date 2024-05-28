@@ -158,7 +158,8 @@ class Appointments extends BaseController
                     'user' => $user, 
                     'date'=>$date,
                     'time'=>$time,
-                    'appointment_id'=>$appointment_id
+                    'appointment_id'=>$appointment_id,
+                    'form_type'=>'add'
                 ];
                 
                 echo view('appointments/booking_form', $data);
@@ -174,6 +175,7 @@ class Appointments extends BaseController
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
             $CompanySettings2= new CompanySettings2;
+            $AppointmentsBookings= new AppointmentsBookings;
             $myid=session()->get('id');
             $con = array( 
                 'id' => session()->get('id') 
@@ -181,13 +183,13 @@ class Appointments extends BaseController
             $user=$UserModel->where('id',$myid)->first(); 
             
             if (is_appointments(company($user['id']))==1) {
-             
+                $ap_data=$AppointmentsBookings->where('id',$booking_id)->first();
                 $data = [
                     'title' => 'form',
-                    'user' => $user, 
-                    'date'=>$date,
-                    'time'=>$time,
-                    'appointment_id'=>$appointment_id
+                    'user' => $user,   
+                    'form_type'=>'edit',
+                    'ap_data'=>$ap_data,
+
                 ];
                 
                 echo view('appointments/booking_form', $data);
@@ -423,7 +425,7 @@ class Appointments extends BaseController
 
 
 
-    public function save_booking(){ 
+    public function save_booking($booking_id=0){ 
         if ($this->request->getMethod() == 'post'){
             $myid=session()->get('id');
             $AppointmentsBookings= new AppointmentsBookings(); 
@@ -449,6 +451,7 @@ class Appointments extends BaseController
                 $booking_type='resource';
             }
 
+            
             $resources_data = [ 
                 'company_id' => company($myid), 
                 'booking_name'=> strip_tags($this->request->getVar('booking_name')), 
@@ -465,6 +468,11 @@ class Appointments extends BaseController
                 'note'=> strip_tags($this->request->getVar('note')),
                 'deleted' => 0,
             ];
+
+            if ($booking_id>0) { 
+               $resources_data['id'] = $booking_id;
+            }
+             
 
             if ($AppointmentsBookings->save($resources_data)) {
                 echo 1;
