@@ -489,6 +489,56 @@ $(document).ready(function() {
 
     });
 
+    var current_url=location.href;
+    
+    $(document).on('click','.delete_appointment',function(){
+      var deleteurl=$(this).data('deleteurl');
+      var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+      var csrfHash = $('#csrf_token').val(); // CSRF hash
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          allowOutsideClick: false,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+
+       $.ajax({
+            type: 'POST',
+            url: deleteurl,
+            data:{
+                [csrfName]: csrfHash
+            },
+             beforeSend: function() {
+                // setting a timeout
+                // $(techerbt).html('Saving  <i class="anticon anticon-loading d-inline-block"></i> ');
+                
+            },
+            success: function() {
+                
+                Swal.fire(
+                          'Deleted!',
+                          'Appointment has been deleted!',
+                          'success'
+                        ).then(function() {
+                            window.location.href = current_url;
+                        });
+
+
+                
+               
+             
+                }
+            });
+        }
+        });
+
+    });
+
 
 
 

@@ -176,13 +176,13 @@
                 <td>
                     <?php if ($aps['availability_on']=='users'): ?>
                         <div class="d-flex">
-                            <img src="" class="me-2 res_per_img"> 
+                            <img src="<?= user_profile_pic($aps['person']); ?>" class="me-2 res_per_img"> 
                             <div class="my-auto"><?= user_name($aps['person']) ?></div>
                         </div>
                     <?php elseif ($aps['availability_on']=='resources'): ?>
                          <div class="d-flex">
-                            <img src="" class="me-2 res_per_img"> 
-                            <div class="my-auto"><?= $aps['resource'] ?></div>
+                            <img src="<?= resource_pic($aps['resource']); ?>" class="me-2 res_per_img"> 
+                            <div class="my-auto"><?= resource_data($aps['resource'],'appointment_resource') ?></div>
                         </div>
                     <?php endif ?>
                     
@@ -205,14 +205,12 @@
                             <i class="bx bx-cog"></i> Action
                         </a>
                         <div class="dropdown-menu" style="">  
-                            <a class="dropdown-item href_loader" href="http://localhost/aitsun-erp/products/manufacture/create_raw_materials/18675">
-                                <span class="">Orders</span>
+                            <a class="dropdown-item href_loader" href="">
+                                <span class="">Edit</span>
                             </a>
-                            <a class="dropdown-item href_loader" href="http://localhost/aitsun-erp/products/manufacture/create_raw_materials/18675">
-                                <span class="">Sales</span>
+                            <a class="dropdown-item delete_appointment" data-deleteurl="<?= base_url('appointments/delete_appointment'); ?>/<?= $aps['id']; ?>">
+                                <span>Delete</span>
                             </a> 
-                            <a class="dropdown-item href_loader" href="http://localhost/aitsun-erp/products/manufacture/create_raw_materials/18675">
-                                <span class="">Session report</span>
                             </a> 
                         </div>
                     </div>
