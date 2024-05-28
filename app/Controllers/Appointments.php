@@ -422,8 +422,6 @@ class Appointments extends BaseController
     }
 
 
-<<<<<<< HEAD
-
 
     public function save_booking(){ 
         if ($this->request->getMethod() == 'post'){
@@ -476,7 +474,6 @@ class Appointments extends BaseController
         }
     }
 
-=======
      public function save_appointments(){
 
         if ($this->request->getMethod() == 'post'){
@@ -531,5 +528,4 @@ class Appointments extends BaseController
             }
         }
     }
->>>>>>> origin/Rajesh
 }
