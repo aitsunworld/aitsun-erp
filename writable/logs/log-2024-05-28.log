@@ -1,0 +1,22 @@
+CRITICAL - 2024-05-28 03:49:31 --> Undefined array key "name"
+in APPPATH\Views\appointments\appointments_index.php on line 168.
+ 1 APPPATH\Views\appointments\appointments_index.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'APPPATH\\Views\\appointments\\appointments_index.php', 168)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\appointments_index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/appointments_index', [], true)
+ 5 APPPATH\Controllers\Appointments.php(49): view('appointments/appointments_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-28 03:49:47 --> Undefined array key "images"
+in APPPATH\Views\appointments\appointments_index.php on line 178.
+ 1 APPPATH\Views\appointments\appointments_index.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "images"', 'APPPATH\\Views\\appointments\\appointments_index.php', 178)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\appointments\\appointments_index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/appointments_index', [], true)
+ 5 APPPATH\Controllers\Appointments.php(49): view('appointments/appointments_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

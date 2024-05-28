@@ -12,7 +12,11 @@ use App\Models\ClientsModel;
 use App\Models\Main_item_party_table;
 use App\Models\ResourcesModel;
 use App\Models\AppointmentsTimings;
+
 use App\Models\AppointmentsBookings;
+
+use App\Models\AppointmentsModel;
+
 
 
 use CodeIgniter\I18n\Time;
@@ -25,8 +29,9 @@ class Appointments extends BaseController
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
-            $CompanySettings2= new CompanySettings2;
+            $AppointmentsModel= new AppointmentsModel;
             $myid=session()->get('id');
+            $pager = \Config\Services::pager();
             $con = array( 
                 'id' => session()->get('id') 
             );
@@ -34,11 +39,14 @@ class Appointments extends BaseController
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
             
             if (is_appointments(company($user['id']))==1) {
-            
-                $etqry = $CompanySettings2->where('company_id',company($myid))->first();
+                
+                $app_data = $AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->paginate(6);
+
                 $data = [
                     'title' => 'Aitsun ERP- Appoinments',
-                    'user' => $user, 
+                    'user' => $user,
+                    'appointment_data'=>$app_data,
+                    'pager' => $AppointmentsModel->pager,
                 ];
                
                 echo view('header',$data);
@@ -414,6 +422,7 @@ class Appointments extends BaseController
     }
 
 
+<<<<<<< HEAD
 
 
     public function save_booking(){ 
@@ -467,4 +476,60 @@ class Appointments extends BaseController
         }
     }
 
+=======
+     public function save_appointments(){
+
+        if ($this->request->getMethod() == 'post'){
+                $myid=session()->get('id');
+                $AppointmentsModel= new AppointmentsModel();
+                $AppointmentsTimings= new AppointmentsTimings();
+                
+                $apt_data = [
+                    'company_id' => company($myid),
+                    'added_by' => $myid,
+                    'datetime' => now_time($myid),
+                    'title' => strip_tags($this->request->getVar('appointment_title')),
+                    'duration' => strip_tags($this->request->getVar('duration')),
+                    'allow_cancelling_before' => strip_tags($this->request->getVar('allow_cancelling_before')),
+                    'availability_on' => strip_tags($this->request->getVar('availability_on')),
+                    'person' => strip_tags($this->request->getVar('person')),
+                    'resource' => strip_tags($this->request->getVar('resource')),
+                    'hours_before' => strip_tags($this->request->getVar('hours_before')),
+                    'days_before' => strip_tags($this->request->getVar('days_before')),
+                    'is_image_show' => strip_tags($this->request->getVar('is_image_show')),
+                    'assign_method' => strip_tags($this->request->getVar('assign_method')),
+                    
+                 ];
+                ;
+                if ($AppointmentsModel->save($apt_data)) {
+                    
+                    $apoid=$AppointmentsModel->insertID(); 
+                    echo 1;
+                    if (!empty($_POST["week"])) {
+                        foreach ($_POST["week"] as $i => $value ) {
+                            $from=trim(strip_tags($_POST["from"][$i]));
+                            $week=trim(strip_tags($_POST["week"][$i]));
+                            $to=trim(strip_tags($_POST["to"][$i]));
+                            
+                            
+                            $add_fields=[
+                                'appointment_id'=>$apoid,
+                                'week'=>$week,
+                                'from'=> $from,
+                                'to'=>$to,
+                            ];
+
+                            if (!empty($from) && !empty($to)) {
+                                $AppointmentsTimings->save($add_fields); 
+                            }
+                        
+                    }
+                }
+
+                     
+
+            }
+        }
+    }
+>>>>>>> origin/Rajesh
 }

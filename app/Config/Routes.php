@@ -62,9 +62,15 @@ $routes->post('/appointments/update_resources/(:any)', 'Appointments::update_res
 $routes->get('/appointments/book_persons', 'Appointments::book_persons');
 $routes->get('/appointments/delete_resource/(:any)', 'Appointments::delete_resource/$1');
 $routes->get('/appointments/get_timings/(:any)', 'Appointments::get_timings/$1');
+
 $routes->get('/appointments/get_booking_form/(:any)/(:any)/(:any)', 'Appointments::get_booking_form/$1/$2/$3');
 $routes->get('/appointments/get_booking_edit_form/(:any)', 'Appointments::get_booking_edit_form/$1');
 $routes->post('/appointments/save_booking', 'Appointments::save_booking');
+
+$routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
+$routes->post('/appointments/save_appointments', 'Appointments::save_appointments');
+
+
  
 
 
@@ -756,6 +762,8 @@ $routes->get('/selectors/employees/(:any)', 'Selectors::employees/$1');
 $routes->get('/selectors/accounts/(:any)', 'Selectors::accounts/$1');
 $routes->get('/selectors/all_parties/(:any)', 'Selectors::all_parties/$1');
 $routes->get('/selectors/all_parties_for_create_invoice/(:any)/(:any)', 'Selectors::all_parties_for_create_invoice/$1/$2');
+$routes->get('/selectors/all_staffs/(:any)', 'Selectors::all_staffs/$1');
+$routes->get('/selectors/all_resources/(:any)', 'Selectors::all_resources/$1');
 
 
 

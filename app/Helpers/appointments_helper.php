@@ -35,4 +35,5 @@
 	    return $d && $d->format($format) === $date;
 	}
 
+
  ?>
