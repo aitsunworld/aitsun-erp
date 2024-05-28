@@ -162,10 +162,10 @@
     <div class="aitsun-row"> 
  
         <table class="appointments_table">
-            <?php $slno=0; foreach (appoints() as $aps): $slno++; ?> 
+            <?php $slno=0; foreach ($appointment_data as $aps): $slno++; ?> 
             <tr class="ap_tr" style="background: <?php echo ($slno % 2 == 0) ? "white" : "#ffffff54"; ?>;">
                 <td>
-                    <h6><?= $aps['name'] ?></h6>
+                    <h6><?= $aps['title'] ?></h6>
                 </td>
                 <td>
                     <div class="duration">
@@ -174,20 +174,28 @@
                     </div>
                 </td>
                 <td>
-                    <div class="d-flex">
-                        <img src="<?= $aps['images']['url'] ?>" class="me-2 res_per_img"> 
-                        <div class="my-auto"><?= $aps['images']['name'] ?></div>
-                    </div>
+                    <?php if ($aps['availability_on']=='users'): ?>
+                        <div class="d-flex">
+                            <img src="" class="me-2 res_per_img"> 
+                            <div class="my-auto"><?= user_name($aps['person']) ?></div>
+                        </div>
+                    <?php elseif ($aps['availability_on']=='resources'): ?>
+                         <div class="d-flex">
+                            <img src="" class="me-2 res_per_img"> 
+                            <div class="my-auto"><?= $aps['resource'] ?></div>
+                        </div>
+                    <?php endif ?>
+                    
                 </td>
                 <td>
                     <div class="duration">
-                        <div class="time-span"><?= $aps['meetings'] ?> meetings</div>
+                        <div class="time-span">45 meetings</div>
                         <div class="time-head">Scheduled</div>
                     </div>
                 </td>
                 <td>
                     <div class="duration">
-                        <div class="time-span"><?= $aps['total_meetings'] ?> Total meetings</div>
+                        <div class="time-span">10 Total meetings</div>
                         <div class="time-head">(Last 30 days)</div>
                     </div>
                 </td>
@@ -228,7 +236,7 @@
         <a href="<?= base_url('tutorial_coming_soon') ?>" class="href_loader text-dark font-size-footer"><i class="bx bx-right-arrow ms-2"></i> <span class="my-auto">Tutorial</span></a>
     </div>
     <div class="aitsun_pagination">  
-      
+      <?= $pager->links() ?>
     </div>
 </div> 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->

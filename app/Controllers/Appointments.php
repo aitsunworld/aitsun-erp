@@ -25,8 +25,9 @@ class Appointments extends BaseController
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
-            $CompanySettings2= new CompanySettings2;
+            $AppointmentsModel= new AppointmentsModel;
             $myid=session()->get('id');
+            $pager = \Config\Services::pager();
             $con = array( 
                 'id' => session()->get('id') 
             );
@@ -34,11 +35,14 @@ class Appointments extends BaseController
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
             
             if (is_appointments(company($user['id']))==1) {
-            
-                $etqry = $CompanySettings2->where('company_id',company($myid))->first();
+                
+                $app_data = $AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->paginate(6);
+
                 $data = [
                     'title' => 'Aitsun ERP- Appoinments',
-                    'user' => $user, 
+                    'user' => $user,
+                    'appointment_data'=>$app_data,
+                    'pager' => $AppointmentsModel->pager,
                 ];
                
                 echo view('header',$data);
