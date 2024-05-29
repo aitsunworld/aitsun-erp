@@ -54,21 +54,25 @@
             </div>
         </div> 
 
-        <a href="<?= base_url('parties_category') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
+        <a href="" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
 
 
 
         <div class="dropdown  my-auto me-2">
-            <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-calendar"></i> Configuration
             </a>
             <div class="dropdown-menu" style="">  
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">
-                    <span class="">Resources</span>
+                    <span >Resources</span>
                 </a>
                  
             </div>
         </div> 
+
+        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2 my-auto" data-bs-toggle="collapse" data-bs-target="#filter-appointment"> 
+            <i class="bx bx-filter"></i> <span class="my-auto">Filter</span>
+        </a>
 
 
     </div>
@@ -79,25 +83,16 @@
  
  
         
-        <div id="filter" class=" accordion-collapse col-12 border-0 collapse">
+        <div id="filter-appointment" class=" accordion-collapse col-12 border-0 collapse">
             <div class="filter_bar">
                 <!-- FILTER -->
                   <form method="get" class="d-flex">
                     <?= csrf_field(); ?>
                     
-                      <input type="text" name="display_name" placeholder="<?= langg(get_setting(company($user['id']),'language'),'Display Name'); ?>" class="form-control form-control-sm filter-control ">
+                      <input type="text" name="appointment" placeholder="Search appointment" class="form-control form-control-sm filter-control ">
                     
-     
-                      <select class="form-control form-control-sm" name="party_type">
-                          <option value="">Type</option>
-                          <option value="customer">Customer</option>
-                          <option value="vendor">Vendor</option>
-                          <option value="delivery">Delivery</option>
-                          <option value="seller">Seller</option>
-                      </select> 
-                     
                       <button class=" btn-dark btn-sm"><?= langg(get_setting(company($user['id']),'language'),'Filter'); ?></button>
-                      <a class=" btn-outline-dark btn btn-sm" href="<?= base_url('customers') ?>"><?= langg(get_setting(company($user['id']),'language'),'Clear'); ?></a>
+                      <a class=" btn-outline-dark btn btn-sm" href="<?= base_url('appointments') ?>"><?= langg(get_setting(company($user['id']),'language'),'Clear'); ?></a>
                     
                     
                   </form>
