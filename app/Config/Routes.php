@@ -74,16 +74,11 @@ $routes->get('/appointments/delete_booking/(:any)', 'Appointments::delete_bookin
 $routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
 $routes->post('/appointments/save_appointments', 'Appointments::save_appointments');
 $routes->post('/appointments/delete_appointment/(:any)', 'Appointments::delete_appointment/$1');
-<<<<<<< HEAD
+ 
 $routes->get('/appointments/confirm_checkin/(:any)/(:any)', 'Appointments::confirm_checkin/$1/$2');
 $routes->get('/appointments/reports', 'Appointments::reports');
-
-
-=======
+ 
 $routes->post('/appointments/update_resource_img/(:any)', 'Appointments::update_resource_img/$1');
->>>>>>> origin/Rajesh
-
-
  
 
 
