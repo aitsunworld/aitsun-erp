@@ -71,6 +71,7 @@ $routes->post('/appointments/save_booking/(:any)', 'Appointments::save_booking/$
 $routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
 $routes->post('/appointments/save_appointments', 'Appointments::save_appointments');
 $routes->post('/appointments/delete_appointment/(:any)', 'Appointments::delete_appointment/$1');
+$routes->post('/appointments/update_resource_img/(:any)', 'Appointments::update_resource_img/$1');
 
 
  

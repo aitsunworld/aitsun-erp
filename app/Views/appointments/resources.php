@@ -166,14 +166,14 @@
                     <?php $i=0; foreach ($resource_data as $p_data): $i++; ?>
 
                     <tr>
-                        <td>
+                        <td style="width: 110px;">
                             <div class="avatar-upload">
                                 <div class="avatar-edit">
-                                    <input type='file' id="imageUpload" name="imageUpload" accept=".png, .jpg, .jpeg" />
-                                    <label for="imageUpload"></label>
+                                    <input type='file' class="imageUpload" id="imageUpload<?= $p_data['id'] ?>" data-id="<?= $p_data['id'] ?>"  accept="image/*" />
+                                    <label for="imageUpload<?= $p_data['id'] ?>"></label>
                                 </div>
                                 <div class="avatar-preview">
-                                       <img src="<?= resource_pic($p_data['id']); ?>" id="imagePreview" style="width: 100px;height: 100px;">
+                                       <img src="<?= resource_pic($p_data['id']); ?>" class="imagePreview" id="imagePreview<?= $p_data['id'] ?>" >
                                 </div>
                             </div>
                         </td>
@@ -218,20 +218,4 @@
     </div>
 </div> 
 
-<script type="text/javascript">
-    
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#imagePreview').attr('src', e.target.result);
-                $('#imagePreview').hide();
-                $('#imagePreview').fadeIn(650);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    $("#imageUpload").change(function() {
-        readURL(this);
-    });
-</script>
+ 
