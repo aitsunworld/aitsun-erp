@@ -365,43 +365,44 @@ class Appointments extends BaseController
         }
     }
 
-     public function add_resources(){
+     public function add_resources() {
+    if ($this->request->getMethod() == 'post') {
+        $myid = session()->get('id');
+        $ResourcesModel = new ResourcesModel();
 
-        if ($this->request->getMethod() == 'post'){
-                $myid=session()->get('id');
-                $ResourcesModel= new ResourcesModel();
+        $img = $this->request->getFile('resource_img');
+        $imagePath = '';
 
-                $img = $this->request->getFile('resource_img');
-                $imagePath = '';
-
-                if ($img->isValid() && !$img->hasMoved()) {
-                    if ($img->getSize() <= 307200) { // 300 KB = 300 * 1024 bytes = 307200 bytes
-                        $newName = $img->getRandomName(); // Generate a random name for the image
-                        $img->move(ROOTPATH . 'public/image/users', $newName); // Move the image to the custom directory
-                        $imagePath = 'image/users/' . $img->getName(); // Get the relative path of the uploaded image
-
-                        $resources_data = [
-                            'image'=>strip_tags($imagePath),
-                            'appointment_resource' => strip_tags($this->request->getVar('appointment_resource')),
-                            'company_id' => company($myid),
-                            'capacity' => strip_tags($this->request->getVar('capacity')),
-                            'description' => strip_tags($this->request->getVar('description')),
-                            
-                         ];
-
-                         if ($ResourcesModel->save($resources_data)) {
-                                echo 1; // Success
-                            } else {
-                                echo 0; // Error saving data
-                            }
-                        } else {
-                        echo 0; // File size exceeds the 300 KB limit
-                    }
-                } else {
-                    echo 0; // Invalid file or file already moved
-                }
+        if ($img && $img->isValid() && !$img->hasMoved()) {
+            if ($img->getSize() <= 307200) { // 300 KB = 300 * 1024 bytes = 307200 bytes
+                $newName = $img->getRandomName();
+                $img->move(ROOTPATH . 'public/images/resources', $newName); 
+                $imagePath =$img->getName(); 
+            } else {
+                echo 0; // File size exceeds the 300 KB limit
+                return;
             }
+        }
+
+        $resources_data = [
+            'appointment_resource' => strip_tags($this->request->getVar('appointment_resource')),
+            'company_id' => company($myid),
+            'capacity' => strip_tags($this->request->getVar('capacity')),
+            'description' => strip_tags($this->request->getVar('description')),
+        ];
+
+        if (!empty($imagePath)) {
+            $resources_data['image'] = strip_tags($imagePath);
+        }
+
+        if ($ResourcesModel->save($resources_data)) {
+            echo 1; 
+        } else {
+            echo 0; 
+        }
     }
+}
+
 
     public function update_resources($rsoid=""){
         $session=session();

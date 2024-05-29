@@ -59,7 +59,7 @@
 
 
         <div class="dropdown  my-auto me-2">
-            <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-calendar"></i> Configuration
             </a>
             <div class="dropdown-menu" style="">  
@@ -71,7 +71,7 @@
         </div> 
 
         <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2 my-auto" data-bs-toggle="collapse" data-bs-target="#filter-appointment"> 
-            <span class="my-auto">Filter</span>
+            <i class="bx bx-filter"></i> <span class="my-auto">Filter</span>
         </a>
 
 

@@ -150,7 +150,7 @@
             <table id="resource_edit_table" class="erp_table sortable">
                  <thead>
                     <tr>
-                        <th class="sorticon">Appointment Resource</th>
+                        <th class="sorticon" colspan="2">Appointment Resource</th>
                         <th class="sorticon">Capacity</th>
                         <th class="sorticon">Description</th>
                         <th class="sorticon text-center" style="width:75px;" data-tableexport-display="none">
@@ -166,8 +166,20 @@
                     <?php $i=0; foreach ($resource_data as $p_data): $i++; ?>
 
                     <tr>
+                        <td>
+                            <div class="avatar-upload">
+                                <div class="avatar-edit">
+                                    <input type='file' id="imageUpload" name="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                       <img src="<?= resource_pic($p_data['id']); ?>" id="imagePreview" style="width: 100px;height: 100px;">
+                                </div>
+                            </div>
+                        </td>
                         
                         <td>
+                            
                             <p class="d-none"><?= $p_data['appointment_resource']; ?></p>
                             <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-appointment_resource-<?= $p_data['id']; ?>"  name="appointment_resource" data-resource_id="<?= $p_data['id']; ?>" data-r_element="appointment_resource" value="<?= $p_data['appointment_resource']; ?>">
                         </td>
@@ -205,3 +217,21 @@
         <?= $pager->links() ?>
     </div>
 </div> 
+
+<script type="text/javascript">
+    
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imagePreview').attr('src', e.target.result);
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn(650);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#imageUpload").change(function() {
+        readURL(this);
+    });
+</script>
