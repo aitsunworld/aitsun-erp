@@ -26,12 +26,12 @@ $(document).ready(function() {
 
         if (booking_name.length<1) {
             is_ready_to_submit=false;
-            show_success_msg('error','Booking name required!');
+            show_failed_msg('error','Booking name required!');
         }
 
         if (booking_party<1) {
             is_ready_to_submit=false;
-            show_success_msg('error','Select party!');
+            show_failed_msg('error','Select party!');
         }
 
         var fromDate = new Date(from_datetime);
@@ -42,10 +42,10 @@ $(document).ready(function() {
             
         } else if (fromDate > toDate) { 
             is_ready_to_submit=false;
-            show_success_msg('error','From date is greater than to date.');
+            show_failed_msg('error','From date is greater than to date.');
         } else {
             is_ready_to_submit=false;
-            show_success_msg('error','From date is equal to to date.');
+            show_failed_msg('error','From date is equal to to date.');
         }
 
         if (is_ready_to_submit) {
@@ -66,7 +66,7 @@ $(document).ready(function() {
                     }else{
                         $(this_btn).prop('disabled', false);
                         $(this_btn).html(this_btn_html);  
-                        show_success_msg('error',response['message']);
+                        show_failed_msg('error',response['message']);
                     }
                   
                },

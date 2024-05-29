@@ -525,7 +525,9 @@ class Appointments extends BaseController
             
             $book_result=[];
 
-            if ($this->check_booking_availabilty($resources_data)=='available') {
+            $check_booking_availabilty=$this->check_booking_availabilty($resources_data);
+
+            if ($check_booking_availabilty=='available') {
                 if ($AppointmentsBookings->save($resources_data)) {
                     $book_result=[
                         'result'=>1,
@@ -534,13 +536,13 @@ class Appointments extends BaseController
                 }else{
                     $book_result=[
                         'result'=>0,
-                        'message'=>'Failed!, Try again!'
+                        'message'=>$check_booking_availabilty
                     ];
                 }
             }else{
                 $book_result=[
                     'result'=>0,
-                    'message'=>'Plot not available'
+                    'message'=>$check_booking_availabilty
                 ];
             }
             
@@ -551,7 +553,51 @@ class Appointments extends BaseController
 
     private function check_booking_availabilty($booking_data){
         $availabilty_result='available';
-        // $availabilty_result='not_available';
+
+        $AppointmentsModel= new AppointmentsModel();
+        $AppointmentsBookings= new AppointmentsBookings();
+        $AppointmentsTimings= new AppointmentsTimings();
+       
+        $company_id=$booking_data['company_id']; 
+        $booking_name=$booking_data['booking_name']; 
+        $booking_type=$booking_data['booking_type'];
+        $resource_id=$booking_data['resource_id'];
+        $person_id=$booking_data['person_id'];
+        $customer=$booking_data['customer'];
+        $book_from=$booking_data['book_from'];
+        $book_to=$booking_data['book_to'];
+        $appointment_id=$booking_data['appointment_id'];
+        $duration=$booking_data['duration'];
+        $booked_by=$booking_data['booked_by'];
+        $datetime=$booking_data['datetime'];
+        $note=$booking_data['note'];
+        $deleted =$booking_data['deleted'];
+
+        //check appointment from and to time
+        $get_appoint_ment_timing_from=$AppointmentsTimings->where('appointment_id',$appointment_id)->where('week',get_date_format($book_from,'w'))->first();
+        $get_appoint_ment_timing_to=$AppointmentsTimings->where('appointment_id',$appointment_id)->where('week',get_date_format($book_to,'w'))->first();
+        $available_from_time=$get_appoint_ment_timing_from['from'];
+        $available_to_time=$get_appoint_ment_timing_to['to'];
+
+        $book_from_time=get_date_format($book_from,'H:i:s');
+        $book_to_time=get_date_format($book_to,'H:i:s');
+ 
+
+        // Check if booking times are within available times
+        if ($book_from_time >= $available_from_time && $book_to_time <= $available_to_time) {
+            // Check appointment already book or not
+            $check_time_is_booked_or_not=$AppointmentsBookings->where('book_from <', $book_to)->where('book_to >', $book_from)->where('deleted',0)->first();
+            if ($check_time_is_booked_or_not) {
+                $availabilty_result= "The requested time slot from " . date('H:i A', strtotime($book_from)) . " to " . date('H:i A', strtotime($book_to)) . " is already booked.";
+            }else{
+                $availabilty_result= "available";
+            }
+            
+        } else {
+            $availabilty_result= "Timing avalable only from ".get_date_format($available_from_time,'h:i A')." to ".get_date_format($available_to_time,'h:i A');
+        }
+ 
+
         return $availabilty_result;
     }
 
