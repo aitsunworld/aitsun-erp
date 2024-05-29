@@ -589,7 +589,52 @@ $(document).ready(function() {
 
     });
 
+    $(document).on('change','.imageUpload',function(e){
+        var image=$(this).val();
+        var input_id=$(this).data('id');
+        var input=$(this);
+        var file = e.target.files[0];
+        var formData = new FormData();
+        formData.append('resource_img', file);
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+         formData.append(csrfName, csrfHash);
+      
+        $.ajax({
+              type: 'POST',
+              url: base_url()+'appointments/update_resource_img/'+input_id,
+              data: formData,
+              processData: false,
+              contentType: false,
+              beforeSend: function() {
 
+                  // $('#save_appointment').html('<div class="spinner-grow" role="status"> <span class="visually-hidden">Loading...</span></div>');
+              },
+              success: function(result) {
+                if ($.trim(result)==1) {
+                   
+                }
+
+              }
+          });
+
+        if (file) { 
+            var reader = new FileReader();
+ 
+            reader.onload = function(e) {  
+                $('#imagePreview'+input_id).attr('src', e.target.result);
+                $('#imagePreview'+input_id).hide();
+                $('#imagePreview'+input_id).fadeIn(650);
+            };
+ 
+            reader.readAsDataURL(file);
+        } else { 
+            $('#imagePreview'+input_id).attr('src', e.target.result);
+            $('#imagePreview'+input_id).hide();
+            $('#imagePreview'+input_id).fadeIn(650);
+        }
+        
+    })
 
 
     function show_success_msg(type,message,title) {
