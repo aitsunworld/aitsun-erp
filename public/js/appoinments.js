@@ -1,11 +1,37 @@
 $(document).ready(function() { 
-
-    
+ 
+    $(document).on('click','.confirm_checkin',function(){ 
+        var this_btn=$(this);
+        var this_btn_html=$(this).html();
+        var booking_id=$(this).data('id');
+        var booking_value=$(this).data('value');
+        $(this_btn).prop('disabled', true);
+        $.ajax({
+            type: 'GET',
+            url: base_url()+'appointments/confirm_checkin/'+booking_id+'/'+booking_value,
+            success: function(del_res) {  
+              if (del_res==1) {
+                if (booking_value==1) {
+                    show_success_msg('success','Confirmed!');
+                }else{
+                    show_success_msg('success','Unconfirmed!');
+                }
+                  
+                  setTimeout(function(){
+                    location.reload();
+                  },500);
+              }else{
+                  show_failed_msg('error','Failed!, Try again'); 
+              } 
+            }
+        });
+    });
     
     $(document).on('click','.save_booking',function(){ 
         var this_btn=$(this);
         var this_btn_html=$(this).html();
         var save_type=$(this).data('save_type');
+        
         if (save_type=='edit') {
             var booking_id=$('#booking_id').val();
         }else{

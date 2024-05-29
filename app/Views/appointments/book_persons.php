@@ -16,7 +16,12 @@
                 </li>
              
                 <li class="breadcrumb-item active" aria-current="page">
-                    <b class="page_heading text-dark">Book persons</b>
+                    <?php if ($book_type=='person'): ?>
+                        <b class="page_heading text-dark">Book persons</b>
+                    <?php else: ?> 
+                        <b class="page_heading text-dark">Book Resources</b>
+                    <?php endif ?>
+                    
                 </li>
             </ol>
         </nav>
@@ -59,7 +64,17 @@
 
         <a href="<?= base_url('parties_category') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
 
-        <a href="<?= base_url('parties_category') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-cog"></i> <span class="my-auto">Configuration</span></a>
+        <div class="dropdown  my-auto me-2">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-cog"></i> Configuration
+            </a>
+            <div class="dropdown-menu" style="">  
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">
+                    <span >Resources</span>
+                </a>
+                 
+            </div>
+        </div> 
     </div>
 
     <a href="<?= base_url('appointments/create') ?>" class=" btn-back font-size-footer my-auto ms-2 href_loader"> <span class="">+ New Appointment</span></a>
@@ -219,7 +234,7 @@
                                 </div>
                             </div>
                             <div class="schedule_box">
-                                <div class="timeto"> 
+                                <div class="timeto <?= ($bk['status'])?'bg-success':'bg-danger'; ?>"> 
                                     <div>
                                         <?= (get_date_format($bk['book_from'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_from'],'d M'); ?> - <?= get_date_format($bk['book_from'],'h:i A') ?>
                                     </div>
@@ -227,6 +242,31 @@
                                     <div>
                                         <?= (get_date_format($bk['book_to'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_to'],'d M'); ?> - <?= get_date_format($bk['book_to'],'h:i A') ?>
                                     </div> 
+
+                                    <div class="timeto_label">
+                                        <div>
+                                            <h6 class="mb-1">Contact Information</h6>
+
+                                             <b>Name:</b> <br> <?= user_data($bk['customer'],'display_name') ?>
+                                                <?php if (!empty(user_data($bk['customer'],'email'))): ?>
+                                                    <br> <b>Email:</b> <br> <?= user_data($bk['customer'],'email') ?>
+                                                <?php endif ?> 
+                                             
+                                            
+                                            <?php if ($bk['booking_type']=='resource'): ?>
+                                             <br><b>Resource:</b> <br><?= resource_data($bk['resource_id'],'appointment_resource') ?>
+                                            <?php endif ?>  
+
+                                            <h6 class="mb-1 mt-2">Booking Details</h6>
+                                            <b>Type:</b> <br><?= appointments_data(strip_tags($bk['appointment_id']),'title') ?>
+                                            <br> <b>Start Date:</b> <br><?= (get_date_format($bk['book_from'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_from'],'d M Y'); ?> - <?= get_date_format($bk['book_from'],'h:i A') ?>
+                                            <br> <b>Stop Date:</b> <br><?= (get_date_format($bk['book_to'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_to'],'d M Y'); ?> - <?= get_date_format($bk['book_to'],'h:i A') ?>
+
+                                            <div class="d-flex justify-content-center mt-2">
+                                                <button class="btn btn-edit-dark rounded-pill confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="<?= ($bk['status'])?'0':'1'; ?>"><?= ($bk['status'])?'Unconfirm':'Confirm'; ?> Check-In</button>
+                                            </div>
+                                        </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

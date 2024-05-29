@@ -5143,7 +5143,11 @@ function total_messages($company){
 function user_data($id,$column){
     $Main_item_party_table = new Main_item_party_table;
     $user=$Main_item_party_table->where('id', $id)->first();
-    $fn=$user[$column];
+    if ($user) {
+        $fn=$user[$column];
+    }else{
+        $fn='';
+    }
     return $fn;
 }
 

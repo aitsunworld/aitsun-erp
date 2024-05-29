@@ -54,13 +54,29 @@
             </div>
         </div> 
 
-        <a href="" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
+        
+        <div class="dropdown  my-auto me-2">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-file"></i> Reports
+            </a>
+            <div class="dropdown-menu" style="">  
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
+                    <span>Booking reports</span>
+                </a>
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
+                    <span>Person wise</span>
+                </a>
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
+                    <span>Resource wise</span>
+                </a>
+            </div>
+        </div> 
 
 
 
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bx bx-calendar"></i> Configuration
+                <i class="bx bx-cog"></i> Configuration
             </a>
             <div class="dropdown-menu" style="">  
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">

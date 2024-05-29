@@ -506,6 +506,34 @@ class Appointments extends BaseController
         }  
     }
 
+    public function confirm_checkin($booking_id=0,$book_value=0){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $AppointmentsBookings= new AppointmentsBookings();
+            $myid=session()->get('id');
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+                    
+            if (is_appointments(company($user['id']))==1) {
+                $resources_data = [ 
+                    'id' => $booking_id,  
+                    'status' => $book_value,
+                ];
+
+                if ($AppointmentsBookings->save($resources_data)) {
+                    echo 1;
+                }else{
+                    echo 0;
+                }
+            }else{
+                echo 0;
+            }
+        }else{
+            echo 0;
+        }  
+    }
+
 
     public function save_booking($booking_id=0){ 
         if ($this->request->getMethod() == 'post'){
@@ -618,7 +646,7 @@ class Appointments extends BaseController
         // Check if booking times are within available times
         if ($book_from_time >= $available_from_time && $book_to_time <= $available_to_time) {
             // Check appointment already book or not
-            $check_time_is_booked_or_not=$AppointmentsBookings->where('book_from <', $book_to)->where('book_to >', $book_from)->where('deleted',0)->first();
+            $check_time_is_booked_or_not=$AppointmentsBookings->where('appointment_id',$appointment_id)->where('book_from <', $book_to)->where('book_to >', $book_from)->where('deleted',0)->first();
             if ($check_time_is_booked_or_not) {
                 $availabilty_result= "The requested time slot from " . date('H:i A', strtotime($book_from)) . " to " . date('H:i A', strtotime($book_to)) . " is already booked.";
             }else{
@@ -728,5 +756,80 @@ class Appointments extends BaseController
             return redirect()->to(base_url('appointments'));
         }
 
+    }
+
+     public function reports(){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $AppointmentsModel= new AppointmentsModel;
+            $AppointmentsBookings= new AppointmentsBookings;
+            $ResourcesModel= new ResourcesModel;
+
+            $myid=session()->get('id');
+            $pager = \Config\Services::pager();
+            $con = array( 
+                'id' => session()->get('id') 
+            );
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+            
+            if (is_appointments(company($user['id']))==1) {
+
+
+                // if ($_GET) {
+                //     $from=$_GET['from'];
+                //     $dto=$_GET['to'];
+
+                //     if (!empty($from) && empty($dto)) {
+                //         $PaymentsModel->where('date(datetime)',$from);
+                //     }
+                //     if (!empty($dto) && empty($from)) {
+                //         $PaymentsModel->where('date(datetime)',$dto);
+                //     }
+
+                    
+                //     if (!empty($dto) && !empty($from)) {
+                //         $PaymentsModel->where("date(datetime) BETWEEN '$from' AND '$dto'");
+                //     }
+
+                //     if (!empty($_GET['status'])) {
+                //          $PaymentsModel->where('lead_status',$_GET('status'));
+                //     }
+
+                //     if (!empty($_GET['voucher_no'])) {
+                //          $PaymentsModel->where('serial_no',$_GET['voucher_no']);
+                //     }
+
+                    
+
+                //      if (isset($_GET['collected_user'])) {
+                //         if (!empty($_GET['collected_user'])) {
+                //             $PaymentsModel->where('collected_by',$_GET['collected_user']);
+                //         }
+                //     }
+                    
+                // }else{
+                //     $PaymentsModel->where('date(datetime)',get_date_format(now_time($myid),'Y-m-d'));
+                // }
+
+                $all_bookings = $AppointmentsBookings->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->findAll();
+
+                $data = [
+                    'title' => 'Aitsun ERP- Booking reports',
+                    'user' => $user,
+                    'all_bookings'=>$all_bookings, 
+                ];
+               
+                echo view('header',$data);
+                echo view('appointments/booking_report', $data);
+                echo view('footer'); 
+
+            }else{
+            return redirect()->to(base_url('users/login'));
+        }
+        }else{
+            return redirect()->to(base_url('users/login'));
+        }
     }
 }
