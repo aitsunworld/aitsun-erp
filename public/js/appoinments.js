@@ -600,7 +600,11 @@ $(document).ready(function() {
         var csrfHash = $('#csrf_token').val(); // CSRF hash
          formData.append(csrfName, csrfHash);
       
-        $.ajax({
+        
+
+        if (file) { 
+
+            $.ajax({
               type: 'POST',
               url: base_url()+'appointments/update_resource_img/'+input_id,
               data: formData,
@@ -612,22 +616,24 @@ $(document).ready(function() {
               },
               success: function(result) {
                 if ($.trim(result)==1) {
-                   
+                   var reader = new FileReader();
+ 
+                    reader.onload = function(e) {  
+                        $('#imagePreview'+input_id).attr('src', e.target.result);
+                        $('#imagePreview'+input_id).hide();
+                        $('#imagePreview'+input_id).fadeIn(650);
+                    };
+         
+                    reader.readAsDataURL(file);
+                }else  if ($.trim(result)==3){
+                    show_failed_msg('error','Image size must be less that 300kb');
+                } else{
+                    show_failed_msg('error','Failed to update!');
                 }
-
               }
           });
 
-        if (file) { 
-            var reader = new FileReader();
- 
-            reader.onload = function(e) {  
-                $('#imagePreview'+input_id).attr('src', e.target.result);
-                $('#imagePreview'+input_id).hide();
-                $('#imagePreview'+input_id).fadeIn(650);
-            };
- 
-            reader.readAsDataURL(file);
+            
         } else { 
             $('#imagePreview'+input_id).attr('src', e.target.result);
             $('#imagePreview'+input_id).hide();

@@ -433,23 +433,25 @@ class Appointments extends BaseController
                     $newName = $img->getRandomName();
                     $img->move(ROOTPATH . 'public/images/resources', $newName); 
                     $imagePath =$img->getName(); 
+
+                    $resources_data = [
+                        'id'=>$rsid,
+                        'image' => strip_tags($imagePath),
+                        
+                    ];
+
+                    if ($ResourcesModel->save($resources_data)) {
+                        echo 1; 
+                    } else {
+                        echo 0; 
+                    }
                 } else {
-                    echo 0; 
+                    echo 3; 
                     return;
                 }
             }
 
-            $resources_data = [
-                'id'=>$rsid,
-                'image' => strip_tags($imagePath),
-                
-            ];
-
-            if ($ResourcesModel->save($resources_data)) {
-                echo 1; 
-            } else {
-                echo 0; 
-            }
+           
         }
 }
 
@@ -615,13 +617,15 @@ class Appointments extends BaseController
                 'deleted' => 0,
             ];
 
+            $type_of_request='insert';
             if ($booking_id>0) { 
                $resources_data['id'] = $booking_id;
+               $type_of_request='update';
             }
             
             $book_result=[];
 
-            $check_booking_availabilty=$this->check_booking_availabilty($resources_data);
+            $check_booking_availabilty=$this->check_booking_availabilty($resources_data,$type_of_request);
 
             if ($check_booking_availabilty=='available') {
                 if ($AppointmentsBookings->save($resources_data)) {
@@ -647,7 +651,7 @@ class Appointments extends BaseController
         echo json_encode($book_result);
     }
 
-    private function check_booking_availabilty($booking_data){
+    private function check_booking_availabilty($booking_data,$type_of_request){
         $availabilty_result='available';
 
         $AppointmentsModel= new AppointmentsModel();
@@ -682,6 +686,9 @@ class Appointments extends BaseController
         // Check if booking times are within available times
         if ($book_from_time >= $available_from_time && $book_to_time <= $available_to_time) {
             // Check appointment already book or not
+            if ($type_of_request=='update') {
+                $AppointmentsBookings->where('id!=',$booking_data['id']);
+            }
             $check_time_is_booked_or_not=$AppointmentsBookings->where('appointment_id',$appointment_id)->where('book_from <', $book_to)->where('book_to >', $book_from)->where('deleted',0)->first();
             if ($check_time_is_booked_or_not) {
                 $availabilty_result= "The requested time slot from " . date('H:i A', strtotime($book_from)) . " to " . date('H:i A', strtotime($book_to)) . " is already booked.";

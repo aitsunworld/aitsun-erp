@@ -19,6 +19,7 @@
     use App\Models\LeadModel;
     use App\Models\InvoiceTaxes; 
     use App\Models\Main_item_party_table; 
+    use App\Models\AppointmentsBookings;
     use App\Models\PosSessions; 
 
 
@@ -36,6 +37,8 @@
             $ProductsModel=new Main_item_party_table;
             $InvoiceTaxes=new InvoiceTaxes;
             $PosSessions = new PosSessions;
+            $AppointmentsBookings = new AppointmentsBookings;
+
 
             if ($session->has('isLoggedIn')){
 
@@ -89,6 +92,12 @@
                         $converttted=0;
                     }
 
+                    $booking_id=strip_tags($this->request->getVar('booking_id'));
+                    $bill_from='';
+                    if ($booking_id>0) {
+                        $bill_from='appointment';
+                    }
+                     
 
                     $in_data=[
                         'company_id'=>company($myid),
@@ -126,6 +135,8 @@
                         'validity'=>strip_tags($this->request->getVar('validity')),
                         'session_id'=>strip_tags($this->request->getVar('session_id')),
                         'bill_type'=>strip_tags($this->request->getVar('bill_type')),
+                        'booking_id'=>$booking_id,
+                        'bill_from'=>$bill_from,
                     ];
                      
                     $in_ins=$InvoiceModel->save($in_data);
@@ -139,6 +150,10 @@
                             'closing_balance'=>aitsun_round($pos_total_amt,get_setting(company($myid),'round_of_value'))
                         ];
                         $PosSessions->update($session_pos_id['id'],$pos_data);
+                    }
+
+                    if ($booking_id>0) {
+                        $AppointmentsBookings->update($booking_id,['status'=>2]);
                     }
 
 

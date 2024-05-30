@@ -328,7 +328,15 @@
           <input type="hidden" name="old_due_amount" value="<?= $old_due_amount ?>">
           <input type="hidden" name="old_paid_amount" value="<?= $old_paid_amount ?>">
 
+          <?php $booking_id=0; if ($_GET): ?>
+            <?php if (isset($_GET['booking'])): ?>
+              <?php if (!empty($_GET['booking'])): ?>
+                <?php $booking_id=$_GET['booking']; ?> 
+              <?php endif ?>
+            <?php endif ?>
+          <?php endif ?>
 
+          <input type="hidden" name="booking_id" value="<?= $booking_id ?>">
 
 
           <input type="hidden" name="alternate_name" class="form-control form-control-sm mr-5" placeholder="Party name" id="alternate_name" value="<?= $cus_value; ?>" <?= $disable_value; ?>>
@@ -342,6 +350,13 @@
                   <option value="<?= $in_data['customer'] ?>"><?= user_name($in_data['customer']) ?></option> 
                 <?php }else{ ?>
                   <?php if ($view_type=='sales'): ?>
+                    <?php if ($_GET): ?>
+                      <?php if (isset($_GET['customer'])): ?>
+                        <?php if (!empty($_GET['customer'])): ?>
+                          <option value="<?= $_GET['customer'] ?>"><?= user_name($_GET['customer']) ?></option> 
+                        <?php endif ?>
+                      <?php endif ?>
+                    <?php endif ?>
                     <option value="<?= cash_customer_of_company(company($user['id'])) ?>"><?= user_name(cash_customer_of_company(company($user['id']))) ?></option> 
                   <?php else: ?>
                     <option value="">Search party</option> 

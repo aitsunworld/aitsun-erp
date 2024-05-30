@@ -178,7 +178,13 @@
                 <?php foreach ($todays_booking as $bk): ?> 
                    
                     <div class="bg-white booking_item p-1 mb-2">
-                        <div class="d-flex justify-content-between"> 
+
+                        <?php if ($bk['status']==2): ?>
+                            <div class="billed_tag">
+                                Billed
+                            </div>
+                        <?php endif ?> 
+                        <div class="d-flex justify-content-between <?= ($bk['status']==2)?'opacity_60':''; ?>"> 
                             <div class="d-flex">
                                 <div class="me-2">
                                     <?php 
@@ -200,7 +206,11 @@
                                 <div>
                                     <h6 class="mb-1">
                                         <?= $bk['booking_name'] ?> 
-                                        <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i></a>
+                                        <?php if ($bk['status']!=2): ?>
+                                             <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i></a>
+                                        <?php endif ?> 
+                                       
+
                                     </h6>
                                     <div class="d-flex">
                                        <b><?= user_data($bk['customer'],'display_name') ?></b> 
@@ -261,10 +271,16 @@
                                             <b>Type:</b> <br><?= appointments_data(strip_tags($bk['appointment_id']),'title') ?>
                                             <br> <b>Start Date:</b> <br><?= (get_date_format($bk['book_from'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_from'],'d M Y'); ?> - <?= get_date_format($bk['book_from'],'h:i A') ?>
                                             <br> <b>Stop Date:</b> <br><?= (get_date_format($bk['book_to'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_to'],'d M Y'); ?> - <?= get_date_format($bk['book_to'],'h:i A') ?>
-
-                                            <div class="d-flex justify-content-center mt-2">
-                                                <button class="btn btn-edit-dark rounded-pill confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="<?= ($bk['status'])?'0':'1'; ?>"><?= ($bk['status'])?'Unconfirm':'Confirm'; ?> Check-In</button>
-                                            </div>
+                                            <?php if ($bk['status']!=2): ?>
+                                                <div class="d-flex justify-content-center mt-2">
+                                                    <div class="text-center">
+                                                        <button class="btn btn-edit-dark rounded-pill confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="<?= ($bk['status'])?'0':'1'; ?>"><?= ($bk['status'])?'Unconfirm':'Confirm'; ?> Check-In</button>
+                                                    <?php if ($bk['status']==1): ?>
+                                                        <a href="<?= base_url('invoices/create_invoice') ?>?customer=<?= $bk['customer'] ?>&booking=<?= $bk['id'] ?>" class="btn btn-sm btn-success mt-2 rounded-pill">Make bill</a>
+                                                    <?php endif ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif ?> 
                                         </div> 
                                     </div>
                                 </div>
