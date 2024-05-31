@@ -10,11 +10,19 @@
                         <div class="icon-title">Preferences</div>
                     </a>
                 </li>
+
+
+                <li>
+                    <a href="<?= base_url('settings/printers'); ?>" class="href_loader">
+                        <div class="icon_parent"><i class='bx bx-printer'></i></div>
+                        <div class="icon-title">Printers</div>
+                    </a>
+                </li>
                 
                 <li>
                     <a href="<?= base_url('settings/printing_and_devices'); ?>" class="href_loader">
-                        <div class="icon_parent"><i class='bx bx-printer'></i></div>
-                        <div class="icon-title">Printer & Devices</div>
+                        <div class="icon_parent"><i class='bx bx-devices'></i></div>
+                        <div class="icon-title">Other Devices</div>
                     </a>
                 </li>
 

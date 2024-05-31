@@ -75,10 +75,7 @@ use App\Models\PostThumbnail as PostThumbnail;
 use App\Models\EmployeeCategoriesModel as EmployeeCategoriesModel;
 use App\Models\Stockadjustmodel as Stockadjustmodel;
 use App\Models\Main_item_party_table as Main_item_party_table;
-
-
-
-
+use App\Models\PrintersModel as PrintersModel;
 
 
 function style_version(){
@@ -147,6 +144,17 @@ function site_key(){
         return '6LeLFIQlAAAAAF2nc9eyEn0iYWhZUJm4qKXLeYGm';
     } 
     
+}
+
+
+function printer_data($userid,$column){
+    $PrintersModel=new PrintersModel;
+    $defaults=$PrintersModel->where('company_id',company($userid))->where('default',1)->where('user_id',$userid)->first();
+    if ($defaults) {
+        return $defaults[$column];
+    }else{
+        return 0;
+    }
 }
 
 function user_token(){

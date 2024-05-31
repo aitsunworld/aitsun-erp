@@ -488,6 +488,12 @@ $routes->post('settings/invoice_settings', 'Settings::invoice');
 $routes->get('/app_info', 'Settings::app_info'); 
 $routes->get('/settings/product-scrapper', 'Product_scrapper::configuration'); 
 $routes->get('/settings/sms_and_emails', 'Settings::sms_and_emails'); 
+$routes->get('/settings/printers', 'Settings::printers');
+$routes->post('/settings/printers', 'Settings::printers/0');
+$routes->post('/settings/printers/(:any)', 'Settings::printers/$1');
+$routes->get('/settings/set_default_printer/(:any)', 'Settings::set_default_printer/$1');
+$routes->get('/settings/delete_printer/(:any)', 'Settings::delete_printer/$1');
+
 $routes->get('/settings/printing_and_devices', 'Settings::printing_and_devices'); 
 $routes->get('/settings/preferences', 'Settings::preferences'); 
 $routes->post('/settings/sms_and_emails', 'Settings::sms_and_emails'); 

@@ -13,7 +13,7 @@
                 </li>
              
                 <li class="breadcrumb-item active" aria-current="page">
-                    <b class="page_heading text-dark">Printers & Devices</b>
+                    <b class="page_heading text-dark">Other Devices</b>
                 </li>
             </ol>
         </nav>
@@ -44,7 +44,8 @@
                 <?= csrf_field(); ?>
 
                   <div class="col-md-12 row m-0" >
-                    <h5 class="col-md-12 mb-3">Invoice thermal printer</h5>
+                    <div class="d-none">
+                        <h5 class="col-md-12 mb-3">Invoice thermal printer</h5>
                     <div class="form-group my-auto col-lg-12 mb-3">
                         <div class="form-check form-switch">
                             <label class="form-check-label" for="print_thermal">Print thermal
@@ -200,6 +201,7 @@
                             </div>
 
                         </div>
+                    </div>
                     </div>
 
                    
@@ -370,8 +372,7 @@
                         </div>
                     </div>
 
-
-                    <hr>
+ 
                     <h5 class="col-md-12 ">Weighing machine </h5>
                     <div class="form-group col-md-12 mb-3">
                         <div class="form-check form-switch">

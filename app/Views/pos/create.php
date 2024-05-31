@@ -768,7 +768,17 @@ if (session()->has('pos_session')) {
           <div class="btn-complete-block">
             <h4 class="mb-4 text-center">Payment Successful!</h4>
 
-            <button type="button" class="btn w-100 btn-sm btn-pos-print aitsun-print" id="print_pos_btn" data-url=""><i class="bx bx-printer"></i> Print</button> 
+            <button type="button" class="btn w-100 btn-sm btn-pos-print aitsun-electron-print" id="print_pos_btn" 
+            data-url="dsfdfds" 
+            data-silent="<?= printer_data($user['id'],'silent') ?>"
+            data-devicename="<?= printer_data($user['id'],'printer_name') ?>"
+            data-top="<?= printer_data($user['id'],'top') ?>"
+            data-right="<?= printer_data($user['id'],'right') ?>"
+            data-bottom="<?= printer_data($user['id'],'bottom') ?>"
+            data-left="<?= printer_data($user['id'],'left') ?>"
+            data-scalefactor="<?= printer_data($user['id'],'scale') ?>"
+
+            ><i class="bx bx-printer"></i> Print</button> 
 
             
             <button type="button" class="btn w-100 btn-sm mt-3 btn-pos-neworder" id="set_new_order"><i class="bx bx-chevron-right-circle"></i> New order</button> 

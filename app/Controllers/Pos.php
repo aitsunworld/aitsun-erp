@@ -142,7 +142,7 @@ class Pos extends BaseController
                     $ProductsModel = new Main_item_party_table(); 
                     $acti=activated_year($sesdata['company_id']);
                     $ProductsModel->where('is_pos',1);
-                    $get_pro = $ProductsModel->where('company_id',company($sesdata['user_id']))->orderBy("id", "desc")->where('deleted',0)->where('financial_year',$acti)->where('main_type','product')->findAll(); 
+                    $get_pro = $ProductsModel->where('company_id',company($sesdata['user_id']))->orderBy("id", "desc")->where('deleted',0)->where('financial_year',$acti)->findAll(); 
 
                     $get_cust = $UserModel->where('u_type!=','staff')->where('u_type!=','driver')->where('u_type!=','teacher')->where('u_type!=','delivery')->where('u_type!=','seller')->where('u_type!=','admin')->where('u_type!=','student')->where('company_id',company($myid))->where('deleted',0)->where('main_type','user')->orderBy('id','DESC')->findAll();
 
