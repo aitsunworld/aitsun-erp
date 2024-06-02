@@ -39,20 +39,35 @@
 
        <div class=" col-md-12 mb-2"> 
         <label for="input-1" class="modal_lab">Party</label> 
-         <div>
-             <div class="aitsun_select position-relative d-inline-flex" style="width: 100%;">                            
-                <input type="text" class="aitsun-datebox d-none " style="min-width:100%; height: 35px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
-                <a class="select_close d-none" style="top:0px; color: black;"><i class="bx bx-x"></i></a>
-                <select class="px-3 form-select" name="customer_id" id="booking_party" style="margin: auto; min-width:250px; height: 35px; padding: 0;">
-                    <?php if ($customer!=''): ?>
-                        <option value="<?= $customer ?>"><?= user_name($customer) ?></option> 
-                    <?php else: ?>
-                        <option value="">Search party</option>
-                    <?php endif ?> 
-                </select>
-                <div class="aitsun_select_suggest">
-                </div>
-            </div> 
+         <div class="d-flex">
+             <div class="w-100">
+                 <div class="aitsun_select position-relative d-inline-flex" id="aitsun_select" style="width: 100%;">                            
+                    <input type="text" class="aitsun-datebox d-none " style="min-width:100%; height: 35px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
+                    <a class="select_close d-none" style="top:0px; color: black;"><i class="bx bx-x"></i></a>
+                    <select class="px-3 form-select" name="customer_id" id="booking_party" style="margin: auto; min-width:250px; height: 35px; padding: 0;">
+                        <?php if ($customer!=''): ?>
+                            <option value="<?= $customer ?>"><?= user_name($customer) ?></option> 
+                        <?php else: ?>
+                            <option value="">Search party</option>
+                        <?php endif ?> 
+                    </select>
+                    <div class="aitsun_select_suggest">
+                    </div>
+                </div> 
+             </div>
+             <div style="position: relative;">
+                 <a style="min-width: 110px; height:35px;" class="btn btn-success" onclick="$('#new_party_popup').toggle();">New party</a>
+                 <div class="new_party_popup" id="new_party_popup">
+                     <div>
+                         <input type="text" class="mb-2 form-control" id="pop_name" placeholder="Name">
+                         <input type="number" class="mb-2 form-control" id="pop_phone" placeholder="Phone">
+                         <input type="email" class="mb-2 form-control" id="pop_email" placeholder="Email">
+                         <div class="text-center">
+                             <a class="btn btn-back-dark btn-sm add_party_popup" data-element_id="">Add</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
          </div>
        </div>
 

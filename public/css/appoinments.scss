@@ -230,14 +230,25 @@
 		}
 
 		.billed_tag{
-			z-index: 1;
-			background: green;
-		    color: white;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    border-radius: 10px 0 10px;
-		    padding: 0 10px;
+			        z-index: 1;
+				    backdrop-filter: blur(1px);
+				    background: rgba(255, 255, 255, .2);
+				    position: absolute;
+				    top: 0;
+				    width: 100%;
+				    left: 0;
+				    display: flex;
+				    height: 100%;
+				    span{
+					    border: 1px solid green;
+					    color: green; 
+					    background: white;
+					    font-weight: bold;
+					    border-radius: 5px;
+					    margin:auto;
+					    width: max-content;
+					    padding: 6px 25px;
+				    }
 		}
 
 		.opacity_60{

@@ -62,7 +62,22 @@
             </div>
         </div> 
 
-        <a href="<?= base_url('parties_category') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
+      <div class="dropdown  my-auto me-2">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-file"></i> Reports
+            </a>
+            <div class="dropdown-menu" style="">  
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
+                    <span>Booking reports</span>
+                </a>
+               <!--  <a class="dropdown-item href_loader" href="#">
+                    <span>Person wise</span>
+                </a>
+                <a class="dropdown-item href_loader" href="#">
+                    <span>Resource wise</span>
+                </a> -->
+            </div>
+        </div> 
 
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
@@ -174,14 +189,14 @@
 
         <div class="booking_details col-md-6">
             <h5><?= ($active_date==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today\'s':''; ?> Booking - <?= get_date_format($active_date,'d M Y, l') ?></h5>
-            <div class="w-100 book_list">
+            <div class="w-100 book_list position-relative">
                 <?php foreach ($todays_booking as $bk): ?> 
                    
-                    <div class="bg-white booking_item p-1 mb-2">
+                    <div class="bg-white booking_item position-relative p-1 mb-2">
 
                         <?php if ($bk['status']==2): ?>
                             <div class="billed_tag">
-                                Billed
+                                <span>Billed</span>
                             </div>
                         <?php endif ?> 
                         <div class="d-flex justify-content-between <?= ($bk['status']==2)?'opacity_60':''; ?>"> 
@@ -253,6 +268,7 @@
                                         <?= (get_date_format($bk['book_to'],'Y-m-d')==get_date_format(now_time($user['id']),'Y-m-d'))? 'Today':get_date_format($bk['book_to'],'d M'); ?> - <?= get_date_format($bk['book_to'],'h:i A') ?>
                                     </div> 
 
+                                    <?php if ($bk['status']!=2): ?> 
                                     <div class="timeto_label">
                                         <div>
                                             <h6 class="mb-1">Contact Information</h6>
@@ -283,6 +299,7 @@
                                             <?php endif ?> 
                                         </div> 
                                     </div>
+                                    <?php endif ?> 
                                 </div>
                             </div>
                         </div>

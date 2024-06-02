@@ -349,6 +349,8 @@ class Customers extends BaseController
                     $customer_data = [
                         'company_id'=>company($myid),
                         'display_name'=>strip_tags($this->request->getVar('cus_name')),
+                        'phone'=>strip_tags($this->request->getVar('pop_phone')),
+                        'email'=>strip_tags($this->request->getVar('pop_email')), 
                         'u_type'=>'customer',
                         'created_at'=>now_time($myid),
                         'serial_no'=>serial_no_customer(company($myid)), 

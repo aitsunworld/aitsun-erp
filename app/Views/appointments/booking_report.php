@@ -96,11 +96,14 @@
               
             <form method="get" class="d-flex">
                 <?= csrf_field(); ?>
-               <input type="number" min="1" name="voucher_no" class="form-control form-control-sm filter-control" placeholder="<?= get_setting($user['company_id'],'payment_prefix'); ?>">
+               <input type="number" min="1" name="booking_number" class="form-control form-control-sm filter-control" placeholder="No.">
+
+               <input type="text" min="1" name="booking_name" class="form-control form-control-sm filter-control" placeholder="Booking name">
+
                <input type="date" name="from" class="form-control form-control-sm filter-control" title="From" placeholder="">
                 <input type="date" name="to" title="To" class="form-control form-control-sm filter-control" placeholder="">
 
-                <select name="collected_user" class="form-select">
+                <select name="person_id" class="form-select">
                  <option value="">Select user</option>
                  <?php foreach (staffs_array(company($user['id'])) as $stf): ?>
                      <option value="<?= $stf['id']; ?>"><?= user_name($stf['id']); ?></option>
@@ -108,7 +111,7 @@
                 </select>
               
                 <button class=" btn-dark btn-sm"><?= langg(get_setting(company($user['id']),'language'),'Filter'); ?></button>
-                <a class=" btn-outline-dark btn btn-sm" href="<?= base_url('day_book') ?>"><?= langg(get_setting(company($user['id']),'language'),'Clear'); ?></a>
+                <a class=" btn-outline-dark btn btn-sm" href="<?= base_url('appointments/reports') ?>"><?= langg(get_setting(company($user['id']),'language'),'Clear'); ?></a>
               
             </form>
             <!-- FILTER -->

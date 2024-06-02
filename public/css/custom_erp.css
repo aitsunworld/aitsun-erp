@@ -3767,3 +3767,13 @@ body {
   object-fit: contain;
 }
 
+.new_party_popup{
+    display: none;
+    position: absolute;
+    left: -130px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px #00000080;
+    border-radius: 10px;
+    top: 40px;
+}

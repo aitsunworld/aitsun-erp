@@ -50,13 +50,19 @@ class Appointments extends BaseController
                     
              
                 }
-                $app_data = $AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->paginate(6);
+                
+                
+                $AppointmentsModel->select('appointments.*, COUNT(CASE WHEN appointments_bookings.deleted = 0 AND appointments_bookings.status = 0 THEN 1 END) as scheduled_bookings, COUNT(CASE WHEN appointments_bookings.deleted = 0 AND appointments_bookings.book_from >= CURDATE() - INTERVAL 30 DAY THEN 1 END) as total_scheduled_bookings');
+
+                $AppointmentsModel->join('appointments_bookings', 'appointments_bookings.appointment_id = appointments.id', 'left');
+                $AppointmentsModel->groupBy('appointments.id');
+
+                $app_data = $AppointmentsModel->where('appointments.company_id',company($myid))->where('appointments.deleted',0)->orderBy('appointments.id','DESC')->findAll();
 
                 $data = [
                     'title' => 'Aitsun ERP- Appoinments',
                     'user' => $user,
-                    'appointment_data'=>$app_data,
-                    'pager' => $AppointmentsModel->pager,
+                    'appointment_data'=>$app_data, 
                 ];
                
                 echo view('header',$data);
@@ -252,13 +258,15 @@ class Appointments extends BaseController
                 
                 $week_of_selected_date=get_date_format($selected_date,'w');
                 // echo $week_of_selected_date; 
+                // echo $app_id; 
+
 
                 $timings=$AppointmentsTimings->where('appointment_id',$app_id)->where('week',$week_of_selected_date)->findAll();
                 $timing_box=[];
                 foreach ($timings as $tm) {
                     $start_time = new Time($tm['from']);
                     $end_time = new Time($tm['to']); 
-                        
+                    
                     $interval = new DateInterval('PT30M'); 
                     $result_time= new DatePeriod($start_time, $interval, $end_time->add($interval));
                     foreach ($result_time as $rt) {   
@@ -820,41 +828,47 @@ class Appointments extends BaseController
             if (is_appointments(company($user['id']))==1) {
 
 
-                // if ($_GET) {
-                //     $from=$_GET['from'];
-                //     $dto=$_GET['to'];
+                if ($_GET) {
+                    $from=$_GET['from'];
+                    $dto=$_GET['to'];
 
-                //     if (!empty($from) && empty($dto)) {
-                //         $PaymentsModel->where('date(datetime)',$from);
-                //     }
-                //     if (!empty($dto) && empty($from)) {
-                //         $PaymentsModel->where('date(datetime)',$dto);
-                //     }
-
-                    
-                //     if (!empty($dto) && !empty($from)) {
-                //         $PaymentsModel->where("date(datetime) BETWEEN '$from' AND '$dto'");
-                //     }
-
-                //     if (!empty($_GET['status'])) {
-                //          $PaymentsModel->where('lead_status',$_GET('status'));
-                //     }
-
-                //     if (!empty($_GET['voucher_no'])) {
-                //          $PaymentsModel->where('serial_no',$_GET['voucher_no']);
-                //     }
+                    if (!empty($from) && empty($dto)) {
+                        $AppointmentsBookings->where('date(datetime)',$from);
+                    }
+                    if (!empty($dto) && empty($from)) {
+                        $AppointmentsBookings->where('date(datetime)',$dto);
+                    }
 
                     
+                    if (!empty($dto) && !empty($from)) {
+                        $AppointmentsBookings->where("date(datetime) BETWEEN '$from' AND '$dto'");
+                    }
 
-                //      if (isset($_GET['collected_user'])) {
-                //         if (!empty($_GET['collected_user'])) {
-                //             $PaymentsModel->where('collected_by',$_GET['collected_user']);
-                //         }
-                //     }
+                    if (!empty($_GET['status'])) {
+                         $AppointmentsBookings->where('status',$_GET('status'));
+                    }
+
+                    if (!empty($_GET['booking_name'])) {
+                         $AppointmentsBookings->like('booking_name',$_GET['booking_name'],'both');
+                    }
+
+                    if (!empty($_GET['booking_number'])) {
+                         // $AppointmentsBookings->like('booking_number',$_GET['booking_number'],'both');
+                    }
+
+                    if (isset($_GET['person_id'])) {
+                        if (!empty($_GET['person_id'])) {
+                            $AppointmentsBookings->where('person_id',$_GET['person_id']);
+                        }
+                    }
                     
-                // }else{
-                //     $PaymentsModel->where('date(datetime)',get_date_format(now_time($myid),'Y-m-d'));
-                // }
+                }else{
+                    $AppointmentsBookings->where('MONTH(datetime)',get_date_format(now_time($myid),'m'));
+                }
+
+                
+
+
 
                 $all_bookings = $AppointmentsBookings->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->findAll();
 
