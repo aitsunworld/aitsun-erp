@@ -79,11 +79,11 @@ use App\Models\PrintersModel as PrintersModel;
 
 
 function style_version(){
-    return '1.2.2';
+    return '1.2.3';
 }
 
 function script_version(){
-    return '1.2.2';
+    return '1.2.3';
 }
 
 function round_after(){
