@@ -1,4 +1,6 @@
-<!-- ////////////////////////// TOP BAR START ///////////////////////// -->
+
+<div class="d-flex"><?= view('sidebar_menus') ?><div class="position-relative w-100">
+    <!-- ////////////////////////// TOP BAR START ///////////////////////// -->
 <div class="sub_topbar d-flex">
     <div class="right_bar d-flex justify-content-between w-100">
       
@@ -279,6 +281,8 @@
         </div>
     </div>
 </div>
+</div>
+
 
 <script type="text/javascript">
     

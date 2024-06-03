@@ -550,7 +550,7 @@
 
 
                         $paid_amount=0;
-                        $payment_type=strip_tags($_POST['payment_type']);
+                        // $payment_type=strip_tags($_POST['payment_type']);
                         $check_nomber='';
                         $check_date='';
                         $chk_amt=0;

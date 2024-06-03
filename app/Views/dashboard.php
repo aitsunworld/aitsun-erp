@@ -1,4 +1,5 @@
-<div class="main_page_content d-flex">
+<div class="main_page_content ps-0 d-flex">
+    <?= view('sidebar_menus') ?>
     <div class="menu_box">
  
         <?php

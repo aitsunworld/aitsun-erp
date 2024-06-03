@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/lobibox.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/sweetalert2.min.css') ?>">
      <?php 
-            $uri = new \CodeIgniter\HTTP\URI(str_replace('index.php','',current_url()));
+            $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
          ?>
     <?php  
         if ($uri->getTotalSegments()>sn2()) {

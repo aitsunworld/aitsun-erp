@@ -73,19 +73,13 @@
                         <option value="" selected>User type</option>
                         <option value="">Select user type</option>
                         <option value="admin">Admin</option>
-                        <option value="staff">Staff</option>
-                        <?php if (is_school(company($user['id']))): ?>
-                            <option value="teacher">Teacher</option>
-                            <option value="driver">Driver</option>
-                        <?php endif ?>
-                        <option value="delivery">Delivery</option>
-                        <option value="seller">Seller</option>
+                        <option value="staff">Staff/Normal user</option> 
                 </select>
 
 
-                  <input type="text" name="serachname" class="form-control-sm form-control filter-control" placeholder="Search Name">
+                <input type="text" name="serachname" class="form-control-sm form-control filter-control" placeholder="Search Name">
                 
-                  <button class=" btn-dark btn-sm"><?= langg(get_setting(company($user['id']),'language'),'Filter'); ?></button>
+                <button class=" btn-dark btn-sm"><?= langg(get_setting(company($user['id']),'language'),'Filter'); ?></button>
                   <a class=" btn-outline-dark btn btn-sm" href="<?= base_url('user_master') ?>?page=1"><?= langg(get_setting(company($user['id']),'language'),'Clear'); ?></a>
                 
                 
@@ -176,13 +170,7 @@
                         <select class="form-select" name="u_type">
                             <option value="">Select user type</option>
                             <option value="admin">Admin</option>
-                            <option value="staff">Staff</option>
-                            <?php if (is_school(company($user['id']))): ?>
-                                <option value="teacher">Teacher</option>
-                                <option value="driver">Driver</option>
-                            <?php endif ?>
-                            <option value="delivery">Delivery</option>
-                            <option value="seller">Seller</option>
+                            <option value="staff">Staff/Normal user</option> 
                         </select>
                     </div>
 
@@ -540,13 +528,7 @@
                                                 <select class="form-select" name="u_type">
                                                     <option value="">Select user type</option>
                                                     <option value="admin" <?php if ($cmpuser['u_type']=='admin'){echo 'selected'; }?>>Admin</option>
-                                                    <option value="staff" <?php if ($cmpuser['u_type']=='staff'){echo 'selected'; }?>>Staff</option>
-                                                    <?php if (is_school(company($user['id']))): ?>
-                                                        <option value="teacher" <?php if ($cmpuser['u_type']=='teacher'){echo 'selected'; }?>>Teacher</option>
-                                                        <option value="driver" <?php if ($cmpuser['u_type']=='driver'){echo 'selected'; }?>>Driver</option>
-                                                    <?php endif ?>
-                                                    <option value="delivery" <?php if ($cmpuser['u_type']=='delivery'){echo 'selected'; }?>>Delivery</option>
-                                                    <option value="seller" <?php if ($cmpuser['u_type']=='seller'){echo 'selected'; }?>>Seller</option>
+                                                    <option value="staff" <?php if ($cmpuser['u_type']=='staff'){echo 'selected'; }?>>Staff/Normal user</option> 
                                                 </select>
                                             </div>
 

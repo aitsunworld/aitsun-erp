@@ -1,4 +1,5 @@
-<!-- ////////////////////////// TOP BAR START ///////////////////////// -->
+ 
+    <!-- ////////////////////////// TOP BAR START ///////////////////////// -->
 <div class="sub_topbar d-flex">
     <div class="right_bar d-flex justify-content-between w-100">
       
@@ -226,8 +227,7 @@
     </div>
 </div> 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
-
-
+ 
 <script type="text/javascript">
     
     $(document).on('click','.primary_check',function(){

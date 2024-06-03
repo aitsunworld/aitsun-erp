@@ -1401,9 +1401,42 @@
 <?php if (has_sticky(company($user['id']))): ?> 
 <?php else: ?> 
 <?php endif; ?>
+  <?php 
+            $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
+         ?>
 
-
+    
+<div id="sidebar">  
+  <div class="list"> 
+       
+        <?php 
+            foreach (menus_array($user['id'],$user['u_type']) as $side_item) {
+                if (!isset($side_item['condition']) || $side_item['condition']) {
+        ?>
+            <div class="item" onclick="location.href='<?= $side_item["url"] ?>'">
+                <img src="<?= $side_item['icon'] ?>" class=" my-auto me-2">
+                <?= $side_item['title'] ?>
+            </div> 
+        <?php
+                }
+            } 
+        ?> 
+  </div>  
+  <?php if ($uri->getTotalSegments()>=sn2()): ?>
+      <div class="main_menu_toggler" onclick="toggleSidebar()">
+          Main Menu 
+      </div>
+  <?php endif ?>
+         
  
+</div>  
+    
+ <script type="text/javascript">
+    function toggleSidebar(){
+      document.getElementById("sidebar").classList.toggle('active');
+    }
+</script>   
+        
 <input type="hidden" value="<?= get_setting(company($user['id']),'printer1'); ?>" id="installedPrinterName">
    <script src="<?= base_url('public/js/bootstrap.bundle.min.js') ?>"></script>
 <script src="<?= base_url('public'); ?>/js/pos_print.js?v=<?= script_version(); ?>"></script>

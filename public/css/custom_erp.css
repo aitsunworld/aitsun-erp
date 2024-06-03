@@ -214,7 +214,11 @@ a{
     padding: 15px 15px 15px 15px;
     height: 90vh;
     margin-top: 8vh;
+    overflow-y: scroll;
+}
 
+.sub_main_page_content::-webkit-scrollbar{
+    display: flex;
 }
 
 .no_toolbar_sub_main_page_content{
@@ -264,6 +268,7 @@ a{
     margin: auto;
     max-height: 85vh;
     overflow-y: scroll;
+    width: 100%;
     position: relative;
 }
 
@@ -3776,4 +3781,116 @@ body {
     box-shadow: 0px 0px 10px 0px #00000080;
     border-radius: 10px;
     top: 40px;
+}
+
+.sidebar_menus{
+    background: #ffffff29;
+    margin-top: 10px;
+    height: 100vh;
+    padding-top: 60px;
+    width: 240px;
+    overflow: scroll;
+}
+.sidebar_menus.home{
+    margin-top: -56px;
+}
+
+.sidebar_menus::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar_menus .menu_container{
+    
+    width: 100%;
+}
+
+.sidebar_menus .menu_container ul{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+} 
+
+.sidebar_menus .menu_container ul li{
+    padding: 5px 10px; 
+    width: 100%;
+    border-bottom: 1px solid #000000;
+} 
+.sidebar_menus .menu_container ul li.active, .sidebar_menus .menu_container ul li:hover{
+    background: #bf003e1f;
+} 
+
+.sidebar_menus .menu_container ul img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+} 
+
+
+#sidebar {
+  z-index: 111;
+  position:absolute;
+  top:0px; 
+  left:-200px;
+  width:200px;
+  height:100vh;
+  background:#151719;
+  transition:all 300ms linear; 
+}
+
+#sidebar .list{
+    height: 100vh;
+    overflow-y: scroll;
+}
+#sidebar .list::-webkit-scrollbar{
+    display: none;
+}
+#sidebar.active {
+  left:0px;
+}
+#sidebar .toggle-btn {
+  position:absolute;
+  left:220px;
+  top:10px;
+}
+#sidebar .toggle-btn span {
+  display:block;
+  width:30px;
+  height:5px;
+  background:#151719;
+  margin:5px 0px;
+  cursor:pointer;
+}
+#sidebar div.list div.item {
+  padding:15px 10px;
+  border-bottom:1px solid #444;
+  color:#fcfcfc;
+  text-transform:uppercase;
+  font-size:12px;
+  cursor: pointer;
+}
+#sidebar div.list div.item:hover{
+  background: #cf2057;
+}
+
+#sidebar div.list div.item img{
+  width: 30px;
+  height: 30px;
+}
+
+
+#sidebar div.list div.item a{
+  color:#fcfcfc;
+  text-decoration: none;
+}
+.main_menu_toggler{
+    cursor: pointer;
+    position: absolute;
+    right: -57px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    background: #cf2057;
+    color: white;
+    padding: 0 12px;
+    border-radius: 0 0 10px 10px;
 }

@@ -3,6 +3,13 @@
 	function menus_array($user_id,$u_type){
 		$menuItems = [
 		    [
+		    	"menu_name"=>'Dashboard', 
+		        "url" => base_url(),
+		        "icon" => base_url('public/images/menu_icons/home.webp'),
+		        "title" => "Dashboard",
+		        'class'=>''
+		    ], 
+		    [
 		    	"menu_name"=>'Parties', 
 		        "url" => base_url('customers') . "?page=1",
 		        "icon" => base_url('public/images/menu_icons/customer_master.webp'),
