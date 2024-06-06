@@ -80,7 +80,8 @@ $routes->get('/appointments/reports', 'Appointments::reports');
  
 $routes->post('/appointments/update_resource_img/(:any)', 'Appointments::update_resource_img/$1');
  
-
+//rental management 
+$routes->get('/rental', 'Rental::index');
 
 ////////// Parties /////////////
 $routes->get('/customers', 'Customers::index'); 

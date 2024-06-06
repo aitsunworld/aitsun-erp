@@ -64,6 +64,12 @@
 		        "condition" => check_permission($user_id, 'manage_purchase') || $u_type == 'admin'
 		    ],
 		    [
+		    	"menu_name"=>'Rental',
+		        "url" => base_url('rental'),
+		        "icon" => base_url('public/images/menu_icons/rental.webp'),
+		        "title" => "Rental"
+		    ],
+		    [
 		    	"menu_name"=>'Vouchers',
 		        "url" => base_url('voucher_entries'),
 		        "icon" => base_url('public/images/menu_icons/vouchers.webp'),

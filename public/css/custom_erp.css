@@ -3882,6 +3882,7 @@ body {
   color:#fcfcfc;
   text-decoration: none;
 }
+
 .main_menu_toggler{
     cursor: pointer;
     position: absolute;
@@ -3893,4 +3894,8 @@ body {
     color: white;
     padding: 0 12px;
     border-radius: 0 0 10px 10px;
+}
+
+#sidebar:hover{
+    left: 0!important;
 }
