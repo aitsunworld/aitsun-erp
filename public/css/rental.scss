@@ -1,0 +1,39 @@
+.rental_fiters{
+	ul{
+		list-style: none;
+    	padding: 0 0 0 0;
+		li{
+			a{
+				color: black;
+			    display: block;
+			    padding: 5px 0 5px 15px;
+			    border-bottom: 1px solid #c3c3c3;
+			    &:hover, &.active{
+			    	background: #f7e6d0;
+			    }
+
+			}
+			&:last-child a{
+		    	border-bottom: none;
+		    }
+		}
+	}
+	h6{
+		background: #d5265d;
+	    color: white;
+	    padding: 4px 10px;
+	}
+}
+
+.duration-badge{
+	padding: 2px 10px;
+    display: inline-block;
+    background: #6f6d6d;
+    width: max-content;
+    color: white;
+    border-radius: 20px;
+}
+
+.rental_status span{
+	font-weight: 400;
+}
