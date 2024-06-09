@@ -77,7 +77,7 @@ class Appointments extends BaseController
         }
     }
 
-    public function book_persons($book_type='person'){
+    public function book_persons($book_type='person',$my_appointments=''){
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
@@ -110,7 +110,10 @@ class Appointments extends BaseController
                     $AppointmentsModel->where('availability_on',1);
                 }
                 $appointments_array=$AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','desc')->findAll();
-            
+                
+                if ($my_appointments=='my_appointments') {
+                    $AppointmentsBookings->where('person_id',$myid);
+                }
                 $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->where('deleted',0)->findAll();
                 
                 $data = [
@@ -118,7 +121,8 @@ class Appointments extends BaseController
                     'user' => $user, 
                     'todays_booking'=>$todays_booking,
                     'book_type'=>$book_type,
-                    'appointments_array'=>$appointments_array
+                    'appointments_array'=>$appointments_array,
+                    'my_appointments'=>$my_appointments
                 ];
                
                 echo view('header',$data);
@@ -629,6 +633,8 @@ class Appointments extends BaseController
             if ($booking_id>0) { 
                $resources_data['id'] = $booking_id;
                $type_of_request='update';
+            }else{
+                $resources_data['booking_no'] = booking_no(company($myid));
             }
             
             $book_result=[];
@@ -833,19 +839,24 @@ class Appointments extends BaseController
                     $dto=$_GET['to'];
 
                     if (!empty($from) && empty($dto)) {
-                        $AppointmentsBookings->where('date(datetime)',$from);
+                        $AppointmentsBookings->where('date(book_from)',$from);
                     }
                     if (!empty($dto) && empty($from)) {
-                        $AppointmentsBookings->where('date(datetime)',$dto);
+                        $AppointmentsBookings->where('date(book_from)',$dto);
+                    }
+
+                    if (empty($dto) && empty($from)) {
+                        $AppointmentsBookings->where('MONTH(book_from)',get_date_format(now_time($myid),'m'));
                     }
 
                     
+                    
                     if (!empty($dto) && !empty($from)) {
-                        $AppointmentsBookings->where("date(datetime) BETWEEN '$from' AND '$dto'");
+                        $AppointmentsBookings->where("date(book_from) BETWEEN '$from' AND '$dto'");
                     }
 
                     if (!empty($_GET['status'])) {
-                         $AppointmentsBookings->where('status',$_GET('status'));
+                         $AppointmentsBookings->where('status',$_GET['status']);
                     }
 
                     if (!empty($_GET['booking_name'])) {
@@ -853,7 +864,7 @@ class Appointments extends BaseController
                     }
 
                     if (!empty($_GET['booking_number'])) {
-                         // $AppointmentsBookings->like('booking_number',$_GET['booking_number'],'both');
+                         $AppointmentsBookings->where('booking_no',$_GET['booking_number']);
                     }
 
                     if (isset($_GET['person_id'])) {
@@ -861,9 +872,16 @@ class Appointments extends BaseController
                             $AppointmentsBookings->where('person_id',$_GET['person_id']);
                         }
                     }
+
+                    if (isset($_GET['customer'])) {
+                        if (!empty($_GET['customer'])) {
+                            $AppointmentsBookings->where('customer',$_GET['customer']);
+                        }
+                    }
+
                     
                 }else{
-                    $AppointmentsBookings->where('MONTH(datetime)',get_date_format(now_time($myid),'m'));
+                    $AppointmentsBookings->where('MONTH(book_from)',get_date_format(now_time($myid),'m'));
                 }
 
                 

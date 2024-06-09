@@ -76,6 +76,9 @@ use App\Models\EmployeeCategoriesModel as EmployeeCategoriesModel;
 use App\Models\Stockadjustmodel as Stockadjustmodel;
 use App\Models\Main_item_party_table as Main_item_party_table;
 use App\Models\PrintersModel as PrintersModel;
+use App\Models\AppointmentsBookings as AppointmentsBookings;
+use App\Models\PosSessions as PosSessions;
+
 
 
 function style_version(){
@@ -146,6 +149,63 @@ function site_key(){
     
 }
 
+
+function last_session_data($register_id,$column){
+    $PosSessions=new PosSessions;
+    $last_session_data=''; 
+    $lssdata=$PosSessions->where('register_id',$register_id)->where('deleted',0)->orderBy('id','desc')->first();
+    if ($lssdata) {
+        $last_session_data=$lssdata['closing_balance'];
+        $last_session_data=$lssdata['date'];
+        $last_session_data=$lssdata[$column];
+    }
+    return $last_session_data;
+}
+ 
+
+function duration_in_days($timeString) {
+    // Parse the input string
+    list($hours, $minutes) = explode(':', $timeString);
+
+    // Constants
+    $hoursInDay = 24;
+    $daysInMonth = 30; // Assuming an average month length of 30 days
+
+    // Convert total minutes to hours
+    $totalHours = $hours + ($minutes / 60);
+
+    // Calculate days and remaining hours
+    $days = floor($totalHours / $hoursInDay);
+    $remainingHours = $totalHours % $hoursInDay;
+
+    // Calculate months and remaining days
+    $months = floor($days / $daysInMonth);
+    $remainingDays = $days % $daysInMonth;
+
+    // Calculate remaining minutes
+    $remainingMinutes = $minutes % 60;
+
+    // Construct the output
+    $output = '';
+
+    if ($months > 0) {
+        $output .= $months . " month" . ($months > 1 ? "s" : "") . ", ";
+    }
+    if ($remainingDays > 0) {
+        $output .= $remainingDays . " day" . ($remainingDays > 1 ? "s" : "") . ", ";
+    }
+    if ($remainingHours > 0) {
+        $output .= floor($remainingHours) . " hour" . (floor($remainingHours) > 1 ? "s" : "") . ", ";
+    }
+    if ($remainingMinutes > 0) {
+        $output .= $remainingMinutes . " minute" . ($remainingMinutes > 1 ? "s" : "");
+    }
+
+    // Remove trailing comma and space if any
+    $output = rtrim($output, ', ');
+
+    return $output;
+}
 
 function printer_data($userid,$column){
     $PrintersModel=new PrintersModel;
@@ -4276,6 +4336,15 @@ function serial_no_cash($company){
     $get_serial=$PaymentsModel->first();
     return $get_serial['serial_no']+1;
 }
+
+function booking_no($company){
+    $AppointmentsBookings = new AppointmentsBookings;
+    $AppointmentsBookings->selectMax('booking_no');
+    $AppointmentsBookings->where('company_id',$company);
+    $get_serial=$AppointmentsBookings->first();
+    return $get_serial['booking_no']+1;
+}
+
 
 function serial($company,$invoice){
     $InvoiceModel = new InvoiceModel;

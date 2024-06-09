@@ -140,6 +140,12 @@ class Aitsun_keys extends BaseController
             }else{
                $is_appoinments=0;
             }
+
+            if (isset($_POST['is_clinic'])) {
+               $is_clinic=$_POST['is_clinic'];
+            }else{
+               $is_clinic=0;
+            }
             
             $clientdata=[
                 'display_name'=>$this->request->getVar('display_name'),
@@ -174,6 +180,8 @@ class Aitsun_keys extends BaseController
                 'school'=>$is_school,
                 'is_website'=>$is_website,
                 'is_appoinments'=>$is_appoinments, 
+                'is_clinic'=>$is_clinic, 
+
 
 
             ];
@@ -278,6 +286,12 @@ class Aitsun_keys extends BaseController
                $is_appoinments=0;
             }
 
+            if (isset($_POST['is_clinic'])) {
+               $is_clinic=$_POST['is_clinic'];
+            }else{
+               $is_clinic=0;
+            }
+
 
             if(!empty(trim(strip_tags($this->request->getVar('password'))))){          
 
@@ -311,6 +325,7 @@ class Aitsun_keys extends BaseController
                     'school'=>$is_school,
                     'is_website'=>$is_website,
                     'is_appoinments'=>$is_appoinments,
+                    'is_clinic'=>$is_clinic,
 
                 ];
             }else{
@@ -343,6 +358,7 @@ class Aitsun_keys extends BaseController
                     'school'=>$is_school,
                     'is_website'=>$is_website,
                     'is_appoinments'=>$is_appoinments,
+                    'is_clinic'=>$is_clinic,
                 ];
             }
 

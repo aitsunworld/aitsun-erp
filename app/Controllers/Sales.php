@@ -92,11 +92,25 @@
                         $converttted=0;
                     }
 
+                    $bill_from=strip_tags($this->request->getVar('invoice_for'));
+
                     $booking_id=strip_tags($this->request->getVar('booking_id'));
-                    $bill_from='';
+                
                     if ($booking_id>0) {
                         $bill_from='appointment';
                     }
+
+                    $rent_from='';
+                    $rent_to='';
+
+                    $rent_from_date=strip_tags($this->request->getVar('rent_from_date'));
+                    $rent_from_time=strip_tags($this->request->getVar('rent_from_time'));
+                    $rent_to_date=strip_tags($this->request->getVar('rent_to_date'));
+                    $rent_to_time=strip_tags($this->request->getVar('rent_to_time'));
+                    $rent_from=$rent_from_date.' '.$rent_from_time;
+                    $rent_to=$rent_to_date.' '.$rent_to_time;
+        
+                    
                      
 
                     $in_data=[
@@ -137,6 +151,12 @@
                         'bill_type'=>strip_tags($this->request->getVar('bill_type')),
                         'booking_id'=>$booking_id,
                         'bill_from'=>$bill_from,
+                        'rental_status'=>0,
+                        'invoice_address'=>strip_tags($this->request->getVar('invoice_address')),
+                        'delivery_address'=>strip_tags($this->request->getVar('delivery_address')),
+                        'rent_from'=>$rent_from,
+                        'rent_to'=>$rent_to,
+                        'rental_duration'=>strip_tags($this->request->getVar('rental_duration'))
                     ];
                      
                     $in_ins=$InvoiceModel->save($in_data);
@@ -153,7 +173,7 @@
                     }
 
                     if ($booking_id>0) {
-                        $AppointmentsBookings->update($booking_id,['status'=>2]);
+                        $AppointmentsBookings->update($booking_id,['billing_status'=>1]);
                     }
 
 
@@ -579,6 +599,15 @@
                         $old_paid_amount=strip_tags($this->request->getVar('old_paid_amount'));
 
                         
+                        $rent_from='';
+                        $rent_to='';
+
+                        $rent_from_date=strip_tags($this->request->getVar('rent_from_date'));
+                        $rent_from_time=strip_tags($this->request->getVar('rent_from_time'));
+                        $rent_to_date=strip_tags($this->request->getVar('rent_to_date'));
+                        $rent_to_time=strip_tags($this->request->getVar('rent_to_time'));
+                        $rent_from=$rent_from_date.' '.$rent_from_time;
+                        $rent_to=$rent_to_date.' '.$rent_to_time;
 
                        
                        $in_data=[
@@ -612,7 +641,12 @@
                             'mrn_number'=>strip_tags($this->request->getVar('mrn_number')),
                             'doctor_name'=>strip_tags($this->request->getVar('doctor_name')),
                              'bill_number'=>strip_tags($this->request->getVar('bill_number')),
-                            'validity'=>strip_tags($this->request->getVar('validity'))  
+                            'validity'=>strip_tags($this->request->getVar('validity')),
+                            'invoice_address'=>strip_tags($this->request->getVar('invoice_address')),
+                            'delivery_address'=>strip_tags($this->request->getVar('delivery_address')),
+                            'rent_from'=>$rent_from,
+                            'rent_to'=>$rent_to,
+                            'rental_duration'=>strip_tags($this->request->getVar('rental_duration'))
 
                         ];
                         
@@ -1310,6 +1344,52 @@
                 }else{
                     return redirect()->to(base_url('users/login'));
                 }
+        }
+
+        public function change_rental_status($rental_status='',$inid=0){
+            $session=session();
+            $UserModel=new Main_item_party_table;
+            $InvoiceModel=new InvoiceModel;
+         
+            if ($session->has('isLoggedIn')){
+
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+                $user=$UserModel->where('id',$myid)->first(); 
+
+                    
+            if ($this->request->getMethod()=='post') {  
+                
+                $final_rental_status=$rental_status;
+
+                // if ($rental_status==0) {
+                //     $final_rental_status=1;
+                // }elseif ($rental_status==1) {
+                //    $final_rental_status=2;
+                // }elseif ($rental_status==2) {
+                //    $final_rental_status=3;
+                // }
+
+                $in_data=[ 
+                    'rental_status'=>$final_rental_status,  
+                ]; 
+
+                $in_ins=$InvoiceModel->update($inid,$in_data);
+                 
+
+                if ($in_ins) {
+                    echo 1;
+                } 
+
+            }
+
+                            
+            }else{
+                echo 0;
+            }
+
         }
 
 

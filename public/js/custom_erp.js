@@ -84,6 +84,32 @@ $(document).ready(function(){
         $('.erp_warning').remove();
     });
 
+
+    
+    $(document).on('click','.rental_status',function(){
+        var status=$(this).data('status'); 
+        var invoice_id=$(this).data('invoice_id'); 
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+    
+        $.ajax({
+            type: 'POST',
+            url: base_url()+'/sales/change_rental_status/'+status+'/'+invoice_id,
+            data:{
+                status:status,
+                [csrfName]: csrfHash
+            },
+            success: function(response) { 
+                if ($.trim(response)==1) {
+                    show_success_msg('success','Rental data updated!');
+                    location.reload();
+                }else{
+                    show_success_msg('success','Try again!'); 
+                }
+            }
+        });
+    });
+
     
     $(document).on('change','.is_pos',function(){
         var p_url=$(this).data('p_url');

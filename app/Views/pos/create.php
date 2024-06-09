@@ -17,11 +17,13 @@
 
 <?php 
 $products_array=[];
-if (session()->has('pos_session')) {
-  $session_data=session()->get('pos_session');
+if (session()->has('pos_session'.$page_register_id)) {
+  $session_data=session()->get('pos_session'.$page_register_id);
   $products_array=$session_data['products'];
   $customers=$session_data['customers']; 
   $session_id=$session_data['session_id']; 
+  $register_id=$session_data['register_id']; 
+
 }
 
 
@@ -204,6 +206,7 @@ if (session()->has('pos_session')) {
                   <input type="hidden" name="round_type" value="add">
 
                   <input type="hidden" name="session_id" value="<?= $session_id; ?>">
+                  <input type="hidden" name="register_id" value="<?= $register_id; ?>">
                   <input type="hidden" name="bill_type" value="pos">
 
                   <input type="date" name="invoice_date" id="invoice_date" class="d-none" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'Y-m-d'); ?><?php endif ?>"  >
@@ -269,7 +272,7 @@ if (session()->has('pos_session')) {
              <!--  <a class="dropdown-item href_loader" href="">
                 <span class="ms-3">Cash In/Out</span> 
               </a>   -->
-              <a class="dropdown-item href_loader" href="<?= base_url('pos/close_register') ?>">
+              <a class="dropdown-item href_loader" href="<?= base_url('pos/close_register') ?>/<?= $register_id ?>">
                 <span class="ms-0">Close register</span> 
               </a> 
             </div>

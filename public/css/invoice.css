@@ -367,6 +367,8 @@ a{
     border-radius: 5px;
     margin: 0 10px;
     background: #f1ebeb;
+    overflow-y: scroll;
+    height: 80vh;
 }
 .btn-complete{
 	color: #fff;
@@ -573,4 +575,10 @@ a{
     color: white;
     padding: 0 12px;
     border-radius: 0 0 10px 10px;
+}
+
+.rental_details{
+        border: 1px solid #919191;
+    padding: 6px;
+    border-radius: 5px;
 }

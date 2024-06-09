@@ -240,14 +240,16 @@ a{
     display: none!important;
 }
 
-
+.filters{
+    background: wheat;
+}
 .row_search{
     width: 100%;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid;
-    background: none;
+    background: none; 
 }
 
 .row_search:focus{
@@ -261,12 +263,10 @@ a{
     color: blue;
 }
 
-.menu_box{
-	display: flex;
-    flex-wrap: wrap;
+.menu_box { 
     justify-content: center;
-    margin: auto;
-    max-height: 85vh;
+   
+    max-height: 100vh;
     overflow-y: scroll;
     width: 100%;
     position: relative;
@@ -3898,4 +3898,33 @@ body {
 
 #sidebar:hover{
     left: 0!important;
+}
+
+.tob_bar_status_btn{
+    background: purple;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.tob_bar_status_btn:hover{
+    color: white;
+    background: #a905a9;
+}
+
+.appointments_notification{
+    width: 240px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.appointments_notification ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.appointments_notification li{
+    border-bottom: 1px solid beige;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }

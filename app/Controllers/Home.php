@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\Main_item_party_table;
 use App\Models\InvoiceModel;
 use App\Models\ProductsModel;
-use App\Models\FinancialYears;
+use App\Models\AppointmentsBookings;
 use App\Models\PaymentsModel;
 use App\Models\ProductrequestsModel;
 use App\Models\LeadModel;
@@ -33,7 +33,7 @@ class Home extends BaseController
             $Main_item_party_table=new Main_item_party_table;
             $InvoiceModel=new InvoiceModel;
             $ProductsModel=new Main_item_party_table;
-            $FinancialYears=new FinancialYears;
+            $AppointmentsBookings=new AppointmentsBookings;
             $ProductrequestsModel=new ProductrequestsModel;
             $LeadModel=new LeadModel;
             $ActivitiesNotes=new ActivitiesNotes;
@@ -41,14 +41,7 @@ class Home extends BaseController
             $ClientpaymentModel= new ClientpaymentModel;
             $AlertSessionModel = new AlertSessionModel;
             $Companies = new Companies;
-            
-
- 
-            
-            
-
-          
-
+              
 
             if ($_GET) {
                 if (!empty($_GET['year'])) {
@@ -67,36 +60,38 @@ class Home extends BaseController
             // array push of alert session
             $payment_alert = array();
 
-            $billing_payment=$ClientpaymentModel->where('deleted',0)->where('client_id',app_super_user(company($myid)))->where('status!=','paid')->findAll();
+            // $billing_payment=$ClientpaymentModel->where('deleted',0)->where('client_id',app_super_user(company($myid)))->where('status!=','paid')->findAll();
 
 
-            foreach ($billing_payment as $bp) {
+            // foreach ($billing_payment as $bp) {
                
-                $alert_session=$AlertSessionModel->where('bill_id',$bp['id'])->where('status!=','done')->findAll();
-                 // echo $bp['id'];
-                foreach ($alert_session as $als) {
-                    if ($als['status']=='activated') {
-                        array_push($payment_alert, $als);
-                    }else{
-                        $curr_date=now_time($myid);
-                        if ($curr_date>=$als['datetime']) {
-                            $alss = array('status' => 'activated');
-                            $AlertSessionModel->update($als['id'],$alss);   
-                        }
-                    }
+            //     $alert_session=$AlertSessionModel->where('bill_id',$bp['id'])->where('status!=','done')->findAll();
+            //      // echo $bp['id'];
+            //     foreach ($alert_session as $als) {
+            //         if ($als['status']=='activated') {
+            //             array_push($payment_alert, $als);
+            //         }else{
+            //             $curr_date=now_time($myid);
+            //             if ($curr_date>=$als['datetime']) {
+            //                 $alss = array('status' => 'activated');
+            //                 $AlertSessionModel->update($als['id'],$alss);   
+            //             }
+            //         }
                    
-                }
-            } 
+            //     }
+            // } 
             // array push of alert session
 
             $get_branches=$Companies->where('parent_company', main_company_id($myid));
 
+            $my_appointments=$AppointmentsBookings->where('company_id',company($myid))->where('person_id',$myid)->where('date(book_from)',get_date_format(now_time($myid),'Y-m-d'))->where('deleted',0)->orderBy('book_from','ASC')->findAll();
             $data = [
                 'title' => 'Aitsun ERP-Dashboard',
                 'user'=>$user,
                 'now_year'=>$year_data, 
                 'payment_alert'=>$payment_alert,
-                'branches'=>$get_branches->findAll()
+                'branches'=>$get_branches->findAll(),
+                'my_appointments'=>$my_appointments
             ];
            
 

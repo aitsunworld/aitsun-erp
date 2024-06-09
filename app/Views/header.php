@@ -32,23 +32,27 @@
         }
     ?>
 
-     <?php  
-        if ($uri->getTotalSegments()>sn2()) {
-           if ($uri->getSegment(sn3())== 'pos') {
+     <?php   
+           if ($uri->getSegment(sn2())== 'pos') {
     ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/pos.css') ?>?ver=<?= style_version(); ?>">
-    <?php    
-           }
+    <?php     
         }
     ?>
 
-    <?php  
-        if ($uri->getTotalSegments()>sn2()) {
-           if ($uri->getSegment(sn3())== 'appointments') {
+    <?php   
+           if ($uri->getSegment(sn2())== 'appointments') {
     ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/appoinments.css') ?>?ver=<?= style_version(); ?>">
-    <?php    
-           }
+    <?php     
+        }
+    ?>
+
+    <?php   
+           if ($uri->getSegment(sn2())== 'rental') {
+    ?>
+        <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/rental.css') ?>?ver=<?= style_version(); ?>">
+    <?php     
         }
     ?>
 
@@ -96,6 +100,8 @@
 
     <?php }; ?>
     <?php } ?>
+
+    
 
 </head>
 

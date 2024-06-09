@@ -17,8 +17,12 @@
             $report_date='From - '.get_date_format($from,'d M Y').'&nbsp; &nbsp; To - '.get_date_format($dto,'d M Y');
         }
 
+        if (empty($dto) && empty($from)) {
+            $report_date=''.get_date_format(now_time($user['id']),'M Y');
+        }
+
      }else{
-        $report_date='Today - '.get_date_format(now_time($user['id']),'d M Y');
+        $report_date=''.get_date_format(now_time($user['id']),'M Y');
      }
 ?>
 
@@ -102,12 +106,26 @@
 
                <input type="date" name="from" class="form-control form-control-sm filter-control" title="From" placeholder="">
                 <input type="date" name="to" title="To" class="form-control form-control-sm filter-control" placeholder="">
-
+                <select name="customer" class="form-select">
+                 <option value="">Select party</option>
+                 <?php foreach (customers_array(company($user['id'])) as $stf): ?>
+                     <option value="<?= $stf['id']; ?>"><?= user_name($stf['id']); ?></option>
+                 <?php endforeach ?>
+                </select>
                 <select name="person_id" class="form-select">
-                 <option value="">Select user</option>
+                 <option value="">Select person</option>
                  <?php foreach (staffs_array(company($user['id'])) as $stf): ?>
                      <option value="<?= $stf['id']; ?>"><?= user_name($stf['id']); ?></option>
                  <?php endforeach ?>
+                </select>
+
+                <select name="status" class="form-select">
+                 <option value="">Status</option>
+                 <option value="0">Scheduled</option>
+                 <option value="1">Visited</option>
+                 <option value="2">Completed</option>
+                 <option value="3">Pending</option>
+                 
                 </select>
               
                 <button class=" btn-dark btn-sm"><?= langg(get_setting(company($user['id']),'language'),'Filter'); ?></button>
@@ -128,13 +146,14 @@
             <table id="daybook_table" class="erp_table sortable no-wrap">
                  <thead>
                     <tr>
-                        <th colspan="9" class="text-center" >
+                        <td colspan="10" class="text-center" >
                             
                            <?= $report_date; ?>
 
-                        </th>
+                        </td>
                     </tr>
                     <tr> 
+                        <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'No.'); ?></th>
                         <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'Subject'); ?></th>
                         <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'Starts on'); ?>. </th>
                         <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'Ends on'); ?>. </th> 
@@ -144,11 +163,13 @@
                         <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'Person'); ?></th> 
                         <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'Resource'); ?></th> 
                         <th class="sorticon"><?= langg(get_setting(company($user['id']),'language'),'Status'); ?></th> 
+                    </tr>
                  </thead>
                  <tbody>
                     
                     <?php foreach ($all_bookings as $bk): ?>
                         <tr>
+                            <td><?= $bk['booking_no'] ?> </td>
                             <td><?= $bk['booking_name'] ?> </td>
                             <td><?= get_date_format($bk['book_from'],'d M Y - H:i A') ?></td>
                             <td><?= get_date_format($bk['book_to'],'d M Y - H:i A') ?></td> 
@@ -158,7 +179,15 @@
                             <td><?= user_data($bk['person_id'],'display_name') ?></td> 
                             <td><?= resource_data($bk['resource_id'],'appointment_resource') ?></td> 
                             <td>
-                                <?= ($bk['status'])?'<span class="badge bg-success">Checked In</span>':'' ?>
+                                <?php if ($bk['status']==0): ?>
+                                    <span class="badge bg-warning text-dark">Scheduled</span>
+                                <?php elseif ($bk['status']==1): ?>
+                                    <span class="badge bg-primary text-white">Visited</span>
+                                <?php elseif ($bk['status']==2): ?>
+                                    <span class="badge bg-success text-white">Completed</span> 
+                                <?php elseif ($bk['status']==3): ?>
+                                    <span class="badge bg-danger text-white">Pending</span> 
+                                <?php endif ?>
                             </td>
                         </tr>
                     <?php endforeach ?>

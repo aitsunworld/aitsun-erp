@@ -122,6 +122,29 @@
                 return $app_status;
         }
 
+        function is_clinic($company){
+                $Companies = new Companies;
+                $Main_item_party_table = new Main_item_party_table;
+                $MainCompanies = new MainCompanies;
+
+                $app_status=0;
+
+                $get_company=$Companies->where('id',$company);
+                foreach ($get_company->findAll() as $gc) {
+                        $get_main_company=$MainCompanies->where('id',$gc['parent_company']);
+                        foreach ($get_main_company->findAll() as $mc) {
+                                $get_author=$Main_item_party_table->where('id',$mc['uid']);
+                                foreach ($get_author->findAll() as $auth) {
+                                        if ($auth['is_clinic']!=0) {
+                                                $app_status=$auth['is_clinic'];
+                                        }
+                                }
+                        }
+                }
+
+                return $app_status;
+        }
+
         function is_website($company){
                 $Companies = new Companies;
                 $UserModel = new Main_item_party_table;

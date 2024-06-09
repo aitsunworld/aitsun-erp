@@ -66,6 +66,16 @@
             </script> 
         <php } ?> -->
 
+        <script type="text/javascript">
+            $(document).ready(function(){  
+                $.ajax({
+                  url: "<?= base_url('cron_jobs'); ?>", 
+                  success: function(dataResult){ 
+                  }
+                }); 
+            }); 
+        </script> 
+
       <div id="asm_toast"></div>
     
 <div id="sidebar">  
@@ -457,24 +467,20 @@
     }
 ?>
 
-<?php  
-    if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())== 'pos') {
+<?php   
+       if ($uri->getSegment(sn2())== 'pos') {
 ?>
     <script src="<?= base_url('public'); ?>/js/pos_index.js?v=<?= script_version(); ?>"></script>
 <?php    
-       }
-    }
+       } 
 ?>
 
-<?php  
-    if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())>= 'appointments') {
+<?php   
+       if ($uri->getSegment(sn2())>= 'appointments') {
 ?>
     <script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
 <?php    
-       }
-    }
+       } 
 ?>
 
  

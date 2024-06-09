@@ -8,6 +8,8 @@ use App\Models\Classtablemodel;
 use App\Models\AccountingModel; 
 use App\Models\Main_item_party_table;
 use App\Models\ResourcesModel; 
+use App\Models\PosRegisters; 
+
 
 
 class Selectors extends BaseController {
@@ -364,7 +366,7 @@ class Selectors extends BaseController {
                 
 
                 $UserModel->like('display_name',$search_text,'both');
-                $starray=$UserModel->where('company_id', company($myid))->where('deleted',0)->where('u_type','staff')->findAll();
+                $starray=$UserModel->where('company_id', company($myid))->where('deleted',0)->where('u_type!=','customer')->where('u_type!=','vendor')->findAll();
 
                 $lis='';
                 $lis.='<ul>'; 
@@ -372,6 +374,41 @@ class Selectors extends BaseController {
                 foreach ($starray as $li) {
                     $sc++;
                     $lis.='<li class="select_li" data-value="'.$li['id'].'" data-text="'.$li['display_name'].'">'.$li['display_name'].'</li>';
+                }
+                if ($sc<1) {
+                    $lis.='<li class="text-center">No result</li>';
+                }
+                $lis.='</ul>';
+
+                echo $lis;
+
+            }
+        } 
+    }
+
+    
+    public function all_pos_registers($search_text=''){
+        if (!empty($search_text)) { 
+            $session=session(); 
+            if($session->has('isLoggedIn')){ 
+
+                $PosRegisters=new PosRegisters;
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+              
+                
+
+                $PosRegisters->like('register_name',$search_text,'both');
+                $starray=$PosRegisters->where('company_id', company($myid))->where('deleted',0)->findAll();
+
+                $lis='';
+                $lis.='<ul>'; 
+                $sc=0;
+                foreach ($starray as $li) {
+                    $sc++;
+                    $lis.='<li class="select_li" data-value="'.$li['id'].'" data-text="'.$li['register_name'].'">'.$li['register_name'].'</li>';
                 }
                 if ($sc<1) {
                     $lis.='<li class="text-center">No result</li>';
