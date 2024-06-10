@@ -477,10 +477,9 @@ class Pos extends BaseController
                             'seats'=> $seats,
                             'shape'=>$shape,
                         ];
-
-                        if (!empty($table_name)) {
-                            $PosTables->save($add_fields); 
-                        }
+ 
+                        $PosTables->save($add_fields); 
+                       
                         
                     }
                 }

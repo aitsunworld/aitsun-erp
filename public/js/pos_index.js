@@ -49,21 +49,17 @@ $(document).on('click','#save_floor',function(){
         } 
 
          $('.after-add-more-table-tr').each(function () {
-            var fromTime = $(this).find('input[name="from[]"]').val();
-            var toTime = $(this).find('input[name="to[]"]').val();
             
-            // Convert time strings to date objects
-            var fromDateTime = new Date('1970-01-01T' + fromTime + ':00Z');
-            var toDateTime = new Date('1970-01-01T' + toTime + ':00Z');
-
-            // Calculate the difference in hours
-            var timeDifference = (toDateTime - fromDateTime) / (1000 * 60 * 60);
-
-            if (timeDifference < 1) {
-                show_failed_msg('error', '', '"To" time must be at least 1 hour greater than the "From" time!');
+            var thisrow=$(this).find('input[name="table_name[]"]');
+            $(thisrow).css("border",'1px solid #80808061');
+            var table_name = $(this).find('input[name="table_name[]"]').val();
+           
+            if ($.trim(table_name)=='') {
+                $(thisrow).css("border",'1px solid red');
+                show_failed_msg('error', '', 'Table name is empty in list');
                 approve = false;
                 return false; // Exit the loop
-            }
+            } 
         });
 
  
