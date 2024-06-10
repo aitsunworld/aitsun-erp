@@ -689,6 +689,9 @@ $routes->post('/user_master/delete_staff/(:any)', 'User_master::delete_staff/$1'
 $routes->post('/user_master/user_permission/(:any)', 'User_master::user_permission/$1');
 $routes->post('/user_master/save_branch_permission/(:any)', 'User_master::save_branch_permission/$1');
 
+$routes->get('/permission/(:any)', 'Permission::index/$1');
+$routes->post('/is_permission_allowed', 'Permission::is_permission_allowed');
+
 
 $routes->get('/messaging/send_credentials', 'Messaging::send_credentials');
 

@@ -78,6 +78,8 @@ use App\Models\Main_item_party_table as Main_item_party_table;
 use App\Models\PrintersModel as PrintersModel;
 use App\Models\AppointmentsBookings as AppointmentsBookings;
 use App\Models\PosSessions as PosSessions;
+use App\Models\PermissionsModel as PermissionsModel;
+
 
 
 
@@ -6262,6 +6264,16 @@ function get_invoice_items_data($invoice_id,$columnnn){
         }
         return $returnval;
     }
+
+function is_allowed($userid,$permission_name){
+    $PermissionsModel= new PermissionsModel;
+    $permi=$PermissionsModel->where('user_id',$userid)->where('permission_name',$permission_name)->where('is_allowed',1)->first();
+    if ($permi) {
+        return true;
+    }else{
+        return false;
+    }
+}
 
 
 ?>

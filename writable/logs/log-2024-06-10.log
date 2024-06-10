@@ -54,3 +54,209 @@ in SYSTEMPATH\Database\BaseConnection.php on line 645.
  8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
  9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-10 04:13:07 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp2\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp2\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp2\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp2\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp2\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\aitsun-erp\app\Controllers\Cron_jobs.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Cron_jobs->index()
+#8 C:\xampp2\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron_jobs))
+#9 C:\xampp2\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-10 04:13:07 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `appointments_bookings`
+WHERE `company_id` = :company_id:
+AND `deleted` = :deleted:
+AND `status` = :status:
+AND `book_to` < :book_to:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Cron_jobs.php(15): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cron_jobs->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron_jobs))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 06:16:07 --> Undefined variable $user
+in APPPATH\Views\footer.php on line 42.
+ 1 APPPATH\Views\footer.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\footer.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 5 APPPATH\Controllers\Permission.php(31): view('footer')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 06:52:16 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\user_master\permission.php on line 67.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 4 APPPATH\Controllers\Permission.php(33): view('user_master/permission')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 06:52:32 --> Call to a member function links() on null
+in APPPATH\Views\user_master\permission.php on line 69.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 4 APPPATH\Controllers\Permission.php(33): view('user_master/permission')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 06:54:39 --> Call to a member function links() on null
+in APPPATH\Views\user_master\permission.php on line 69.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 4 APPPATH\Controllers\Permission.php(33): view('user_master/permission', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 07:33:07 --> Undefined variable $Permissionlist
+in APPPATH\Controllers\Permission.php on line 29.
+ 1 APPPATH\Controllers\Permission.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Permissionlist', 'APPPATH\\Controllers\\Permission.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 07:33:16 --> Undefined variable $Permissionlist
+in APPPATH\Controllers\Permission.php on line 29.
+ 1 APPPATH\Controllers\Permission.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Permissionlist', 'APPPATH\\Controllers\\Permission.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:10:47 --> Undefined array key "display_name"
+in APPPATH\Views\user_master\permission.php on line 99.
+ 1 APPPATH\Views\user_master\permission.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "display_name"', 'APPPATH\\Views\\user_master\\permission.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user_master\\permission.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 5 APPPATH\Controllers\Permission.php(36): view('user_master/permission', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:11:13 --> Undefined array key "email"
+in APPPATH\Views\user_master\permission.php on line 100.
+ 1 APPPATH\Views\user_master\permission.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Views\\user_master\\permission.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user_master\\permission.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 5 APPPATH\Controllers\Permission.php(36): view('user_master/permission', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:20:01 --> Call to a member function links() on null
+in APPPATH\Views\user_master\permission.php on line 131.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 4 APPPATH\Controllers\Permission.php(36): view('user_master/permission', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:20:25 --> Call to a member function links() on null
+in APPPATH\Views\user_master\permission.php on line 131.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 4 APPPATH\Controllers\Permission.php(36): view('user_master/permission', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:27:52 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:27:52 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:27:52 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:27:52 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:27:52 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:31:18 --> Undefined variable $pro
+in APPPATH\Views\user_master\permission.php on line 105.
+ 1 APPPATH\Views\user_master\permission.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pro', 'APPPATH\\Views\\user_master\\permission.php', 105)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user_master\\permission.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user_master/permission', [], true)
+ 5 APPPATH\Controllers\Permission.php(36): view('user_master/permission', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Permission->index('18737')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permission))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:43:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:43:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:43:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:43:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 08:43:03 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 09:24:24 --> syntax error, unexpected single-quoted string "permission_name", expecting "]"
+in APPPATH\Controllers\Permission.php on line 52.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permission.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permission')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permission')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Permission', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
