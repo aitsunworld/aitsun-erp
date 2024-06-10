@@ -7,9 +7,9 @@ class Reminders extends BaseController {
         public function index()
         {    
  
-                $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+                $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', BREVO_KEY);
              
-                $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('partner-key', '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');
+                $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('partner-key', BREVO_PARTNER_KEY);
        
                 $apiInstance = new SendinBlue\Client\Api\AccountApi( 
                     new \GuzzleHttp\Client(),
