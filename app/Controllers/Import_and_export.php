@@ -336,7 +336,7 @@ class Import_and_export extends BaseController
             $import_report='';
             $resubmit_form='';
 
-            $row_limit=5;
+            $row_limit=100;
             $row_count=0;
             $count=0;
             $temp_row_count=0;

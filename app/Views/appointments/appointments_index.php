@@ -172,8 +172,7 @@
                             </a>
                             <a class="dropdown-item delete_appointment" data-deleteurl="<?= base_url('appointments/delete_appointment'); ?>/<?= $aps['id']; ?>">
                                 <span>Delete</span>
-                            </a> 
-                            </a> 
+                            </a>  
                         </div>
                     </div>
                 

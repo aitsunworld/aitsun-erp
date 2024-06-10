@@ -292,7 +292,7 @@ if (session()->has('pos_session'.$page_register_id)) {
 
       <div class="item_box row"> 
         <?php foreach ($products_array as $pro): ?> 
-          <div class="col-md-3 item_container barcode_item_<?= $pro['barcode']; ?> product_code_item_<?= $pro['product_code']; ?> " 
+          <div class="col-md-2 item_container barcode_item_<?= $pro['barcode']; ?> product_code_item_<?= $pro['product_code']; ?> " 
           data-category="<?= $pro['category'] ?>"
           data-productid="<?= $pro['id']; ?>" 
           data-product_name="<?= str_replace('"', '&#34;', $pro['product_name']); ?>" 
@@ -561,7 +561,7 @@ if (session()->has('pos_session'.$page_register_id)) {
             <div class="target_input" data-target="discount_percentbox">% Disc</div>
           </td>
           <td>
-              <a class="sp_btns hold">
+              <a class="sp_btns hold" id="hold_invoice" data-action="hold">
                 <div class="m-auto ">
                   <div class="d-flex"><i class="me-1 bx bx-chevron-right-circle"></i>  <span>Hold</span></div>
                 </div>
@@ -746,7 +746,7 @@ if (session()->has('pos_session'.$page_register_id)) {
               ?>
 
               <div class="btn-complete-block">
-                <button type="button" class="btn w-100 btn-sm btn-complete" data-inid="<?= $inid; ?>" id="submit_invoice" name="save_invoice">Complete</button> 
+                <button type="button" class="btn w-100 btn-sm btn-complete" data-inid="<?= $inid; ?>" id="submit_invoice" data-action="submit" name="save_invoice">Complete</button> 
               </div>
 
             </div>

@@ -334,80 +334,7 @@ $(document).on('input click','#product_code', function(){
 
  });
 
-
-
-$(document).on('click','.hold',function(){
-
-
-      var st=$('#subtotal').val();
-    var grand_total=$('#grand_total').val();
-    var view_method=$('#view_method').val();
-
-   
-
-    if (view_method=='create') {
-      var total_cash=$('#cash_input').val();
-    }else{
-      var total_cash=$('#paid_amt').val();
-    }
-
-         
-
-    var party_box=$('#customer').val();
-        var due_amount=$('#due_amount').val();
-
-
-
-        var credit_limit=$('#party_box').data('credit_limit');
-        var closing_balance=$('#party_box').data('closing_balance');
-
-
-
-        var inid=$(this).data('inid');
-        if ($.trim(party_box)!='' && $.trim(party_box)!=0) {
-        if (st!=0) {
-
-    
-
  
-                var status = navigator.onLine;
-                if (status) {
-
-                  var allow_submit=true;
-                  var due_close=parseFloat(closing_balance)+parseFloat(due_amount);
-                  
-
-                  if (credit_limit>0) {
-                    if (due_amount>0) {
-                      if (credit_limit<due_close) {
-                         show_failed_msg('error','Credit limit '+credit_limit+' of this party has been exceeded.'); 
-                        
-                      }else{
-                       sinv(inid);
-                      }
-                    }else{
-                     sinv(inid);
-                    }
-                  }else{
-                   sinv(inid);
-                  }
-                  
-                  
-      
-
-
-                    } else { 
-                     show_failed_msg('error','No internet');  
-                }
-              
-            }else{
-                show_failed_msg('error','Item is empty!');   
-            }
-        }else{
-            show_failed_msg('error','Please select party!');   
-        }
-
-});
 
 $(document).on('click','.payment',function(){
 
@@ -490,9 +417,10 @@ $(document).on('click','.payment',function(){
 
 
 
- $(document).on('click','#submit_invoice',function(e){
+ $(document).on('click','#hold_invoice, #submit_invoice',function(e){
 
-
+    var action=$(this).data('action');
+ 
     var st=$('#subtotal').val();
     var grand_total=$('#grand_total').val();
     var view_method=$('#view_method').val();
@@ -560,13 +488,13 @@ $(document).on('click','.payment',function(){
                   if (credit_limit<due_close) { 
                       show_failed_msg('error','Credit limit '+credit_limit+' of this party has been exceeded.');
                   }else{
-                    sinv(inid);
+                    sinv(inid,action);
                   }
                 }else{
-                  sinv(inid);
+                  sinv(inid,action);
                 }
               }else{
-                sinv(inid);
+                sinv(inid,action);
               }
               
               
@@ -593,35 +521,36 @@ $(document).on('click','.payment',function(){
 
 
 
-  function sinv(inid){
+  function sinv(inid,action){
+alert(action)
   $.ajax({
       type: "POST", 
-            url: $('#invoice_form').attr('action'),
+            url: $('#invoice_form').attr('action')+'/'+action,
             data: $('#invoice_form').serialize(),
             beforeSend:function(){  
               $('#submit_invoice').html('<span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span> Loading...');  
            },
             success:function(response) {
             // alert(response);
-              $('#submit_invoice').prop('disabled', false);
-        $('#submit_invoice').html('<i class="mdi mdi-plus mr-1"></i> Complete');
-        $('#mess').html('');
-        $('#receiptmodal').modal('show');
-        display_invoice($.trim(response));
-        $('#invoice_form')[0].reset();
-        reset_invoice(); 
-        
-        if ($('#view_method').val()=='convert') {
-          try {
-              var valNew=inid.split(',');
+                $('#submit_invoice').prop('disabled', false);
+                $('#submit_invoice').html('<i class="mdi mdi-plus mr-1"></i> Complete');
+                $('#mess').html('');
+                $('#receiptmodal').modal('show');
+                display_invoice($.trim(response));
+                $('#invoice_form')[0].reset();
+                reset_invoice(); 
+                
+                if ($('#view_method').val()=='convert') {
+                  try {
+                      var valNew=inid.split(',');
 
-              for(var i=0;i<valNew.length;i++){
-                  convert_invoice(valNew[i]);
-              }
-          } catch {
-               convert_invoice(inid);
-          }
-        }
+                      for(var i=0;i<valNew.length;i++){
+                          convert_invoice(valNew[i]);
+                      }
+                  } catch {
+                       convert_invoice(inid);
+                  }
+                }
         
 
            },

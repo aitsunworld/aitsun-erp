@@ -135,6 +135,8 @@ class Invoices extends BaseController
         if (get_setting(company($myid),'hide_deleted')) {
             $InvoiceModel->where('deleted',0);
         }
+         $InvoiceModel->where('deleted!=',2);
+          $InvoiceModel->where('deleted!=',3);
         $InvoiceModel->orderBy('id','desc');
 
                     // $InvoiceModel->where('financial_year',$acti);

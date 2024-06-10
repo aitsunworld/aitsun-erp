@@ -120,6 +120,8 @@ $routes->post('/pos/change_pos_mode/(:any)', 'Pos::change_pos_mode/$1');
 $routes->get('/pos/orders', 'Pos::orders');
 $routes->get('/pos/floors', 'Pos::floors');
 $routes->get('/pos/floors/new_floor', 'Pos::new_floor');
+$routes->get('/pos/floors/new_floor/(:any)', 'Pos::new_floor/$1');
+$routes->get('/pos/floors/delete_floor/(:any)', 'Pos::delete_floor/$1');
 $routes->post('/floors/save_floors', 'Pos::save_floors');
   
 
@@ -129,6 +131,7 @@ $routes->get('/purchases/purchases', 'Purchases::purchases');
 $routes->get('/invoices/create_invoice', 'Invoices::create_invoice'); 
 $routes->get('/sales/display_products', 'Sales::display_products'); 
 $routes->post('/sales', 'Sales::index'); 
+$routes->post('/sales/(:any)', 'Sales::index/$1'); 
 $routes->get('/invoices/get_invoice/(:any)', 'Invoices::get_invoice/$1'); 
 $routes->get('/invoices/convert_to_sale/(:any)', 'Invoices::convert_to_sale/$1'); 
 $routes->get('/invoices/convert_invoice/(:any)', 'Invoices::convert_invoice/$1'); 
@@ -401,6 +404,9 @@ $routes->get('/products/get_form', 'Products::get_form');
 $routes->get('products/delete/(:any)', 'Products::delete/$1');
 $routes->post('products/add_to_top/(:any)', 'Products::add_to_top/$1'); 
 $routes->post('is_pos/(:any)', 'Products::is_pos/$1'); 
+$routes->post('is_food/(:any)', 'Products::is_food/$1'); 
+$routes->post('is_self_order/(:any)', 'Products::is_self_order/$1'); 
+ 
 
 $routes->post('products/remove_to_top/(:any)', 'Products::remove_to_top/$1'); 
 $routes->post('products/add_to_deals/(:any)', 'Products::add_to_deals/$1');

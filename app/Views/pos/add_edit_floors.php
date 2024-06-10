@@ -16,7 +16,7 @@
                 </li>
              
                 <li class="breadcrumb-item active" aria-current="page">
-                    <b class="page_heading text-dark">Add floor</b>
+                    <b class="page_heading text-dark"><?= ($floor_id<1)?'Add floor':'Edit floor - '.$floor['floor_name'] ?> </b>
                 </li>
             </ol>
         </nav>
@@ -80,7 +80,7 @@
                      
                                 <select class="form-select" name="register_id" id="register_id">
                                     <option value="">Select Register</option> 
-                                    <option value="<?= isset($floor['register_id']) ? $floor['register_id'] : ''; ?>" <?= isset($floor['register_id']) && $floor['register_id'] ? 'selected' : ''; ?>><?= isset($floor['register_id']) ? user_name($floor['register_id']) : ''; ?></option>  
+                                    <option value="<?= isset($floor['register_id']) ? $floor['register_id'] : ''; ?>" <?= isset($floor['register_id']) && $floor['register_id'] ? 'selected' : ''; ?>><?= isset($floor['register_id']) ? register_data($floor['register_id'],'register_name') : ''; ?></option>  
                                    
                                 </select>
                                 <div class="aitsun_select_suggest">
@@ -115,10 +115,12 @@
                                     <?php foreach (floor_tables_array($floor['id']) as $table): ?>
                                     <tr class="after-add-more-table-tr">
                                       <td>
-                                        <input type="text" name="table_name[]" class="form-control position-relative" id="table_name"> 
+                                        
+                                        <input type="hidden" name="i_id[]" class="form-control position-relative" value="<?= $table['id'] ?>"> 
+                                        <input type="text" name="table_name[]" class="form-control position-relative" value="<?= $table['table_name'] ?>"> 
                                       </td>
                                       <td>
-                                        <input type="number" name="seats[]" min="1" class="form-control" id="seats" value="<?= $table['from']; ?>">
+                                        <input type="number" name="seats[]" min="1" class="form-control" id="seats" value="<?= $table['seats']; ?>">
                                       </td>
                                       <td style="width:135px;">
                                              <select name="shape[]" class="form-select position-relative" id="shape">
@@ -132,6 +134,7 @@
                                 <?php else: ?>
                                    <tr class="after-add-more-table-tr">
                                       <td>
+                                        <input type="hidden" name="i_id[]" class="form-control position-relative" value="0"> 
                                         <input type="text" name="table_name[]" value="Table 1" class="form-control position-relative" id="table_name"> 
                                       </td>
                                       <td>

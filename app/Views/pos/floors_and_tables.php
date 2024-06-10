@@ -11,10 +11,14 @@
                 <li class="breadcrumb-item">
                     <a href="<?= base_url(); ?>" class="href_loader"><i class="bx bx-home-alt text-aitsun-red"></i></a>
                 </li>
-             
+                
+                <li class="breadcrumb-item">
+                    <a href="<?= base_url('pos'); ?>" class="href_loader">Point of sale</a>
+                </li>
+
                 <li class="breadcrumb-item active" aria-current="page">
                     <b class="page_heading text-dark">
-                        Point of Sale
+                        Floor management
                     </b>
                 </li>
             </ol>
@@ -52,7 +56,39 @@
 
 <!-- ////////////////////////// MAIN PAGE START ///////////////////////// -->
 <div class="sub_main_page_content">
-    
+    <div class="aitsun-row"> 
+ 
+
+        <div class="aitsun_table col-12 w-100 pt-3 pb-5">
+            
+            <table id="invoice_table" class="erp_table sortable">
+             <thead>
+                <tr> 
+                    <th class="sorticon">Floor name</th>
+                    <th class="sorticon">Register</th> 
+                    <th class="sorticon" data-tableexport-display="none">Action</th>
+                </tr> 
+             </thead>
+              <tbody>
+                    <?php foreach ($all_floors as $floor): ?>
+                    <tr>
+                        <td><?= $floor['floor_name'] ?></td>
+                        <td><?= $floor['register_name'] ?></td> 
+                        <td data-tableexport-display="none">
+                            <a class="btn btn-sm btn-primary rounded-pill href_loader" href="<?= base_url('pos/floors/new_floor/'.$floor['id']); ?>">
+                                <i class="bx bx-pencil"></i> <span class="">Edit</span>
+                            </a>
+                            <a class="btn btn-sm btn-danger rounded-pill ajax_delete" data-url="<?= base_url('pos/floors/delete_floor'); ?>/<?= $floor['id']; ?>">
+                                <i class="bx bx-trash"></i> <span>Delete</span>
+                            </a>  
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
+              </tbody>
+            </table>
+        </div>
+    </div>
+   
 </div>
 <!-- ////////////////////////// MAIN PAGE END ///////////////////////// -->
 

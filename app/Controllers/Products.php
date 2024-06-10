@@ -1038,6 +1038,58 @@ public function add_product(){
 
         }
 
+        public function is_food($pid=""){
+
+            $ProductsModel = new Main_item_party_table();
+
+            if (!empty($pid)) {
+
+                if ($this->request->getMethod()=='post') {
+                    $ad=[
+                        'is_food'=>strip_tags($this->request->getVar('is_pos'))
+                    ];
+
+
+                    if ($ProductsModel->update($pid,$ad)) {
+                        echo 1;
+                    }else{
+                        echo 0;
+                    }
+                }else{
+                    echo 0;
+                }
+                
+            }
+
+        }
+
+        public function is_self_order($pid=""){
+
+            $ProductsModel = new Main_item_party_table();
+
+            if (!empty($pid)) {
+
+                if ($this->request->getMethod()=='post') {
+                    $ad=[
+                        'is_self_order'=>strip_tags($this->request->getVar('is_pos'))
+                    ];
+
+
+                    if ($ProductsModel->update($pid,$ad)) {
+                        echo 1;
+                    }else{
+                        echo 0;
+                    }
+                }else{
+                    echo 0;
+                }
+                
+            }
+
+        }
+        
+
+
         public function add_to_top($pid=""){
 
             $ProductsModel = new Main_item_party_table();

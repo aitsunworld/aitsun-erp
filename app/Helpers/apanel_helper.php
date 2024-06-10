@@ -78,6 +78,8 @@ use App\Models\Main_item_party_table as Main_item_party_table;
 use App\Models\PrintersModel as PrintersModel;
 use App\Models\AppointmentsBookings as AppointmentsBookings;
 use App\Models\PosSessions as PosSessions;
+use App\Models\PosRegisters as PosRegisters;
+use App\Models\PosTables as PosTables;
 
 
 
@@ -149,6 +151,20 @@ function site_key(){
     
 }
 
+function register_data($register_id,$column){
+    $PosRegisters=new PosRegisters;
+    $defaults=$PosRegisters->where('id',$register_id)->first();
+    if ($defaults) {
+        return $defaults[$column];
+    }else{
+        return '';
+    }
+}
+
+function floor_tables_array($floor_id){
+    $PosTables=new PosTables;
+    return $PosTables->where('floor_id',$floor_id)->where('deleted',0)->findAll();
+}
 
 function last_session_data($register_id,$column){
     $PosSessions=new PosSessions;

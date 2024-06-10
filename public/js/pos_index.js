@@ -8,6 +8,7 @@ $(document).ready(function(){
 
       var html = `<tr class="after-add-more-table-tr">
           <td>
+            <input type="hidden" name="i_id[]" class="form-control position-relative" value="0">
             <input type="text" name="table_name[]" value="Table ${no}" class="form-control position-relative" id="table_name"> 
           </td>
           <td>
@@ -62,6 +63,11 @@ $(document).on('click','#save_floor',function(){
             } 
         });
 
+        if($('.after-add-more-table-tr').length<1){
+            show_failed_msg('error', '', 'Add atleast 1 table');
+            approve = false;
+            return false; // Exit the loop
+        }
  
         if (approve==true) {
             var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
@@ -79,11 +85,15 @@ $(document).on('click','#save_floor',function(){
                   success: function(result) {
                     $('#save_floor').html('Save');
                     if ($.trim(result)==1) {
-                        $('#add_floor_form')[0].reset();
+                        
                         show_success_msg('success', 'Added successfully!', 'Saved!');
                         if ($('#floor_id').length === 0) { 
                             $("#register_id").val('').trigger('change');
                         }
+
+                        setTimeout(function(){
+                            location.reload();
+                        },1000);
                         
                     }
 

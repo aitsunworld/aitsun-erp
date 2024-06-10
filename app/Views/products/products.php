@@ -231,6 +231,8 @@
                         <th class="text-center">+</th>
                         <th class="text-center" style="max-width: 600px; width:600px;">Product/Service</th>
                         <th class="text-center">POS</th>
+                        <th class="text-center">Is food</th>
+                        <th class="text-center">Self order</th>
                         <th class="text-center"><i class="bx bx-dots-horizontal"></i></th> 
                         <th class="text-center">Price</th>
                         <th class="text-center">Action</th>
@@ -472,10 +474,24 @@
                             
                         </td>
 
-                        <td class="text-center">
+                        <td class="text-center" style="border-right:none;border-left:none; padding: 0 10px;">
                              
                              <div class="form-check form-switch text-center p-0" >
                                 <input type="checkbox" class="form-check-input is_pos" data-p_url="<?=  base_url() ?>/is_pos/<?= $pro['id']; ?>" style="margin-left: 0; float: unset;"  name="is_pos" value="1" <?php if ($pro['is_pos'] == '1') {echo 'checked';} ?>> 
+                            </div>
+                        </td>
+
+                        <td class="text-center" style="border-right:none;border-left:none; padding: 0 10px;">
+                             
+                             <div class="form-check form-switch text-center p-0" >
+                                <input type="checkbox" class="form-check-input is_pos" data-p_url="<?=  base_url() ?>/is_food/<?= $pro['id']; ?>" style="margin-left: 0; float: unset;"  name="is_food" value="1" <?php if ($pro['is_food'] == '1') {echo 'checked';} ?>> 
+                            </div>
+                        </td>
+
+                        <td class="text-center" style="border-right:none;border-left:none; padding: 0 10px;">
+                             
+                             <div class="form-check form-switch text-center p-0" >
+                                <input type="checkbox" class="form-check-input is_pos" data-p_url="<?=  base_url() ?>/is_self_order/<?= $pro['id']; ?>" style="margin-left: 0; float: unset;"  name="is_self_order" value="1" <?php if ($pro['is_self_order'] == '1') {echo 'checked';} ?>> 
                             </div>
                         </td>
 

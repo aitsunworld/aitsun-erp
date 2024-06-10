@@ -182,7 +182,12 @@ class Pos extends BaseController
 
                     $ProductsModel = new Main_item_party_table(); 
                     $acti=activated_year($sesdata['company_id']);
-                    $ProductsModel->where('is_pos',1);
+
+                    if (register_data($this->request->getVar('register_id'),'register_type')) {
+                        $ProductsModel->where('is_food',1); 
+                    }
+
+                    $ProductsModel->where('is_pos',1); 
                     $get_pro = $ProductsModel->where('company_id',company($sesdata['user_id']))->orderBy("id", "desc")->where('deleted',0)->findAll(); 
 
                     $get_cust = $UserModel->where('u_type!=','staff')->where('u_type!=','driver')->where('u_type!=','teacher')->where('u_type!=','delivery')->where('u_type!=','seller')->where('u_type!=','admin')->where('u_type!=','student')->where('company_id',company($myid))->where('deleted',0)->where('main_type','user')->orderBy('id','DESC')->findAll();
@@ -366,7 +371,8 @@ class Pos extends BaseController
         $session=session();
         $UserModel=new Main_item_party_table; 
         $PosSessions=new PosSessions; 
-        $InvoiceModel=new InvoiceModel; 
+        $PosFloors=new PosFloors; 
+        $PosRegisters=new PosRegisters; 
 
 
         if ($session->has('isLoggedIn')){
@@ -379,11 +385,15 @@ class Pos extends BaseController
 
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
 
-        
+            $PosFloors->select('pos_floors.*,pos_registers.register_name');
+
+            $PosFloors->join('pos_registers', 'pos_registers.id = pos_floors.register_id', 'left');
+            $all_floors=$PosFloors->where('pos_floors.company_id',company($myid))->where('pos_floors.deleted',0)->findAll(); 
 
             $data = [
                 'title' => 'POS - Floors & Tables',
                 'user'=>$user, 
+                'all_floors'=>$all_floors
             ];
 
             echo view('header',$data);
@@ -408,16 +418,17 @@ class Pos extends BaseController
             if (is_appointments(company($user['id']))==1) {
             
                 $data = [
-                    'title' => 'POS- Add floors',
+                    'title' => ($floor_id<1)?'Add floor':'Edit floor',
                     'user' => $user,
                     'floor' => null, 
+                    'floor_id'=>$floor_id
                 ];
                 
                 if ($floor_id) {
                     $PosFloors = new PosFloors();
                     $data['floor'] = $PosFloors->where('id', $floor_id)->first();
                     if (!$data['floor']) {
-                        return redirect()->to(base_url('appointments'));
+                        return redirect()->to(base_url('pos/floors'));
                     }
                 }
 
@@ -464,7 +475,20 @@ class Pos extends BaseController
                     //     $AdditionalfieldsModel->delete($atms);
                     // }
 
-                $PosTables->where('floor_id', $apoid)->delete();
+               
+
+                $deledata=$PosTables->where('floor_id',$apoid); 
+                foreach ($_POST["table_name"] as $ll => $value ) {
+                    $i_idd=$_POST["i_id"][$ll];
+                    $deledata->where('id!=',$i_idd); 
+                }
+
+                $deleting_prows=$deledata->where('deleted',0)->findAll();
+                foreach ($deleting_prows as $dp) {
+                    $PosTables->update($dp['id'],['deleted'=>1]);
+                }
+
+                 
                 if (!empty($_POST["table_name"])) {
                     foreach ($_POST["table_name"] as $i => $value ) {
                         $table_name=trim(strip_tags($_POST["table_name"][$i]));
@@ -477,6 +501,12 @@ class Pos extends BaseController
                             'seats'=> $seats,
                             'shape'=>$shape,
                         ];
+
+                        $i_id=$_POST["i_id"][$i]; 
+                        $checkexist=$PosTables->where('id',$i_id)->where('deleted',0)->first();
+                        if ($checkexist) {
+                            $add_fields['id']=$checkexist['id'];
+                        }
  
                         $PosTables->save($add_fields); 
                        
@@ -491,28 +521,26 @@ class Pos extends BaseController
 
     public function delete_floor($apid=0)
     {
-        $AppointmentsModel = new AppointmentsModel();
-        $AppointmentsTimings= new AppointmentsTimings();
-        $myid=session()->get('id');
-        
+         $session=session();
+        if($session->has('isLoggedIn')){
+            $PosFloors = new PosFloors();
+            $PosTables= new PosTables();
+            $myid=session()->get('id'); 
+            $deledata=[
+                'deleted'=>1,
+            ];
 
-        if ($this->request->getMethod() == 'post') {
-               
-                $deledata=[
-                    'deleted'=>1,
-                ];
-
-                if ($AppointmentsModel->update($apid,$deledata)) {
-
-                    foreach (appointment_timings_array($apid) as $apt){
-                        $AppointmentsTimings->delete($apt);
-                    }
-                    
-                };
-
-                
+            if ($PosFloors->update($apid,$deledata)) {
+                echo 1;
+                foreach (floor_tables_array($apid) as $apt['id']){
+                    $PosTables->delete($apt['id']);
+                } 
+            
+            }else{
+                echo 0;
+            }
         }else{
-            return redirect()->to(base_url('appointments'));
+            echo 0;
         }
 
     }

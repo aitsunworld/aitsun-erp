@@ -26,7 +26,7 @@
 
     class Sales extends BaseController
     {
-        public function index()
+        public function index($action='')
         {
             $session=session();
             $UserModel=new Main_item_party_table;
@@ -110,8 +110,13 @@
                     $rent_from=$rent_from_date.' '.$rent_from_time;
                     $rent_to=$rent_to_date.' '.$rent_to_time;
         
-                    
-                     
+                    $in_serial_no=serial_no(company($myid),$in_type);
+                    if ($action!='') { 
+                        $paid_stat='unpaid';
+                        $duuuuamt=$grandtotal;
+                        $paid_amount=0;
+                        $in_serial_no=0;
+                    }
 
                     $in_data=[
                         'company_id'=>company($myid),
@@ -137,7 +142,7 @@
                         'paid_amount'=>aitsun_round($paid_amount,get_setting(company($myid),'round_of_value')),
                         'invoice_type'=>$in_type,
                         'converted'=>$converttted,
-                        'serial_no'=>serial_no(company($myid),$in_type), 
+                        'serial_no'=>$in_serial_no, 
                         'company_state'=>strip_tags($this->request->getVar('company_state')),
                         'state_of_supply'=>strip_tags($this->request->getVar('state_of_supply')),
                         'cash_discount_percent'=>strip_tags(aitsun_round($this->request->getVar('cash_discount_percent'),get_setting(company($myid),'round_of_value'))),
@@ -158,76 +163,85 @@
                         'rent_to'=>$rent_to,
                         'rental_duration'=>strip_tags($this->request->getVar('rental_duration'))
                     ];
+
+                    if ($action=='hold') {
+                        $in_data['deleted']=3;
+                    }elseif ($action=='order') {
+                        $in_data['deleted']=2;
+                    }
                      
                     $in_ins=$InvoiceModel->save($in_data);
                     $ins_id=$InvoiceModel->insertID();
 
                     if ($this->request->getVar('bill_type')=='pos') {
-                        $session_pos_id=$PosSessions->where('id',$this->request->getVar('session_id'))->first();
-
-                        $pos_total_amt=$session_pos_id['closing_balance']+$grandtotal;
-                        $pos_data=[
-                            'closing_balance'=>aitsun_round($pos_total_amt,get_setting(company($myid),'round_of_value'))
-                        ];
-                        $PosSessions->update($session_pos_id['id'],$pos_data);
+                        if ($action=='') {
+                            $session_pos_id=$PosSessions->where('id',$this->request->getVar('session_id'))->first();
+                            $pos_total_amt=$session_pos_id['closing_balance']+$grandtotal;
+                            $pos_data=[
+                                'closing_balance'=>aitsun_round($pos_total_amt,get_setting(company($myid),'round_of_value'))
+                            ];
+                            $PosSessions->update($session_pos_id['id'],$pos_data);
+                        } 
                     }
 
                     if ($booking_id>0) {
                         $AppointmentsBookings->update($booking_id,['billing_status'=>1]);
                     }
 
+                    if ($action=='') {
+                        
+                        // ??????????????????????????  customer and cash balance calculation start ????????????
+                        // ??????????????????????????  customer and cash balance calculation start ????????????
+                        //CUSTOMER
+                            $bal_customer=strip_tags($this->request->getVar('customer'));
 
-                    // ??????????????????????????  customer and cash balance calculation start ????????????
-                    // ??????????????????????????  customer and cash balance calculation start ????????????
-                    //CUSTOMER
-                        $bal_customer=strip_tags($this->request->getVar('customer'));
-
-                        $current_closing_balance=user_data($bal_customer,'closing_balance');
-                        $new_closing_balance=$current_closing_balance;
-
-                        if ($in_type=='sales' || $in_type=='proforma_invoice' || $in_type=='purchase_return') {
-                            $new_closing_balance=$new_closing_balance+aitsun_round($duuuuamt,get_setting(company($myid),'round_of_value'));
-                        }elseif ($in_type=='purchase' || $in_type=='sales_return'){
-                            $new_closing_balance=$new_closing_balance-aitsun_round($duuuuamt,get_setting(company($myid),'round_of_value'));
-                        }
-
-
-                        $bal_customer_data=[ 
-                            'closing_balance'=>$new_closing_balance,
-                        ];
-                        $UserModel->update($bal_customer,$bal_customer_data);
-                    // ??????????????????????????  customer and cash balance calculation end ??????????????
-                    // ??????????????????????????  customer and cash balance calculation end ??????????????
-
-
-                    // ??????????????????????????  customer and cash balance calculation end ?????????????? 
-                    // ??????????????????????????  customer and cash balance calculation end ?????????????? 
-                        $payment_types = $_POST['payment_type'];
-                        $payment_values = $_POST['payment_type_value'];
- 
-                        $combined_array = array_combine($payment_types, $payment_values);
-
-                        foreach ($combined_array as $payment_type => $payment_value) {
-                            //PAYMENT
-                            $bal_payment=$payment_type; 
-
-                            $current_pay_closing_balance=user_data($bal_payment,'closing_balance');
-                            $new_closing_pay_balance=$current_pay_closing_balance;
+                            $current_closing_balance=user_data($bal_customer,'closing_balance');
+                            $new_closing_balance=$current_closing_balance;
 
                             if ($in_type=='sales' || $in_type=='proforma_invoice' || $in_type=='purchase_return') {
-                                $new_closing_pay_balance=$new_closing_pay_balance+aitsun_round($payment_value,get_setting(company($myid),'round_of_value'));
+                                $new_closing_balance=$new_closing_balance+aitsun_round($duuuuamt,get_setting(company($myid),'round_of_value'));
                             }elseif ($in_type=='purchase' || $in_type=='sales_return'){
-                                $new_closing_pay_balance=$new_closing_pay_balance-aitsun_round($payment_value,get_setting(company($myid),'round_of_value'));
+                                $new_closing_balance=$new_closing_balance-aitsun_round($duuuuamt,get_setting(company($myid),'round_of_value'));
                             }
 
-                            $bal_payment_data=[ 
-                                'closing_balance'=>$new_closing_pay_balance,
+
+                            $bal_customer_data=[ 
+                                'closing_balance'=>$new_closing_balance,
                             ];
-                            $UserModel->update($bal_payment,$bal_payment_data); 
-                        }
-                            
-                    // ??????????????????????????  customer and cash balance calculation end ??????????????
-                    // ??????????????????????????  customer and cash balance calculation end ??????????????
+                            $UserModel->update($bal_customer,$bal_customer_data);
+                        // ??????????????????????????  customer and cash balance calculation end ??????????????
+                        // ??????????????????????????  customer and cash balance calculation end ??????????????
+
+
+                        // ??????????????????????????  customer and cash balance calculation end ?????????????? 
+                        // ??????????????????????????  customer and cash balance calculation end ?????????????? 
+                            $payment_types = $_POST['payment_type'];
+                            $payment_values = $_POST['payment_type_value'];
+     
+                            $combined_array = array_combine($payment_types, $payment_values);
+
+                            foreach ($combined_array as $payment_type => $payment_value) {
+                                //PAYMENT
+                                $bal_payment=$payment_type; 
+
+                                $current_pay_closing_balance=user_data($bal_payment,'closing_balance');
+                                $new_closing_pay_balance=$current_pay_closing_balance;
+
+                                if ($in_type=='sales' || $in_type=='proforma_invoice' || $in_type=='purchase_return') {
+                                    $new_closing_pay_balance=$new_closing_pay_balance+aitsun_round($payment_value,get_setting(company($myid),'round_of_value'));
+                                }elseif ($in_type=='purchase' || $in_type=='sales_return'){
+                                    $new_closing_pay_balance=$new_closing_pay_balance-aitsun_round($payment_value,get_setting(company($myid),'round_of_value'));
+                                }
+
+                                $bal_payment_data=[ 
+                                    'closing_balance'=>$new_closing_pay_balance,
+                                ];
+                                $UserModel->update($bal_payment,$bal_payment_data); 
+                            }
+                                
+                        // ??????????????????????????  customer and cash balance calculation end ??????????????
+                        // ??????????????????????????  customer and cash balance calculation end ??????????????
+                    }
 
 
                     foreach ($_POST["product_name"] as $i => $value ) {
@@ -366,94 +380,94 @@
 
 
 
+                        if ($action=='') {
+                            //////////////////////////////Stock calculation/////////////////////////
+                            ////////////////////////////////////////////////////////////////////////
+
+                             if ($in_type=='sales' || $in_type=='proforma_invoice' || $in_type=='purchase_return') {
+                                  
+
+                                $old_op_stock=get_products_data($product_id,'opening_balance');
+                                $old_at_price=get_products_data($product_id,'at_price');  
+                                $old_cl_stock=get_products_data($product_id,'closing_balance'); 
+                                $old_cl_value=get_products_data($product_id,'final_closing_value');  
+                                $old_op_value=$old_op_stock*$old_at_price;
+                                
+                                $is_sold_in_primary=true;
+
+                                if ($p_unit!=$in_unit) {
+                                    $is_sold_in_primary=false;
+                                }
 
 
+                                if (!$is_sold_in_primary) { 
+                                    $new_quantity=$quantity/$p_conversion_unit_rate;
+                                }else{
+                                    $new_quantity=$quantity;
+                                }
 
-                        //////////////////////////////Stock calculation/////////////////////////
-                        ////////////////////////////////////////////////////////////////////////
+                                $final_cl_balance=$new_quantity;
+                                $final_cl_value=$quantity*$price;
 
-                         if ($in_type=='sales' || $in_type=='proforma_invoice' || $in_type=='purchase_return') {
+                                $stock_data=[
+                                    'closing_balance'=>$old_cl_stock-$final_cl_balance,
+                                    'final_closing_value'=>calculate_sale_value_average($product_id),
+                                    'final_closing_value_fifo'=>calculate_sale_value_fifo($product_id)
+                                ];
+
+                                $UserModel->update($product_id,$stock_data);
+
+
+                            }elseif ($in_type=='purchase' || $in_type=='sales_return'){
+                                $old_op_stock=get_products_data($product_id,'opening_balance');
+                                $old_at_price=get_products_data($product_id,'at_price');  
+                                $old_cl_stock=get_products_data($product_id,'closing_balance'); 
+                                $old_cl_value=get_products_data($product_id,'final_closing_value');  
+                                $old_op_value=$old_op_stock*$old_at_price;
+                                
+                                $is_sold_in_primary=true;
+
+                                if ($p_unit!=$in_unit) {
+                                    $is_sold_in_primary=false;
+                                }
+
+
+                                if (!$is_sold_in_primary) { 
+                                    $new_quantity=$quantity/$p_conversion_unit_rate;
+                                }else{
+                                    $new_quantity=$quantity;
+                                }
+
+                                $final_cl_balance=$new_quantity;
+                                $final_cl_value=$quantity*$price;
+
+                                $stock_data=[
+                                    'closing_balance'=>$old_cl_stock+$final_cl_balance,
+                                    'final_closing_value'=>calculate_sale_value_average($product_id),
+                                    'final_closing_value_fifo'=>calculate_sale_value_fifo($product_id)
+                                ];
+
+                                $UserModel->update($product_id,$stock_data);
+
                               
+                            } 
 
-                            $old_op_stock=get_products_data($product_id,'opening_balance');
-                            $old_at_price=get_products_data($product_id,'at_price');  
-                            $old_cl_stock=get_products_data($product_id,'closing_balance'); 
-                            $old_cl_value=get_products_data($product_id,'final_closing_value');  
-                            $old_op_value=$old_op_stock*$old_at_price;
-                            
-                            $is_sold_in_primary=true;
-
-                            if ($p_unit!=$in_unit) {
-                                $is_sold_in_primary=false;
-                            }
-
-
-                            if (!$is_sold_in_primary) { 
-                                $new_quantity=$quantity/$p_conversion_unit_rate;
-                            }else{
-                                $new_quantity=$quantity;
-                            }
-
-                            $final_cl_balance=$new_quantity;
-                            $final_cl_value=$quantity*$price;
-
-                            $stock_data=[
-                                'closing_balance'=>$old_cl_stock-$final_cl_balance,
-                                'final_closing_value'=>calculate_sale_value_average($product_id),
-                                'final_closing_value_fifo'=>calculate_sale_value_fifo($product_id)
-                            ];
-
-                            $UserModel->update($product_id,$stock_data);
-
-
-                        }elseif ($in_type=='purchase' || $in_type=='sales_return'){
-                            $old_op_stock=get_products_data($product_id,'opening_balance');
-                            $old_at_price=get_products_data($product_id,'at_price');  
-                            $old_cl_stock=get_products_data($product_id,'closing_balance'); 
-                            $old_cl_value=get_products_data($product_id,'final_closing_value');  
-                            $old_op_value=$old_op_stock*$old_at_price;
-                            
-                            $is_sold_in_primary=true;
-
-                            if ($p_unit!=$in_unit) {
-                                $is_sold_in_primary=false;
-                            }
-
-
-                            if (!$is_sold_in_primary) { 
-                                $new_quantity=$quantity/$p_conversion_unit_rate;
-                            }else{
-                                $new_quantity=$quantity;
-                            }
-
-                            $final_cl_balance=$new_quantity;
-                            $final_cl_value=$quantity*$price;
-
-                            $stock_data=[
-                                'closing_balance'=>$old_cl_stock+$final_cl_balance,
-                                'final_closing_value'=>calculate_sale_value_average($product_id),
-                                'final_closing_value_fifo'=>calculate_sale_value_fifo($product_id)
-                            ];
-
-                            $UserModel->update($product_id,$stock_data);
-
-                          
-                        } 
-
-                        //////////////////////////////Stock calculation/////////////////////////
-                        ////////////////////////////////////////////////////////////////////////
-
-
-                        if ($tax=='None') { 
-                        }elseif ($tax=='Exempted') { 
-                        }else{
-                            insert_invoice_tax($ins_id,$tax,$p_tax_amount,(($price*$quantity)-$p_discount),strip_tags($this->request->getVar('invoice_date')),strip_tags($this->request->getVar('company_state')),strip_tags($this->request->getVar('state_of_supply')));
+                            //////////////////////////////Stock calculation/////////////////////////
+                            ////////////////////////////////////////////////////////////////////////
                         }
+
+                            if ($tax=='None') { 
+                            }elseif ($tax=='Exempted') { 
+                            }else{
+                                insert_invoice_tax($ins_id,$tax,$p_tax_amount,(($price*$quantity)-$p_discount),strip_tags($this->request->getVar('invoice_date')),strip_tags($this->request->getVar('company_state')),strip_tags($this->request->getVar('state_of_supply')));
+                            }
+                        
 
 
 
                     }
 
+                   
                     if (!empty($_POST["tax_id"])) {
                         foreach ($_POST["tax_id"] as $i => $value ) {
                             if ($_POST["tax_id"][$i]!=0) {
@@ -499,8 +513,11 @@
 
                                 if ($ro_amt!=0) {
 
+                                    if ($action=='') {
+                                        add_payment($ins_id,$payment_type,$payment_value,'000',$customer,$_POST['alternate_name'],'',strip_tags($this->request->getVar('invoice_date')),$payment_id,company($myid),$in_type,$myid,0);
+                                    }
 
-                                   add_payment($ins_id,$payment_type,$payment_value,'000',$customer,$_POST['alternate_name'],'',strip_tags($this->request->getVar('invoice_date')),$payment_id,company($myid),$in_type,$myid,0); 
+                                    
 
                           
 
@@ -519,20 +536,22 @@
                         $paid=aitsun_round($paid_amount,get_setting(company($myid),'round_of_value'));
                         echo $ins_id;
 
+                        if ($action=='') {
+                            ////////////////////////CREATE ACTIVITY LOG//////////////
+                            $log_data=[
+                                'user_id'=>$myid,
+                                'action'=>'New '.full_invoice_type($in_type).' inventory <b>#'.prefixof(company($myid),$ins_id).serial(company($myid),$ins_id).'</b> is added.',
+                                'ip'=>get_client_ip(),
+                                'mac'=>GetMAC(),
+                                'created_at'=>now_time($myid),
+                                'updated_at'=>now_time($myid),
+                                'company_id'=>company($myid),
+                            ];
 
-                        ////////////////////////CREATE ACTIVITY LOG//////////////
-                        $log_data=[
-                            'user_id'=>$myid,
-                            'action'=>'New '.full_invoice_type($in_type).' inventory <b>#'.prefixof(company($myid),$ins_id).serial(company($myid),$ins_id).'</b> is added.',
-                            'ip'=>get_client_ip(),
-                            'mac'=>GetMAC(),
-                            'created_at'=>now_time($myid),
-                            'updated_at'=>now_time($myid),
-                            'company_id'=>company($myid),
-                        ];
-
-                        add_log($log_data);
-                        ////////////////////////END ACTIVITY LOG/////////////////
+                            add_log($log_data);
+                            ////////////////////////END ACTIVITY LOG/////////////////
+                        }
+                        
                     
                     }else{
                         echo "failed";
