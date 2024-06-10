@@ -84,6 +84,32 @@ $(document).ready(function(){
         $('.erp_warning').remove();
     });
 
+
+    
+    $(document).on('click','.rental_status',function(){
+        var status=$(this).data('status'); 
+        var invoice_id=$(this).data('invoice_id'); 
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+    
+        $.ajax({
+            type: 'POST',
+            url: base_url()+'/sales/change_rental_status/'+status+'/'+invoice_id,
+            data:{
+                status:status,
+                [csrfName]: csrfHash
+            },
+            success: function(response) { 
+                if ($.trim(response)==1) {
+                    show_success_msg('success','Rental data updated!');
+                    location.reload();
+                }else{
+                    show_success_msg('success','Try again!'); 
+                }
+            }
+        });
+    });
+
     
     $(document).on('change','.is_pos',function(){
         var p_url=$(this).data('p_url');
@@ -113,6 +139,65 @@ $(document).ready(function(){
              
             }
         });
+    });
+
+    $(document).on('click','.add_party_popup',function(){
+        var element_id=$(this).data('element_id'); 
+        var pop_name=$.trim($('#pop_name'+element_id).val());
+        var pop_phone=$.trim($('#pop_phone'+element_id).val());
+        var pop_email=$.trim($('#pop_email'+element_id).val());
+
+        var this_elem=$(this); 
+         
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+        if (pop_name!='') {
+            $.ajax({
+                type: 'POST',
+                url: base_url()+'customers/add_party_from_selector',
+                data:{
+                    cus_name:pop_name,
+                    pop_phone:pop_phone,
+                    pop_email:pop_email, 
+                    [csrfName]: csrfHash
+                },
+                beforeSend: function() {
+                     
+                    
+                },
+                success: function(response) {
+                  
+                    if ($.trim(response)=='limit_reached') {
+                        show_failed_msg('error','User limit reached!');
+                    }else if($.trim(response)==0){
+                        show_failed_msg('error','Failed! try again.');
+                    }else{ 
+                        $('#pop_name'+element_id).val('');
+                        $('#pop_phone'+element_id).val('');
+                        $('#pop_email'+element_id).val('');
+                        $('#new_party_popup'+element_id).toggle();
+                        $('#aitsun_select'+element_id+' select').html('<option value="'+response+'">'+pop_name+'</option>');
+                        $('#aitsun_select'+element_id+' select').removeClass("d-none");  
+                        $('#aitsun_select'+element_id+' select').addClass("d-block");  
+
+                        $('#aitsun_select'+element_id+' input').addClass("d-none");  
+                        $('#aitsun_select'+element_id+' input').removeClass("d-block"); 
+                        $('#aitsun_select'+element_id+' .select_close').addClass("d-none");  
+                        $('#aitsun_select'+element_id+' .select_close').removeClass("d-block"); 
+                         
+                        $('#aitsun_select'+element_id+' .aitsun_select_suggest').html('');
+                        show_success_msg('success','New party <b>"'+pop_name+'"</b> saved!');
+
+                    }
+
+                 
+                }
+            });
+        }else{
+            show_failed_msg('error','Name should not be blank');
+        }
+        
     });
 
     
@@ -152,6 +237,7 @@ $(document).ready(function(){
                     $(this_elem).parents().siblings('.select_close').removeClass("d-block"); 
                      
                     $(this_elem).parents('.aitsun_select_suggest').html('');
+                    show_success_msg('success','New party "<b>'+cus_name+'</b>" saved!');
                 }
 
              

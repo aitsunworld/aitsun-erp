@@ -1,10 +1,37 @@
 $(document).ready(function() { 
-
-    
+ 
+    $(document).on('click','.confirm_checkin',function(){ 
+        var this_btn=$(this);
+        var this_btn_html=$(this).html();
+        var booking_id=$(this).data('id');
+        var booking_value=$(this).data('value');
+        $(this_btn).prop('disabled', true);
+        $.ajax({
+            type: 'GET',
+            url: base_url()+'appointments/confirm_checkin/'+booking_id+'/'+booking_value,
+            success: function(del_res) {  
+              if (del_res==1) {
+                if (booking_value==1) {
+                    show_success_msg('success','Confirmed!');
+                }else{
+                    show_success_msg('success','Unconfirmed!');
+                }
+                  
+                  setTimeout(function(){
+                    location.reload();
+                  },500);
+              }else{
+                  show_failed_msg('error','Failed!, Try again'); 
+              } 
+            }
+        });
+    });
     
     $(document).on('click','.save_booking',function(){ 
         var this_btn=$(this);
+        var this_btn_html=$(this).html();
         var save_type=$(this).data('save_type');
+        
         if (save_type=='edit') {
             var booking_id=$('#booking_id').val();
         }else{
@@ -25,12 +52,12 @@ $(document).ready(function() {
 
         if (booking_name.length<1) {
             is_ready_to_submit=false;
-            show_success_msg('error','Booking name required!');
+            show_failed_msg('error','Booking name required!');
         }
 
         if (booking_party<1) {
             is_ready_to_submit=false;
-            show_success_msg('error','Select party!');
+            show_failed_msg('error','Select party!');
         }
 
         var fromDate = new Date(from_datetime);
@@ -41,10 +68,10 @@ $(document).ready(function() {
             
         } else if (fromDate > toDate) { 
             is_ready_to_submit=false;
-            show_success_msg('error','From date is greater than to date.');
+            show_failed_msg('error','From date is greater than to date.');
         } else {
             is_ready_to_submit=false;
-            show_success_msg('error','From date is equal to to date.');
+            show_failed_msg('error','From date is equal to to date.');
         }
 
         if (is_ready_to_submit) {
@@ -57,9 +84,17 @@ $(document).ready(function() {
                   $(this_btn).html('<span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span> Booking...');  
                },
                 success:function(response) {
-                  show_success_msg('success','Booking completed!');
-                  $(this_btn).prop('disabled', false);
-                  location.reload();
+                    response=JSON.parse(response);
+                    if (response['result']==1) {
+                        show_success_msg('success','Booking completed!');
+                        $(this_btn).prop('disabled', false);
+                        location.reload();
+                    }else{
+                        $(this_btn).prop('disabled', false);
+                        $(this_btn).html(this_btn_html);  
+                        show_failed_msg('error',response['message']);
+                    }
+                  
                },
                error:function(response){
                 alert(JSON.stringify(response));
@@ -565,7 +600,11 @@ $(document).ready(function() {
         var csrfHash = $('#csrf_token').val(); // CSRF hash
          formData.append(csrfName, csrfHash);
       
-        $.ajax({
+        
+
+        if (file) { 
+
+            $.ajax({
               type: 'POST',
               url: base_url()+'appointments/update_resource_img/'+input_id,
               data: formData,
@@ -577,22 +616,24 @@ $(document).ready(function() {
               },
               success: function(result) {
                 if ($.trim(result)==1) {
-                   
+                   var reader = new FileReader();
+ 
+                    reader.onload = function(e) {  
+                        $('#imagePreview'+input_id).attr('src', e.target.result);
+                        $('#imagePreview'+input_id).hide();
+                        $('#imagePreview'+input_id).fadeIn(650);
+                    };
+         
+                    reader.readAsDataURL(file);
+                }else  if ($.trim(result)==3){
+                    show_failed_msg('error','Image size must be less that 300kb');
+                } else{
+                    show_failed_msg('error','Failed to update!');
                 }
-
               }
           });
 
-        if (file) { 
-            var reader = new FileReader();
- 
-            reader.onload = function(e) {  
-                $('#imagePreview'+input_id).attr('src', e.target.result);
-                $('#imagePreview'+input_id).hide();
-                $('#imagePreview'+input_id).fadeIn(650);
-            };
- 
-            reader.readAsDataURL(file);
+            
         } else { 
             $('#imagePreview'+input_id).attr('src', e.target.result);
             $('#imagePreview'+input_id).hide();

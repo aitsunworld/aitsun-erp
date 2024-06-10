@@ -349,6 +349,8 @@ class Customers extends BaseController
                     $customer_data = [
                         'company_id'=>company($myid),
                         'display_name'=>strip_tags($this->request->getVar('cus_name')),
+                        'phone'=>strip_tags($this->request->getVar('pop_phone')),
+                        'email'=>strip_tags($this->request->getVar('pop_email')), 
                         'u_type'=>'customer',
                         'created_at'=>now_time($myid),
                         'serial_no'=>serial_no_customer(company($myid)), 
@@ -544,27 +546,31 @@ class Customers extends BaseController
 // 
         $parties_result_status=1;
         $echo_result=0;
-
-        if ($old_email!=$email) {
-            $checkemail=$Main_item_party_table->where('company_id',company($myid))->where('email',strip_tags($this->request->getVar('email')))->where('deleted',0)->first();
-            if (!$checkemail) {
-                $parties_result_status=1;
-            }else{
-                $parties_result_status=0;
-                $echo_result=$session->setFlashdata('pu_er_msg', 'Email already exit!');;
-                return redirect()->to(current_url());
+        if ($email!='') {
+            if ($old_email!=$email) {
+                $checkemail=$Main_item_party_table->where('company_id',company($myid))->where('email',strip_tags($this->request->getVar('email')))->where('deleted',0)->first();
+                if (!$checkemail) {
+                    $parties_result_status=1;
+                }else{
+                    $parties_result_status=0;
+                    $echo_result=$session->setFlashdata('pu_er_msg', 'Email already exist!');;
+                    return redirect()->to(current_url());
+                }
             }
         }
-        if ($old_phone!=$phone) {
-            $checkcode=$Main_item_party_table->where('company_id',company($myid))->where('phone',strip_tags($this->request->getVar('phone')))->where('deleted',0)->first();
+        
+        if ($phone!='') {
+            if ($old_phone!=$phone) {
+                $checkcode=$Main_item_party_table->where('company_id',company($myid))->where('phone',strip_tags($this->request->getVar('phone')))->where('deleted',0)->first();
 
-            if (!$checkcode) {
-                $parties_result_status=1;
-            }else{
-                $parties_result_status=0;
-                $echo_result=$session->setFlashdata('pu_er_msg', 'Phone already exit!');;
-                return redirect()->to(current_url());
+                if (!$checkcode) {
+                    $parties_result_status=1;
+                }else{
+                    $parties_result_status=0;
+                    $echo_result=$session->setFlashdata('pu_er_msg', 'Phone already exit!');;
+                    return redirect()->to(current_url());
 
+                }
             }
         }
 
@@ -674,18 +680,20 @@ class Customers extends BaseController
 
     $parties_result_status=1;
     $echo_result=0;
-
-    if ($old_email!=$email) {
-        $checkemail=$Main_item_party_table->where('company_id',company($myid))->where('email',strip_tags($this->request->getVar('email')))->where('deleted',0)->first();
-        if (!$checkemail) {
-            $parties_result_status=1;
-        }else{
-            $parties_result_status=0;
-            $echo_result=$session->setFlashdata('pu_er_msg', 'Email already exit!');;
-            return redirect()->to(current_url());
+      if ($email!='') {
+            if ($old_email!=$email) {
+                $checkemail=$Main_item_party_table->where('company_id',company($myid))->where('email',strip_tags($this->request->getVar('email')))->where('deleted',0)->first();
+                if (!$checkemail) {
+                    $parties_result_status=1;
+                }else{
+                    $parties_result_status=0;
+                    $echo_result=$session->setFlashdata('pu_er_msg', 'Email already exit!');;
+                    return redirect()->to(current_url());
+                }
+            }
         }
-    }
-    if ($old_phone!=$phone) {
+    if ($phone!='') {
+       if ($old_phone!=$phone) {
         $checkcode=$Main_item_party_table->where('company_id',company($myid))->where('phone',strip_tags($this->request->getVar('phone')))->where('deleted',0)->first();
 
         if (!$checkcode) {
@@ -697,6 +705,8 @@ class Customers extends BaseController
 
         }
     }
+    }
+    
 
 
     if ($parties_result_status==1) {

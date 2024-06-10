@@ -1,8 +1,17 @@
 $(document).ready(function(){
 
 
+    var currentUrl = window.location.href.split('?')[0];
     
-
+    // Select the <a> elements with class 'href_loader' inside <li> elements
+    $('.sidebar_menus li a.href_loader').each(function() {
+        // Check if the href attribute matches the current URL
+        if ($(this).attr('href').split('?')[0] === currentUrl) {
+            // If it matches, add the 'activate' class to its parent <li> element
+            $(this).closest('li').addClass('active');
+        }
+    });
+ 
  
 	$(document).on('click','#add_customer_ajax',function(){
         var form_data = new FormData($('#add_cust_form')[0]);

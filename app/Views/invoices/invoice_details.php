@@ -66,12 +66,21 @@
             <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'PDF Print'); ?></span>
         </a>
  
-    <a  class="text-dark font-size-footer me-2 <?php if (print_thermal_show(company($user['id']))){}else{echo 'd-none'; } ?>" 
-        onclick="ThermalPrint()"
+    <a  class="text-dark font-size-footer me-2 aitsun-electron-print" 
+            data-url="<?= base_url('invoices/get_pos_invoice/'.$invoice_data['id'])?>" 
+            data-silent="<?= printer_data($user['id'],'silent') ?>"
+            data-devicename="<?= printer_data($user['id'],'printer_name') ?>"
+            data-top="<?= printer_data($user['id'],'top') ?>"
+            data-right="<?= printer_data($user['id'],'right') ?>"
+            data-bottom="<?= printer_data($user['id'],'bottom') ?>"
+            data-left="<?= printer_data($user['id'],'left') ?>"
+            data-scalefactor="<?= printer_data($user['id'],'scale') ?>"
     >
         <i class="bx bx-printer"></i> 
         <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Print Thermal'); ?></span>
     </a>
+
+ 
 
      
     <a href="<?= base_url('invoices/view_pdf/'.$invoice_data['id'].'?method=download'); ?>" class="text-dark font-size-footer me-2 download_complete">
@@ -203,6 +212,24 @@
     <?php endif ?>
     <?php endif ?>
 
+    <?php if ($invoice_data['bill_from']=='rental'): ?>
+        <?php if ($invoice_data['rental_status']==0): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="1" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-check-circle"></i> 
+                <span class="hidden-xs">Confirm</span>
+            </a>
+        <?php elseif($invoice_data['rental_status']==1): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="2" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-bus"></i> 
+                <span class="hidden-xs">Pick Up</span>
+            </a>
+        <?php elseif($invoice_data['rental_status']==2): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="3" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-reply"></i> 
+                <span class="hidden-xs">Return</span>
+            </a>
+        <?php endif ?>
+    <?php endif ?>
 
     </div>
     <?php if ($invoice_data['deleted']==0): ?>

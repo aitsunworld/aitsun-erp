@@ -17,11 +17,13 @@
 
 <?php 
 $products_array=[];
-if (session()->has('pos_session')) {
-  $session_data=session()->get('pos_session');
+if (session()->has('pos_session'.$page_register_id)) {
+  $session_data=session()->get('pos_session'.$page_register_id);
   $products_array=$session_data['products'];
   $customers=$session_data['customers']; 
   $session_id=$session_data['session_id']; 
+  $register_id=$session_data['register_id']; 
+
 }
 
 
@@ -204,6 +206,7 @@ if (session()->has('pos_session')) {
                   <input type="hidden" name="round_type" value="add">
 
                   <input type="hidden" name="session_id" value="<?= $session_id; ?>">
+                  <input type="hidden" name="register_id" value="<?= $register_id; ?>">
                   <input type="hidden" name="bill_type" value="pos">
 
                   <input type="date" name="invoice_date" id="invoice_date" class="d-none" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'Y-m-d'); ?><?php endif ?>"  >
@@ -218,7 +221,9 @@ if (session()->has('pos_session')) {
        <input type="text" id="productbarcodesearch" placeholder="Scan Barcode" class="barcode_inbox form-control form-control-sm  my-auto">
 
       <header class="justify-content-between">
-        <div class="logo">
+
+        <div class="logo top_buttons">
+           <a class="sm_button my-auto me-2" title="Back" href="<?= base_url('invoices/sales') ?>"><i class="bx bx-arrow-back text-dark"></i></a>
           <img src="<?= base_url('public/images/logo-icon.png') ?>">
           <h5>Aitsun POS</h5>
 
@@ -250,6 +255,7 @@ if (session()->has('pos_session')) {
             <?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'D, d M Y'); ?><?php endif ?>
           </div>
 
+         
           <button class="sm_button my-auto me-2" onclick="location.reload();"><i class="bx bx-refresh"></i></button>
           <button class="sm_button my-auto me-2"><i class="text-aitsun bx bx-wifi"></i></button> 
 
@@ -260,14 +266,14 @@ if (session()->has('pos_session')) {
               <i class="bx bx-dots-vertical-rounded"></i>
             </button>  
             <div class="dropdown-menu" style="">  
-              <a class="dropdown-item href_loader" href="<?= base_url('pos/orders') ?>">  
+             <!--  <a class="dropdown-item href_loader" href="<?= base_url('pos/orders') ?>">  
                 <span class="ms-3">Orders</span>
-              </a>  
-              <a class="dropdown-item href_loader" href="">
+              </a>  --> 
+             <!--  <a class="dropdown-item href_loader" href="">
                 <span class="ms-3">Cash In/Out</span> 
-              </a>  
-              <a class="dropdown-item href_loader" href="<?= base_url('pos/close_register') ?>">
-                <span class="ms-3">Close register</span> 
+              </a>   -->
+              <a class="dropdown-item href_loader" href="<?= base_url('pos/close_register') ?>/<?= $register_id ?>">
+                <span class="ms-0">Close register</span> 
               </a> 
             </div>
           </div>
@@ -768,7 +774,17 @@ if (session()->has('pos_session')) {
           <div class="btn-complete-block">
             <h4 class="mb-4 text-center">Payment Successful!</h4>
 
-            <button type="button" class="btn w-100 btn-sm btn-pos-print aitsun-print" id="print_pos_btn" data-url=""><i class="bx bx-printer"></i> Print</button> 
+            <button type="button" class="btn w-100 btn-sm btn-pos-print aitsun-electron-print" id="print_pos_btn" 
+            data-url="dsfdfds" 
+            data-silent="<?= printer_data($user['id'],'silent') ?>"
+            data-devicename="<?= printer_data($user['id'],'printer_name') ?>"
+            data-top="<?= printer_data($user['id'],'top') ?>"
+            data-right="<?= printer_data($user['id'],'right') ?>"
+            data-bottom="<?= printer_data($user['id'],'bottom') ?>"
+            data-left="<?= printer_data($user['id'],'left') ?>"
+            data-scalefactor="<?= printer_data($user['id'],'scale') ?>"
+
+            ><i class="bx bx-printer"></i> Print</button> 
 
             
             <button type="button" class="btn w-100 btn-sm mt-3 btn-pos-neworder" id="set_new_order"><i class="bx bx-chevron-right-circle"></i> New order</button> 

@@ -1,4 +1,5 @@
-<!-- ////////////////////////// TOP BAR START ///////////////////////// -->
+ 
+    <!-- ////////////////////////// TOP BAR START ///////////////////////// -->
 <div class="sub_topbar d-flex">
     <div class="right_bar d-flex justify-content-between w-100">
       
@@ -196,6 +197,7 @@
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
 <div class="sub_footer_bar d-flex justify-content-between">
     <div>
+        <a onclick="toggleSidebar()">Main Menus</a>
         <a href="<?= base_url('app_info') ?>" class="href_loader text-dark font-size-footer"><i class="bx bx-info-circle"></i> <span class="my-auto">App info</span></a>
         <a href="<?= base_url('tutorial_coming_soon') ?>" class="href_loader text-dark font-size-footer"><i class="bx bx-right-arrow ms-2"></i> <span class="my-auto">Tutorial</span></a>
     </div>
@@ -204,6 +206,5 @@
     </div>
 </div> 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
-
-
+</div>
  

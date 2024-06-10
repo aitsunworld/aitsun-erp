@@ -39,6 +39,8 @@
     <div class="d-flex">
           
         <a href="<?= base_url('appointments') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-home"></i> <span class="my-auto">Appointments</span></a>
+        
+        <a href="<?= base_url('appointments/book_persons/my_appointments') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-user"></i> <span class="my-auto">My Appointments</span></a>
 
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,13 +56,29 @@
             </div>
         </div> 
 
-        <a href="" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
+        
+        <div class="dropdown  my-auto me-2">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-file"></i> Reports
+            </a>
+            <div class="dropdown-menu" style="">  
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
+                    <span>Booking reports</span>
+                </a>
+               <!--  <a class="dropdown-item href_loader" href="#">
+                    <span>Person wise</span>
+                </a>
+                <a class="dropdown-item href_loader" href="#">
+                    <span>Resource wise</span>
+                </a> -->
+            </div>
+        </div> 
 
 
 
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bx bx-calendar"></i> Configuration
+                <i class="bx bx-cog"></i> Configuration
             </a>
             <div class="dropdown-menu" style="">  
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">
@@ -133,13 +151,13 @@
                 </td>
                 <td>
                     <div class="duration">
-                        <div class="time-span">45 meetings</div>
+                        <div class="time-span"><?= $aps['scheduled_bookings'] ?> <?= (!$aps['availability_on'])?'meetings':'bookings' ?></div>
                         <div class="time-head">Scheduled</div>
                     </div>
                 </td>
                 <td>
                     <div class="duration">
-                        <div class="time-span">10 Total meetings</div>
+                        <div class="time-span"><?= $aps['total_scheduled_bookings'] ?> Total <?= (!$aps['availability_on'])?'meetings':'bookings' ?></div>
                         <div class="time-head">(Last 30 days)</div>
                     </div>
                 </td>
@@ -178,7 +196,7 @@
         <a href="<?= base_url('tutorial_coming_soon') ?>" class="href_loader text-dark font-size-footer"><i class="bx bx-right-arrow ms-2"></i> <span class="my-auto">Tutorial</span></a>
     </div>
     <div class="aitsun_pagination">  
-      <?= $pager->links() ?>
+      <!-- <= $pager->links() ?> -->
     </div>
 </div> 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->

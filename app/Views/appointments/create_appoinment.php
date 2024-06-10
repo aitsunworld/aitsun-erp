@@ -43,6 +43,8 @@
           
         <a href="<?= base_url('appointments') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-home"></i> <span class="my-auto">Appointments</span></a>
 
+        <a href="<?= base_url('appointments/book_persons/my_appointments') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-user"></i> <span class="my-auto">My Appointments</span></a>
+
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-calendar"></i> Bookings
@@ -57,7 +59,22 @@
             </div>
         </div> 
 
-        <a href="" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-file"></i> <span class="my-auto">Reports</span></a>
+    <div class="dropdown  my-auto me-2">
+            <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-file"></i> Reports
+            </a>
+            <div class="dropdown-menu" style="">  
+                <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
+                    <span>Booking reports</span>
+                </a>
+               <!--  <a class="dropdown-item href_loader" href="#">
+                    <span>Person wise</span>
+                </a>
+                <a class="dropdown-item href_loader" href="#">
+                    <span>Resource wise</span>
+                </a> -->
+            </div>
+        </div> 
 
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
@@ -244,7 +261,7 @@
                                             <option value="4" <?= $schedule['week'] == 4 ? 'selected' : ''; ?>>Thursday</option>
                                             <option value="5" <?= $schedule['week'] == 5 ? 'selected' : ''; ?>>Friday</option>
                                             <option value="6" <?= $schedule['week'] == 6 ? 'selected' : ''; ?>>Saturday</option>
-                                            <option value="7" <?= $schedule['week'] == 7 ? 'selected' : ''; ?>>Sunday</option>
+                                            <option value="0" <?= $schedule['week'] == 0 ? 'selected' : ''; ?>>Sunday</option>
                                         </select> 
                                       </td>
                                       <td>
@@ -264,7 +281,7 @@
                                             <option value="4">Thursday</option>
                                             <option value="5">Friday</option>
                                             <option value="6">Saturday</option>
-                                            <option value="7">Sunday</option>
+                                            <option value="0">Sunday</option>
                                         </select> 
                                       </td>
                                       <td>

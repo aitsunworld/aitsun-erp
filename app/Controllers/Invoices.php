@@ -14,6 +14,8 @@ use App\Models\PaymentsModel;
 use App\Models\InvoiceitemsModel;
 use App\Models\InstallmentsModel;
 use App\Models\Main_item_party_table; 
+use App\Models\AppointmentsBookings; 
+
 
 use App\Libraries\PdfLibrary;
 
@@ -1074,6 +1076,8 @@ public function delete($inid=""){
     $UserModel=new Main_item_party_table;
     $InvoiceModel=new InvoiceModel;
     $InvoiceitemsModel=new InvoiceitemsModel;
+    $AppointmentsBookings=new AppointmentsBookings;
+
 
     $myid=session()->get('id');
     $con = array( 
@@ -1083,9 +1087,18 @@ public function delete($inid=""){
 
     if ($session->has('isLoggedIn')){
 
+        
 
         if (no_of_invoice_payemts($inid)>0) {
            $in_type=$InvoiceModel->where('id',$inid)->first();
+
+            if ($in_type['bill_from']=='appointment') {
+                $resources_data = [ 
+                    'id' => $in_type['booking_id'],  
+                    'status' => 1,
+                ]; 
+                $AppointmentsBookings->save($resources_data);
+            }
 
 
            if ($in_type['invoice_type']=='sales' || $in_type['invoice_type']=='proforma_invoice' || $in_type['invoice_type']=='sales_return' || $in_type['invoice_type']=='sales_order' || $in_type['invoice_type']=='sales_quotation' || $in_type['invoice_type']=='sales_delivery_note') {

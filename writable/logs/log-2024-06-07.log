@@ -1,0 +1,22 @@
+CRITICAL - 2024-06-07 07:22:27 --> Undefined variable $ttaxx
+in APPPATH\Views\reports\gst_report.php on line 198.
+ 1 APPPATH\Views\reports\gst_report.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ttaxx', 'APPPATH\\Views\\reports\\gst_report.php', 198)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\gst_report.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('reports/gst_report', [], true)
+ 5 APPPATH\Controllers\Gst_report.php(91): view('reports/gst_report', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Gst_report->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gst_report))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-07 07:35:21 --> Undefined variable $ttaxx
+in APPPATH\Views\reports\gst_report.php on line 198.
+ 1 APPPATH\Views\reports\gst_report.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ttaxx', 'APPPATH\\Views\\reports\\gst_report.php', 198)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reports\\gst_report.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('reports/gst_report', [], true)
+ 5 APPPATH\Controllers\Gst_report.php(91): view('reports/gst_report', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Gst_report->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gst_report))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

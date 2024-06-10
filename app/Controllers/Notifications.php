@@ -156,7 +156,7 @@ class Notifications extends BaseController
 	    			if (no_of_notifications($user['id'],'admin')!='') { ?>
 	    				<?php if (no_of_notifications($user['id'],'admin')==0): ?>
                				<span class="alert-count">0</span>
-               			<?php else if (no_of_notifications($user['id'],'admin')>9): ?>
+               			<?php elseif (no_of_notifications($user['id'],'admin')>9): ?>
                				<span class="alert-count">9+</span>
                			<?php else: ?>
                				<span class="alert-count"><?= no_of_notifications($user['id'],'admin'); ?></span>

@@ -38,6 +38,40 @@ jQuery.fn.printIt = function(options){
 
 
 
+    $(document).on('click','.aitsun-electron-print',function(){
+        var purl=$(this).data('url');
+        var silent=$(this).data('silent');
+        var devicename=$(this).data('devicename');
+        var top=$(this).data('top');
+        var right=$(this).data('right');
+        var bottom=$(this).data('bottom');
+        var left=$(this).data('left');
+        var scalefactor=$(this).data('scalefactor');
+        
+        if (devicename==0) { 
+            show_failed_msg('error','Printer not available!')
+        }else{
+            var options = { 
+                silent: silent,
+                deviceName: devicename, 
+                margins: { 
+                    marginType: 'custom',
+                    top:top,
+                    right:right,
+                    bottom:bottom,
+                    left:left
+
+                }, 
+                scaleFactor: scalefactor
+            } 
+
+            var print_data=[];
+            print_data.push(options, purl); 
+            window.api.html_print('toDirectPrint', print_data);
+        }
+         
+    });
+
     $(document).on('click','.aitsun-print',function(){
         var purl=$(this).data('url');
         var iframe = document.createElement('iframe');
@@ -412,4 +446,38 @@ jQuery.fn.printIt = function(options){
     function base_url(){
         var baseurl=$('#base_url').val();
         return baseurl;
+    }
+
+    function show_success_msg(type,message,title) {
+         Lobibox.notify(type, {
+            size: 'mini',
+            title: title,
+            position: 'top right',
+            width: 300,
+            icon: 'bx bxs-check-circle',
+            sound: false,
+            // delay: false,
+            delay: 2000,
+            delayIndicator: false,
+            showClass: 'zoomIn',
+            hideClass: 'zoomOut',
+            msg: message
+        });
+    }
+
+    function show_failed_msg(type,message,title) {
+        Lobibox.notify(type, {
+            size: 'mini',
+            title: title,
+            position: 'top right',
+            width: 300,
+            icon: 'bx bxs-x-circle',
+            sound: false,
+            // delay: false,
+            delay: 2000,
+            delayIndicator: false,
+            showClass: 'zoomIn',
+            hideClass: 'zoomOut',
+            msg: message
+        });
     }

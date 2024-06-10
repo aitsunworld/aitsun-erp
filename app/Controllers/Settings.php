@@ -26,11 +26,7 @@ use App\Models\StudentcategoryModel;
 use App\Models\AcademicYearModel;
 use App\Models\CompanySettings2;
 use App\Models\InvoiceSettings;  
-
-
-
-
-
+use App\Models\PrintersModel;  
 
 
 class Settings extends BaseController
@@ -2843,6 +2839,179 @@ public function preferences(){
 
  
 
+    public function printers($printer_id=0){
+            $session=session();
+
+             if($session->has('isLoggedIn')){
+
+                $UserModel= new Main_item_party_table;
+                $PrintersModel= new PrintersModel;
+
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+
+                $user=$UserModel->where('id',$myid)->first();
+
+                if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+
+               
+
+                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+
+
+                $all_printers = $PrintersModel->where('company_id',company($myid))->where('user_id',$myid)->orderBy('id','desc')->findAll();
+
+
+                $data = [
+                    'title' => 'Aitsun ERP- Printers & Devices',
+                    'user' => $user, 
+                    'all_printers' => $all_printers
+                ];
+
+               
+                echo view('header',$data);
+                echo view('settings/printers', $data);
+                echo view('footer');
+                 
+
+                if (isset($_POST['printer_name'])) {
+
+                    if ($printer_id<1) {
+                        $defaults=$PrintersModel->where('company_id',company($myid))->where('default',1)->where('user_id',$myid)->findAll();
+                        
+                    
+                        foreach ($defaults as $df) {
+                            $PrintersModel->update($df['id'],['default'=>0]);
+                        }
+                    }
+                    
+                    
+                    $pu_data = [ 
+                        'company_id'=>company($myid),
+                        'user_id'=>$myid,  
+                        'printer_name'=>strip_tags($this->request->getVar('printer_name')),
+                        'silent'=>strip_tags($this->request->getVar('silent')),
+                        'top'=>strip_tags($this->request->getVar('top')),
+                        'right'=>strip_tags($this->request->getVar('right')),
+                        'bottom'=>strip_tags($this->request->getVar('bottom')),
+                        'left'=>strip_tags($this->request->getVar('left')),
+                        'scale'=>strip_tags($this->request->getVar('scale')), 
+                        'status'=>1
+                    ];
+ 
+                    if (isset($_POST['default'])) { 
+                       $pu_data['default'] = 1; 
+                    }
+
+                    if ($printer_id>0) { 
+                       $pu_data['id'] = $printer_id; 
+                    }
+                    
+                    $update_user=$PrintersModel->save($pu_data);
+
+                    if ($update_user) {
+                        ////////////////////////CREATE ACTIVITY LOG//////////////
+                        $log_data=[
+                            'user_id'=>$myid,
+                            'action'=>'Company/branch (#'.company($myid).') <b>'.my_company_name(company($myid)).'</b> printers & devices details saved.',
+                            'ip'=>get_client_ip(),
+                            'mac'=>GetMAC(),
+                            'created_at'=>now_time($myid),
+                            'updated_at'=>now_time($myid),
+                            'company_id'=>company($myid),
+                        ];
+
+                        add_log($log_data);
+                        ////////////////////////END ACTIVITY LOG/////////////////
+
+
+                        $session->setFlashdata('pu_msg', 'Saved!');
+                        return redirect()->to(base_url('settings/printers'));
+                    }else{
+                        $session->setFlashdata('pu_er_msg', 'Failed to save!');
+                        return redirect()->to(base_url('settings/printers'));
+                    }
+                }
+
+          
+            }else{
+                return redirect()->to(base_url('users/login'));
+            }
+    }
+
+    public function delete_printer($printer_id=0){
+            $session=session();
+
+             if($session->has('isLoggedIn')){
+
+                $UserModel= new Main_item_party_table;
+                $PrintersModel= new PrintersModel;
+
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+
+                $user=$UserModel->where('id',$myid)->first();
+                
+                // $defaults=$PrintersModel->where('company_id',company($myid))->where('default',1)->where('user_id',$myid)->findAll();
+                    
+               
+                // foreach ($defaults as $df) {
+                //     $PrintersModel->update($df['id'],['default'=>0]);
+                // }  
+                
+                $update_user=$PrintersModel->delete($printer_id);
+
+                $session->setFlashdata('pu_msg', 'Done, Default printer changed!');
+                return redirect()->to(base_url('settings/printers'));
+          
+            }else{
+                return redirect()->to(base_url('users/login'));
+            }
+    }
+
+    public function set_default_printer($printer_id=0){
+            $session=session();
+
+             if($session->has('isLoggedIn')){
+
+                $UserModel= new Main_item_party_table;
+                $PrintersModel= new PrintersModel;
+
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+
+                $user=$UserModel->where('id',$myid)->first();
+                
+                $defaults=$PrintersModel->where('company_id',company($myid))->where('default',1)->where('user_id',$myid)->findAll();
+                    
+               
+                foreach ($defaults as $df) {
+                    $PrintersModel->update($df['id'],['default'=>0]);
+                }
+                
+                    
+                $pu_data = [ 
+                    'id'=>$printer_id, 
+                    'default'=>1
+                ]; 
+                
+                $update_user=$PrintersModel->save($pu_data);
+
+                $session->setFlashdata('pu_msg', 'Done, Default printer changed!');
+                return redirect()->to(base_url('settings/printers'));
+          
+            }else{
+                return redirect()->to(base_url('users/login'));
+            }
+    }
+
+        
 
     public function printing_and_devices(){
             $session=session();

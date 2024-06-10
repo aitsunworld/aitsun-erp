@@ -2,8 +2,9 @@
 
 </main>
         
-        
-        
+
+
+
        <div class="fade modal modal-fullscreen fade" id="add_new_party_from_selector"  aria-hidden="true">
         <div class=" modal-lg modal-dialog-centered">
           <div class="modal-content">
@@ -48,7 +49,7 @@
 
 
          <?php 
-            $uri = new \CodeIgniter\HTTP\URI(str_replace('index.php','',current_url()));
+            $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
          ?>
 
     
@@ -65,9 +66,47 @@
             </script> 
         <php } ?> -->
 
+        <script type="text/javascript">
+            $(document).ready(function(){  
+                $.ajax({
+                  url: "<?= base_url('cron_jobs'); ?>", 
+                  success: function(dataResult){ 
+                  }
+                }); 
+            }); 
+        </script> 
+
       <div id="asm_toast"></div>
     
-
+<div id="sidebar">  
+  <div class="list"> 
+       
+        <?php 
+            foreach (menus_array($user['id'],$user['u_type']) as $side_item) {
+                if (!isset($side_item['condition']) || $side_item['condition']) {
+        ?>
+            <div class="item" onclick="location.href='<?= $side_item["url"] ?>'">
+                <img src="<?= $side_item['icon'] ?>" class=" my-auto me-2">
+                <?= $side_item['title'] ?>
+            </div> 
+        <?php
+                }
+            } 
+        ?> 
+  </div>  
+  <?php if ($uri->getTotalSegments()>=sn2()): ?>
+      <div class="main_menu_toggler" onclick="toggleSidebar()">
+          Main Menu 
+      </div>
+  <?php endif ?>
+         
+ <script type="text/javascript">
+    function toggleSidebar(){
+      document.getElementById("sidebar").classList.toggle('active');
+    }
+</script>   
+        
+</div>  
     
         <?php 
             $quick_show=true;
@@ -428,24 +467,20 @@
     }
 ?>
 
-<?php  
-    if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())== 'pos') {
+<?php   
+       if ($uri->getSegment(sn2())== 'pos') {
 ?>
     <script src="<?= base_url('public'); ?>/js/pos_index.js?v=<?= script_version(); ?>"></script>
 <?php    
-       }
-    }
+       } 
 ?>
 
-<?php  
-    if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())>= 'appointments') {
+<?php   
+       if ($uri->getSegment(sn2())>= 'appointments') {
 ?>
     <script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
 <?php    
-       }
-    }
+       } 
 ?>
 
  

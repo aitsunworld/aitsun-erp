@@ -37,7 +37,9 @@ $routes->get('/users/login', 'Users::login');
 $routes->get('/users', 'Users::login');
 $routes->post('/users/login', 'Users::login');
 $routes->get('/users/logout', 'Users::logout'); 
-$routes->get('/accounting_library', 'Accounting_library::index'); 
+$routes->get('/accounting_library', 'Accounting_library::index');
+$routes->get('/cron_jobs', 'Cron_jobs::index');
+
 $routes->get('/notifications/display_notifications', 'Notifications::display_notifications'); 
 $routes->get('/notifications/not_indic', 'Notifications::not_indic'); 
 $routes->get('/notifications/fees_remind/(:any)', 'Notifications::fees_remind/$1'); 
@@ -61,21 +63,29 @@ $routes->get('/appointments/resources', 'Appointments::resources');
 $routes->post('/appointments/add_resources', 'Appointments::add_resources');
 $routes->post('/appointments/update_resources/(:any)', 'Appointments::update_resources/$1');
 $routes->get('/appointments/book_persons', 'Appointments::book_persons');
+$routes->get('/appointments/book_persons/my_appointments', 'Appointments::book_persons/person/my_appointments');
+
+$routes->get('/appointments/book_resources', 'Appointments::book_persons/resource');
+
 $routes->get('/appointments/delete_resource/(:any)', 'Appointments::delete_resource/$1');
 $routes->get('/appointments/get_timings/(:any)', 'Appointments::get_timings/$1');
 
 $routes->get('/appointments/get_booking_form/(:any)/(:any)/(:any)', 'Appointments::get_booking_form/$1/$2/$3');
 $routes->get('/appointments/get_booking_edit_form/(:any)', 'Appointments::get_booking_edit_form/$1');
 $routes->post('/appointments/save_booking/(:any)', 'Appointments::save_booking/$1');
+$routes->get('/appointments/delete_booking/(:any)', 'Appointments::delete_booking/$1');
 
 $routes->get('/appointments/get_booking_form', 'Appointments::get_booking_form');
 $routes->post('/appointments/save_appointments', 'Appointments::save_appointments');
 $routes->post('/appointments/delete_appointment/(:any)', 'Appointments::delete_appointment/$1');
-$routes->post('/appointments/update_resource_img/(:any)', 'Appointments::update_resource_img/$1');
-
-
  
-
+$routes->get('/appointments/confirm_checkin/(:any)/(:any)', 'Appointments::confirm_checkin/$1/$2');
+$routes->get('/appointments/reports', 'Appointments::reports');
+ 
+$routes->post('/appointments/update_resource_img/(:any)', 'Appointments::update_resource_img/$1');
+ 
+//rental management 
+$routes->get('/rental', 'Rental::index');
 
 ////////// Parties /////////////
 $routes->get('/customers', 'Customers::index'); 
@@ -98,13 +108,19 @@ $routes->post('/import_and_export/import_students', 'Import_and_export::import_s
 $routes->post('/import_and_export/import_parties', 'Import_and_export::import_parties');
 $routes->post('/import_and_export/import_parties_ajax', 'Import_and_export::import_parties_ajax');
 
-////////// Inventories /////////////
+////////// POS /////////////
 $routes->get('/pos', 'Pos::index'); 
-$routes->get('/pos/create', 'Pos::create'); 
+$routes->post('/pos', 'Pos::index'); 
+$routes->get('/pos/delete_register/(:num)', 'Pos::index/$1'); 
+
+$routes->get('/pos/create/(:any)', 'Pos::create/$1'); 
 $routes->post('/pos/open_session', 'Pos::open_session'); 
-$routes->get('/pos/close_register', 'Pos::close_register');
+$routes->get('/pos/close_register/(:any)', 'Pos::close_register/$1');
 $routes->post('/pos/change_pos_mode/(:any)', 'Pos::change_pos_mode/$1');
 $routes->get('/pos/orders', 'Pos::orders');
+$routes->get('/pos/floors', 'Pos::floors');
+$routes->get('/pos/floors/new_floor', 'Pos::new_floor');
+$routes->post('/floors/save_floors', 'Pos::save_floors');
   
 
 ////////// Inventories /////////////
@@ -118,6 +134,8 @@ $routes->get('/invoices/convert_to_sale/(:any)', 'Invoices::convert_to_sale/$1')
 $routes->get('/invoices/convert_invoice/(:any)', 'Invoices::convert_invoice/$1'); 
 $routes->get('/invoices/convert_to_sale_delivery_note/(:any)', 'Invoices::convert_to_sale_delivery_note/$1'); 
 
+
+$routes->post('/sales/change_rental_status/(:any)/(:any)', 'Sales::change_rental_status/$1/$2'); 
 
 
 $routes->get('/invoices/get_invoice_pdf/(:any)/(:any)', 'Invoices::get_invoice_pdf/$1/$2'); 
@@ -483,6 +501,12 @@ $routes->post('settings/invoice_settings', 'Settings::invoice');
 $routes->get('/app_info', 'Settings::app_info'); 
 $routes->get('/settings/product-scrapper', 'Product_scrapper::configuration'); 
 $routes->get('/settings/sms_and_emails', 'Settings::sms_and_emails'); 
+$routes->get('/settings/printers', 'Settings::printers');
+$routes->post('/settings/printers', 'Settings::printers/0');
+$routes->post('/settings/printers/(:any)', 'Settings::printers/$1');
+$routes->get('/settings/set_default_printer/(:any)', 'Settings::set_default_printer/$1');
+$routes->get('/settings/delete_printer/(:any)', 'Settings::delete_printer/$1');
+
 $routes->get('/settings/printing_and_devices', 'Settings::printing_and_devices'); 
 $routes->get('/settings/preferences', 'Settings::preferences'); 
 $routes->post('/settings/sms_and_emails', 'Settings::sms_and_emails'); 
@@ -767,7 +791,7 @@ $routes->get('/selectors/all_parties/(:any)', 'Selectors::all_parties/$1');
 $routes->get('/selectors/all_parties_for_create_invoice/(:any)/(:any)', 'Selectors::all_parties_for_create_invoice/$1/$2');
 $routes->get('/selectors/all_staffs/(:any)', 'Selectors::all_staffs/$1');
 $routes->get('/selectors/all_resources/(:any)', 'Selectors::all_resources/$1');
-
+$routes->get('/selectors/all_pos_registers/(:any)', 'Selectors::all_pos_registers/$1');
 
 
  
@@ -957,6 +981,9 @@ $routes->post('home/get_adjust_payment/(:any)', 'Home::get_adjust_payment/$1');
 
 //sleep
 $routes->get('/sleep_mode', 'Calendar::sleep_mode');
+
+//sleep
+$routes->get('/reminder', 'Reminders::index');
 
 
 ////// REST API ////

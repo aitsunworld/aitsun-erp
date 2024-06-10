@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/lobibox.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/sweetalert2.min.css') ?>">
      <?php 
-            $uri = new \CodeIgniter\HTTP\URI(str_replace('index.php','',current_url()));
+            $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
          ?>
     <?php  
         if ($uri->getTotalSegments()>sn2()) {
@@ -32,23 +32,27 @@
         }
     ?>
 
-     <?php  
-        if ($uri->getTotalSegments()>sn2()) {
-           if ($uri->getSegment(sn3())== 'pos') {
+     <?php   
+           if ($uri->getSegment(sn2())== 'pos') {
     ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/pos.css') ?>?ver=<?= style_version(); ?>">
-    <?php    
-           }
+    <?php     
         }
     ?>
 
-    <?php  
-        if ($uri->getTotalSegments()>sn2()) {
-           if ($uri->getSegment(sn3())== 'appointments') {
+    <?php   
+           if ($uri->getSegment(sn2())== 'appointments') {
     ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/appoinments.css') ?>?ver=<?= style_version(); ?>">
-    <?php    
-           }
+    <?php     
+        }
+    ?>
+
+    <?php   
+           if ($uri->getSegment(sn2())== 'rental') {
+    ?>
+        <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/rental.css') ?>?ver=<?= style_version(); ?>">
+    <?php     
         }
     ?>
 
@@ -96,6 +100,8 @@
 
     <?php }; ?>
     <?php } ?>
+
+    
 
 </head>
 

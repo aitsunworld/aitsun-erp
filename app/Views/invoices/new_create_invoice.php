@@ -11,7 +11,9 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/custom.css'); ?>?ver=<?= style_version(); ?>">
   <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/icons.css'); ?>?ver=<?= style_version(); ?>">
   <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/sweetalert2.min.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/lobibox.min.css') ?>">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="<?= base_url('public'); ?>/js/lobibox.min.js"></script>
   <style type="text/css">.bg-no{background: transparent!important;} .bg-no .row{padding: 0!important;}</style>
 
   <style type="text/css">
@@ -110,7 +112,24 @@
     
     <div class="invoice_container">
 
-        
+        <?php 
+          $invoice_for='';
+          if ($_GET) {
+            if (isset($_GET['invoice_for'])) {
+              if (!empty($_GET['invoice_for'])) {
+                $invoice_for=$_GET['invoice_for'];
+              }
+            }
+
+            if (isset($_GET['booking'])) {
+              if (!empty($_GET['booking'])) {
+                if ($_GET['booking']>0) {
+                  $invoice_for='appointment';
+                } 
+              }
+            }
+          }
+         ?>
 
       <form id="invoice_form" method="post" action="<?php if ($view_method=='edit'): ?><?= base_url('sales/update_invoice'); ?>/<?= $in_data['id']; ?><?php elseif($view_method=='convert' || $view_method=='copy'): ?><?= base_url('sales'); ?><?php else: ?><?= base_url('sales') ?><?php endif ?>">
         <?= csrf_field(); ?>
@@ -193,6 +212,7 @@
 
                   <input type="hidden" id="focus_element" value="<?= get_invoicesetting(company($user['id']),$invoice_type,'cursor_position'); ?>">
                   <input type="hidden" id="barcode_type" value="<?= get_setting(company($user['id']),'barcode_settings'); ?>">
+                  <input type="hidden" id="invoice_for" name="invoice_for" value="<?= $invoice_for; ?>">
 
                <!-- ///////////////////////// SOME INITIALIZATION //////////////////////////////////////// -->
 
@@ -205,6 +225,11 @@
           </a>
           <label class="my-auto ml-10">
               <?= langg(get_setting(company($user['id']),'language'),full_invoice_type($invoice_type)); ?>
+
+              <?php if ($invoice_for=='rental'): ?>
+                - Rental
+              <?php endif ?>
+
               <?php if ($view_method=='convert'): ?>
                 <?= langg(get_setting(company($user['id']),'language'),'- Convert'); ?>
               <?php elseif ($view_method=='edit'): ?>
@@ -328,7 +353,15 @@
           <input type="hidden" name="old_due_amount" value="<?= $old_due_amount ?>">
           <input type="hidden" name="old_paid_amount" value="<?= $old_paid_amount ?>">
 
+          <?php $booking_id=0; if ($_GET): ?>
+            <?php if (isset($_GET['booking'])): ?>
+              <?php if (!empty($_GET['booking'])): ?>
+                <?php $booking_id=$_GET['booking']; ?> 
+              <?php endif ?>
+            <?php endif ?>
+          <?php endif ?>
 
+          <input type="hidden" name="booking_id" value="<?= $booking_id ?>">
 
 
           <input type="hidden" name="alternate_name" class="form-control form-control-sm mr-5" placeholder="Party name" id="alternate_name" value="<?= $cus_value; ?>" <?= $disable_value; ?>>
@@ -342,6 +375,13 @@
                   <option value="<?= $in_data['customer'] ?>"><?= user_name($in_data['customer']) ?></option> 
                 <?php }else{ ?>
                   <?php if ($view_type=='sales'): ?>
+                    <?php if ($_GET): ?>
+                      <?php if (isset($_GET['customer'])): ?>
+                        <?php if (!empty($_GET['customer'])): ?>
+                          <option value="<?= $_GET['customer'] ?>"><?= user_name($_GET['customer']) ?></option> 
+                        <?php endif ?>
+                      <?php endif ?>
+                    <?php endif ?>
                     <option value="<?= cash_customer_of_company(company($user['id'])) ?>"><?= user_name(cash_customer_of_company(company($user['id']))) ?></option> 
                   <?php else: ?>
                     <option value="">Search party</option> 
@@ -877,17 +917,19 @@
                 <?php endif ?>
 
 
-                <div>Sub total: <b>
-                    <?= currency_symbol($user['company_id']); ?><span id="subtotal_label"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal-$taxcount,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?></span>
+                <div class="d-flex justify-content-between">
+                    <div>Sub total: <b>
+                      <?= currency_symbol($user['company_id']); ?><span id="subtotal_label"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal-$taxcount,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?></span>
 
-                     <input type="hidden" name="sub_total" id="subtotal" class="form-control text-right control_ro" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?>" readonly>
-                  </b>
+                       <input type="hidden" name="sub_total" id="subtotal" class="form-control text-right control_ro" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?>" readonly>
+                    </b>
+                  </div>
+
+
+                  
+
+                  <div class="mt-1">Tax: <b><?= currency_symbol($user['company_id']); ?><span id="total_taxamt_label_main"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($taxcount,get_setting(company($user['id']),'round_of_value'),PHP_ROUND_HALF_UP); ?><?php else: ?>0<?php endif; ?></span></b></div>
                 </div>
-
-
-                
-
-                <div class="mt-1">Tax: <b><?= currency_symbol($user['company_id']); ?><span id="total_taxamt_label_main"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($taxcount,get_setting(company($user['id']),'round_of_value'),PHP_ROUND_HALF_UP); ?><?php else: ?>0<?php endif; ?></span></b></div>
 
 
                 <div>
@@ -934,19 +976,91 @@
                   </div> 
                 </div>
 
-                <div class="d-flex justify-content-between mt-1">
-                  <div class="my-auto">Vehicle Number:</div>
-                  <div>
-                  <input type="text" name="vehicle_number" class="form-control form-control-sm " value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['vehicle_number']; ?><?php else: ?> <?php endif; ?>">
+               <div class="d-flex justify-content-between">
+                  <div class="d-flex justify-content-between mt-1">
+                    <div class="my-auto me-1">Vehicle Number:</div>
+                    <div>
+                    <input type="text" name="vehicle_number" class="form-control form-control-sm " value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['vehicle_number']; ?><?php else: ?> <?php endif; ?>">
+                    </div>
                   </div>
-                </div>
 
-                <div class="d-flex justify-content-between mt-1">
-                  <div class="my-auto">Transport Charges:</div>
+                  <div class="d-flex justify-content-between mt-1">
+                    <div class="my-auto me-1">Transport Charges:</div>
+                    <div>
+                    <input type="number" step="any" name="transport_charge" id="transport_charge" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['transport_charge']; ?><?php else: ?> <?php endif; ?>" class="form-control-sm form-control">
+                    </div>
+                  </div>
+               </div>
+ 
+
+                <!-- //////////////////////// rental details //////////////////////////// -->
+                <?php  
+                  if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'){
+                    $from_date=get_date_format($in_data['rent_from'],'Y-m-d');
+                    $from_time=get_date_format($in_data['rent_from'],'H:i');
+                    $to_date=get_date_format($in_data['rent_to'],'Y-m-d');
+                    $time=get_date_format($in_data['rent_to'],'h:i');
+                 
+                    $duration=$in_data['rental_duration']; 
+                  
+                    $newTime = get_date_format($in_data['rent_to'],'H:i');
+                  }else{
+                    $from_date=get_date_format(now_time($user['id']),'Y-m-d');
+                    $from_time=get_date_format(now_time($user['id']),'H:i');
+                    $to_date=get_date_format(now_time($user['id']),'Y-m-d');
+                    $time=get_date_format(now_time($user['id']),'h:i');
+                    $booking_id='';
+                    $timeObject = DateTime::createFromFormat('H:i', $time);
+                    $duration='01:00'; 
+                    list($hours, $minutes) = explode(':', $duration); 
+                    $intervalSpec = sprintf('PT%dH%dM', $hours, $minutes);
+                    $durationObject = new DateInterval($intervalSpec); 
+                    $timeObject->add($durationObject); 
+                    $newTime = $timeObject->format('H:i');
+                  } 
+                ?>
+                <?php if ($invoice_for=='rental' || $view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?>
+                <div class="rental_details mt-2">
+                  <h6>Rental details</h6>
+                  <div class="d-flex">
+                    <div class="w-100">
+                      <label>Invoice address</label>
+                      <textarea class="form-control" name="invoice_address" placeholder=""><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_address']; ?><?php else: ?> <?php endif; ?></textarea>
+                    </div>
+                    <div class="w-100">
+                      <label>Delivery address</label>
+                      <textarea class="form-control" name="delivery_address" placeholder=""><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['delivery_address']; ?><?php else: ?> <?php endif; ?></textarea>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <b>Rental period</b>
+                    <div class="d-lex">
+                      <div class="w-100">
+                        <label>From</label>
+                        <div class="d-flex">
+                          <input type="date" class="form-control modal_inpu" name="rent_from_date" id="rent_from_date" value="<?= $from_date ?>">
+                          <input type="time" class="form-control modal_inpu" name="rent_from_time" id="rent_from_time" value="<?= $from_time ?>">
+                        </div>
+                      </div>
+                      <div class="w-100">
+                        <label>To</label>
+                        <div class="d-flex">
+                          <input type="date" class="form-control modal_inpu" name="rent_to_date" id="rent_to_date" value="<?= $to_date ?>">
+                        
+                          <input type="time" class="form-control modal_inpu" name="rent_to_time" id="rent_to_time" value="<?= $newTime ?>">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   <div>
-                  <input type="number" step="any" name="transport_charge" id="transport_charge" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['transport_charge']; ?><?php else: ?> <?php endif; ?>" class="form-control-sm form-control">
+                    <label for="input-1" class="modal_lab">Duration</label>
+                    <input type="text" class="form-control modal_inpu  rental_duration" name="rental_duration" id="rental_duration" value="<?= $duration ?>">
                   </div>
                 </div>
+                <?php endif ?>
+              <!-- //////////////////////// rental details //////////////////////////// -->
 
               </div>
               <div class="my-auto">
@@ -959,6 +1073,11 @@
                   </div> 
                 </div> 
               </div>
+
+
+             
+
+
             </div>
 
             <table class="w-100 mt-2">
@@ -1386,9 +1505,42 @@
 <?php if (has_sticky(company($user['id']))): ?> 
 <?php else: ?> 
 <?php endif; ?>
+  <?php 
+            $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
+         ?>
 
-
+    
+<div id="sidebar">  
+  <div class="list"> 
+       
+        <?php 
+            foreach (menus_array($user['id'],$user['u_type']) as $side_item) {
+                if (!isset($side_item['condition']) || $side_item['condition']) {
+        ?>
+            <div class="item" onclick="location.href='<?= $side_item["url"] ?>'">
+                <img src="<?= $side_item['icon'] ?>" class=" my-auto me-2">
+                <?= $side_item['title'] ?>
+            </div> 
+        <?php
+                }
+            } 
+        ?> 
+  </div>  
+  <?php if ($uri->getTotalSegments()>=sn2()): ?>
+      <div class="main_menu_toggler" onclick="toggleSidebar()">
+          Main Menu 
+      </div>
+  <?php endif ?>
+         
  
+</div>  
+    
+ <script type="text/javascript">
+    function toggleSidebar(){
+      document.getElementById("sidebar").classList.toggle('active');
+    }
+</script>   
+        
 <input type="hidden" value="<?= get_setting(company($user['id']),'printer1'); ?>" id="installedPrinterName">
    <script src="<?= base_url('public/js/bootstrap.bundle.min.js') ?>"></script>
 <script src="<?= base_url('public'); ?>/js/pos_print.js?v=<?= script_version(); ?>"></script>

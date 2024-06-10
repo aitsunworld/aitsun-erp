@@ -97,3 +97,7 @@ define('APP_STATE', 'offline');
 
 define('RECAPTCHA', false);
 define('SLEEP_MODE', false);
+
+define('BREVO_KEY','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');
+define('BREVO_PARTNER_KEY','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');
+ 

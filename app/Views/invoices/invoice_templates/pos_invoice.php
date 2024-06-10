@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $title ?></title>
-  <style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= $title ?></title>
+    <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'PT Sans', sans-serif;
         }
-
-        @page {
-            size: 2.8in 11in;
-            margin-top: 0cm;
-            margin-left: 0cm;
-            margin-right: 0cm;
-        }
-
-        table {
+          table {
             width: 100%;
         }
 
@@ -133,7 +125,8 @@
         }
     </style>
 </head>
-<?php foreach (my_company($invoice_data['company_id']) as $cmp) { 
+<body>
+    <?php foreach (my_company($invoice_data['company_id']) as $cmp) { 
     $company_logo=$cmp['company_logo'];
     $company_name=$cmp['company_name'];
     $address=$cmp['address'];
@@ -147,8 +140,7 @@
     $company_telephone=$cmp['company_telephone'];
     $gstin_vat_no=$cmp['gstin_vat_no']; 
  } ?>
-<body>
-    <header>
+     <header>
         <div id="logo" class="media" style="height:30px;" >
           <img src="<?= base_url('public'); ?>/images/company_docs/<?php if($company_logo!= ''){echo $company_logo; }else{ echo 'company.png';} ?>" class="company_logo" style="width: auto;height: 100%;">
         </div>
@@ -214,9 +206,8 @@
           </p>
 
     </header>
- 
-    
-    <table class="bill-details" border="0">
+
+     <table class="bill-details" border="0">
         <tbody>
             <tr>
                 <td style="vertical-align: middle;">
@@ -255,8 +246,8 @@
             
         </tbody>
     </table>
-    
-    <table class="items">
+
+        <table class="items">
         <thead>
             <tr>
                 <th class="heading name center-align" colspan="4">Item</th>
@@ -383,6 +374,7 @@
             <?= nl2br($invoice_data['notes']) ?>
         </p>
     </footer>
-     <?php endif ?>
+    <?php endif ?>
+ 
 </body>
 </html>

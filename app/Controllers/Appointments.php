@@ -50,13 +50,19 @@ class Appointments extends BaseController
                     
              
                 }
-                $app_data = $AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->paginate(6);
+                
+                
+                $AppointmentsModel->select('appointments.*, COUNT(CASE WHEN appointments_bookings.deleted = 0 AND appointments_bookings.status = 0 THEN 1 END) as scheduled_bookings, COUNT(CASE WHEN appointments_bookings.deleted = 0 AND appointments_bookings.book_from >= CURDATE() - INTERVAL 30 DAY THEN 1 END) as total_scheduled_bookings');
+
+                $AppointmentsModel->join('appointments_bookings', 'appointments_bookings.appointment_id = appointments.id', 'left');
+                $AppointmentsModel->groupBy('appointments.id');
+
+                $app_data = $AppointmentsModel->where('appointments.company_id',company($myid))->where('appointments.deleted',0)->orderBy('appointments.id','DESC')->findAll();
 
                 $data = [
                     'title' => 'Aitsun ERP- Appoinments',
                     'user' => $user,
-                    'appointment_data'=>$app_data,
-                    'pager' => $AppointmentsModel->pager,
+                    'appointment_data'=>$app_data, 
                 ];
                
                 echo view('header',$data);
@@ -71,7 +77,7 @@ class Appointments extends BaseController
         }
     }
 
-    public function book_persons(){
+    public function book_persons($book_type='person',$my_appointments=''){
         $session=session();
         if($session->has('isLoggedIn')){
             $UserModel= new Main_item_party_table;
@@ -96,13 +102,27 @@ class Appointments extends BaseController
                         }
                     }
                 }
-            
-                $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->findAll();
+
+                $AppointmentsModel=new AppointmentsModel;
+                if ($book_type=='person') {
+                    $AppointmentsModel->where('availability_on',0);
+                }elseif($book_type=='resource'){
+                    $AppointmentsModel->where('availability_on',1);
+                }
+                $appointments_array=$AppointmentsModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','desc')->findAll();
+                
+                if ($my_appointments=='my_appointments') {
+                    $AppointmentsBookings->where('person_id',$myid);
+                }
+                $todays_booking=$AppointmentsBookings->where('DATE(book_from)',$active_date)->where('deleted',0)->findAll();
                 
                 $data = [
                     'title' => 'Aitsun ERP- Book person',
                     'user' => $user, 
-                    'todays_booking'=>$todays_booking
+                    'todays_booking'=>$todays_booking,
+                    'book_type'=>$book_type,
+                    'appointments_array'=>$appointments_array,
+                    'my_appointments'=>$my_appointments
                 ];
                
                 echo view('header',$data);
@@ -242,13 +262,15 @@ class Appointments extends BaseController
                 
                 $week_of_selected_date=get_date_format($selected_date,'w');
                 // echo $week_of_selected_date; 
+                // echo $app_id; 
+
 
                 $timings=$AppointmentsTimings->where('appointment_id',$app_id)->where('week',$week_of_selected_date)->findAll();
                 $timing_box=[];
                 foreach ($timings as $tm) {
                     $start_time = new Time($tm['from']);
                     $end_time = new Time($tm['to']); 
-                     
+                    
                     $interval = new DateInterval('PT30M'); 
                     $result_time= new DatePeriod($start_time, $interval, $end_time->add($interval));
                     foreach ($result_time as $rt) {   
@@ -257,11 +279,15 @@ class Appointments extends BaseController
                     
                 }
  
-                $time_result='';
+                
                 $timing_box=array_unique($timing_box);
                 sort($timing_box);
-
+                $tim_count=count($timing_box);
+                if ($tim_count>0) {
+                    $time_result='';
+                }
                 foreach ($timing_box as $time) {
+                    
                     $time_result.='<div class="col-md-3">';
                      $time_result.='<input type="radio" class="time_box_radio" name="time" id="time'.str_replace(':','',$time).'">'; 
                     $time_result.='<label class="time_box" data-time="'.$time.'" for="time'.str_replace(':','',$time).'">';
@@ -419,23 +445,25 @@ class Appointments extends BaseController
                     $newName = $img->getRandomName();
                     $img->move(ROOTPATH . 'public/images/resources', $newName); 
                     $imagePath =$img->getName(); 
+
+                    $resources_data = [
+                        'id'=>$rsid,
+                        'image' => strip_tags($imagePath),
+                        
+                    ];
+
+                    if ($ResourcesModel->save($resources_data)) {
+                        echo 1; 
+                    } else {
+                        echo 0; 
+                    }
                 } else {
-                    echo 0; 
+                    echo 3; 
                     return;
                 }
             }
 
-            $resources_data = [
-                'id'=>$rsid,
-                'image' => strip_tags($imagePath),
-                
-            ];
-
-            if ($ResourcesModel->save($resources_data)) {
-                echo 1; 
-            } else {
-                echo 0; 
-            }
+           
         }
 }
 
@@ -500,6 +528,63 @@ class Appointments extends BaseController
 
 
 
+    public function delete_booking($booking_id=0){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $AppointmentsBookings= new AppointmentsBookings();
+            $myid=session()->get('id');
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+                    
+            if (is_appointments(company($user['id']))==1) {
+                $resources_data = [ 
+                    'id' => $booking_id,  
+                    'deleted' => 1,
+                ];
+
+                if ($AppointmentsBookings->save($resources_data)) {
+                    echo 1;
+                }else{
+                    echo 0;
+                }
+            }else{
+                echo 0;
+            }
+        }else{
+            echo 0;
+        }  
+    }
+
+    public function confirm_checkin($booking_id=0,$book_value=0){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $AppointmentsBookings= new AppointmentsBookings();
+            $myid=session()->get('id');
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+                    
+            if (is_appointments(company($user['id']))==1) {
+                $resources_data = [ 
+                    'id' => $booking_id,  
+                    'status' => $book_value,
+                ];
+
+                if ($AppointmentsBookings->save($resources_data)) {
+                    echo 1;
+                }else{
+                    echo 0;
+                }
+            }else{
+                echo 0;
+            }
+        }else{
+            echo 0;
+        }  
+    }
+
+
     public function save_booking($booking_id=0){ 
         if ($this->request->getMethod() == 'post'){
             $myid=session()->get('id');
@@ -530,7 +615,7 @@ class Appointments extends BaseController
             $resources_data = [ 
                 'company_id' => company($myid), 
                 'booking_name'=> strip_tags($this->request->getVar('booking_name')), 
-                'booking_type'=> 'person',
+                'booking_type'=> $booking_type,
                 'resource_id'=> $resource_id,
                 'person_id'=> $person_id,
                 'customer'=> strip_tags($this->request->getVar('customer_id')),
@@ -544,17 +629,93 @@ class Appointments extends BaseController
                 'deleted' => 0,
             ];
 
+            $type_of_request='insert';
             if ($booking_id>0) { 
                $resources_data['id'] = $booking_id;
-            }
-             
-
-            if ($AppointmentsBookings->save($resources_data)) {
-                echo 1;
+               $type_of_request='update';
             }else{
-                echo 0;
+                $resources_data['booking_no'] = booking_no(company($myid));
             }
+            
+            $book_result=[];
+
+            $check_booking_availabilty=$this->check_booking_availabilty($resources_data,$type_of_request);
+
+            if ($check_booking_availabilty=='available') {
+                if ($AppointmentsBookings->save($resources_data)) {
+                    $book_result=[
+                        'result'=>1,
+                        'message'=>'Booking completed!'
+                    ];
+                }else{
+                    $book_result=[
+                        'result'=>0,
+                        'message'=>$check_booking_availabilty
+                    ];
+                }
+            }else{
+                $book_result=[
+                    'result'=>0,
+                    'message'=>$check_booking_availabilty
+                ];
+            }
+            
         }
+
+        echo json_encode($book_result);
+    }
+
+    private function check_booking_availabilty($booking_data,$type_of_request){
+        $availabilty_result='available';
+
+        $AppointmentsModel= new AppointmentsModel();
+        $AppointmentsBookings= new AppointmentsBookings();
+        $AppointmentsTimings= new AppointmentsTimings();
+       
+        $company_id=$booking_data['company_id']; 
+        $booking_name=$booking_data['booking_name']; 
+        $booking_type=$booking_data['booking_type'];
+        $resource_id=$booking_data['resource_id'];
+        $person_id=$booking_data['person_id'];
+        $customer=$booking_data['customer'];
+        $book_from=$booking_data['book_from'];
+        $book_to=$booking_data['book_to'];
+        $appointment_id=$booking_data['appointment_id'];
+        $duration=$booking_data['duration'];
+        $booked_by=$booking_data['booked_by'];
+        $datetime=$booking_data['datetime'];
+        $note=$booking_data['note'];
+        $deleted =$booking_data['deleted'];
+
+        //check appointment from and to time
+        $get_appoint_ment_timing_from=$AppointmentsTimings->where('appointment_id',$appointment_id)->where('week',get_date_format($book_from,'w'))->first();
+        $get_appoint_ment_timing_to=$AppointmentsTimings->where('appointment_id',$appointment_id)->where('week',get_date_format($book_to,'w'))->first();
+        $available_from_time=$get_appoint_ment_timing_from['from'];
+        $available_to_time=$get_appoint_ment_timing_to['to'];
+
+        $book_from_time=get_date_format($book_from,'H:i:s');
+        $book_to_time=get_date_format($book_to,'H:i:s');
+ 
+
+        // Check if booking times are within available times
+        if ($book_from_time >= $available_from_time && $book_to_time <= $available_to_time) {
+            // Check appointment already book or not
+            if ($type_of_request=='update') {
+                $AppointmentsBookings->where('id!=',$booking_data['id']);
+            }
+            $check_time_is_booked_or_not=$AppointmentsBookings->where('appointment_id',$appointment_id)->where('book_from <', $book_to)->where('book_to >', $book_from)->where('deleted',0)->first();
+            if ($check_time_is_booked_or_not) {
+                $availabilty_result= "The requested time slot from " . date('H:i A', strtotime($book_from)) . " to " . date('H:i A', strtotime($book_to)) . " is already booked.";
+            }else{
+                $availabilty_result= "available";
+            }
+            
+        } else {
+            $availabilty_result= "Timing avalable only from ".get_date_format($available_from_time,'h:i A')." to ".get_date_format($available_to_time,'h:i A');
+        }
+ 
+
+        return $availabilty_result;
     }
 
      public function save_appointments(){
@@ -652,5 +813,98 @@ class Appointments extends BaseController
             return redirect()->to(base_url('appointments'));
         }
 
+    }
+
+     public function reports(){
+        $session=session();
+        if($session->has('isLoggedIn')){
+            $UserModel= new Main_item_party_table;
+            $AppointmentsModel= new AppointmentsModel;
+            $AppointmentsBookings= new AppointmentsBookings;
+            $ResourcesModel= new ResourcesModel;
+
+            $myid=session()->get('id');
+            $pager = \Config\Services::pager();
+            $con = array( 
+                'id' => session()->get('id') 
+            );
+            $user=$UserModel->where('id',$myid)->first();
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+            
+            if (is_appointments(company($user['id']))==1) {
+
+
+                if ($_GET) {
+                    $from=$_GET['from'];
+                    $dto=$_GET['to'];
+
+                    if (!empty($from) && empty($dto)) {
+                        $AppointmentsBookings->where('date(book_from)',$from);
+                    }
+                    if (!empty($dto) && empty($from)) {
+                        $AppointmentsBookings->where('date(book_from)',$dto);
+                    }
+
+                    if (empty($dto) && empty($from)) {
+                        $AppointmentsBookings->where('MONTH(book_from)',get_date_format(now_time($myid),'m'));
+                    }
+
+                    
+                    
+                    if (!empty($dto) && !empty($from)) {
+                        $AppointmentsBookings->where("date(book_from) BETWEEN '$from' AND '$dto'");
+                    }
+
+                    if (!empty($_GET['status'])) {
+                         $AppointmentsBookings->where('status',$_GET['status']);
+                    }
+
+                    if (!empty($_GET['booking_name'])) {
+                         $AppointmentsBookings->like('booking_name',$_GET['booking_name'],'both');
+                    }
+
+                    if (!empty($_GET['booking_number'])) {
+                         $AppointmentsBookings->where('booking_no',$_GET['booking_number']);
+                    }
+
+                    if (isset($_GET['person_id'])) {
+                        if (!empty($_GET['person_id'])) {
+                            $AppointmentsBookings->where('person_id',$_GET['person_id']);
+                        }
+                    }
+
+                    if (isset($_GET['customer'])) {
+                        if (!empty($_GET['customer'])) {
+                            $AppointmentsBookings->where('customer',$_GET['customer']);
+                        }
+                    }
+
+                    
+                }else{
+                    $AppointmentsBookings->where('MONTH(book_from)',get_date_format(now_time($myid),'m'));
+                }
+
+                
+
+
+
+                $all_bookings = $AppointmentsBookings->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->findAll();
+
+                $data = [
+                    'title' => 'Aitsun ERP- Booking reports',
+                    'user' => $user,
+                    'all_bookings'=>$all_bookings, 
+                ];
+               
+                echo view('header',$data);
+                echo view('appointments/booking_report', $data);
+                echo view('footer'); 
+
+            }else{
+            return redirect()->to(base_url('users/login'));
+        }
+        }else{
+            return redirect()->to(base_url('users/login'));
+        }
     }
 }

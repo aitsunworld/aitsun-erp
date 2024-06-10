@@ -223,6 +223,11 @@
                         <input class="form-check-input" type="checkbox" value="1" name="is_appoinments" id="is_appoinments">
                         <label class="form-check-label" for="is_appoinments">Appoinments</label>
                     </div>
+                    <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" value="1" name="is_clinic" id="is_clinic">
+                        <label class="form-check-label" for="is_clinic">Clinic</label>
+                    </div>
+                    
 
                 </div>
 
