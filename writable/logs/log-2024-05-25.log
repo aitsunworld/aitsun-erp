@@ -1,6 +1,0 @@
-CRITICAL - 2024-05-25 05:56:00 --> Call to undefined function App\Controllers\is_appoinments()
-in APPPATH\Controllers\Appoinments.php on line 28.
- 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appoinments->index()
- 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appoinments))
- 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
