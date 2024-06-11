@@ -105,6 +105,8 @@ class Pos extends BaseController
         if ($page_register_id>0) { 
             $session=session();
             $UserModel=new Main_item_party_table; 
+            $InvoiceModel=new InvoiceModel; 
+
             if ($session->has('isLoggedIn')){
 
                 $myid=session()->get('id');
@@ -124,15 +126,114 @@ class Pos extends BaseController
                 }
 
                 $acti=activated_year(company($myid));
-     
+                
+                $view_type='sales';
+                $invoice_type='sales';
 
+              
+                    
+
+ 
                 $data = [
                     'title' => 'POS - Aitsun ERP',
                     'user'=>$user,  
                     'view_method'=>'create',
                     'view_type'=>'sales',
                     'invoice_type'=>'sales',
-                    'page_register_id'=>$page_register_id
+                    'page_register_id'=>$page_register_id,
+                    'in_data'=>null,
+                    'inid'=>0,
+                    'invoice_type'=>$invoice_type,
+                    'm_invoices'=>[]
+
+                ];
+     
+                echo view('pos/create', $data);    
+                
+            }else{
+                return redirect()->to(base_url('users/login'));
+            }
+        }else{
+            return redirect()->to(base_url('pos'));
+        }
+    }
+
+    public function edit($page_register_id=0,$load_type='create',$invoice_id=0){
+        if ($page_register_id>0) { 
+            $session=session();
+            $UserModel=new Main_item_party_table; 
+            $InvoiceModel=new InvoiceModel; 
+
+            if ($session->has('isLoggedIn')){
+
+                $myid=session()->get('id');
+                $con = array( 
+                    'id' => session()->get('id') 
+                );
+                $user=$UserModel->where('id',$myid)->first();
+
+                if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
+
+                
+
+                if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+
+                if (usertype($myid)=='customer') {
+                    return redirect()->to(base_url('customer_dashboard'));
+                }
+
+                $acti=activated_year(company($myid));
+                
+                $view_type='sales';
+                $invoice_type='sales';
+
+                $invoice_data=$InvoiceModel->where('id',$invoice_id)->first();
+
+                if ($invoice_data) {
+                    if ($invoice_data['order_status']!='cancelled'){
+                        if ($invoice_data['invoice_type']=='sales'){
+                         $view_type='sales';
+                         } elseif ($invoice_data['invoice_type']=='purchase'){
+                             $view_type='purchase';
+                         } elseif ($invoice_data['invoice_type']=='sales_order'){
+                             $view_type='sales';
+                         } elseif ($invoice_data['invoice_type']=='sales_quotation'){
+                             $view_type='sales';
+                         } elseif ($invoice_data['invoice_type']=='sales_return'){
+                             $view_type='sales';
+                         } elseif ($invoice_data['invoice_type']=='sales_delivery_note'){
+                              $view_type='sales';
+                          } elseif ($invoice_data['invoice_type']=='purchase_order'){
+                              $view_type='purchase';
+                          } elseif ($invoice_data['invoice_type']=='purchase_quotation'){
+                              $view_type='purchase';
+                          } elseif ($invoice_data['invoice_type']=='purchase_return'){
+                             $view_type='purchase';
+                          } elseif ($invoice_data['invoice_type']=='purchase_delivery_note'){
+                             $view_type='purchase';
+                          } else{
+                            $view_type='sales';
+                         } 
+                    }
+
+                    $invoice_type=$invoice_data['invoice_type'];
+                }
+                    
+
+
+            $multyiple = explode(',', $invoice_id);
+
+                $data = [
+                    'title' => 'POS - Aitsun ERP',
+                    'user'=>$user,  
+                    'view_method'=>$load_type,
+                    'view_type'=>'sales',
+                    'invoice_type'=>'sales',
+                    'page_register_id'=>$page_register_id,
+                    'in_data'=>$invoice_data,
+                    'inid'=>$invoice_id,
+                    'invoice_type'=>$invoice_type,
+                    'm_invoices'=>$multyiple
 
                 ];
      
@@ -171,6 +272,7 @@ class Pos extends BaseController
                     'Note'=>strip_tags(htmlentities(trim($this->request->getVar('opening_note')))),
                     'register_id'=>strip_tags(htmlentities(trim($this->request->getVar('register_id')))),
                     'company_id'=>company($myid),
+                    'session_serial'=>session_serial(company($myid)), 
                     'deleted'=>0,
                     'user_id'=>$myid
                 ];
@@ -183,14 +285,7 @@ class Pos extends BaseController
                     $ProductsModel = new Main_item_party_table(); 
                     $acti=activated_year($sesdata['company_id']);
 
-                    if (register_data($this->request->getVar('register_id'),'register_type')) {
-                        $ProductsModel->where('is_food',1); 
-                    }
-
-                    $ProductsModel->where('is_pos',1); 
-                    $get_pro = $ProductsModel->where('company_id',company($sesdata['user_id']))->orderBy("id", "desc")->where('deleted',0)->findAll(); 
-
-                    $get_cust = $UserModel->where('u_type!=','staff')->where('u_type!=','driver')->where('u_type!=','teacher')->where('u_type!=','delivery')->where('u_type!=','seller')->where('u_type!=','admin')->where('u_type!=','student')->where('company_id',company($myid))->where('deleted',0)->where('main_type','user')->orderBy('id','DESC')->findAll();
+                    
 
                     
                     $set_data=[ 
@@ -201,8 +296,7 @@ class Pos extends BaseController
                         'company_id'=>company($myid),
                         'deleted'=>0,
                         'user_id'=>$myid,
-                        'products'=>$get_pro,
-                        'customers'=>$get_cust,
+                        'products'=>[], 
                         'session_id'=>$insert_id,
                     ];
 
@@ -285,30 +379,34 @@ class Pos extends BaseController
                 return redirect()->to(base_url('customer_dashboard'));
             }
 
+
+            $InvoiceModel->select('invoices.*,pos_registers.register_name,pos_sessions.session_serial');
+
+            $InvoiceModel->join('pos_registers', 'pos_registers.id = invoices.register_id', 'left');
+            $InvoiceModel->join('pos_sessions', 'pos_sessions.id = invoices.session_id', 'left');
+              
+
             if (!$_GET) {
-            $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
+                $InvoiceModel->where('invoices.invoice_date',get_date_format(now_time($myid),'Y-m-d'));
             }else {
 
 
 
                 if (isset($_GET['invoice_no'])) {
                     if (!empty($_GET['invoice_no'])) {
-                        $InvoiceModel->where('serial_no',$_GET['invoice_no']);
+                        $InvoiceModel->where('invoices.serial_no',$_GET['invoice_no']);
                     }
-                }
-
-               
-
+                } 
 
 
                 if (isset($_GET['customer'])) {
                     if (!empty($_GET['customer'])) {
-                        $InvoiceModel->where('customer',$_GET['customer']);
+                        $InvoiceModel->where('invoices.customer',$_GET['customer']);
                     }
                 }
                 if (isset($_GET['cust_name'])) {
                     if (!empty($_GET['cust_name'])) {
-                        $InvoiceModel->like('alternate_name',$_GET['cust_name']);
+                        $InvoiceModel->like('invoices.alternate_name',$_GET['cust_name']);
                     }
                 }
 
@@ -317,35 +415,28 @@ class Pos extends BaseController
                     $dto=$_GET['to'];
 
                     if (!empty($from) && empty($dto)) {
-                        $InvoiceModel->where('invoice_date',$from);
+                        $InvoiceModel->where('invoices.invoice_date',$from);
                     }
                     if (!empty($dto) && empty($from)) {
-                        $InvoiceModel->where('invoice_date',$dto);
+                        $InvoiceModel->where('invoices.invoice_date',$dto);
                     }
 
                     if (!empty($dto) && !empty($from)) {
-                        $InvoiceModel->where("invoice_date BETWEEN '$from' AND '$dto'");
+                        $InvoiceModel->where("invoices.invoice_date BETWEEN '$from' AND '$dto'");
                     }
 
                                 // if (empty($dto) && empty($from)) {
                                 //     $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
                                 // }
-                }
-
-
-
+                } 
 
             }
-
-
+ 
           
-            $InvoiceModel->where('invoice_type','sales');
-            $InvoiceModel->where('bill_type','pos');
-            $InvoiceModel->where('deleted',4);
-
-            $InvoiceModel->where('company_id',company($myid));
-            
-            $InvoiceModel->orderBy('id','desc');
+            $InvoiceModel->where('invoices.invoice_type','sales');
+            $InvoiceModel->where('invoices.bill_from','pos');
+            $InvoiceModel->where('invoices.company_id',company($myid));
+            $InvoiceModel->orderBy('invoices.id','desc');
 
                         // $InvoiceModel;
 
@@ -356,7 +447,7 @@ class Pos extends BaseController
                 'title' => 'POS - Orders',
                 'user'=>$user,
                 'all_invoices'=>$all_invoices, 
-            'view_type'=>'sales'      
+                'view_type'=>'sales'      
             ];
 
             echo view('header',$data);

@@ -522,7 +522,7 @@ $(document).on('click','.payment',function(){
 
 
   function sinv(inid,action){
-alert(action)
+ 
   $.ajax({
       type: "POST", 
             url: $('#invoice_form').attr('action')+'/'+action,
@@ -535,23 +535,28 @@ alert(action)
                 $('#submit_invoice').prop('disabled', false);
                 $('#submit_invoice').html('<i class="mdi mdi-plus mr-1"></i> Complete');
                 $('#mess').html('');
-                $('#receiptmodal').modal('show');
-                display_invoice($.trim(response));
-                $('#invoice_form')[0].reset();
-                reset_invoice(); 
-                
-                if ($('#view_method').val()=='convert') {
-                  try {
-                      var valNew=inid.split(',');
 
-                      for(var i=0;i<valNew.length;i++){
-                          convert_invoice(valNew[i]);
+                if (action=='hold') {
+                    set_new_order();
+                    show_success_msg('warning','Order saved for later!')
+                }else{
+                    $('#receiptmodal').modal('show');
+                    display_invoice($.trim(response));
+                    if ($('#view_method').val()=='convert') {
+                      try {
+                          var valNew=inid.split(',');
+
+                          for(var i=0;i<valNew.length;i++){
+                              convert_invoice(valNew[i]);
+                          }
+                      } catch {
+                           convert_invoice(inid);
                       }
-                  } catch {
-                       convert_invoice(inid);
-                  }
+                    }
                 }
-        
+                
+                $('#invoice_form')[0].reset();
+                reset_invoice();  
 
            },
            error:function(response){
@@ -611,6 +616,11 @@ function convert_invoice(invoice){
     }
 
 $(document).on('click','#set_new_order',function(){
+    set_new_order();
+
+});
+
+function set_new_order(){
     $('#receipt_dialog').addClass('d-none');
     $('#pos_iframe').attr('src','');
     $('#print_pos_btn').data('url','');
@@ -640,8 +650,7 @@ $(document).on('click','#set_new_order',function(){
     // $('.methods_pay_input').val(0);
     // $('#cash_input').val(0);
 
-});
-
+}
  $(document).on('input','#internal_note',function(){
     var this_val=$.trim($(this).val());
     if (this_val=='') {

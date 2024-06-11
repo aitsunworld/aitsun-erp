@@ -17,25 +17,29 @@
 
 <?php 
 $products_array=[];
-if (session()->has('pos_session'.$page_register_id)) {
-  $session_data=session()->get('pos_session'.$page_register_id);
-  $products_array=$session_data['products'];
-  $customers=$session_data['customers']; 
-  $session_id=$session_data['session_id']; 
-  $register_id=$session_data['register_id']; 
+if ($view_method=='load' || $view_method=='edit') {
+  $session_id=$in_data['session_id']; 
+  $register_id=$in_data['register_id'];
+}else{
+  if (session()->has('pos_session'.$page_register_id)) {
+    $session_data=session()->get('pos_session'.$page_register_id);
+    $products_array=$session_data['products'];
+    $customers=[]; 
+    $session_id=$session_data['session_id']; 
+    $register_id=$session_data['register_id']; 
 
-}
-
+  }
+} 
 
 ?>
 <body class="pos_body"> 
 
  
-<form class="pos_main d-flex" id="invoice_form" method="post" action="<?php if ($view_method=='edit'): ?><?= base_url('sales/update_invoice'); ?>/<?= $in_data['id']; ?><?php elseif($view_method=='convert' || $view_method=='copy'): ?><?= base_url('sales'); ?><?php else: ?><?= base_url('sales') ?><?php endif ?>">
+<form class="pos_main d-flex" id="invoice_form" method="post" action="<?php if ($view_method=='edit' || $view_method=='load' ): ?><?= base_url('sales/update_invoice'); ?>/<?= $in_data['id']; ?><?php elseif($view_method=='convert' || $view_method=='copy'): ?><?= base_url('sales'); ?><?php else: ?><?= base_url('sales') ?><?php endif ?>">
         <?= csrf_field(); ?>
 
          <?php 
-                if ($view_method=='convert' || $view_method=='copy' || $view_method=='edit') {
+                if ($view_method=='convert' || $view_method=='copy' || $view_method=='edit' || $view_method=='load') {
                     $indata_subtotal=$in_data['sub_total'];
                     $indata_total=$in_data['total'];
                     $indata_discount=$in_data['discount'];
@@ -93,8 +97,10 @@ if (session()->has('pos_session'.$page_register_id)) {
 
               <!-- ///////////////////////// SOME INITIALIZATION //////////////////////////////////////// -->
                <input type="hidden" id="invoice_type" name="invoice_type" value="<?php if ($view_method=='convert'): ?><?= $convert_to; ?><?php else: ?><?= $invoice_type; ?><?php endif ?>">
+               <input type="hidden" id="invoice_for" name="invoice_for" value="pos">
 
-                <?php if ($view_method=='edit'): ?>
+
+                <?php if ($view_method=='edit' || $view_method=='load'): ?>
                     <input type="hidden" name="paaid" id="paid_amt" value="<?= aitsun_round($in_data['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?>">
                     <input type="hidden" name="old_total" value="<?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?>">
                   <?php endif ?>
@@ -167,7 +173,7 @@ if (session()->has('pos_session'.$page_register_id)) {
                       }
                   ?> 
                   <?php 
-                      if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy') {
+                      if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy') {
                         if ($in_data['customer']!='CASH') {
                           $cus_value=user_name($in_data['customer']); 
                           $disable_value="readonly"; 
@@ -186,11 +192,11 @@ if (session()->has('pos_session'.$page_register_id)) {
 
                   <input type="hidden" name="alternate_name" placeholder="Party name" id="alternate_name" value="<?= $cus_value; ?>" <?= $disable_value; ?>>
 
-                  <input type="hidden" name="bill_number" placeholder="<?= langg(get_setting(company($user['id']),'language'),'Bill No'); ?>." value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['bill_number']; ?><?php else: ?><?php endif; ?>">
+                  <input type="hidden" name="bill_number" placeholder="<?= langg(get_setting(company($user['id']),'language'),'Bill No'); ?>." value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['bill_number']; ?><?php else: ?><?php endif; ?>">
 
                   <input type="hidden" name="inv_referal" value="0">
 
-                  <input type="hidden" name="mrn_number" class="" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['mrn_number']; ?><?php else: ?> <?php endif; ?>">
+                  <input type="hidden" name="mrn_number" class="" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['mrn_number']; ?><?php else: ?> <?php endif; ?>">
 
                   <input type="hidden" name="validity" value="3">
 
@@ -209,7 +215,7 @@ if (session()->has('pos_session'.$page_register_id)) {
                   <input type="hidden" name="register_id" value="<?= $register_id; ?>">
                   <input type="hidden" name="bill_type" value="pos">
 
-                  <input type="date" name="invoice_date" id="invoice_date" class="d-none" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'Y-m-d'); ?><?php endif ?>"  >
+                  <input type="date" name="invoice_date" id="invoice_date" class="d-none" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'Y-m-d'); ?><?php endif ?>"  >
 
 
                <!-- ///////////////////////// SOME INITIALIZATION //////////////////////////////////////// -->
@@ -223,7 +229,7 @@ if (session()->has('pos_session'.$page_register_id)) {
       <header class="justify-content-between">
 
         <div class="logo top_buttons">
-           <a class="sm_button my-auto me-2" title="Back" href="<?= base_url('invoices/sales') ?>"><i class="bx bx-arrow-back text-dark"></i></a>
+          <a class="sm_button my-auto me-2" title="Back" href="<?= base_url('pos') ?>"><i class="bx bx-arrow-back text-dark"></i></a>
           <img src="<?= base_url('public/images/logo-icon.png') ?>">
           <h5>Aitsun POS</h5>
 
@@ -252,7 +258,7 @@ if (session()->has('pos_session'.$page_register_id)) {
         <div class="top_buttons d-flex">
 
           <div class="my-auto me-2" style="font-size: 14px;">
-            <?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'D, d M Y'); ?><?php endif ?>
+            <?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['invoice_date']; ?><?php else: ?><?= get_date_format(now_time($user['id']),'D, d M Y'); ?><?php endif ?>
           </div>
 
          
@@ -291,7 +297,7 @@ if (session()->has('pos_session'.$page_register_id)) {
 
 
       <div class="item_box row"> 
-        <?php foreach ($products_array as $pro): ?> 
+        <?php foreach (pos_products_array(company($user['id']),register_data($register_id,'register_type')) as $pro): ?> 
           <div class="col-md-2 item_container barcode_item_<?= $pro['barcode']; ?> product_code_item_<?= $pro['product_code']; ?> " 
           data-category="<?= $pro['category'] ?>"
           data-productid="<?= $pro['id']; ?>" 
@@ -437,7 +443,7 @@ if (session()->has('pos_session'.$page_register_id)) {
               </tr>
             </thead>
             <tbody>
-              <?php $slno=1; foreach ($customers as $cus): $slno++; ?> 
+              <?php $slno=1; foreach (pos_customers(company($user['id'])) as $cus): $slno++; ?> 
               <tr style="background:<?php echo ($slno % 2 == 0) ? "#f3ecec" : "white"; ?>;" class="customer_row" data-cus_id="<?= $cus['id'] ?>" data-cus_name="<?= $cus['display_name'] ?>" data-credit_limit="<?= $cus['credit_limit'] ?>" data-closing_balance="<?= $cus['closing_balance'] ?>">
                 <td><?= $cus['display_name'] ?></td>
                 <td>
@@ -458,10 +464,276 @@ if (session()->has('pos_session'.$page_register_id)) {
 <div class="biller_body">
   <div class="bill_panel">
     <ul class="position-relative" id="bill_item_box">
+ 
+       <?php if ($view_method=='edit' || $view_method=='load'  || $view_method=='convert' || $view_method=='copy'): ?>
 
-     
 
-      <li class="text-center" id="no_items">No items</li>
+
+              <?php  $taxcount=0; foreach ($m_invoices as $m): ?>
+                <?php if (!empty(trim($m))): ?> 
+
+                <?php  $rc=0; foreach (invoice_items_array($m) as $pros): 
+                $rc++;
+                  $product_name=$pros['product'];
+                  $productid=$pros['product_id'];
+                  $row=$pros['id'];
+                  $description=$pros['desc'];
+                  $stock=stock_of_product($pros['product_id']);
+                  $discoount=$pros['discount'];
+                  $discount_percent=$pros['discount_percent'];
+
+                  
+                  
+ 
+
+                  $quaantity=$pros['quantity'];
+                  $selling_price=selling_price($pros['product_id']);
+                  $pur_price=purchase_price($pros['product_id']);
+
+                  $sale_tax=$pros['sale_tax'];
+                  $purchase_tax=$pros['purchase_tax'];
+                  $in_unit=$pros['in_unit']; 
+
+
+                  $sale_withtax_selected='';
+                  $sale_withouttax_selected='';
+                  $purchase_withtax_selected='';
+                  $purchase_withouttax_selected='';
+
+                  if ($sale_tax==1) {
+                    $sale_withtax_selected='selected';
+                  }else{
+                    $sale_withouttax_selected='selected';
+                  }
+
+                  if ($purchase_tax==1) {
+                    $purchase_withtax_selected='selected';
+                  }else{
+                    $purchase_withouttax_selected='selected';
+                  }
+ 
+                  $price=($pros['price']-$discoount);
+                
+                  
+                  $amount=$pros['amount'];
+                  $pro_unit=$pros['unit'];
+                  $pro_subunit=$pros['sub_unit'];
+                  $pro_conversion_unit_rate=$pros['conversion_unit_rate'];
+
+                  $old_purchase_price=$pros['old_purchase_price'];
+                  $old_purchase_amount=$pros['old_purchase_amount'];
+
+                  $box_class='d-none';
+
+                  if ($pro_unit!='' && $pro_subunit!='' && $pro_unit!=$pro_subunit) {
+                      $box_class='';
+                    } 
+
+                  $pro_tax=$pros['tax'];
+
+                  $tax=$pros['tax'];
+
+
+                 
+                      
+                         $taxxxx=(($pros['price']*$pros['quantity'])-$pros['discount'])*percent_of_tax($pros['tax'])/100; 
+                     
+
+                      
+
+                      $taxcount+=$taxxxx; 
+                    
+                      $show_inputs='do_not_show_inputs';
+
+                ?>
+
+<li class="orderline <?= $show_inputs ?> <?= ($rc==1)?'active':''; ?> probox mb-2 position-relative productidforcheck<?= $productid; ?> barcode<?= get_barcode($productid); ?>" id="row<?= $row; ?>" data-thisrow="<?= $row; ?>">
+
+    <div class="d-flex justify-content-between">
+        <div class="product-name d-inline-block flex-grow-1 fw-bolder pe-1 text-truncate">
+            <span class="text-wrap"><?= $product_name; ?></span>
+
+            <input type="hidden" name="p_tax[]" id="pptax<?= $row; ?>" value="<?= $tax; ?>"><input type="hidden" name="product_name[]" value="<?= $product_name; ?>"><input type="hidden" name="product_id[]" value="<?= $productid; ?>">
+            <input type="hidden" name="batch_number[]" value="<?= $pros['batch_number']; ?>">
+            <input type="hidden" name="p_purchase_tax[]" value="<?= $pros['sale_tax'] ?>" id="id_purchase_tax_pptax<?= $row; ?>">
+            <input type="hidden" name="p_sale_tax[]" value="<?= $pros['purchase_tax'] ?>" id="id_sale_tax_pptax<?= $row; ?>">
+
+            <input type="hidden" name="i_id[]" value="<?= $row; ?>">
+            <input type="hidden" name="old_quantity[]" value="<?= $quaantity; ?>">
+            <input type="hidden" class="form-control text-center form-control-sm mb-0 quantity_input numpad"  name="quantity[]" data-row="<?= $row; ?>" data-stock="<?= $stock; ?>" data-price="<?= $price+$discoount; ?>" data-product="<?= $productid; ?>" id="quantity_input<?= $row; ?>"  min="1" value="<?= $quaantity; ?>">
+            <input type="hidden" name="old_p_unit[]" value="<?= $pro_unit; ?>">
+            <input type="hidden" name="old_in_unit[]" value="<?= $in_unit; ?>">
+            <input type="hidden" name="old_p_conversion_unit_rate[]" value="<?= $pro_conversion_unit_rate; ?>"> 
+            <input type="hidden" name="split_taxx[]" value="<?= $pros['split_tax'] ?>">
+            <input type="hidden" step="any" class=" price mb-0 control_ro"  name="price[]" value="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" data-row="<?= $row; ?>" id="price_bx<?= $row; ?>" readonly >
+            <input type="hidden" step="any" class="item_total form-control mb-0 control_ro"  name="amount[]" value="<?= aitsun_round($amount,get_setting(company($user['id']),'round_of_value')); ?>" id="proprice<?= $row; ?>" readonly>
+        
+            <div class="d-none"><span id="tax_hider<?= $row; ?>">Tax: 
+                      <?php if ($tax>0): ?>
+                        <?= tax_name($tax); ?>(<?= percent_of_tax($tax); ?>%)
+                      <?php else: ?>
+                        None
+                      <?php endif ?>
+                    </span> <?= currency_symbol($user['company_id']); ?><input type="hidden" name="p_tax_amount[]" value="<?= aitsun_round(($pros['price']*$pros['quantity'])*percent_of_tax($tax)/100,get_setting(company($user['id']),'round_of_value')); ?>" id="p_tax_box<?= $row; ?>"><span class="tbox" id="taxboxlabel<?= $row; ?>"><?= aitsun_round((($pros['price']*$pros['quantity'])-$pros['discount'])*percent_of_tax($tax)/100,get_setting(company($user['id']),'round_of_value')); ?></span> <a class="delete_tax text-danger" data-rowid="<?= $row; ?>" data-pricesss="<?= $price; ?>"><i class="bx bxs-x-circle"></i></a>
+            <input type="hidden" step="any" class="numpad control_ro" data-row="<?= $row; ?>" data-product="<?= $productid; ?>" id="taxbox<?= $row; ?>" name="p_tax_percent[]" min="" value="<?= percent_of_tax($tax); ?>" readonly></div> 
+            <textarea name="product_desc[]" class="d-none keypad textarea_border form-control prodesc" style="border: 1px solid #0000002e;"><?= $description; ?></textarea>
+            <select class="in_unit form-control p-0 text-center d-none form-control-sm mb-0" name="in_unit[]" data-row="<?= $row; ?>" data-proconversion_unit_rate="<?= conversion_unit_of_product($productid); ?>"  id="in_unit<?= $row; ?>">
+
+             <option value="<?= $pro_unit; ?>" <?php if($pro_unit==$in_unit){echo "selected";} ?>><?= $pro_unit; ?></option>
+                          <?php if (!empty($pro_subunit)): ?>
+                            <option value="<?= $pro_subunit ?>" <?php if($pro_subunit==$in_unit){echo "selected";} ?>><?= $pro_subunit ?></option>
+                          <?php endif ?> 
+
+              </select>
+       
+            <input type="hidden" step="any" class="form-control dis_inp form-control-sm mr-5 numpad discount_percent_input" data-type="percent" data-row="<?= $row; ?>" data-product="<?= $productid; ?>" data-price="<?= $price+$discoount; ?>" id="discount_percentbox<?= $row; ?>" name="discount_percent[]" placeholder="Discount %" min="0" max="100" value="<?= aitsun_round($discount_percent,get_setting(company($user['id']),'round_of_value')); ?>">
+
+            <input type="hidden" step="any" class="form-control dis_inp form-control-sm mr-5 numpad discount_input" data-row="<?= $row; ?>" data-product="<?= $productid; ?>" data-price="<?= $price+$discoount; ?>" id="discountbox<?= $row; ?>" name="p_discount[]" placeholder="Discount" min="0" value="<?= aitsun_round($discoount,get_setting(company($user['id']),'round_of_value')); ?>">
+
+        </div>
+
+        <div class="product-price text-end price fw-bolder"><?= currency_symbol(company($user['id'])) ?>&nbsp;<span data-row="<?= $row; ?>" id="propricelabel<?= $row; ?>"><?= $price+$discoount; ?></span>
+        </div>
+    </div>
+
+    <ul class="info-list">
+      <li class="price-per-unit">
+        <em class="qty fst-normal fw-bolder me-1" data-row="<?= $row; ?>" id="quantity_input_label<?= $row; ?>"><?= $quaantity; ?></em> <span class="text-muted"> Units x $&nbsp;<span data-row="<?= $row; ?>" id="price_bx_label<?= $row; ?>"><?= $price+$discoount; ?></span><span> / Units</span></span>
+      </li>
+      <li id="discount_percentbox_li<?= $row; ?>" class="d-none"><span class="text-muted"> With a</span> <em><span id="discount_percentbox_label<?= $row; ?>">0</span>% </em> <span class="text-muted">discount</span> </li>
+    </ul>
+
+    <div class="it_close pro_btn_remove" id="<?= $row; ?>">
+        <i class="bx bx-x"></i>
+    </div>
+
+
+     <div class="modal fade" id="price_edit_popup<?= $row; ?>"   aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit price</h5>
+                            <button type="button" class="btn-close close_popup" data-proid="<?= $row; ?>" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <div class="form-group">
+            
+                            <label for="inputProductTitle" class="form-label">MRP <small class="font-weight-bold text-danger">*</small></label>
+                            <div class="">
+                              <input type="number" min="0" step="any" class="form-control pmrp" data-rowin="<?= $row; ?>" id="pmrp<?= $row; ?>" name="mrp[]" placeholder="Max Retail Price" value="<?= aitsun_round($pros['mrp'],get_setting(company($user['id']),'round_of_value')) ?>">
+                              <div class="d-flex mt-2 w-100">
+                                 <div class="w-100">
+                                  <label>Pur. margin (%)</label>
+                                  <input type="number" min="0" step="any" class="form-control me-1 p_margin" data-rowin="<?= $row; ?>" id="p_margin<?= $row; ?>" name="purchase_margin[]" value="<?= aitsun_round($pros['purchase_margin'],get_setting(company($user['id']),'round_of_value')) ?>" placeholder="Pur. Disc %">
+                                 </div>
+                                 <div class="w-100">
+                                  <label>Sale margin (%)</label>
+                                  <input type="number" min="0" step="any" class="form-control ms-1 s_margin" data-rowin="<?= $row; ?>" id="s_margin<?= $row; ?>" name="sale_margin[]" value="<?= aitsun_round($pros['sale_margin'],get_setting(company($user['id']),'round_of_value')) ?>" placeholder="Sale. Disc %">
+                                 </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+
+                          <div class="form-group mt-2">
+                            <label class="text-dark"><?= langg(get_setting(company($user['id']),'language'),'Purchase price'); ?></label>
+                            <div class="d-flex">
+                            <input type="number" id="purchase_price_text<?= $row; ?>" value="<?= aitsun_round($pur_price,get_setting(company($user['id']),'round_of_value')); ?>" class="form-control">
+
+                            <div style="width: 134px;">
+                            <select class="form-control" name="purchase_tax" id="purchase_tax_text<?= $row ?>">
+                              <option value="1" <?= $purchase_withtax_selected; ?>>With Tax</option>
+                              <option value="0" <?= $purchase_withouttax_selected; ?>>Without Tax</option>
+                            </select>
+                          </div>
+                          </div>
+
+                          </div>
+                          <div class="form-group mt-2">
+                            <label class="text-dark"><?= langg(get_setting(company($user['id']),'language'),'Selling price'); ?></label>
+                            <div class="d-flex">
+                            <input type="number" id="selling_price_text<?= $row; ?>" value="<?= aitsun_round($selling_price,get_setting(company($user['id']),'round_of_value')); ?>" class="form-control">
+
+                            <div style="width: 134px;">
+                              <select class="form-control" name="sale_tax" id="sale_tax_text<?= $row ?>">
+                                <option value="1" <?= $sale_withtax_selected; ?>>With Tax</option>
+                                <option value="0" <?= $sale_withouttax_selected; ?>>Without Tax</option>
+                              </select>
+                            </div>
+                            </div>
+                          </div>
+
+
+
+
+                          <div class="form-group mt-2">
+                            <label class="text-dark">Unit</label> 
+ 
+                              <?php if (item_has_transaction($pros['product_id'])): ?>
+                                <span style="display: block; color:red; font-size: 11px;">You are unable to alter the primary unit because this item has transactions.</span>
+                                <div class="form-control bg-light-transparent"><?= $pro_unit ?></div>
+                              <?php endif ?> 
+
+                            <select id="unit_text<?= $row; ?>" name="p_unit[]" class="form-control box_unit_input <?php if (item_has_transaction($pros['product_id'])): ?>readonly_select<?php endif ?> box_unit<?= $row; ?>" data-rowid="<?= $row; ?>">
+                              <?php foreach (products_units_array(company($user['id'])) as $pu): ?>
+                                <option value="<?= $pu['value']; ?>" <?php if ($pro_unit==$pu['value']) {echo 'selected';} ?>>
+                                  <?= $pu['name']; ?>
+                                </option>
+                              <?php endforeach ?>
+                            </select>
+                          </div>
+                          <div class="form-group mt-2">
+                            <label class="text-dark">Sub Unit <small class=" text-danger box_subuer<?= $row; ?>"></small></label>
+                            <select id="subunit_text<?= $row; ?>" name="subunit[]" class="form-control box_subu box_sub_unit<?= $row; ?>" data-rowid="<?= $row; ?>">
+                              <option value="">None</option>
+                              <?php foreach (products_units_array(company($user['id'])) as $pu): ?>
+                              <option value="<?= $pu['value']; ?>" <?php if ($pro_subunit==$pu['value']) {echo 'selected';} ?>>
+                                <?= $pu['name']; ?>
+                              </option>
+                            <?php endforeach ?>
+                            </select>
+                          </div>
+
+                          <div class="form-group mt-2 <?php if ($pro_unit!='' && $pro_subunit!='' && $pro_unit!=$pro_subunit) {  echo ''; }else{ echo 'd-none'; } ?> box_add_conversion<?= $row; ?>" id="box_add_conversion<?= $row; ?>">
+                            <label class="text-dark">Conversion unit rate</label>
+                            <input type="number" min="0" step="any" class="form-control"  id="conversion_unit_text<?= $row; ?>" name="conversion_unit[]" placeholder="Conversion unit rate" value="<?= aitsun_round(conversion_unit_of_product($productid),get_setting(company($user['id']),'round_of_value')); ?>">
+                            
+                          </div>
+  
+
+                          <div class="form-group mt-2">
+                            <label class="text-dark">Tax</label>
+                            <select id="tax_text<?= $row; ?>" class="form-control">
+ 
+
+                              <?php foreach (tax_array(company($user['id'])) as $txxx): ?>
+                                <option data-perc="<?= $txxx['percent']; ?>" data-tname="<?= $txxx['name']; ?>" value="<?= $txxx['name']; ?>" <?php if ($pro_tax==$txxx['name']) {echo 'selected';} ?>>
+                                  <?= $txxx['name']; ?>
+                                </option>
+                              <?php endforeach ?>
+                            </select>
+                          </div>
+
+                          
+
+
+                          <div class="form-group">
+                            <button type="button" class="btn btn-primary btn-sm mt-2
+                             edit_purchase_price" id="edit_purchase_price<?= $row; ?>" data-proid="<?= $productid; ?>" data-rowid="<?= $row; ?>"><?= langg(get_setting(company($user['id']),'language'),'Save'); ?></button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+</li>
+
+ <?php endforeach ?>    
+            <?php endif ?>                                                     
+              <?php endforeach ?>  
+            <?php endif ?> 
 
     </ul>  
   </div>
@@ -470,16 +742,16 @@ if (session()->has('pos_session'.$page_register_id)) {
 
 <!-- //////////////////////////hiddenables//////////////////////// --> 
 <div class="d-none">Sub total: <b>
-  <?= currency_symbol($user['company_id']); ?><span id="subtotal_label"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal-$taxcount,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?></span>
+  <?= currency_symbol($user['company_id']); ?><span id="subtotal_label"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal-$taxcount,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?></span>
 
-  <input type="hidden" name="sub_total" id="subtotal" class="form-control text-right control_ro" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?>" readonly>
+  <input type="hidden" name="sub_total" id="subtotal" class="form-control text-right control_ro" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_subtotal,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif; ?>" readonly>
 </b>
 
-<h6 class="m-0"><?= currency_symbol($user['company_id']); ?><span id="total_taxamt_label"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['tax']; ?><?php else: ?>0<?php endif; ?></span></h6>
-<input type="hidden" name="tax_amount" id="total_taxamt" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['tax']; ?><?php else: ?>0<?php endif; ?>">
+<h6 class="m-0"><?= currency_symbol($user['company_id']); ?><span id="total_taxamt_label"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['tax']; ?><?php else: ?>0<?php endif; ?></span></h6>
+<input type="hidden" name="tax_amount" id="total_taxamt" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['tax']; ?><?php else: ?>0<?php endif; ?>">
 
-<h5 class="mb-0"><?= currency_symbol($user['company_id']); ?><span id="due_amount_label"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></h5>
-<input type="hidden" name="due_amount" id="due_amount" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?>">
+<h5 class="mb-0"><?= currency_symbol($user['company_id']); ?><span id="due_amount_label"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></h5>
+<input type="hidden" name="due_amount" id="due_amount" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?>">
 </div>
 <!-- //////////////////////////hiddenables//////////////////////// -->
 
@@ -489,12 +761,12 @@ if (session()->has('pos_session'.$page_register_id)) {
 
 
     <div class="text-muted">Taxes:  
-      <?= currency_symbol($user['company_id']); ?><span id="total_taxamt_label_main"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($taxcount,get_setting(company($user['id']),'round_of_value'),PHP_ROUND_HALF_UP); ?><?php else: ?>0<?php endif; ?></span>
+      <?= currency_symbol($user['company_id']); ?><span id="total_taxamt_label_main"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($taxcount,get_setting(company($user['id']),'round_of_value'),PHP_ROUND_HALF_UP); ?><?php else: ?>0<?php endif; ?></span>
     </div>  
     <div>
-      <b class="text-success">Total: <?= currency_symbol($user['company_id']); ?><span id="grand_total_label"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></b>
+      <b class="text-success">Total: <?= currency_symbol($user['company_id']); ?><span id="grand_total_label"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></b>
 
-      <input type="hidden" name="grand_total" id="grand_total" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?>">
+      <input type="hidden" name="grand_total" id="grand_total" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?>">
     </div>
 
 
@@ -652,15 +924,15 @@ if (session()->has('pos_session'.$page_register_id)) {
               <div class="d-flex justify-content-between mb-4 pol_block">
                 <div >
                   <h6>Total:</h6>
-                  <div class="due_label text-primary"><?= currency_symbol($user['company_id']); ?><span id="grand_total_label2"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></div>
+                  <div class="due_label text-primary"><?= currency_symbol($user['company_id']); ?><span id="grand_total_label2"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($indata_total,get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></div>
                 </div>
                 <div >
                   <h6>Due amount:</h6>
-                  <div class="due_label text-danger"><?= currency_symbol($user['company_id']); ?><span id="due_amount_label2"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></div>
+                  <div class="due_label text-danger"><?= currency_symbol($user['company_id']); ?><span id="due_amount_label2"><?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?></span></div>
                 </div>
               </div>
 
-              <input type="hidden" name="due_amount" id="due_amount" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?>">
+              <input type="hidden" name="due_amount" id="due_amount" value="<?php if ($view_method=='edit' || $view_method=='load' || $view_method=='convert' || $view_method=='copy'): ?><?= aitsun_round($in_data['due_amount'],get_setting(company($user['id']),'round_of_value')); ?><?php else: ?>0<?php endif ?>">
 
               <div>
                 <label>Total paid:</label>
@@ -734,7 +1006,7 @@ if (session()->has('pos_session'.$page_register_id)) {
 
               <?php 
               $invoice_type ='sales';
-                if ($view_method=='edit' || $view_method=='copy'){
+                if ($view_method=='edit' || $view_method=='load' || $view_method=='copy'){
                   $inid=$in_data['id'];
                 }elseif ($view_method=='convert') {
                   $inid=$inid;

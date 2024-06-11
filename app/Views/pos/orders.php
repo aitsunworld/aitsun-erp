@@ -125,13 +125,17 @@
             <table id="invoice_table" class="erp_table sortable">
              <thead>
                 <tr> 
-                    <th class="sorticon">Inv. no.</th>
+                    <th class="sorticon">Session</th>
                     <th class="sorticon">Date</th>
+                    <th>Point of sale</th>
+                    <th>Receipt No.</th>
                     <th class="sorticon">Customer</th>
-                    <th class="sorticon">Amount</th>
+                    <th class="sorticon">Staff/Cashier</th>
+                    <th class="sorticon">Total</th>
                     <th class="sorticon">Paid</th>
                     <th class="sorticon">Due</th>
-                    <th class="sorticon" data-tableexport-display="none">Action</th>
+                    <th class="sorticon">Status</th> 
+                    <th class="text-center" data-tableexport-display="none">Action</th>
                 </tr>
              
              </thead>
@@ -141,11 +145,13 @@
                     <tr  class="in_pay_tr"> 
                         <td>
                             <a href="javascript:void(0);" class="aitsun_link">
-                                #<?= inventory_prefix(company($user['id']),$di['invoice_type']); ?><?= $di['serial_no']; ?></a>
-                           
+                                POS/<?= $di['session_serial']; ?>
+                            </a> 
                             
                         </td>
                         <td><?= get_date_format($di['invoice_date'],'d M Y'); ?></td>
+                        <td><?= $di['register_name']; ?></td>
+                        <td><?= pos_order_prefix(company($user['id'])) ?><?= $di['pos_receipt_no']; ?></td>
                         <td>
                           <a href="javascript:void(0);" class="aitsun_link" >
 
@@ -164,7 +170,9 @@
 
                           </a>
                       </td>
-                      
+                      <td>
+                          <?= user_name($di['billed_by']) ?>
+                      </td>
                         
                         <td class="text-right">
                             
@@ -197,7 +205,23 @@
                                 
                         </td>
                        <td>
-                           
+                        <?php if ($di['paid_status']=='paid'): ?>
+                            <span class="badge bg-success">Paid</span>
+                        <?php endif ?>
+                           <?php if ($di['deleted']==0): ?>
+                               
+                           <?php elseif ($di['deleted']==1): ?>
+                            <span class="badge bg-secondary">Cancelled</span>
+                           <?php elseif ($di['deleted']==2): ?>
+                            <span class="badge bg-dark">Order preparing</span>
+                           <?php elseif ($di['deleted']==3): ?>
+                            <span class="badge bg-warning text-dark">On hold</span>
+                           <?php else: ?>
+                           <?php endif; ?>
+                       </td>
+
+                       <td class="text-center">
+                           <a href="<?= base_url('pos/edit') ?>/<?= $di['register_id'] ?>/load/<?= $di['id'] ?>" class="btn btn-sm btn-primary rounded-pill">Load</a>
                        </td>
                        
                       </tr>

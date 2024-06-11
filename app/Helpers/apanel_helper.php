@@ -4409,6 +4409,26 @@ function add_payment($invoice_id,$type,$amount,$reference_id,$customer,$alternat
     
 }
 
+function pos_products_array($company_id,$register_type){
+    $ProductsModel=new Main_item_party_table;
+    if ($register_type==1) {
+        $ProductsModel->where('is_food',1); 
+    }
+    $ProductsModel->where('is_pos',1); 
+    $get_pro = $ProductsModel->where('company_id',$company_id)->orderBy("id", "desc")->where('deleted',0)->findAll();
+    return $get_pro;
+}
+
+function pos_customers($company_id){
+    $UserModel=new Main_item_party_table;
+    $posusers=$UserModel->where('u_type!=','staff')->where('u_type!=','driver')->where('u_type!=','teacher')->where('u_type!=','delivery')->where('u_type!=','seller')->where('u_type!=','admin')->where('u_type!=','student')->where('company_id',$company_id)->where('deleted',0)->where('main_type','user')->orderBy('id','DESC')->findAll();
+    return $posusers;
+}
+
+function pos_order_prefix($company){
+    return 'Order ';
+}
+
 function serial_no($company,$invoive_type){
     $InvoiceModel = new InvoiceModel;
     
@@ -4418,6 +4438,28 @@ function serial_no($company,$invoive_type){
     $get_serial=$InvoiceModel->first();
     return $get_serial['serial_no']+1;
 }
+
+function pos_receipt_no($company,$invoive_type){
+    $InvoiceModel = new InvoiceModel;
+    
+    $InvoiceModel->selectMax('pos_receipt_no');
+    $InvoiceModel->where('company_id',$company);
+    $InvoiceModel->where('invoice_type',$invoive_type);
+    $InvoiceModel->where('bill_from','pos');
+    $get_serial=$InvoiceModel->first();
+    return $get_serial['pos_receipt_no']+1;
+}
+
+function session_serial($company){
+    $PosSessions = new PosSessions;
+    
+    $PosSessions->selectMax('session_serial');
+    $PosSessions->where('company_id',$company); 
+    $get_serial=$PosSessions->first();
+    return $get_serial['session_serial']+1;
+}
+
+
 
 function add_discount_payment($invoice_id,$amount,$customer,$alternate_name,$now_time,$payment_id,$company_id,$bill_type,$type){
     $PaymentsModel = new PaymentsModel;
