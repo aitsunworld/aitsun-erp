@@ -102,7 +102,9 @@
    
   <div class="text-center mt-3">
     <?php if ($save_type=='edit'): ?>
+            <?php if (is_allowed($user['id'], 'delete_booked_resources')): ?>
             <a class="btn btn-danger ajax_delete rounded-pill" data-url="<?= base_url('appointments/delete_booking') ?>/<?= $booking_id ?>"><i class="bx bx-trash"></i> Delete</a>
+            <?php endif ?>
     <?php endif ?>  
     <button type="button" class="btn <?= ($save_type!='edit')? 'btn-erp-medium':'btn-primary'; ?> rounded-pill text-center save_booking" data-save_type="<?= $save_type ?>">
        <?php if ($save_type=='edit'): ?>

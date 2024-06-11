@@ -89,6 +89,12 @@ class Appointments extends BaseController
             );
             $user=$UserModel->where('id',$myid)->first();
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+
+            if ($book_type=='person') {
+                if (!is_allowed($myid,'read_booked_person')) {return redirect()->to(base_url('permission_denied/read_booked_person'));}
+            }elseif($book_type=='resource'){
+                if (!is_allowed($myid,'read_booked_resources')) {return redirect()->to(base_url('permission_denied/read_booked_resources'));}
+            }
             
             if (is_appointments(company($user['id']))==1) {
                 $active_date=get_date_format(now_time($myid),'Y-m-d'); 
@@ -148,6 +154,8 @@ class Appointments extends BaseController
             );
             $user=$UserModel->where('id',$myid)->first();
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+
+            if (!is_allowed($myid,'add_appointments')) {return redirect()->to(base_url('permission_denied/add_appointments'));}
             
             if (is_appointments(company($user['id']))==1) {
             
@@ -314,6 +322,7 @@ class Appointments extends BaseController
             );
             $user=$UserModel->where('id',$myid)->first();
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+            if (!is_allowed($myid,'read_resources')) {return redirect()->to(base_url('permission_denied/read_resources'));}
             
             if (is_appointments(company($user['id']))==1) {
 

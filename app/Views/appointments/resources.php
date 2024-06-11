@@ -67,8 +67,12 @@
 
     </div>
     <div>
+    <?php if (is_allowed($user['id'], 'add_resources')): ?>
     <a type="button" data-bs-toggle="modal" data-bs-target="#resourcesmodel" class=" font-size-footer ms-2 my-auto btn-back" style="padding: 3px 10px;"> <span class="my-auto">+ New</span></a>
+    <?php endif; ?>
+    <?php if (is_allowed($user['id'], 'delete_resources')): ?>
     <button class="aitsun-btn-sm btn-danger my-auto btn-sm d-none rounded-nav" id="deletereallbtn"  >Delete</button> 
+    <?php endif; ?>
     </div> 
 </div>
 <!-- ////////////////////////// TOOL BAR END ///////////////////////// -->
@@ -153,9 +157,11 @@
                         <th class="sorticon" colspan="2">Appointment Resource</th>
                         <th class="sorticon">Capacity</th>
                         <th class="sorticon">Description</th>
+                        <?php if (is_allowed($user['id'], 'delete_resources')): ?>
                         <th class="sorticon text-center" style="width:75px;" data-tableexport-display="none">
                             <i id="deleteresourcesCheckAll" class="select ml-2 bx bx-plus-circle" style="font-size:20px; color: white;">
                         </th>
+                        <?php endif; ?>
                     </tr>
                  
                  </thead>
@@ -168,10 +174,13 @@
                     <tr>
                         <td style="width: 110px;">
                             <div class="avatar-upload">
+                                <?php if (is_allowed($user['id'], 'edit_resources')): ?>
                                 <div class="avatar-edit">
                                     <input type='file' class="imageUpload" id="imageUpload<?= $p_data['id'] ?>" data-id="<?= $p_data['id'] ?>"  accept="image/*" />
                                     <label for="imageUpload<?= $p_data['id'] ?>"></label>
                                 </div>
+                                <?php endif; ?>
+
                                 <div class="avatar-preview">
                                        <img src="<?= resource_pic($p_data['id']); ?>" class="imagePreview" id="imagePreview<?= $p_data['id'] ?>" >
                                 </div>
@@ -181,21 +190,23 @@
                         <td>
                             
                             <p class="d-none"><?= $p_data['appointment_resource']; ?></p>
-                            <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-appointment_resource-<?= $p_data['id']; ?>"  name="appointment_resource" data-resource_id="<?= $p_data['id']; ?>" data-r_element="appointment_resource" value="<?= $p_data['appointment_resource']; ?>">
+                            <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-appointment_resource-<?= $p_data['id']; ?>"  name="appointment_resource" data-resource_id="<?= $p_data['id']; ?>" data-r_element="appointment_resource" value="<?= $p_data['appointment_resource']; ?>" <?php if (!is_allowed($user['id'], 'edit_resources')): ?>disabled <?php endif; ?>>
                         </td>
                         <td style="width: 180px;">
                             <p class="d-none"><?= $p_data['capacity']; ?></p>
-                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  class="resource_update form-control blnk_sp py-1 add_cls-capacity-<?= $p_data['id']; ?>" data-resource_id="<?= $p_data['id']; ?>" name="capacity" value="<?= $p_data['capacity']; ?>" data-r_element="capacity">
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  class="resource_update form-control blnk_sp py-1 add_cls-capacity-<?= $p_data['id']; ?>" data-resource_id="<?= $p_data['id']; ?>" name="capacity" value="<?= $p_data['capacity']; ?>" data-r_element="capacity" <?php if (!is_allowed($user['id'], 'edit_resources')): ?>disabled <?php endif; ?>>
                         </td>
 
                         <td><p class="d-none"><?= $p_data['description']; ?></p>
-                            <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-description-<?= $p_data['id']; ?>" data-resource_id="<?= $p_data['id']; ?>" name="description" value="<?= $p_data['description']; ?>" data-r_element="description">
+                            <input type="text" class="resource_update form-control blnk_sp py-1 add_cls-description-<?= $p_data['id']; ?>" data-resource_id="<?= $p_data['id']; ?>" name="description" value="<?= $p_data['description']; ?>" data-r_element="description" <?php if (!is_allowed($user['id'], 'edit_resources')): ?>disabled <?php endif; ?>>
                         </td>
+                        <?php if (is_allowed($user['id'], 'delete_resources')): ?>
                         <td class="big_check text-center" data-tableexport-display="none">
                             <div class="form-group mb-0">
                                 <input type="checkbox" class="checkbox checkBoxresourcesAll checkingrollbox" name="delete_all_resources[]" value="<?= $p_data['id']; ?>" data-inid="<?= $p_data['id']; ?>" >
                             </div>
                         </td>
+                        <?php endif; ?>
                     </tr>
 
                     <?php endforeach ?>

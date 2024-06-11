@@ -59,12 +59,16 @@
                 <i class="bx bx-calendar"></i> Bookings
             </a>
             <div class="dropdown-menu" style="">  
+               <?php if (is_allowed($user['id'], 'read_booked_resources')): ?>
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/book_resources') ?>">
                     <span class="">Book resources</span>
                 </a>
+                <?php endif; ?>
+                <?php if (is_allowed($user['id'], 'read_booked_person')): ?>
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/book_persons') ?>">
                     <span class="">Book a person</span>
-                </a>  
+                </a> 
+                <?php endif; ?>   
             </div>
         </div> 
 
@@ -73,15 +77,12 @@
                 <i class="bx bx-file"></i> Reports
             </a>
             <div class="dropdown-menu" style="">  
+                <?php if (is_allowed($user['id'], 'read_appointments_reports')): ?> 
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
                     <span>Booking reports</span>
                 </a>
-               <!--  <a class="dropdown-item href_loader" href="#">
-                    <span>Person wise</span>
-                </a>
-                <a class="dropdown-item href_loader" href="#">
-                    <span>Resource wise</span>
-                </a> -->
+                <?php endif; ?>
+               
             </div>
         </div> 
 
@@ -89,16 +90,20 @@
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-cog"></i> Configuration
             </a>
-            <div class="dropdown-menu" style="">  
+            <div class="dropdown-menu" style=""> 
+                <?php if (is_allowed($user['id'], 'read_resources')): ?> 
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">
                     <span >Resources</span>
                 </a>
+                <?php endif; ?>
                  
             </div>
         </div> 
     </div>
 
+    <?php if (is_allowed($user['id'], 'add_appointments')): ?>
     <a href="<?= base_url('appointments/create') ?>" class=" btn-back font-size-footer my-auto ms-2 href_loader"> <span class="">+ New Appointment</span></a>
+    <?php endif; ?>
 </div>
 <!-- ////////////////////////// TOOL BAR END ///////////////////////// -->
  
@@ -179,6 +184,7 @@
 
                 </div>
 
+                <?php if (is_allowed($user['id'], 'add_booked_resources')): ?>
                 <div class="modal customer_modal fade" id="booking_modal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
@@ -195,6 +201,7 @@
                       </div>
                     </div>
                 </div>
+                <?php endif; ?>
 
             </form>
         </div>
@@ -234,8 +241,12 @@
                                 <th class="sorticon text-center">Starts on</th>  
                                 <th class="sorticon text-center">Ends on</th>  
                                 <th class="sorticon">Status <small>(Click to change)</small></th> 
-                                <th class="sorticon">Billing</th>  
+                                <?php if (is_allowed($user['id'], 'resource_billing')): ?>
+                                <th class="sorticon">Billing</th> 
+                                <?php endif; ?> 
+                                <?php if (is_allowed($user['id'], 'edit_booked_resources')): ?>
                                 <th class="sorticon noExl">Action</th> 
+                                <?php endif; ?>
                             </tr>
                         </thead>
                         <tbody> 
@@ -315,6 +326,7 @@
                                             </div>
                                         </div>  
                                     </td>
+                                    <?php if (is_allowed($user['id'], 'resource_billing')): ?>
                                     <td class="text-center">
                                         <?php if ($bk['billing_status']==0): ?>
                                              <a href="<?= base_url('invoices/create_invoice') ?>?customer=<?= $bk['customer'] ?>&booking=<?= $bk['id'] ?>" class=" aitsun-link mt-2 rounded-pill">Make bill</a>
@@ -322,11 +334,14 @@
                                             <span class="badge bg-success text-white">Billed</span>
                                         <?php endif ?>
                                     </td> 
+                                    <?php endif ?>
+                                    <?php if (is_allowed($user['id'], 'edit_booked_resources')): ?>
                                     <td class="noExl">
                                          <?php if ($bk['status']!=2): ?>
                                              <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i> Edit</a>
                                         <?php endif ?>
                                     </td>
+                                    <?php endif ?>
                                 </tr>
                             <?php endforeach ?> 
                         </tbody>

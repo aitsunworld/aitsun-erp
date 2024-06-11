@@ -691,7 +691,7 @@ $routes->post('/user_master/save_branch_permission/(:any)', 'User_master::save_b
 
 $routes->get('/permission/(:any)', 'Permission::index/$1');
 $routes->post('/is_permission_allowed', 'Permission::is_permission_allowed');
-
+$routes->get('/permission_denied/(:any)', 'Home::permission_denied/$1');
 
 $routes->get('/messaging/send_credentials', 'Messaging::send_credentials');
 

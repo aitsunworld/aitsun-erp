@@ -3928,3 +3928,6 @@ body {
     padding-bottom: 5px;
     margin-bottom: 5px;
 }
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f1f1f1 !important;
+}

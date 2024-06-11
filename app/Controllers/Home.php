@@ -328,5 +328,29 @@ class Home extends BaseController
         }
     }
 
+    public function permission_denied($permission_name=''){
+        $session=session();
+
+        if ($session->has('isLoggedIn')){
+
+                $myid=session()->get('id');
+                if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+                
+                $Main_item_party_table=new Main_item_party_table;
+                $user=$Main_item_party_table->where('id',$myid)->first();
+
+                $data = [
+                    'title' => 'Aitsun ERP-Dashboard',
+                    'user'=>$user,
+                    'permission_name'=>$permission_name 
+                ];
+               
+            echo view('errors/html/permission_denied',$data);
+
+        }else{
+            return redirect()->to(base_url('users/login'));
+        }
+    }
+
     
 }

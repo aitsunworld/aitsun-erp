@@ -25,6 +25,7 @@
         margin-top: 0;
         margin-bottom: 0;
         color: #2c3e65;
+        text-transform: uppercase;
     }
     .semi-text{
         margin-top: 1.5rem;
@@ -39,7 +40,7 @@
         margin:0;
                 }
     .wait-img{
-        width: 30%;
+        width: 15%;
         }
     .btn-soon{
         background: #2c3e65;
@@ -84,8 +85,8 @@
     <div class="main-head">
         <div class="error_box">
             <div>
-                <h1 class="head-text">No Entry</h1>
-                <h2 class="semi-text">Sorry, You have no permissions to access this. Please contact your administrator & request to give certain permission</h2>
+                <h1 class="head-text">Access Denied</h1>
+                <h2 class="semi-text">Sorry, you do not have permission to <?= get_permission_heading_of_name($permission_name) ?>. <br>Please contact your administrator to request the necessary permissions</h2>
                 <img class="wait-img" src="<?= base_url('public') ?>/images/no-permission.webp" alt="">
             </div>
             <div class="" >

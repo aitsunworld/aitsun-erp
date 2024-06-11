@@ -47,30 +47,32 @@
                 <i class="bx bx-calendar"></i> Bookings
             </a>
             <div class="dropdown-menu" style="">  
+                <?php if (is_allowed($user['id'], 'read_booked_resources')): ?>
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/book_resources') ?>">
                     <span class="">Book resources</span>
                 </a>
+                <?php endif; ?>
+                <?php if (is_allowed($user['id'], 'read_booked_person')): ?>
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/book_persons') ?>">
                     <span class="">Book a person</span>
-                </a>  
+                </a> 
+                <?php endif; ?> 
             </div>
         </div> 
 
         
         <div class="dropdown  my-auto me-2">
+           
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-file"></i> Reports
             </a>
-            <div class="dropdown-menu" style="">  
+            
+            <div class="dropdown-menu" style=""> 
+             <?php if (is_allowed($user['id'], 'read_appointments_reports')): ?> 
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/reports') ?>">
                     <span>Booking reports</span>
                 </a>
-               <!--  <a class="dropdown-item href_loader" href="#">
-                    <span>Person wise</span>
-                </a>
-                <a class="dropdown-item href_loader" href="#">
-                    <span>Resource wise</span>
-                </a> -->
+               <?php endif; ?> 
             </div>
         </div> 
 
@@ -81,9 +83,12 @@
                 <i class="bx bx-cog"></i> Configuration
             </a>
             <div class="dropdown-menu" style="">  
+                <?php if (is_allowed($user['id'], 'read_resources')): ?>
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/resources') ?>">
                     <span >Resources</span>
                 </a>
+                <?php endif; ?>
+
                  
             </div>
         </div> 
@@ -95,7 +100,9 @@
 
     </div>
 
-    <a href="<?= base_url('appointments/create') ?>" class=" btn-back font-size-footer my-auto ms-2 href_loader"> <span class="">+ New Appointment</span></a>
+    <?php if (is_allowed($user['id'], 'add_appointments')): ?>
+        <a href="<?= base_url('appointments/create') ?>" class=" btn-back font-size-footer my-auto ms-2 href_loader"> <span class="">+ New Appointment</span></a>
+    <?php endif; ?>
 </div>
 <!-- ////////////////////////// TOOL BAR END ///////////////////////// -->
  
