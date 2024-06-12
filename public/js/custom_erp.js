@@ -141,6 +141,41 @@ $(document).ready(function(){
         });
     });
 
+
+      $(document).on('change','.is_permission_allowed',function(){
+        var p_url=$(this).data('permi_url');
+        var user_id=$(this).data('user_id');
+        var permission_name=$(this).data('permission_name');
+        var is_permission_allowed=0;
+        if($(this).is(':checked')) {
+            is_permission_allowed=1;
+        } 
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+        $.ajax({
+            type: 'POST',
+            url: p_url,
+            data:{
+                user_id:user_id,
+                permission_name:permission_name,
+                is_permission_allowed:is_permission_allowed,
+                [csrfName]: csrfHash
+            },
+             beforeSend: function() {
+                // setting a timeout
+                // $(techerbt).html('Saving  <i class="bx bx-loader spin_me d-inline-block"></i> ');
+                
+            },
+            success: function() {
+              
+                show_success_msg('success','Added successfully!')
+                
+             
+            }
+        });
+    });
+
     $(document).on('click','.add_party_popup',function(){
         var element_id=$(this).data('element_id'); 
         var pop_name=$.trim($('#pop_name'+element_id).val());

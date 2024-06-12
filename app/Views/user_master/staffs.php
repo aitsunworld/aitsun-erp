@@ -401,6 +401,9 @@
                                   <?php if ($cmpuser['id'] != $user['id']): ?>
                                     <?php if (usertype($cmpuser['id']) != 'admin'): ?>
 
+                                        <a title="Permission" class=" btn-info me-2 action_btn cursor-pointer href_loader" href="<?= base_url('permission'); ?>/<?= $cmpuser['id'] ?>">Permission</a>
+
+
                                 <a title="Branch permission" class="btn-purple me-2 action_btn cursor-pointer" data-bs-toggle="modal" data-bs-target="#branchpermission<?= $cmpuser['id'] ?>"><i class="bx bx-building-house"></i></a>
 
                             <a title="Permission" class=" btn-info me-2 action_btn cursor-pointer" data-bs-toggle="modal" data-bs-target="#user_permission<?= $cmpuser['id'] ?>"><i class="bx bxs-key"></i></a>

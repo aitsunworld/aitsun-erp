@@ -10,6 +10,7 @@
         $duration=$ap_data['duration'];
         $newTime =get_date_format($ap_data['book_to'],'H:i:s'); 
         $note=$ap_data['note'];
+        $booking_type=$ap_data['booking_type'];
         $save_type='edit';
     }else{
         $booking_name=appointments_data(strip_tags($appointment_id),'title');
@@ -26,6 +27,7 @@
         $timeObject->add($durationObject); 
         $newTime = $timeObject->format('H:i'); 
         $note='';
+        $booking_type='';
         $save_type='insert';
     } 
  ?>
@@ -102,8 +104,18 @@
    
   <div class="text-center mt-3">
     <?php if ($save_type=='edit'): ?>
-            <a class="btn btn-danger ajax_delete rounded-pill" data-url="<?= base_url('appointments/delete_booking') ?>/<?= $booking_id ?>"><i class="bx bx-trash"></i> Delete</a>
-    <?php endif ?>  
+            <?php if ($booking_type=='person'): ?>
+                <?php if (is_allowed($user['id'], 'delete_booked_person')): ?>
+                    <a class="btn btn-danger ajax_delete rounded-pill" data-url="<?= base_url('appointments/delete_booking') ?>/<?= $booking_id ?>"><i class="bx bx-trash"></i> Delete</a>
+                <?php endif ?>
+            <?php else: ?>
+                <?php if (is_allowed($user['id'], 'delete_booked_resources')): ?>
+                    <a class="btn btn-danger ajax_delete rounded-pill" data-url="<?= base_url('appointments/delete_booking') ?>/<?= $booking_id ?>"><i class="bx bx-trash"></i> Delete</a>
+                <?php endif ?>
+            <?php endif ?>
+    <?php endif ?> 
+
+
     <button type="button" class="btn <?= ($save_type!='edit')? 'btn-erp-medium':'btn-primary'; ?> rounded-pill text-center save_booking" data-save_type="<?= $save_type ?>">
        <?php if ($save_type=='edit'): ?>
             Update
