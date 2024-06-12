@@ -80,7 +80,8 @@ use App\Models\AppointmentsBookings as AppointmentsBookings;
 use App\Models\PosSessions as PosSessions;
 use App\Models\PosRegisters as PosRegisters;
 use App\Models\PosTables as PosTables;
-
+use App\Models\PermissionsModel as PermissionsModel;
+use App\Models\Permissionlist as Permissionlist;
 
 
 function style_version(){
@@ -148,6 +149,33 @@ function site_key(){
     }else{
         return '6LeLFIQlAAAAAF2nc9eyEn0iYWhZUJm4qKXLeYGm';
     }  
+}
+
+
+function is_allowed($userid,$permission_name){
+    $PermissionsModel= new PermissionsModel;
+    if (usertype($userid)=='admin') {
+
+        return true;
+    }else{
+        $permi=$PermissionsModel->where('user_id',$userid)->where('permission_name',$permission_name)->where('is_allowed',1)->first();
+        if ($permi) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+
+
+function get_permission_heading_of_name($permission_name){
+    $Permissionlist = new Permissionlist;
+    $get_name=$Permissionlist->where('permission_name',$permission_name)->first();
+    if ($get_name) {
+        return $get_name['permission_heading'];
+    }else{
+        return '';
+    }
 }
 
 function get_total_rental($company_id,$status){ 
