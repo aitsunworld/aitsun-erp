@@ -42,45 +42,45 @@ class Reminders extends BaseController {
 
                 ////transactional sms
 
-                // $apiInstance = new SendinBlue\Client\Api\TransactionalSMSApi(
-                //     new \GuzzleHttp\Client(),
-                //     $config
-                // );
-                // $sendTransacSms = new \SendinBlue\Client\Model\SendTransacSms();
-                // $sendTransacSms['sender'] = 'senderName';
-                // $sendTransacSms['recipient'] = '+918943868855';
-                // $sendTransacSms['content'] = 'This is a transactional SMS';
-                // $sendTransacSms['type'] = 'transactional';
-                // $sendTransacSms['webUrl'] = 'https://example.com/notifyUrl';
+                $apiInstance = new SendinBlue\Client\Api\TransactionalSMSApi(
+                    new \GuzzleHttp\Client(),
+                    $config
+                );
+                $sendTransacSms = new \SendinBlue\Client\Model\SendTransacSms();
+                $sendTransacSms['sender'] = 'senderName';
+                $sendTransacSms['recipient'] = '+918943868855';
+                $sendTransacSms['content'] = 'This is a transactional SMS';
+                $sendTransacSms['type'] = 'transactional';
+                $sendTransacSms['webUrl'] = 'https://example.com/notifyUrl';
 
-                // try {
-                //     $result = $apiInstance->sendTransacSms($sendTransacSms);
-                //     print_r($result);
-                // } catch (Exception $e) {
-                //     echo 'Exception when calling TransactionalSMSApi->sendTransacSms: ', $e->getMessage(), PHP_EOL;
-                // }
+                try {
+                    $result = $apiInstance->sendTransacSms($sendTransacSms);
+                    print_r($result);
+                } catch (Exception $e) {
+                    echo 'Exception when calling TransactionalSMSApi->sendTransacSms: ', $e->getMessage(), PHP_EOL;
+                }
                 ////transactional sms
 
                 
 
-               $apiInstance = new SendinBlue\Client\Api\TransactionalWhatsAppApi(
-                    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-                    // This is optional, `GuzzleHttp\Client` will be used as default.
-                    new \GuzzleHttp\Client(),
-                    $config
-                );
-                $sendWhatsappMessage = new \SendinBlue\Client\Model\SendWhatsappMessage(); // \SendinBlue\Client\Model\SendWhatsappMessage | Values to send WhatsApp message
+               // $apiInstance = new SendinBlue\Client\Api\TransactionalWhatsAppApi(
+               //      // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+               //      // This is optional, `GuzzleHttp\Client` will be used as default.
+               //      new \GuzzleHttp\Client(),
+               //      $config
+               //  );
+               //  $sendWhatsappMessage = new \SendinBlue\Client\Model\SendWhatsappMessage(); // \SendinBlue\Client\Model\SendWhatsappMessage | Values to send WhatsApp message
 
-                $sendTransacSms['senderNumber'] = '+918943868855';
-                $sendTransacSms['contactNumbers'] = '+918075680885'; 
-                $sendTransacSms['text'] = 'Hi';  
+               //  $sendTransacSms['senderNumber'] = '+918943868855';
+               //  $sendTransacSms['contactNumbers'] = '+918075680885'; 
+               //  $sendTransacSms['text'] = 'Hi';  
 
-                try {
-                    $result = $apiInstance->sendWhatsappMessage($sendWhatsappMessage);
-                    print_r($result);
-                } catch (Exception $e) {
-                    echo 'Exception when calling TransactionalWhatsAppApi->sendWhatsappMessage: ', $e->getMessage(), PHP_EOL;
-                }
+               //  try {
+               //      $result = $apiInstance->sendWhatsappMessage($sendWhatsappMessage);
+               //      print_r($result);
+               //  } catch (Exception $e) {
+               //      echo 'Exception when calling TransactionalWhatsAppApi->sendWhatsappMessage: ', $e->getMessage(), PHP_EOL;
+               //  }
  
         }
 }

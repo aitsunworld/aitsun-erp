@@ -147,9 +147,30 @@ function site_key(){
         return '6Ld4NjIpAAAAALDCafzSm_j2Fa8JNOBlPydoxFoX';
     }else{
         return '6LeLFIQlAAAAAF2nc9eyEn0iYWhZUJm4qKXLeYGm';
-    } 
-    
+    }  
 }
+
+function get_total_rental($company_id,$status){ 
+    $InvoiceModel=new InvoiceModel; 
+  
+         
+        if ($status!='') {
+            $InvoiceModel->where('rental_status',$status);
+        }
+        
+       
+        $InvoiceModel->where('invoice_type!=','sales'); 
+    $total_rentals=$InvoiceModel->where('company_id',$company_id)->where('deleted',0)->where('bill_from','rental')->countAllResults();
+    return $total_rentals;
+}
+
+function get_total_rental_invoices($company_id,$status){ 
+    $InvoiceModel=new InvoiceModel; 
+    $InvoiceModel->where('invoice_type','sales');
+    $total_rentals=$InvoiceModel->where('company_id',$company_id)->where('deleted',0)->where('bill_from','rental')->countAllResults();
+    return $total_rentals;
+}
+ 
 
 function register_data($register_id,$column){
     $PosRegisters=new PosRegisters;

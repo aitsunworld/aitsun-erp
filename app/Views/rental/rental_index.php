@@ -42,16 +42,16 @@
 
         <a href="<?= base_url('products') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-package"></i> <span class="my-auto">Products</span></a>
 
-        <a href="<?= base_url('rental/periods') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-time"></i> <span class="my-auto">Rental periods</span></a>
+        <!-- <a href="<= base_url('rental/periods') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-time"></i> <span class="my-auto">Rental periods</span></a> -->
  
         
         
-        <div class="dropdown  my-auto me-2">
+       <!--  <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-file"></i> Reports
             </a>
             <div class="dropdown-menu" style="">  
-              <!--   <a class="dropdown-item href_loader" href="<= base_url('appointments/reports') ?>">
+                <a class="dropdown-item href_loader" href="<= base_url('appointments/reports') ?>">
                     <span>Booking reports</span>
                 </a>
               <a class="dropdown-item href_loader" href="#">
@@ -59,9 +59,9 @@
                 </a>
                 <a class="dropdown-item href_loader" href="#">
                     <span>Resource wise</span>
-                </a> --> 
+                </a> 
             </div>
-        </div> 
+        </div>  -->
  
  
 
@@ -81,29 +81,49 @@
             <div class="rental_fiters mt-4">
                 <h6><i class="bx bx-refresh"></i> Rental status</h6>
                 <ul>
-                    <li><a href="<?= base_url('rental') ?>">All</a></li>
-                    <li><a href="<?= base_url('rental') ?>?status=0">Quatation</a></li>
-                    <li><a href="<?= base_url('rental') ?>?status=1">Reserved</a></li>
-                    <li><a href="<?= base_url('rental') ?>?status=2">Picked Up</a></li>
-                    <li><a href="<?= base_url('rental') ?>?status=3">Returned</a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>">All <b>(<?= get_total_rental(company($user['id']),'') ?>)</b></a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?status=0">Quatation <b>(<?= get_total_rental(company($user['id']),0) ?>)</b></a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?status=1">Reserved <b>(<?= get_total_rental(company($user['id']),1) ?>)</b></a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?status=2">Picked Up <b>(<?= get_total_rental(company($user['id']),2) ?>)</b></a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?status=3">Returned <b>(<?= get_total_rental(company($user['id']),3) ?>)</b></a></li>
                 </ul>
                 <h6><i class="bx bx-refresh"></i> Invoice status</h6>
                 <ul>
-                    <li><a href="<?= base_url('rental') ?>?invoice_status=1">All</a></li>
-                    <li><a href="<?= base_url('rental') ?>?invoice_status=1">To Invoice</a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?invoice_status=1">All <b>(<?= get_total_rental_invoices(company($user['id']),0) ?>)</b></a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?invoice_status=1">To Invoice <b>(<?= get_total_rental_invoices(company($user['id']),0) ?>)</b></a></li>
                 </ul>
             </div>
         </div>
         <div class="col-md-9">
-            <div class="aitsun_table">
-            <table id="parties_table" class="mt-4 ms-3 erp_table sortable">
+            
+            <div class="mt-4 ms-3 aitsun_table">
+                <div class="my-auto">
+                    <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="excel" data-table="#rental_table" data-filename="Rental data - <?= get_date_format(now_time($user['id']),'d M Y') ?>"> 
+                        <span class="my-auto">Excel</span>
+                    </a>
+                    <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="csv" data-table="#rental_table" data-filename="Rental data - <?= get_date_format(now_time($user['id']),'d M Y') ?>"> 
+                        <span class="my-auto">CSV</span>
+                    </a>
+                    <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="pdf" data-table="#rental_table" data-filename="Rental data - <?= get_date_format(now_time($user['id']),'d M Y') ?>"> 
+                        <span class="my-auto">PDF</span>
+                    </a>
+                   
+                    <a href="javascript:void(0);" class="aitsun_table_quick_search text-dark font-size-footer me-2" data-table="#rental_table"> 
+                        <span class="my-auto">Quick search</span>
+                    </a> 
+
+                </div>
+            <table id="rental_table" class=" erp_table sortable">
                 <thead>
                     <tr>
                         <th class="sorticon">No.</th>
                         <th class="sorticon">Party</th>
                         <th class="sorticon">Amount</th> 
+                        <th class="sorticon">Paid</th>
+                        <th class="sorticon">Due</th>
                         <th class="sorticon text-center">Rental date</th>  
                         <th class="sorticon text-center">Duration</th>  
+                        <th class="sorticon text-center">Bill</th>  
                         <th class="sorticon">Status</th> 
                     </tr>
                 </thead>
@@ -146,6 +166,38 @@
                             <?php endif ?>
 
                             </td> 
+                            <td class="text-right text-success" <?php if ($di['deleted']!=0): ?>style="text-decoration: line-through;"<?php endif ?>>
+                            
+                                <?php if (!has_converted($di['id']) || $di['invoice_type']!='proforma_invoice'): ?>
+                                 <?php if ($di['invoice_type']=='sales' || $di['invoice_type']=='proforma_invoice' || $di['invoice_type']=='sales_return' || $di['invoice_type']=='purchase' || $di['invoice_type']=='purchase_return'): ?> 
+                                <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?> 
+                                 <?php if ($di['deleted']==0): ?>
+                                    <?php $total_paid_amount+=aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?>
+                                <?php endif ?>
+                                 <?php else: ?>
+                                     
+                                <?php endif; ?>
+
+                               
+                                <?php endif; ?>
+                                
+                                
+                            </td>
+
+                            <td class="text-right text-danger" <?php if ($di['deleted']!=0): ?>style="text-decoration: line-through;"<?php endif ?>>
+
+                                <?php if (!has_converted($di['id']) || $di['invoice_type']!='proforma_invoice'): ?>
+                                       
+                                <?php if ($di['invoice_type']=='sales' || $di['invoice_type']=='proforma_invoice' || $di['invoice_type']=='sales_return' || $di['invoice_type']=='purchase' || $di['invoice_type']=='purchase_return'): ?> 
+                                    <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['due_amount'],get_setting(company($user['id']),'round_of_value')); ?>
+                                    <?php if ($di['deleted']==0): ?>
+                                        <?php $total_due_amount+=aitsun_round($di['due_amount'],get_setting(company($user['id']),'round_of_value')); ?>
+                                    <?php endif ?>
+                                <?php else: ?>
+                                     
+                                <?php endif; ?>
+                                <?php endif; ?>
+                            </td>
                             <td class="text-center">
                                 <?= get_date_format($di['rent_from'],'d M Y h:i A') ?>
                              -
@@ -154,7 +206,21 @@
                             <td class="text-center">
                                 <span class="badge bg-dark px-3 py-1" style="font-weight: 400; font-size: 10px;"><?= (!empty($di['rental_duration']))?duration_in_days($di['rental_duration']):''; ?></span>
                             </td>
-                            <td class="rental_status">
+                            <td class="text-center">
+                                <?php if (has_converted($di['id'])): ?>
+                                    <button class="btn btn-muted btn-sm" disabled>
+                                        Billed
+                                    </button>
+                                <?php else: ?>
+                                    <?php if ($di['invoice_type']=='sales_quotation'): ?>
+                                            <a href="<?= base_url('invoices/convert_to_sale'); ?>/<?= $di['id']; ?>" class="aitsun_link href_loader btn-sm">
+                                                    Make bill
+                                            </a>
+                                    <?php endif ?>
+                                <?php endif; ?>
+                                
+                            </td>
+                            <td class="">
                                 <?php if ($di['rental_status']==0): ?> 
                                     <span class="badge bg-light text-dark">Quotation</span>
                                 <?php elseif ($di['rental_status']==1): ?>
@@ -175,6 +241,8 @@
                     <tr>
                         <td colspan="2"></td>
                         <td class="text-end"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
+                        <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_paid_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
+                    <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_due_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
                         <td colspan="3"></td>
                     </tr>
                 </tfoot>

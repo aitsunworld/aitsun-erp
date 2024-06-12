@@ -129,6 +129,10 @@
               }
             }
           }
+
+          if ($view_method=='convert') {
+            $invoice_for=$in_data['bill_from'];
+          }
          ?>
 
       <form id="invoice_form" method="post" action="<?php if ($view_method=='edit'): ?><?= base_url('sales/update_invoice'); ?>/<?= $in_data['id']; ?><?php elseif($view_method=='convert' || $view_method=='copy'): ?><?= base_url('sales'); ?><?php else: ?><?= base_url('sales') ?><?php endif ?>">
