@@ -42,10 +42,12 @@
         
         <a href="<?= base_url('appointments/book_persons/my_appointments') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-user"></i> <span class="my-auto">My Appointments</span></a>
 
+        <?php if (is_allowed($user['id'], 'read_booked_resources') || is_allowed($user['id'], 'read_booked_person')): ?>
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-calendar"></i> Bookings
             </a>
+          
             <div class="dropdown-menu" style="">  
                 <?php if (is_allowed($user['id'], 'read_booked_resources')): ?>
                 <a class="dropdown-item href_loader" href="<?= base_url('appointments/book_resources') ?>">
@@ -58,11 +60,11 @@
                 </a> 
                 <?php endif; ?> 
             </div>
-        </div> 
+        </div>
+        <?php endif; ?> 
 
-        
+        <?php if (is_allowed($user['id'], 'read_appointments_reports')): ?>
         <div class="dropdown  my-auto me-2">
-           
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-file"></i> Reports
             </a>
@@ -74,10 +76,11 @@
                 </a>
                <?php endif; ?> 
             </div>
-        </div> 
+        </div>
+        <?php endif; ?>
 
 
-
+        <?php if (is_allowed($user['id'], 'read_resources')): ?>
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-cog"></i> Configuration
@@ -88,10 +91,9 @@
                     <span >Resources</span>
                 </a>
                 <?php endif; ?>
-
-                 
             </div>
-        </div> 
+        </div>
+        <?php endif; ?> 
 
         <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2 my-auto" data-bs-toggle="collapse" data-bs-target="#filter-appointment"> 
             <i class="bx bx-filter"></i> <span class="my-auto">Filter</span>
@@ -173,15 +175,20 @@
                         <a class="text-dark cursor-pointer font-size-footer ms-2 my-auto " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bx bx-cog"></i> Action
                         </a>
+                         <?php if (is_allowed($user['id'], 'edit_appointments') || is_allowed($user['id'], 'delete_appointments')): ?>
                         <div class="dropdown-menu" style="">  
+                            <?php if (is_allowed($user['id'], 'edit_appointments')): ?>
                             <a class="dropdown-item href_loader" href="<?= base_url('appointments/create/'.$aps['id']); ?>">
                                 <span class="">Edit</span>
                             </a>
+                            <?php endif ?>
+                            <?php if (is_allowed($user['id'], 'delete_appointments')): ?>
                             <a class="dropdown-item delete_appointment" data-deleteurl="<?= base_url('appointments/delete_appointment'); ?>/<?= $aps['id']; ?>">
                                 <span>Delete</span>
-                            </a> 
-                            </a> 
+                            </a>
+                            <?php endif ?> 
                         </div>
+                        <?php endif ?> 
                     </div>
                 
                 </td>

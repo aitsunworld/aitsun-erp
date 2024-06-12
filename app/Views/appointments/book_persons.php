@@ -53,7 +53,7 @@
 
         <a href="<?= base_url('appointments/book_persons/my_appointments') ?>" class="href_loader text-dark my-auto font-size-footer me-2"><i class="bx bx-user"></i> <span class="my-auto">My Appointments</span></a>
         
-
+        <?php if (is_allowed($user['id'], 'read_booked_resources') || is_allowed($user['id'], 'read_booked_person')): ?>
         <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer   " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-calendar"></i> Bookings
@@ -71,8 +71,9 @@
                 <?php endif; ?>   
             </div>
         </div> 
-
-      <div class="dropdown  my-auto me-2">
+        <?php endif; ?>
+        <?php if (is_allowed($user['id'], 'read_appointments_reports')): ?>
+        <div class="dropdown  my-auto me-2">
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-file"></i> Reports
             </a>
@@ -82,11 +83,12 @@
                     <span>Booking reports</span>
                 </a>
                 <?php endif; ?>
-               
             </div>
-        </div> 
-
+        </div>
+        <?php endif; ?> 
+        <?php if (is_allowed($user['id'], 'read_resources')): ?>
         <div class="dropdown  my-auto me-2">
+            
             <a class="text-dark cursor-pointer font-size-footer" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bx bx-cog"></i> Configuration
             </a>
@@ -96,9 +98,9 @@
                     <span >Resources</span>
                 </a>
                 <?php endif; ?>
-                 
             </div>
-        </div> 
+        </div>
+        <?php endif; ?> 
     </div>
 
     <?php if (is_allowed($user['id'], 'add_appointments')): ?>
@@ -184,24 +186,45 @@
 
                 </div>
 
-                <?php if (is_allowed($user['id'], 'add_booked_resources')): ?>
-                <div class="modal customer_modal fade" id="booking_modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <div class="d-flex">
-                            <h5 class="modal-title">Book a person</h5>
-                          </div>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-start" id="booking_form_div">
-                          
+                    <?php if ($book_type=='person'): ?>
+                        <?php if (is_allowed($user['id'], 'add_booked_person')): ?>
+                            <div class="modal customer_modal fade" id="booking_modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <div class="d-flex">
+                                        <h5 class="modal-title">Book a person</h5>
+                                      </div>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start" id="booking_form_div">
+                                      
 
-                        </div> 
-                      </div>
-                    </div>
-                </div>
-                <?php endif; ?>
+                                    </div> 
+                                  </div>
+                                </div>
+                            </div>
+                        <?php endif ?> 
+                    <?php else: ?> 
+                        <?php if (is_allowed($user['id'], 'add_booked_resources')): ?>
+                            <div class="modal customer_modal fade" id="booking_modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <div class="d-flex">
+                                        <h5 class="modal-title">Book a person</h5>
+                                      </div>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start" id="booking_form_div">
+                                      
+
+                                    </div> 
+                                  </div>
+                                </div>
+                            </div>
+                        <?php endif ?> 
+                    <?php endif ?> 
 
             </form>
         </div>
@@ -241,12 +264,8 @@
                                 <th class="sorticon text-center">Starts on</th>  
                                 <th class="sorticon text-center">Ends on</th>  
                                 <th class="sorticon">Status <small>(Click to change)</small></th> 
-                                <?php if (is_allowed($user['id'], 'resource_billing')): ?>
                                 <th class="sorticon">Billing</th> 
-                                <?php endif; ?> 
-                                <?php if (is_allowed($user['id'], 'edit_booked_resources')): ?>
                                 <th class="sorticon noExl">Action</th> 
-                                <?php endif; ?>
                             </tr>
                         </thead>
                         <tbody> 
@@ -310,38 +329,89 @@
                                                     <span class="badge bg-danger text-white">Pending</span> 
                                                 <?php endif ?>
                                             </a>
-                                            <div class="dropdown-menu" style=""> 
-                                                <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="0">
-                                                    <span class="">Scheduled</span>
-                                                </a>   
-                                                <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="1">
-                                                    <span class="">Visited</span>
-                                                </a> 
-                                                <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="3">
-                                                    <span class="">Pending</span>
-                                                </a>  
-                                                <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="2">
-                                                    <span class="">Completed</span>
-                                                </a> 
-                                            </div>
+                                            <?php if ($bk['booking_type']=='person'): ?>
+                                                <?php if (is_allowed($user['id'], 'person_booking_status')): ?>
+                                                <div class="dropdown-menu" style=""> 
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="0">
+                                                        <span class="">Scheduled</span>
+                                                    </a>   
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="1">
+                                                        <span class="">Visited</span>
+                                                    </a> 
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="3">
+                                                        <span class="">Pending</span>
+                                                    </a>  
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="2">
+                                                        <span class="">Completed</span>
+                                                    </a> 
+                                                </div>
+                                                <?php endif ?>
+                                            
+                                            <?php else: ?>  
+                                                <?php if (is_allowed($user['id'], 'resource_booking_status')): ?>
+                                                <div class="dropdown-menu" style=""> 
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="0">
+                                                        <span class="">Scheduled</span>
+                                                    </a>   
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="1">
+                                                        <span class="">Visited</span>
+                                                    </a> 
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="3">
+                                                        <span class="">Pending</span>
+                                                    </a>  
+                                                    <a class="dropdown-item confirm_checkin" data-id="<?= $bk['id'] ?>" data-value="2">
+                                                        <span class="">Completed</span>
+                                                    </a> 
+                                                </div>
+                                                <?php endif ?>
+                                            <?php endif ?>
+
+
+
                                         </div>  
                                     </td>
-                                    <?php if (is_allowed($user['id'], 'resource_billing')): ?>
+                                    
                                     <td class="text-center">
-                                        <?php if ($bk['billing_status']==0): ?>
-                                             <a href="<?= base_url('invoices/create_invoice') ?>?customer=<?= $bk['customer'] ?>&booking=<?= $bk['id'] ?>" class=" aitsun-link mt-2 rounded-pill">Make bill</a>
+                                        <?php if ($bk['booking_type']=='person'): ?>
+                                            <?php if (is_allowed($user['id'], 'person_billing')): ?>
+                                                <?php if ($bk['billing_status']==0): ?>
+                                                     <a href="<?= base_url('invoices/create_invoice') ?>?customer=<?= $bk['customer'] ?>&booking=<?= $bk['id'] ?>" class=" aitsun-link mt-2 rounded-pill">Make bill</a>
+                                                <?php else: ?>
+                                                    <span class="badge bg-success text-white">Billed</span>
+                                                <?php endif ?>
+                                            <?php endif ?>
                                         <?php else: ?>
-                                            <span class="badge bg-success text-white">Billed</span>
+                                            <?php if (is_allowed($user['id'], 'resource_billing')): ?>
+                                                <?php if ($bk['billing_status']==0): ?>
+                                                     <a href="<?= base_url('invoices/create_invoice') ?>?customer=<?= $bk['customer'] ?>&booking=<?= $bk['id'] ?>" class=" aitsun-link mt-2 rounded-pill">Make bill</a>
+                                                <?php else: ?>
+                                                    <span class="badge bg-success text-white">Billed</span>
+                                                <?php endif ?>
+                                            <?php endif ?>
                                         <?php endif ?>
+
+
                                     </td> 
-                                    <?php endif ?>
-                                    <?php if (is_allowed($user['id'], 'edit_booked_resources')): ?>
+                                    
+                                   
                                     <td class="noExl">
-                                         <?php if ($bk['status']!=2): ?>
-                                             <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i> Edit</a>
+
+                                        <?php if ($bk['booking_type']=='person'): ?>
+                                            <?php if (is_allowed($user['id'], 'edit_booked_person')): ?>
+                                                 <?php if ($bk['status']!=2): ?>
+                                                     <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i> Edit</a>
+                                                <?php endif ?>
+                                            <?php endif ?>
+                                        <?php else: ?>
+                                            <?php if (is_allowed($user['id'], 'edit_booked_resources')): ?>
+                                                <?php if ($bk['status']!=2): ?>
+                                                     <a class="edit_booking" data-booking_id="<?= $bk['id'] ?>"><i class="bx bx-pencil text text-decoration-underline"></i> Edit</a>
+                                                <?php endif ?>
+                                            <?php endif ?>
                                         <?php endif ?>
+
                                     </td>
-                                    <?php endif ?>
+                                    
                                 </tr>
                             <?php endforeach ?> 
                         </tbody>

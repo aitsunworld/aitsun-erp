@@ -91,7 +91,12 @@ class Appointments extends BaseController
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
 
             if ($book_type=='person') {
-                if (!is_allowed($myid,'read_booked_person')) {return redirect()->to(base_url('permission_denied/read_booked_person'));}
+                if ($my_appointments=='my_appointments'){
+                    
+                }else{
+                    if (!is_allowed($myid,'read_booked_person')) {return redirect()->to(base_url('permission_denied/read_booked_person'));}
+                }
+                
             }elseif($book_type=='resource'){
                 if (!is_allowed($myid,'read_booked_resources')) {return redirect()->to(base_url('permission_denied/read_booked_resources'));}
             }
@@ -839,6 +844,8 @@ class Appointments extends BaseController
             );
             $user=$UserModel->where('id',$myid)->first();
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+
+            if (!is_allowed($myid,'read_appointments_reports')) {return redirect()->to(base_url('permission_denied/read_appointments_reports'));}
             
             if (is_appointments(company($user['id']))==1) {
 
