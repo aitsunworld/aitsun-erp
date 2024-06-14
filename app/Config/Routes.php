@@ -132,10 +132,11 @@ $routes->get('/purchases/purchases', 'Purchases::purchases');
 $routes->get('/invoices/create_invoice', 'Invoices::create_invoice'); 
 $routes->get('/sales/display_products', 'Sales::display_products'); 
 $routes->post('/sales', 'Sales::index'); 
+$routes->post('/sales/submit', 'Sales::index'); 
 $routes->post('/sales/hold', 'Sales::index/hold'); 
 $routes->get('/invoices/get_invoice/(:any)', 'Invoices::get_invoice/$1'); 
 $routes->get('/invoices/convert_to_sale/(:any)', 'Invoices::convert_to_sale/$1'); 
-$routes->get('/invoices/convert_invoice/(:any)', 'Invoices::convert_invoice/$1'); 
+$routes->get('/invoices/convert_invoice/(:any)/(:any)', 'Invoices::convert_invoice/$1/$2'); 
 $routes->get('/invoices/convert_to_sale_delivery_note/(:any)', 'Invoices::convert_to_sale_delivery_note/$1'); 
 
 

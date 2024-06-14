@@ -174,8 +174,8 @@ function get_permission_heading_of_name($permission_name){
     if ($get_name) {
         return $get_name['permission_heading'];
     }else{
-        return '';
-    }
+        return ''; 
+    }
 }
 
 function get_total_rental($company_id,$status){ 

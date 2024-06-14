@@ -263,6 +263,16 @@ a{
     color: blue;
 }
 
+.report_menu_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-height: 85vh;
+    overflow-y: scroll;
+    position: relative;
+}
+
 .menu_box { 
     justify-content: center;
    

@@ -77,24 +77,24 @@
 <!-- ////////////////////////// MAIN PAGE START ///////////////////////// -->
 <div class="sub_main_page_content">
     <div class="aitsun-row">  
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="rental_fiters mt-4">
                 <h6><i class="bx bx-refresh"></i> Rental status</h6>
                 <ul>
                     <li><a class="href_loader" href="<?= base_url('rental') ?>">All <b>(<?= get_total_rental(company($user['id']),'') ?>)</b></a></li>
-                    <li><a class="href_loader" href="<?= base_url('rental') ?>?status=0">Quatation <b>(<?= get_total_rental(company($user['id']),0) ?>)</b></a></li>
+                    <li><a class="href_loader" href="<?= base_url('rental') ?>?status=0">Quotation <b>(<?= get_total_rental(company($user['id']),0) ?>)</b></a></li>
                     <li><a class="href_loader" href="<?= base_url('rental') ?>?status=1">Reserved <b>(<?= get_total_rental(company($user['id']),1) ?>)</b></a></li>
                     <li><a class="href_loader" href="<?= base_url('rental') ?>?status=2">Picked Up <b>(<?= get_total_rental(company($user['id']),2) ?>)</b></a></li>
                     <li><a class="href_loader" href="<?= base_url('rental') ?>?status=3">Returned <b>(<?= get_total_rental(company($user['id']),3) ?>)</b></a></li>
                 </ul>
-                <h6><i class="bx bx-refresh"></i> Invoice status</h6>
+                <!-- <h6><i class="bx bx-refresh"></i> Invoice status</h6>
                 <ul>
-                    <li><a class="href_loader" href="<?= base_url('rental') ?>?invoice_status=1">All <b>(<?= get_total_rental_invoices(company($user['id']),0) ?>)</b></a></li>
-                    <li><a class="href_loader" href="<?= base_url('rental') ?>?invoice_status=1">To Invoice <b>(<?= get_total_rental_invoices(company($user['id']),0) ?>)</b></a></li>
-                </ul>
+                    <li><a class="href_loader" href="<= base_url('rental') ?>?invoice_status=1">All <b>(<= get_total_rental_invoices(company($user['id']),0) ?>)</b></a></li>
+                    <li><a class="href_loader" href="<= base_url('rental') ?>?invoice_status=1">To Invoice <b>(<= get_total_rental_invoices(company($user['id']),0) ?>)</b></a></li>
+                </ul> -->
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10">
             
             <div class="mt-4 ms-3 aitsun_table">
                 <div class="my-auto">
@@ -118,6 +118,7 @@
                     <tr>
                         <th class="sorticon">No.</th>
                         <th class="sorticon">Party</th>
+                        <th class="sorticon">Type</th>
                         <th class="sorticon">Amount</th> 
                         <th class="sorticon">Paid</th>
                         <th class="sorticon">Due</th>
@@ -158,6 +159,9 @@
 
                                   </a>
                             </td>
+                            <td>
+                                <?= full_invoice_type($di['invoice_type']) ?>
+                            </td>
                             <td class="text-end">
                                 <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['total'],get_setting(company($user['id']),'round_of_value')); ?> 
 
@@ -167,36 +171,27 @@
 
                             </td> 
                             <td class="text-right text-success" <?php if ($di['deleted']!=0): ?>style="text-decoration: line-through;"<?php endif ?>>
-                            
-                                <?php if (!has_converted($di['id']) || $di['invoice_type']!='proforma_invoice'): ?>
-                                 <?php if ($di['invoice_type']=='sales' || $di['invoice_type']=='proforma_invoice' || $di['invoice_type']=='sales_return' || $di['invoice_type']=='purchase' || $di['invoice_type']=='purchase_return'): ?> 
-                                <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?> 
-                                 <?php if ($di['deleted']==0): ?>
-                                    <?php $total_paid_amount+=aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?>
-                                <?php endif ?>
-                                 <?php else: ?>
-                                     
-                                <?php endif; ?>
 
-                               
-                                <?php endif; ?>
+                                <?php if ($di['converted_id']>0): ?>
+                                    <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round(invoice_data($di['converted_id'],'paid_amount'),get_setting(company($user['id']),'round_of_value')); ?> 
+                                    <?php if ($di['deleted']==0): ?>
+                                        <?php $total_paid_amount+=aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?>
+                                    <?php endif ?>
+                                <?php endif ?> 
                                 
                                 
                             </td>
 
                             <td class="text-right text-danger" <?php if ($di['deleted']!=0): ?>style="text-decoration: line-through;"<?php endif ?>>
 
-                                <?php if (!has_converted($di['id']) || $di['invoice_type']!='proforma_invoice'): ?>
-                                       
-                                <?php if ($di['invoice_type']=='sales' || $di['invoice_type']=='proforma_invoice' || $di['invoice_type']=='sales_return' || $di['invoice_type']=='purchase' || $di['invoice_type']=='purchase_return'): ?> 
-                                    <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['due_amount'],get_setting(company($user['id']),'round_of_value')); ?>
+                                 <?php if ($di['converted_id']>0): ?>
+                                    <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round(invoice_data($di['converted_id'],'due_amount'),get_setting(company($user['id']),'round_of_value')); ?> 
                                     <?php if ($di['deleted']==0): ?>
                                         <?php $total_due_amount+=aitsun_round($di['due_amount'],get_setting(company($user['id']),'round_of_value')); ?>
                                     <?php endif ?>
-                                <?php else: ?>
-                                     
-                                <?php endif; ?>
-                                <?php endif; ?>
+                                <?php endif ?> 
+
+                             
                             </td>
                             <td class="text-center">
                                 <?= get_date_format($di['rent_from'],'d M Y h:i A') ?>
@@ -207,10 +202,8 @@
                                 <span class="badge bg-dark px-3 py-1" style="font-weight: 400; font-size: 10px;"><?= (!empty($di['rental_duration']))?duration_in_days($di['rental_duration']):''; ?></span>
                             </td>
                             <td class="text-center">
-                                <?php if (has_converted($di['id'])): ?>
-                                    <button class="btn btn-muted btn-sm" disabled>
-                                        Billed
-                                    </button>
+                                <?php if ($di['converted_id']>0): ?> 
+                                    <a href="<?= base_url('invoices/details') ?>/<?= $di['converted_id'] ?>" class="text-success">View invoice</a>
                                 <?php else: ?>
                                     <?php if ($di['invoice_type']=='sales_quotation'): ?>
                                             <a href="<?= base_url('invoices/convert_to_sale'); ?>/<?= $di['id']; ?>" class="aitsun_link href_loader btn-sm">
@@ -239,10 +232,10 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2"></td>
+                        <td colspan="3"></td>
                         <td class="text-end"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
-                        <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_paid_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
-                    <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_due_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
+                        <td class="text-success"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_paid_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
+                    <td class="text-danger"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_due_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
                         <td colspan="3"></td>
                     </tr>
                 </tfoot>

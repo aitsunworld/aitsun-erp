@@ -386,11 +386,14 @@ button{
 
 .customer_modal{
 	input{
-		border: 1px solid #c3c3c3;
+		    border: 1px solid #c3c3c3;
     margin: auto 0;
     height: 30px;
     text-indent: 10px;
     border-radius: 5px;
+    width: 410px;
+    height: 35px;
+    border-radius: 20px;
     &:focus{
     	outline: none;
     	box-shadow: none;
@@ -735,4 +738,16 @@ button{
       transform: 1;
     }
 
+}
+
+.new_party_popup{
+    display: none;
+    position: absolute;
+    left: 40px;
+    z-index: 11;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5019607843);
+    border-radius: 10px;
+    top: 60px;
 }

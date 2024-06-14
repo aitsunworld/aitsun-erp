@@ -849,10 +849,10 @@ $(document).on('input click keypress','#gst_input',function(){
                   var valNew=inid.split(',');
 
                   for(var i=0;i<valNew.length;i++){
-                      convert_invoice(valNew[i]);
+                      convert_invoice(valNew[i]),response;
                   }
               } catch {
-                   convert_invoice(inid);
+                   convert_invoice(inid,response);
               }
             }
             
@@ -879,11 +879,11 @@ $(document).on('click','.tranname',function(){
 
 
 
-	function convert_invoice(invoice){
+	function convert_invoice(invoice,converted_id){
 		var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
     var csrfHash = $('#csrf_token').val(); // CSRF hash
 		$.ajax({
-      url: base_url()+"invoices/convert_invoice/"+invoice,
+      url: base_url()+"invoices/convert_invoice/"+invoice+"/"+converted_id,
       data:{
 				[csrfName]: csrfHash
 			},

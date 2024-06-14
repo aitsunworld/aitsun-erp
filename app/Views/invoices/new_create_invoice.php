@@ -238,6 +238,8 @@
                 <?= langg(get_setting(company($user['id']),'language'),'- Convert'); ?>
               <?php elseif ($view_method=='edit'): ?>
                 <?= langg(get_setting(company($user['id']),'language'),'- Edit'); ?>
+
+
               <?php elseif ($view_method=='copy'): ?>
                 <?= langg(get_setting(company($user['id']),'language'),'- Copy'); ?>
               <?php endif ?>  
@@ -1023,7 +1025,7 @@
                     $newTime = $timeObject->format('H:i');
                   } 
                 ?>
-                <?php if ($invoice_for=='rental' || $view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?>
+                <?php if ($invoice_for=='rental'): ?>
                 <div class="rental_details mt-2">
                   <h6>Rental details</h6>
                   <div class="d-flex">

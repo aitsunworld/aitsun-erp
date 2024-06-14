@@ -262,7 +262,7 @@ if ($view_method=='load' || $view_method=='edit') {
           </div>
 
          
-          <button class="sm_button my-auto me-2" onclick="location.reload();"><i class="bx bx-refresh"></i></button>
+          <a class="sm_button my-auto me-2 text-dark" href="<?= str_replace('/index.php','',current_url()) ?>"><i class="bx bx-refresh"></i></a>
           <button class="sm_button my-auto me-2"><i class="text-aitsun bx bx-wifi"></i></button> 
 
           <button class="big_btn btn btn-dark d-none btn-sm me-2"><i class="bx bx-table"></i> Select table</button>
@@ -272,9 +272,9 @@ if ($view_method=='load' || $view_method=='edit') {
               <i class="bx bx-dots-vertical-rounded"></i>
             </button>  
             <div class="dropdown-menu" style="">  
-             <!--  <a class="dropdown-item href_loader" href="<?= base_url('pos/orders') ?>">  
-                <span class="ms-3">Orders</span>
-              </a>  --> 
+             <a class="dropdown-item href_loader" href="<?= base_url('pos/orders') ?>">  
+                <span class="">Orders</span>
+              </a>  
              <!--  <a class="dropdown-item href_loader" href="">
                 <span class="ms-3">Cash In/Out</span> 
               </a>   -->
@@ -427,8 +427,21 @@ if ($view_method=='load' || $view_method=='edit') {
     <div class="modal-dialog modal-dialog-centered modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <div class="d-flex">
-            <a class="btn btn-danger btn-sm me-2">+ New</a>
+          <div class="d-flex"> 
+
+            <a style="min-width: 110px; height:35px;" class="btn btn-danger btn-sm me-2 rounded-pill" onclick="$('#new_party_popup').toggle();">New party</a>
+             <div class="new_party_popup" id="new_party_popup">
+                 <div>
+                     <input type="text" class="mb-2 form-control" id="pop_name" placeholder="Name">
+                     <input type="number" class="mb-2 form-control" id="pop_phone" placeholder="Phone">
+                     <input type="email" class="mb-2 form-control" id="pop_email" placeholder="Email">
+                     <div class="text-center">
+                         <a class="add_party_popup_pos btn btn-dark btn-sm rounded-pill" data-element_id="">Add party</a>
+                     </div>
+                 </div>
+             </div>
+
+
             <input type="search" placeholder="Search..." id="searchCustomerInput">
           </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -442,7 +455,7 @@ if ($view_method=='load' || $view_method=='edit') {
                 <th>Balance</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="party_tbody">
               <?php $slno=1; foreach (pos_customers(company($user['id'])) as $cus): $slno++; ?> 
               <tr style="background:<?php echo ($slno % 2 == 0) ? "#f3ecec" : "white"; ?>;" class="customer_row" data-cus_id="<?= $cus['id'] ?>" data-cus_name="<?= $cus['display_name'] ?>" data-credit_limit="<?= $cus['credit_limit'] ?>" data-closing_balance="<?= $cus['closing_balance'] ?>">
                 <td><?= $cus['display_name'] ?></td>

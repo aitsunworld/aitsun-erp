@@ -40,7 +40,7 @@
  
         
 
-    <div class="menu_box">
+    <div class="report_menu_box">
 
         <a class="menu_icon text-dark cursor-pointer href_loader" href="<?= base_url('day_end_summary'); ?>">
             <img src="<?= base_url('public/images/menu_icons/day_end_summary.webp') ?>" class="menu_img">

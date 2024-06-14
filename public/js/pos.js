@@ -12,6 +12,60 @@ $(document).on('keypress','#product_search_input,#product_code,#searchCustomerIn
     }
 });
 
+$(document).on('click','.add_party_popup_pos',function(){
+        var element_id=$(this).data('element_id'); 
+        var pop_name=$.trim($('#pop_name'+element_id).val());
+        var pop_phone=$.trim($('#pop_phone'+element_id).val());
+        var pop_email=$.trim($('#pop_email'+element_id).val());
+
+        var this_elem=$(this); 
+         
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+        if (pop_name!='') {
+            $.ajax({
+                type: 'POST',
+                url: base_url()+'customers/add_party_from_selector',
+                data:{
+                    cus_name:pop_name,
+                    pop_phone:pop_phone,
+                    pop_email:pop_email, 
+                    [csrfName]: csrfHash
+                },
+                beforeSend: function() {
+                     
+                    
+                },
+                success: function(response) {
+                  
+                    if ($.trim(response)=='limit_reached') {
+                        show_failed_msg('error','User limit reached!');
+                    }else if($.trim(response)==0){
+                        show_failed_msg('error','Failed! try again.');
+                    }else{  
+                        $('#new_party_popup'+element_id).toggle(); 
+                        $('#party_tbody').prepend(` 
+                            <tr style="background:white;" class="customer_row" data-cus_id="${response}" data-cus_name="${pop_name}" data-credit_limit="0>" data-closing_balance="0">
+                                <td>${pop_name}</td>
+                                <td>
+                                  <div>${pop_phone}</div> 
+                                  <div>${pop_email}</div> 
+                                </td>
+                                <td>${currency_symbol()} 0</td>
+                              </tr> 
+                            `); 
+
+                    }
+
+                 
+                }
+            });
+        }else{
+            show_failed_msg('error','Name should not be blank');
+        }
+        
+    });
 
 
 categoryBox.addEventListener("mousedown", function (e) {

@@ -212,7 +212,7 @@
     <?php endif ?>
     <?php endif ?>
 
-    <?php if ($invoice_data['bill_from']=='rental'): ?>
+    <?php if ($invoice_data['bill_from']=='rental' &&  $invoice_data['invoice_type']!='sales'): ?>
         <?php if ($invoice_data['rental_status']==0): ?>
             <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="1" data-invoice_id="<?= $invoice_id ?>">
                 <i class="bx bx-check-circle"></i> 

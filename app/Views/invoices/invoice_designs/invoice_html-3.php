@@ -503,6 +503,19 @@ Buyer's/Seller's/Transport Copy
              <span style="font-family: DejaVu Sans;"><?= currency_symbol($invoice_data['company_id']); ?><?= aitsun_round($invoice_data['sub_total'],get_setting($invoice_data['company_id'],'round_of_value')); ?></span>
             </td>
           </tr>
+
+           <?php if ($invoice_data['transport_charge']>0): ?>  
+           <tr>
+            <td style="text-align: left;border-right: none;border-top: none;border-bottom: none;border-left: none;" class="invoice_font" colspan="2" >
+              <?= langg(get_setting($invoice_data['company_id'],'language'),'Transport Charge'); ?>
+            </td>
+
+            <td class="invoice_font"  style="text-align: right;border-top: none;border-bottom: none; border-left: none;border-right: none;">
+             <span style="font-family: DejaVu Sans;"><?= currency_symbol($invoice_data['company_id']); ?><?= aitsun_round($invoice_data['transport_charge'],get_setting($invoice_data['company_id'],'round_of_value')); ?></span>
+            </td>
+          </tr>
+
+          <?php endif ?>
         
 
           <tr>

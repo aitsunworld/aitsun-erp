@@ -54,9 +54,12 @@ class Invoices extends BaseController
 
         $acti=activated_year(company($myid));
 
+        $getfrom=get_date_format(now_time($myid),'Y-m-01');
+        $getdto=get_date_format(now_time($myid),'Y-m-t');
 
         if (!$_GET) {
-            $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
+            // $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
+            $InvoiceModel->where("invoice_date BETWEEN '$getfrom' AND '$getdto'");
         }else {
 
 
@@ -1670,7 +1673,7 @@ public function pdf($cusval=""){
 
 
 
-public function convert_invoice($cusval=""){
+public function convert_invoice($cusval="",$converted_id=0){
    $session=session();
    $myid=session()->get('id');
    $InvoiceModel=new InvoiceModel;
@@ -1681,6 +1684,7 @@ public function convert_invoice($cusval=""){
    $intype=invoice_data($cusval,'invoice_type');
 
    $udt=[
+    'converted_id'=>$converted_id,
     'converted'=>1
 ];
 $InvoiceModel->update($cusval,$udt);  

@@ -199,6 +199,7 @@
                     <th class="sorticon">Amount</th>
                     <th class="sorticon">Paid</th>
                     <th class="sorticon">Due</th>
+                    <th class="sorticon">From</th>
                     <th class="sorticon" data-tableexport-display="none">Action</th>
                 </tr>
              
@@ -377,6 +378,10 @@
                                  
                             <?php endif; ?>
                             <?php endif; ?>
+                        </td>
+
+                        <td>
+                            <?= $di['bill_from'] ?>
                         </td>
                        
                         <td class="position-relative noExl" data-tableexport-display="none">
