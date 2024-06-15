@@ -343,6 +343,7 @@
              <thead>
                 <tr>
                     <th class="sorticon">S. No</th>
+                    <th class="sorticon">Profile</th>
                     <th class="sorticon">Name</th>
                     <th class="sorticon">Email</th>
                     <th class="sorticon">Phone Number </th> 
@@ -360,7 +361,9 @@
 
                 <?php foreach ($company_members_array as $cmpuser) { $data_count++; ?>
                   <tr>
+
                     <td><?= $data_count; ?> </td>
+                    <td><img src="<?= base_url(); ?>/public/uploads/users/<?php if($cmpuser['profile_pic'] != ''){echo $cmpuser['profile_pic']; }else{ echo 'avatar-icon.png';} ?>" alt="Admin" class="rounded-circle  bg-dark" style="width: 50px;height: 50px;"></td>
                     <td><?= $cmpuser['display_name']; ?></td>
                     <td><?= $cmpuser['email']; ?></td>
                     <td><?= $cmpuser['phone']; ?></td>

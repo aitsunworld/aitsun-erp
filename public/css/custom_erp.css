@@ -3838,7 +3838,7 @@ body {
 
 #sidebar {
   z-index: 111;
-  position:absolute;
+  position:fixed;
   top:0px; 
   left:-200px;
   width:200px;

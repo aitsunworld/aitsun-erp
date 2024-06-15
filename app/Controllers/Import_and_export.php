@@ -45,6 +45,9 @@ class Import_and_export extends BaseController
                         'user'=>$user,
                     ];
 
+                    if (isset($_SESSION['starting_row'])) {
+                        unset($_SESSION['starting_row']);
+                    }
                     if (usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
 
                     if (check_main_company($myid)==true) {
@@ -322,12 +325,28 @@ class Import_and_export extends BaseController
 
             $file->move($destinationDirectory, $newName); 
 
+            try {
             // Load the Excel file
             $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load("public/csvfile/".$newName);
             $sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
 
+            // Transpose the sheet data
+            $transposedData = transpose($sheetData);
+             
 
-
+            // Count valid columns
+            $validColumnCount = 0;
+            foreach ($transposedData as $column) {
+                if (isValidColumn($column)) {
+                    $validColumnCount++;
+                }
+            } 
+            
+           
+           if ($validColumnCount<24) {
+               session()->setFlashdata('pu_er_msg', 'Invalid format!');
+               return redirect()->to(base_url('products/import_and_export')); 
+           }
             $old_file_name='';
             if (isset($_SESSION['file_name'])) {
                 $old_file_name=$_SESSION['file_name'];
@@ -412,10 +431,13 @@ class Import_and_export extends BaseController
                                     if ($units_array[$result]['value']) {
                                         $unit_res=preg_replace('/\s+/', '', trim(ucfirst($unit)));
                                     }else{
-                                        $unit_res="";
+                                        $unit_res="Nos";
                                     }
 
-
+                                if (empty(trim($unit_res))) {
+                                   $unit_res="Nos";
+                                }
+                                
                                
 
                                $sub_unit=preg_replace('/\s+/', '', trim(ucfirst($sub_unit)));
@@ -909,6 +931,7 @@ $import_report .= '<tr class="" id="imported_tr'.$row.'">
 
                     if ($total_rows <= $temp_row_count) { 
                         unset($_SESSION['starting_row']);
+                        $count=0;
                     }
                     
                 }
@@ -930,6 +953,11 @@ $import_report .= '<tr class="" id="imported_tr'.$row.'">
             echo view('header', $data); 
             echo view('import_and_exports/import_report_product');
             echo view('footer');  
+
+            } catch (\PhpOffice\PhpSpreadsheet\Exception $e) {
+                session()->setFlashdata('pu_er_msg', 'Invalid format!');
+               return redirect()->to(base_url('products/import_and_export')); 
+            }
 
         }
     }  
@@ -1298,9 +1326,26 @@ public function import_parties() {
             $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load("public/csvfile/".$newName);
             $sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
 
+           // Transpose the array to switch rows and columns
 
 
-            $old_file_name='';
+            // Transpose the sheet data
+            $transposedData = transpose($sheetData);
+             
+
+            // Count valid columns
+            $validColumnCount = 0;
+            foreach ($transposedData as $column) {
+                if (isValidColumn($column)) {
+                    $validColumnCount++;
+                }
+            } 
+
+           if ($validColumnCount<9) {
+                session()->setFlashdata('pu_er_msg', 'Invalid format!');
+                return redirect()->to(base_url('import_and_export/parties'));
+           }else{
+             $old_file_name='';
             if (isset($_SESSION['file_name'])) {
                 $old_file_name=$_SESSION['file_name'];
             }
@@ -1358,7 +1403,7 @@ public function import_parties() {
                                 $u_type='customer';
                             }
 
-                            if (!empty($display_name)) {
+                            if (!empty(trim($display_name))) {
                                 if ($openingType == 'To Pay') {
                                     $value_of_opening = '-'.$opening_balance;  // Make opening balance negative for "pay" type
                                 }else{
@@ -1410,6 +1455,7 @@ public function import_parties() {
                                             'closing_balance' => aitsun_round(htmlentities(strip_tags(trim($value_of_opening))), get_setting(company($myid),'round_of_value')),
                                             
                                         ];
+
 
                                         $saveparty = $Main_item_party_table->save($partydata);
                                         $insidd = $Main_item_party_table->insertID();
@@ -1489,13 +1535,14 @@ public function import_parties() {
 
                     if ($total_rows <= $temp_row_count) { 
                         unset($_SESSION['starting_row']);
+                        $count=0;
                     }
+
+                    
                     
                 }
+
             }
-
-            
-
 
             $data = [
                 'title' => 'Import report',
@@ -1509,7 +1556,15 @@ public function import_parties() {
 
             echo view('header', $data); 
             echo view('import_and_exports/import_report');
-            echo view('footer');  
+            echo view('footer'); 
+
+           }
+
+           
+            
+
+
+             
 
         }
     }         

@@ -179,10 +179,7 @@ class Customers extends BaseController
 
             if (isset($_POST['display_name'])) {
 
-                if (total_user(company($myid))>=user_limit(company($myid))) {
-                    $session->setFlashdata('pu_er_msg', 'Sorry, Maximum user limit reached!');
-                    return redirect()->to(current_url());
-                }else{
+               
 
 
 
@@ -318,9 +315,7 @@ class Customers extends BaseController
 
                 }
 
-            }else{
-
-            }
+           
 
         }
     }

@@ -151,10 +151,7 @@
                     </select>
                 </div>
 
-                <div class="form-group col-md-4">
-                    <label class="form-label">Max User</label>
-                    <input class="form-control mb-3" type="number" name="max_user" required>
-                </div>
+         
 
                 <div class="form-group col-md-4 d-none">
                     <label for="app" class="form-label">Choose a app:</label>

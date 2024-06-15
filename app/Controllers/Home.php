@@ -91,7 +91,8 @@ class Home extends BaseController
                 'now_year'=>$year_data, 
                 'payment_alert'=>$payment_alert,
                 'branches'=>$get_branches->findAll(),
-                'my_appointments'=>$my_appointments
+                'my_appointments'=>$my_appointments,
+                'page_name'=>'home'
             ];
            
 

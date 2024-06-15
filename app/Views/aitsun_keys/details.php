@@ -153,11 +153,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
-                                <label for="input-2" class="modal_lab">Max User</label>
-                                <input type="text" class="form-control modal_inpu mb-3" name="max_user" value="<?= $us['max_user']; ?>">
-                            </div>
-
+                          
                             <div class="form-group col-md-4 d-none">
                                 <label for="input-2" class="modal_lab">App</label>
                                 <select class="form-control mb-3" name="pos">

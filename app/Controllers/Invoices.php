@@ -58,8 +58,8 @@ class Invoices extends BaseController
         $getdto=get_date_format(now_time($myid),'Y-m-t');
 
         if (!$_GET) {
-            // $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
-            $InvoiceModel->where("invoice_date BETWEEN '$getfrom' AND '$getdto'");
+            $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
+            // $InvoiceModel->where("invoice_date BETWEEN '$getfrom' AND '$getdto'");
         }else {
 
 

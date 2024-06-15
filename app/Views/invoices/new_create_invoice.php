@@ -1511,9 +1511,9 @@
 <?php if (has_sticky(company($user['id']))): ?> 
 <?php else: ?> 
 <?php endif; ?>
-  <?php 
-            $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
-         ?>
+<?php 
+    $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
+ ?>
 
     
 <div id="sidebar">  
@@ -1555,5 +1555,5 @@
  <script type="text/javascript">
     setInterval(function(){
                 location.href="<?= base_url('sleep_mode') ?>?red=<?= str_replace('/index.php', '', 'users/logout') ?>"
-            },3600000)
+            },1800000)
  </script>

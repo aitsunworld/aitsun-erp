@@ -85,11 +85,11 @@ use App\Models\Permissionlist as Permissionlist;
 
 
 function style_version(){
-    return '1.2.3';
+    return '1.2.5';
 }
 
 function script_version(){
-    return '1.2.3';
+    return '1.2.5';
 }
 
 function round_after(){
@@ -106,7 +106,7 @@ function sn2(){
     if (APP_STATE=='offline') {
         return 2;
     }else{
-        return 0;
+        return 1;
     } 
 }
 
@@ -122,7 +122,7 @@ function sn4(){
     if (APP_STATE=='offline') {
         return 4;
     }else{
-        return 2;
+        return 3;
     }  
 } 
 
@@ -151,6 +151,24 @@ function site_key(){
     }  
 }
 
+function transpose($array) {
+    $transposedArray = [];
+    foreach ($array as $row => $columns) {
+        foreach ($columns as $col => $value) {
+            $transposedArray[$col][$row] = $value;
+        }
+    }
+    return $transposedArray;
+}
+
+function isValidColumn($column) {
+    foreach ($column as $cell) {
+        if (trim($cell) !== '') {
+            return true;
+        }
+    }
+    return false;
+}
 
 function is_allowed($userid,$permission_name){
     $PermissionsModel= new PermissionsModel;
@@ -2194,6 +2212,9 @@ function check_tax_during_import($company,$taxname){
 function check_category_during_import($company,$unit){
     $ProductCategories= new ProductCategories;
     $rettt='';
+    if (empty($unit)) {
+        $unit='Default';
+    }
     $checkunit=$ProductCategories->where('cat_name',$unit)->where('company_id',$company)->first();
     if ($checkunit) {
         $rettt=$checkunit['id'];
@@ -2208,6 +2229,8 @@ function check_category_during_import($company,$unit){
     }
     return $rettt;
 }
+
+
 function check_sub_category_during_import($company,$unit,$parent){
     $ProductSubCategories= new ProductSubCategories;
     $rettt='';
@@ -2239,6 +2262,11 @@ function check_sub_category_during_import($company,$unit,$parent){
 function check_brand_category_during_import($company,$unit){
     $ProductBrand= new ProductBrand;
     $rettt='';
+
+    if (empty($unit)) {
+        $unit='General';
+    }
+    
     $checkunit=$ProductBrand->where('brand_name',$unit)->where('company_id',$company)->first();
     if ($checkunit) {
         $rettt=$checkunit['id'];

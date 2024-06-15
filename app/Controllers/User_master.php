@@ -170,24 +170,24 @@ class User_master extends BaseController
 			          'opening_balance'=>strip_tags($this->request->getVar('opening_type')).aitsun_round(strip_tags($this->request->getVar('opening_balance')),get_setting(company($myid),'round_of_value')),
 			          'closing_balance'=>strip_tags($this->request->getVar('opening_type')).aitsun_round(strip_tags($this->request->getVar('opening_balance')),get_setting(company($myid),'round_of_value')),
 			           'billing_address' => strip_tags($this->request->getVar('address')),
-						          'phone_2' => strip_tags($this->request->getVar('phone2')),
-						          'adhar' => strip_tags($this->request->getVar('aadhar_no')),
-						          'bank_name' => strip_tags($this->request->getVar('bank_name')),
-						          'account_number' => strip_tags($this->request->getVar('account_number')),
-						          'ifsc' => strip_tags($this->request->getVar('ifsc')),
-						          'designation' => strip_tags($this->request->getVar('designation')),
-						          'saved_as' => strip_tags($this->request->getVar('staff_additional')),
-	                    
-	                            'password_2' => strip_tags($this->request->getVar('password')),
-								'main_subject' => strip_tags($this->request->getVar('main_subject')),
-								'date_of_join' => strip_tags($this->request->getVar('date_of_join')),
-								 'gender' => strip_tags($this->request->getVar('gender')),
-								 'date_of_birth' => strip_tags($this->request->getVar('date_of_birth')),
-								'stdage' => strip_tags($this->request->getVar('age')),
-								'religion' => strip_tags($this->request->getVar('religion')),
-								'nature_of_appointment' => strip_tags($this->request->getVar('nature_of_appointment')),
-								'qualification' => strip_tags($this->request->getVar('qualification')),
-								'blood_group' => strip_tags($this->request->getVar('blood_gp')),
+			          'phone_2' => strip_tags($this->request->getVar('phone2')),
+			          'adhar' => strip_tags($this->request->getVar('aadhar_no')),
+			          'bank_name' => strip_tags($this->request->getVar('bank_name')),
+			          'account_number' => strip_tags($this->request->getVar('account_number')),
+			          'ifsc' => strip_tags($this->request->getVar('ifsc')),
+			          'designation' => strip_tags($this->request->getVar('designation')),
+			          'saved_as' => strip_tags($this->request->getVar('staff_additional')),
+            
+                    'password_2' => strip_tags($this->request->getVar('password')),
+					'main_subject' => strip_tags($this->request->getVar('main_subject')),
+					'date_of_join' => strip_tags($this->request->getVar('date_of_join')),
+					 'gender' => strip_tags($this->request->getVar('gender')),
+					 'date_of_birth' => strip_tags($this->request->getVar('date_of_birth')),
+					'stdage' => strip_tags($this->request->getVar('age')),
+					'religion' => strip_tags($this->request->getVar('religion')),
+					'nature_of_appointment' => strip_tags($this->request->getVar('nature_of_appointment')),
+					'qualification' => strip_tags($this->request->getVar('qualification')),
+					'blood_group' => strip_tags($this->request->getVar('blood_gp')),
 				];
 			}
 
@@ -196,33 +196,29 @@ class User_master extends BaseController
 
 				if ($_FILES['user_img']['size'] < 500000) {
 					if (!$checkemail) {
-						$maxuser=user_limit(company($myid));
-						$current_user=total_user(company($myid));
-						
-						if ($current_user>=$maxuser) {
-							echo 'failed';
-						}else{
-							$model->save($newData);
-							$insidd=$model->insertID();
- 
 						 
+						
+						$model->save($newData);
+						$insidd=$model->insertID();
 
-                            ////////////////////////CREATE ACTIVITY LOG//////////////
-                            $log_data=[
-                                'user_id'=>$myid,
-                                'action'=>'New staff <b>'.user_name($insidd).'</b> is joined.',
-                                'ip'=>get_client_ip(),
-                                'mac'=>GetMAC(),
-                                'created_at'=>now_time($myid),
-                                'updated_at'=>now_time($myid),
-                                'company_id'=>company($myid),
-                            ];
+					 
 
-                            add_log($log_data);
-                            ////////////////////////END ACTIVITY LOG/////////////////
+                        ////////////////////////CREATE ACTIVITY LOG//////////////
+                        $log_data=[
+                            'user_id'=>$myid,
+                            'action'=>'New staff <b>'.user_name($insidd).'</b> is joined.',
+                            'ip'=>get_client_ip(),
+                            'mac'=>GetMAC(),
+                            'created_at'=>now_time($myid),
+                            'updated_at'=>now_time($myid),
+                            'company_id'=>company($myid),
+                        ];
 
-							echo 'passed';
-						}
+                        add_log($log_data);
+                        ////////////////////////END ACTIVITY LOG/////////////////
+
+						echo 'passed';
+						
 					}else{
 						echo 'email_exist';
 					}

@@ -2,7 +2,7 @@
  <?php
     $report_date=get_date_format(now_time($user['id']),'d M Y');
     $customer_name='';
-    $from=get_date_format(now_time($user['id']),'Y-m-01');
+    $from=get_date_format(now_time($user['id']),'Y-m-d');
     $to=get_date_format(now_time($user['id']),'Y-m-t');;
 
    if ($_GET) { 

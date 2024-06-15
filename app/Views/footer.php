@@ -94,7 +94,17 @@
             } 
         ?> 
   </div>  
-  <?php if ($uri->getTotalSegments()>=sn2()): ?>
+  <?php 
+   
+    $is_home=false;
+    if (isset($page_name)) {
+        if ($page_name=='home') {
+            $is_home=true;
+        } 
+    } 
+  ?> 
+   
+  <?php if ($is_home==false): ?>
       <div class="main_menu_toggler" onclick="toggleSidebar()">
           Main Menu 
       </div>
@@ -111,11 +121,7 @@
         <?php 
             $quick_show=true;
 
-            if ($uri->getTotalSegments()>sn2()) {
-               if ($uri->getSegment(sn4())== 'view_challan' || $uri->getSegment(sn4())== 'payments' ||  $uri->getSegment(sn4())== 'details' ||  $uri->getSegment(sn3())== 'business-operations' ||  $uri->getSegment(sn3())== 'products' ||  $uri->getSegment(sn3())== 'day_end_summary') {
-                     $quick_show=false;
-                }
-            }
+            
            
 
             if ($quick_show) {  
@@ -175,38 +181,14 @@
 
         <?php }; ?> 
 
-        <?php if ($uri->getTotalSegments()>sn2()) { ?> 
-        <?php if ($uri->getSegment(sn3()) == 'crm' || $uri->getSegment(sn4()) == 'tasks' || $uri->getSegment(sn3()) == 'purchase_confirmation') { ?>
-        <script src="<?= base_url('public'); ?>/js/crm.js?v=<?= script_version(); ?>"></script>
-        <?php }; ?>
-        <?php } ?>
-
-
+       
+       
         <script src="<?= base_url('public'); ?>/js/notify.js"></script>
         <script src="<?= base_url('public/js/bootstrap.bundle.min.js') ?>"></script>
         <script src="<?= base_url('public'); ?>/js/sweetalert2.min.js"></script>
     
          
-        <?php if ($uri->getTotalSegments()>sn2()) { ?> 
-            <?php if ($uri->getSegment(sn4()) == 'add_new' || $uri->getSegment(sn4()) == 'long_edit' || $uri->getSegment(sn3()) == 'notice') { ?>
-
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js" integrity="sha512-ZESy0bnJYbtgTNGlAD+C2hIZCt4jKGF41T5jZnIXy4oP8CQqcrBGWyxNP16z70z/5Xy6TS/nUZ026WmvOcjNIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-                <script src="<?= base_url('public'); ?>/js/bootstrap.min.js"></script>
-
-                <script>
-                    $(document).on('click','.dropdown-toggle',function(){
-                         
-                      $(this).siblings('.dropdown-menu').toggle();
-                    });
-
-                    $('.summernote').summernote({
-                    
-                    });
-                </script>
-
-            <?php }; ?>
-        <?php } ?>
+       
 
         <script type="text/javascript">
             if ('serviceWorker' in navigator) {
@@ -253,16 +235,11 @@
             <script type="text/javascript">
                  setInterval(function(){
                     location.href="<?= base_url('sleep_mode') ?>?red=<?= str_replace('/index.php', '', current_url()) ?>"
-                },600000)
+                },1800000)
             </script>
         <?php endif ?>
-
-        <?php if ($uri->getTotalSegments()>sn2()) { ?> 
-            <?php if ($uri->getSegment(sn4()) == 'details' || $uri->getSegment(sn4()) == 'pay' || $uri->getSegment(sn4()) == 'view_payroll_slip' || $uri->getSegment(sn4()) =='view_salary_slip' || $uri->getSegment(sn4()) =='view_challan' || $uri->getSegment(sn4()) =='payments') { ?>
+<!-- 1800000 -->
         <script src="<?= base_url('public'); ?>/js/pos_print.js?v=<?= script_version(); ?>"></script>
-              
-            <?php }; ?>
-        <?php } ?>
 
          <script src="<?= base_url('public'); ?>/js/printThis.js?v=<?= script_version(); ?>"></script>
 
@@ -457,33 +434,17 @@
 <script src="<?= base_url('public'); ?>/js/custom_erp_additional.js?v=<?= script_version(); ?>"></script>
 
 
-<?php  
-    if ($uri->getTotalSegments()>sn2()) {
-       if ($uri->getSegment(sn3())== 'business-operations') {
-?>
-    <script src="<?= base_url('public'); ?>/js/business_operations.js?v=<?= script_version(); ?>"></script>
-<?php    
-       }
-    }
-?>
-
-<?php   
-       if ($uri->getSegment(sn2())== 'pos') {
-?>
-    <script src="<?= base_url('public'); ?>/js/pos_index.js?v=<?= script_version(); ?>"></script>
-<?php    
-       } 
-?>
-
-<?php   
-       if ($uri->getSegment(sn2())>= 'appointments') {
-?>
-    <script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
-<?php    
-       } 
-?>
-
  
+ 
+ 
+<script src="<?= base_url('public'); ?>/js/pos_index.js?v=<?= script_version(); ?>"></script>
+
+
+
+<script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
+
+
+
 
 <script src="<?= base_url('public'); ?>/js/payroll.js?v=<?= script_version(); ?>"></script>
 <script src="<?= base_url('public'); ?>/js/tags.js?v=<?= script_version(); ?>"></script>

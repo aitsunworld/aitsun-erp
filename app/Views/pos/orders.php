@@ -221,7 +221,10 @@
                        </td>
 
                        <td class="text-center">
-                           <a href="<?= base_url('pos/edit') ?>/<?= $di['register_id'] ?>/load/<?= $di['id'] ?>" class="btn btn-sm btn-primary rounded-pill">Load</a>
+                        <?php if ($di['deleted']!=0): ?>
+                            <a href="<?= base_url('pos/edit') ?>/<?= $di['register_id'] ?>/load/<?= $di['id'] ?>" class="btn btn-sm btn-primary rounded-pill">Load</a>
+                        <?php endif ?>
+                           
                        </td>
                        
                       </tr>
@@ -232,7 +235,7 @@
                             <?php endforeach; ?>
                     <?php if ($icount<1): ?>
                         <tr>
-                            <td class="text-center" colspan="9">
+                            <td class="text-center" colspan="11">
                                 <span class="text-danger">
                                     No Sales
                                     
@@ -247,11 +250,11 @@
 
               <tfoot>
                 <tr>  
-                    <td colspan="3"><b>Total</b></td>
+                    <td colspan="6"><b>Total</b></td>
                     <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
 
-                    <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_paid_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
-                    <td class=""><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_due_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
+                    <td class="text-success"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_paid_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
+                    <td class="text-danger"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_due_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
                     <td class="" data-tableexport-display="none"></td>
                 </tr>
              

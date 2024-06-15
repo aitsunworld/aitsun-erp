@@ -183,3 +183,245 @@ in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:05:33 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:05:42 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:06:34 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 798.
+ 1 APPPATH\Controllers\Sales.php(798): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 798)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('55')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:07:27 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:08:16 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:08:55 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:09:02 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:09:05 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:09:41 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 08:51:24 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:37:21 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(115): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Pos.php(56): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:37:47 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(115): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Pos.php(56): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:13 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:15 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:25 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:27 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:38 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:48:07 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:48:50 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:48:52 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:49:16 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:49:31 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:51:11 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:51:33 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(187): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

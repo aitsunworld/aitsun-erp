@@ -156,14 +156,17 @@ $(document).on('click','#save_floor',function(){
 
 
 	$(document).on('click','.open_session',function(){
+        var this_btn=$(this);
         var reg_id=$(this).data('reg_id');
 		var opening_cash=$('#opening_cash'+reg_id).val();
 		if (opening_cash!='' || opening_cash>=0) {
+            $(this_btn).prop('disabled',true);
 			$.ajax({
 	            type: 'POST',
 	            url: base_url()+'pos/open_session',
 	            data:$('#open_session_form'+reg_id).serialize(),
 	            beforeSend: function() {
+                    $(this_btn).html('Starting session... <i class="bx bx-loader-alt bx-spin"></i>');
 	            },
 	            success: function(ses_response) {
 	              if ($.trim(ses_response)==1) {

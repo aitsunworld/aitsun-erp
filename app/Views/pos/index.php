@@ -199,7 +199,7 @@
                             </div> 
 
                             <div class="d-flex justify-content-between mt-4">   
-                                <a class="btn btn-dark btn-sm open_session" data-reg_id="<?= $reg['id'] ?>">Open Session</a>
+                                <button class="btn btn-dark btn-sm open_session" data-reg_id="<?= $reg['id'] ?>">Open Session</button>
                             </div>
                         </form>
                     </div>

@@ -263,7 +263,7 @@ if ($view_method=='load' || $view_method=='edit') {
 
          
           <a class="sm_button my-auto me-2 text-dark" href="<?= str_replace('/index.php','',current_url()) ?>"><i class="bx bx-refresh"></i></a>
-          <button class="sm_button my-auto me-2"><i class="text-aitsun bx bx-wifi"></i></button> 
+          <button type="button" class="sm_button my-auto me-2"><i class="text-aitsun bx bx-wifi"></i></button> 
 
           <button class="big_btn btn btn-dark d-none btn-sm me-2"><i class="bx bx-table"></i> Select table</button>
 
@@ -846,7 +846,8 @@ if ($view_method=='load' || $view_method=='edit') {
             <div class="target_input" data-target="discount_percentbox">% Disc</div>
           </td>
           <td>
-              <a class="sp_btns hold" id="hold_invoice" data-action="hold">
+            <!-- id="hold_invoice" -->
+              <a class="sp_btns hold"  data-action="hold">
                 <div class="m-auto ">
                   <div class="d-flex"><i class="me-1 bx bx-chevron-right-circle"></i>  <span>Hold</span></div>
                 </div>
@@ -866,7 +867,7 @@ if ($view_method=='load' || $view_method=='edit') {
           <td>
             <div class="target_input" data-target="price_bx">Price</div>
           </td>
-          <td rowspan="2">
+          <td rowspan="3">
             <a class="sp_btns payment">
               <div class="m-auto rot">
                 <div class="d-flex"><i class="me-1 bx bx-chevron-right-circle"></i>  <span>Payment</span></div>

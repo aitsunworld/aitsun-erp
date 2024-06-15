@@ -101,7 +101,7 @@
                     <!-- Display resubmit form if necessary -->
                     <?php if ($count >= 4): ?>
                         <div class="col-xl-12 col-md-12 text-center d-inline-block">
-                            <form action="<?= base_url('import_and_export/import_parties');?>" class="submit_loader w-50 m-auto text-center spsec-validation" id="spsec-validation" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                            <form action="<?= base_url('import_and_export/save');?>" class="submit_loader w-50 m-auto text-center spsec-validation" id="spsec-validation" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                                 <?= csrf_field(); ?>
                                 <div class="form-group position-relative mb-2">
                                     <input type="file" name="fileURL" id="file-url" class="filestyle form-control custom-file-input" data-allowed-file-extensions="[CSV, csv,xlsx,XLSX]" accept=".CSV, .csv, .xlsx" data-buttontext="Choose File" required>

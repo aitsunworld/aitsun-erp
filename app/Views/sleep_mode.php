@@ -108,7 +108,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 text-center">
-                        	<a href="<?= $redirect_url ?>?clear_history=1" class="btn btn-light mt-5">Wake Up!</a>
+                        	<a href="<?= base_url() ?>" class="btn btn-light mt-5">Wake Up!</a>
                         </div>
                     </div>
                 </div>

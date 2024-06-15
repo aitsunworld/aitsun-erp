@@ -22,39 +22,14 @@
      <?php 
             $uri = new \CodeIgniter\HTTP\URI(str_replace('/index.php','',current_url()));
          ?>
-    <?php  
-        if ($uri->getTotalSegments()>sn2()) {
-           if ($uri->getSegment(sn3())== 'business-operations') {
-    ?>
-        <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/business_operations.css') ?>?ver=<?= style_version(); ?>">
-    <?php    
-           }
-        }
-    ?>
+   
+       
 
-     <?php   
-           if ($uri->getSegment(sn2())== 'pos') {
-    ?>
-        <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/pos.css') ?>?ver=<?= style_version(); ?>">
-    <?php     
-        }
-    ?>
+   
+<link rel="stylesheet" type="text/css" href="<?= base_url('public/css/pos.css') ?>?ver=<?= style_version(); ?>">
+<link rel="stylesheet" type="text/css" href="<?= base_url('public/css/appoinments.css') ?>?ver=<?= style_version(); ?>">
+<link rel="stylesheet" type="text/css" href="<?= base_url('public/css/rental.css') ?>?ver=<?= style_version(); ?>">
 
-    <?php   
-           if ($uri->getSegment(sn2())== 'appointments') {
-    ?>
-        <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/appoinments.css') ?>?ver=<?= style_version(); ?>">
-    <?php     
-        }
-    ?>
-
-    <?php   
-           if ($uri->getSegment(sn2())== 'rental') {
-    ?>
-        <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/rental.css') ?>?ver=<?= style_version(); ?>">
-    <?php     
-        }
-    ?>
 
     <link rel="stylesheet" href="<?= base_url('public') ?>/richtexteditor/rte_theme_default.css" />
     <script type="text/javascript" src="<?= base_url('public') ?>/richtexteditor/rte.js"></script>
@@ -107,10 +82,13 @@
 
 <?php 
    
-    $home_bg='home-bg';
-    if ($uri->getTotalSegments()>sn2()){
-        $home_bg='sub-bg';
-    }
+    $home_bg='sub-bg';
+    if (isset($page_name)) {
+        if ($page_name=='home') {
+            $home_bg='home-bg';
+        }
+        
+    } 
   ?> 
 <body class="app_body <?= $home_bg; ?>">
 <main>

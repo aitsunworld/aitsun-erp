@@ -15,7 +15,7 @@
                     <a href="<?= base_url('user_master'); ?>" class="href_loader">User Master</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <b class="page_heading text-dark">Permissions - <?= user_name($staff['id']); ?></b>
+                    <b class="page_heading text-dark">Permissions - <?= $staff['display_name']; ?></b>
                 </li>
             </ol>
         </nav>
@@ -76,36 +76,58 @@
 <!-- ////////////////////////// MAIN PAGE START ///////////////////////// -->
 <div class="sub_main_page_content">
     <div class="aitsun-row">
-
+        <div class="pb-3 d-flex">
+            <div class="me-3">
+                <img src="<?= base_url(); ?>/public/uploads/users/<?php if($staff['profile_pic'] != ''){echo $staff['profile_pic']; }else{ echo 'avatar-icon.png';} ?>" alt="Admin" class="rounded-circle p-1 bg-dark" width="110" height="110">
+            </div>
+           <div>
+               <h2><?= $staff['display_name']; ?></h2> 
+               <h6>Email: <?= $staff['email']; ?></h6> 
+               <h6>Phone: <?= $staff['phone']; ?></h6> 
+           </div>
+        </div>
         <div class="aitsun_table w-100 pt-0">
             
             <table id="staffs_table" class="erp_table no-wrap sortable">
              <thead>
-                <tr>
-                    <th class="sorticon">Module</th>
-                    <th class="sorticon">Permission name</th>
+                <tr> 
+                    <th class="sorticon" data-tableexport-display="none">Action</th>  
                     <th class="sorticon">Description</th>
-                    <th class="sorticon" data-tableexport-display="none">Action</th> 
+                    
                 </tr>
              
              </thead>
               <tbody>
                 <?php  $data_count=0; ?>
 
-                <?php foreach ($permission_lists as $pl) { $data_count++; ?>
-                  <tr>
-                    <td style="width:200px;text-transform: capitalize;"><?= $pl['module']; ?></td>
-                    <td style="width:200px;"><?= $pl['permission_heading']; ?></td>
-                    <td><?= $pl['description']; ?></td>
-                    <td style="width:100px;">
+                <?php 
+                    $temp_module='';
+                    foreach ($permission_lists as $pl) { $data_count++;  ?>
+                
+                <?php if ($temp_module!=$pl['module']): ?>
+                    <tr class="bg-dark">
+                        <td colspan="2" class="text-start text-white" style="text-transform: capitalize;">
+                            <?= $pl['module']; ?>
+                        </td>
+                    </tr>
+                <?php endif ?> 
 
-                         <div class="form-check form-switch text-center p-0" >
-                            <input type="checkbox" class="form-check-input is_permission_allowed" data-permi_url="<?= base_url() ?>/is_permission_allowed" data-user_id="<?= $staff['id']; ?>" data-permission_name="<?= $pl['permission_name']; ?>" style="margin-left: 0; float: unset;"  name="is_permission_allowed" value="1" <?= (is_allowed($staff['id'],$pl['permission_name']))?'checked':''; ?>> 
+                  <tr>
+                   <td style="width:100px;">
+
+                         <div class="form-check form-switch text-start p-0" >
+                            <input type="checkbox" class="form-check-input is_permission_allowed" data-permi_url="<?= base_url() ?>/is_permission_allowed" data-user_id="<?= $staff['id']; ?>" data-permission_name="<?= $pl['permission_name']; ?>" style="margin-left: 0; float: unset;"  name="is_permission_allowed" value="1" id="perm<?= $pl['id']; ?>" <?= (is_allowed($staff['id'],$pl['permission_name']))?'checked':''; ?>> 
+
+                            <label for="perm<?= $pl['id']; ?>"><?= $pl['permission_heading']; ?></label>
                         </div>
 
-                    </td>
+
+
+                    </td> 
+                    <td><?= $pl['description']; ?></td>
+                    
                   </tr>
-                <?php } ?>
+                <?php $temp_module=$pl['module']; }  ?>
                 <?php if ($data_count<1): ?>
                     <tr>
                         <td class="text-center" colspan="9">

@@ -64,7 +64,7 @@
 
     </div>
 
-    <a href="<?= base_url('customers/add') ?>" class="text-dark font-size-footer my-auto ms-2 href_loader"> <span class="">+ New party</span></a>
+    <a href="<?= base_url('customers/add') ?>" class=" btn-back font-size-footer my-auto ms-2 href_loader"> <span class="">+ New party</span></a>
 </div>
 <!-- ////////////////////////// TOOL BAR END ///////////////////////// -->
  

@@ -96,7 +96,7 @@
            
             <div> 
                 <span><?= $resubmit_form ?></span>
-                <div class="mt-4 mb-4">
+                <div class="mt-4 mb-4 pb-5">
                     <!-- Display resubmit form if necessary -->
                     <?php if ($count >= 4): ?>
                         <div class="col-xl-12 col-md-12 text-center d-inline-block">

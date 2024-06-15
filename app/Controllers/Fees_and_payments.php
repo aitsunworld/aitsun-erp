@@ -2906,7 +2906,7 @@ public function generate_invoices_for_class($fees_id='',$class_id='')
 		    		if (usertype($myid)=='staff' || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
 
 		    		$invoice_data=$InvoiceModel->where('id',$in_id)->first();
-		    		$payments=$PaymentsModel->where('company_id',company($myid))->where('deleted',0)->where('invoice_id',$invoice_data['id'])->findAll();
+		    		$payments=$PaymentsModel->where('deleted',0)->where('invoice_id',$invoice_data['id'])->findAll();
 		    		
 		    		$data=[
 		    			'title'=>'Payments | Aitsun ERP',
