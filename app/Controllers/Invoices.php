@@ -513,6 +513,56 @@ public function view_pdf($inid=0)
         );
         $data_string = json_encode($data);
         
+    }
+
+public function view_pdf_orginal($inid=0)
+    {
+        
+        $view_method='download';
+        $InvoiceModel=new InvoiceModel;
+        
+        if ($_GET) {
+            if (isset($_GET['method'])) {
+                if ($_GET['method']!=='download') {
+                    $view_method='view';
+                }else{
+                    $view_method='download';
+                }
+            }
+        } 
+        
+        $url = pdf_api_url();
+
+        $invoice_data=$InvoiceModel->where('id',$inid)->first();
+
+        $page_size='A4';
+        $orientation='portrait';
+
+        if (!empty($page_size)) {
+            $page_size=strtoupper(get_setting2($invoice_data['company_id'],'invoice_page_size')); 
+        }
+
+        if (!empty($page_size)) {
+            $orientation=get_setting2($invoice_data['company_id'],'invoice_orientation'); 
+        }
+
+        $filename="uknown file.pdf";
+        $cusname=user_name($invoice_data['customer']);
+        if ($invoice_data['alternate_name']!=''){
+            $cusname= $invoice_data['alternate_name'];
+        }
+        $filename=inventory_heading($invoice_data['company_id'],$invoice_data['invoice_type']).'-'.$cusname.'-'.inventory_prefix($invoice_data['company_id'],$invoice_data['invoice_type']).$invoice_data['serial_no'].'.pdf';
+
+        // Data to be sent in the POST request (in this example, JSON data)
+        $data = array(
+            'target_url' => base_url('invoices/get_invoice_pdf').'/'.$inid.'/view',
+            'file_name' => $filename,
+            'page_type' => $page_size,
+            'view_method'=>$view_method,
+            'scaling'=>get_setting2($invoice_data['company_id'],'pdf_scaling')
+        );
+        $data_string = json_encode($data);
+        
         // Initialize cURL session
         $curl = curl_init();
         
@@ -548,6 +598,7 @@ public function view_pdf($inid=0)
         // Close cURL session
         curl_close($curl);
     }
+
 
 public function get_invoice_pdf_old($cusval="",$type='view'){
         $session=session();

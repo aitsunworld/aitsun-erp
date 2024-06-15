@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://192.168.2.18/aitsun-erp/';
+    public string $baseURL = 'http://localhost/aitsun-erp/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
