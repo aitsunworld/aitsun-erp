@@ -601,6 +601,7 @@ class Appointments extends BaseController
 
     public function save_booking($booking_id=0){ 
         if ($this->request->getMethod() == 'post'){
+            $book_result=[];
             $myid=session()->get('id');
             $AppointmentsBookings= new AppointmentsBookings(); 
             $book_from='';
@@ -649,9 +650,7 @@ class Appointments extends BaseController
                $type_of_request='update';
             }else{
                 $resources_data['booking_no'] = booking_no(company($myid));
-            }
-            
-            $book_result=[];
+            } 
 
             $check_booking_availabilty=$this->check_booking_availabilty($resources_data,$type_of_request);
 

@@ -35,7 +35,7 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ['apanel_helper','auth_helper','language_helper','trial_balance_helper','analytics_helper','crm_helper','form','accounting_helper','profit_and_loss_helper','payroll_helper','version_helper','tax_helper','school_helper','barcode_helper','attendance_helper','special_report_helper','stock_helper','appointments_helper','menu_helper'];
+    protected $helpers = ['apanel_helper','auth_helper','language_helper','trial_balance_helper','analytics_helper','crm_helper','form','accounting_helper','profit_and_loss_helper','payroll_helper','version_helper','tax_helper','school_helper','barcode_helper','attendance_helper','special_report_helper','stock_helper','appointments_helper','menu_helper','share_helper'];
 
     /**
      * Constructor.

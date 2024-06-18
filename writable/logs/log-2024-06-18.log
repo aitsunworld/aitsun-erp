@@ -1,0 +1,61 @@
+CRITICAL - 2024-06-18 04:07:22 --> syntax error, unexpected token "if"
+in APPPATH\Views\header.php on line 29.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Appointments.php(139): view('header', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 04:07:37 --> syntax error, unexpected token "if"
+in APPPATH\Views\footer.php on line 8.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 3 APPPATH\Controllers\Appointments.php(141): view('footer')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->book_persons()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 04:08:14 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Appointments.php on line 708.
+ 1 APPPATH\Controllers\Appointments.php(708): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Appointments.php', 708)
+ 2 APPPATH\Controllers\Appointments.php(656): App\Controllers\Appointments->check_booking_availabilty([...], 'insert')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_booking('0')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 04:08:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Appointments.php on line 708.
+ 1 APPPATH\Controllers\Appointments.php(708): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Appointments.php', 708)
+ 2 APPPATH\Controllers\Appointments.php(656): App\Controllers\Appointments->check_booking_availabilty([...], 'insert')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_booking('0')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 04:10:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Appointments.php on line 690.
+ 1 APPPATH\Controllers\Appointments.php(690): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Appointments.php', 690)
+ 2 APPPATH\Controllers\Appointments.php(655): App\Controllers\Appointments->check_booking_availabilty([...], 'insert')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_booking('0')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 04:11:03 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Appointments.php on line 707.
+ 1 APPPATH\Controllers\Appointments.php(707): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Appointments.php', 707)
+ 2 APPPATH\Controllers\Appointments.php(655): App\Controllers\Appointments->check_booking_availabilty([...], 'insert')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->save_booking('0')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 07:09:58 --> Undefined variable $invoice_data
+in APPPATH\Views\aitsun_share\email_form.php on line 11.
+ 1 APPPATH\Views\aitsun_share\email_form.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invoice_data', 'APPPATH\\Views\\aitsun_share\\email_form.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\aitsun_share\\email_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_share/email_form', [], true)
+ 5 APPPATH\Controllers\Aitsun_share.php(46): view('aitsun_share/email_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_share->get_form()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_share))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -48,7 +48,8 @@ class Pos extends BaseController
             $data = [
                 'title' => 'POS - Aitsun ERP',
                 'user'=>$user,      
-                'all_registers'=>$all_registers
+                'all_registers'=>$all_registers,
+                'page_name'=>'pos'
             ];
 
             echo view('header',$data);
@@ -144,7 +145,8 @@ class Pos extends BaseController
                     'in_data'=>null,
                     'inid'=>0,
                     'invoice_type'=>$invoice_type,
-                    'm_invoices'=>[]
+                    'm_invoices'=>[],
+                    'page_name'=>'pos'
 
                 ];
      
@@ -233,7 +235,8 @@ class Pos extends BaseController
                     'in_data'=>$invoice_data,
                     'inid'=>$invoice_id,
                     'invoice_type'=>$invoice_type,
-                    'm_invoices'=>$multyiple
+                    'm_invoices'=>$multyiple, 
+                    'page_name'=>'pos'
 
                 ];
      
@@ -298,6 +301,7 @@ class Pos extends BaseController
                         'user_id'=>$myid,
                         'products'=>[], 
                         'session_id'=>$insert_id,
+                        'page_name'=>'pos'
                     ];
 
                     if ($this->setPosSession(strip_tags(htmlentities(trim($this->request->getVar('register_id')))),$set_data)) {
@@ -447,7 +451,8 @@ class Pos extends BaseController
                 'title' => 'POS - Orders',
                 'user'=>$user,
                 'all_invoices'=>$all_invoices, 
-                'view_type'=>'sales'      
+                'view_type'=>'sales', 
+                'page_name'=>'pos'    
             ];
 
             echo view('header',$data);
@@ -484,7 +489,8 @@ class Pos extends BaseController
             $data = [
                 'title' => 'POS - Floors & Tables',
                 'user'=>$user, 
-                'all_floors'=>$all_floors
+                'all_floors'=>$all_floors, 
+                'page_name'=>'pos'
             ];
 
             echo view('header',$data);
@@ -512,7 +518,8 @@ class Pos extends BaseController
                     'title' => ($floor_id<1)?'Add floor':'Edit floor',
                     'user' => $user,
                     'floor' => null, 
-                    'floor_id'=>$floor_id
+                    'floor_id'=>$floor_id, 
+                    'page_name'=>'pos'
                 ];
                 
                 if ($floor_id) {

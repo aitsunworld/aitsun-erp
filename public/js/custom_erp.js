@@ -1,15 +1,29 @@
 $(document).ready(function(){
 
-    //  var currentpageUrl = window.location.href;
+    $(document).on('click','.aitsun-share',function(){
+        var share_button=$(this);
+        var share_type=$(this).data('type');
+        var to=$(this).data('to');
+        var template=$(this).data('template');
+        
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
 
-    // $('a').each(function() {
-    //     if (this.href == currentpageUrl) {
-    //         if (this.href!='') {
-    //             $(this).addClass('active');
-    //         }
-            
-    //     }
-    // });
+        $.ajax({
+            type: 'POST',
+            url: base_url()+'/aitsun_share/get_form',
+            data:{
+                to:to,
+                share_type:share_type,
+                template:template, 
+                [csrfName]: csrfHash
+            },
+            success: function(response) { 
+                $("#share-content").html(response);
+                $("#share_modal").modal('show');
+            }
+        }); 
+    });
 
     
      $(document).on('blur','.duration_input',function() {

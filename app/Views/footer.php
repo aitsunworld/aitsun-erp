@@ -1,7 +1,28 @@
+
+
+
  
 
 </main>
         
+
+<!-- /////////////////////////////////////////////////////email///////////////////////////////////////// -->
+<div class="modal aitsun-modal fade" id="share_modal"  role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content" id="share-content">
+             
+        </div>
+    </div>
+</div>
+<!-- /////////////////////////////////////////////////////End email///////////////////////////////////////// -->
+
+<?php 
+    $name_of_page='';
+    if (isset($page_name)) {
+        $name_of_page=$page_name; 
+    } 
+  ?> 
+
 
 
 
@@ -436,8 +457,9 @@
 
  
  
- 
-<script src="<?= base_url('public'); ?>/js/pos_index.js?v=<?= script_version(); ?>"></script>
+<?php if ($name_of_page=='pos'): ?>
+   <script src="<?= base_url('public'); ?>/js/pos_index.js?v=<?= script_version(); ?>"></script>
+<?php endif ?>
 
 
 

@@ -136,11 +136,41 @@
 
 
     <!-- export pdf-->
-<?php if ($invoice_data['deleted']==0): ?>
+
+
+    <?php if ($invoice_data['bill_from']=='rental' &&  $invoice_data['invoice_type']!='sales'): ?>
+        <?php if ($invoice_data['rental_status']==0): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="1" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-check-circle"></i> 
+                <span class="hidden-xs">Confirm</span>
+            </a>
+        <?php elseif($invoice_data['rental_status']==1): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="2" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-bus"></i> 
+                <span class="hidden-xs">Pick Up</span>
+            </a>
+        <?php elseif($invoice_data['rental_status']==2): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="3" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-reply"></i> 
+                <span class="hidden-xs">Return</span>
+            </a>
+        <?php endif ?>
+    <?php endif ?>
+
+
+    <?php if ($invoice_data['deleted']==0): ?>
+      <a class="text-dark font-size-footer ms-2 aitsun-share" data-type="email" data-to="<?= user_email($invoice_data['customer']) ?>" data-template="invoice_share"><i class="bx bx-envelope"></i> Email</a>
+    <?php endif ?>
+
+    </div>
+
+
+    <div>
+        <?php if ($invoice_data['deleted']==0): ?>
     <!-- payment-->
     <?php if ($invoice_data['invoice_type']=='sales' || $invoice_data['invoice_type']=='proforma_invoice' || $invoice_data['invoice_type']=='purchase' || $invoice_data['invoice_type']=='sales_return' || $invoice_data['invoice_type']=='purchase_return'): ?>
             <?php if ($invoice_data['deleted']!=4): ?>
-              <a href="<?php echo base_url('fees_and_payments/payments') ?>/<?= $invoice_id ?>" class="text-dark font-size-footer me-2 href_loader ">
+              <a href="<?php echo base_url('fees_and_payments/payments') ?>/<?= $invoice_id ?>" class="btn-sm btn-back font-size-footer me-2 href_loader ">
                   <i class="bx bx-money"></i> 
                   <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Receipt / Payment'); ?></span>
               </a>
@@ -176,11 +206,11 @@
     <?php endif; ?> 
 
         <?php if ($invoice_data['deleted']!=4): ?>
-             <a href="<?php echo base_url($editex.'/edit/') ?>/<?= $invoice_id ?>" class="text-dark font-size-footer me-2 href_loader">
+             <a href="<?php echo base_url($editex.'/edit/') ?>/<?= $invoice_id ?>" class="text-primary font-size-footer me-2 href_loader">
                 <i class="bx bx-pencil"></i> 
                 <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Edit'); ?></span>
             </a>
-            <a href="<?php echo base_url($editex.'/copy/') ?>/<?= $invoice_id ?>" class="text-dark font-size-footer me-2 href_loader">
+            <a href="<?php echo base_url($editex.'/copy/') ?>/<?= $invoice_id ?>" class="text-info font-size-footer me-2 href_loader">
                 <i class="bx bx-copy"></i> 
                 <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Copy'); ?></span>
             </a>
@@ -190,63 +220,16 @@
 
   
            
-        <a data-url="<?php echo base_url() ?>/invoices/delete/<?= $invoice_id ?>" class="delete text-dark font-size-footer me-2">
+        <a data-url="<?php echo base_url() ?>/invoices/delete/<?= $invoice_id ?>" class="delete text-danger font-size-footer me-2">
             <i class="bx bx-trash-alt"></i> 
             <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Delete'); ?></span>
-        </a>
-
-        <?php if ($invoice_data['deleted']==4): ?>
-            <a data-url="<?php echo base_url() ?>/invoices/restore/<?= $invoice_id ?>" class="d-none text-dark font-size-footer me-2  restore">
-                <i class="bx bx-reset"></i> 
-                <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Restore'); ?></span>
-            </a>
-
-        <?php else: ?>
-            <a data-url="<?= base_url() ?>/invoices/cancel/<?= $invoice_id ?>" class="d-none text-dark font-size-footer me-2 cancel" >
-                <i class="bx bx-eraser"></i> 
-                <span class="hidden-xs"><?= langg(get_setting(company($user['id']),'language'),'Cancel'); ?></span>
-            </a>
-        <?php endif ?>
+        </a> 
         
 
     <?php endif ?>
     <?php endif ?>
-
-    <?php if ($invoice_data['bill_from']=='rental' &&  $invoice_data['invoice_type']!='sales'): ?>
-        <?php if ($invoice_data['rental_status']==0): ?>
-            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="1" data-invoice_id="<?= $invoice_id ?>">
-                <i class="bx bx-check-circle"></i> 
-                <span class="hidden-xs">Confirm</span>
-            </a>
-        <?php elseif($invoice_data['rental_status']==1): ?>
-            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="2" data-invoice_id="<?= $invoice_id ?>">
-                <i class="bx bx-bus"></i> 
-                <span class="hidden-xs">Pick Up</span>
-            </a>
-        <?php elseif($invoice_data['rental_status']==2): ?>
-            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="3" data-invoice_id="<?= $invoice_id ?>">
-                <i class="bx bx-reply"></i> 
-                <span class="hidden-xs">Return</span>
-            </a>
-        <?php endif ?>
-    <?php endif ?>
-
     </div>
-    <?php if ($invoice_data['deleted']==0): ?>
-      <a type="button" class="text-dark font-size-footer ms-2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-share-alt"></i> Share</a>
-
-        <ul class="dropdown-menu aitsun-dropdown-menu" style="margin: 0px;">
-            <li>
-                <a class="mr-4 dropdown-item" data-bs-toggle="modal" data-bs-target="#email<?= $invoice_data['id']; ?>" href="#">
-                    <i class="bx bx-mail-send"></i>
-                    Email
-                </a>
-            </li>
-            <li>
-                <a class="ml-4 dropdown-item whatsapp_share" data-invoice_id="<?= $invoice_data['id'];?>"><i class="lni lni-whatsapp"></i> WhatsApp</a>
-            </li>
-        </ul>
-        <?php endif ?>
+    
      
 </div>
 <!-- ////////////////////////// TOOL BAR END ///////////////////////// -->

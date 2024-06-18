@@ -333,16 +333,10 @@ $routes->post('/fees_and_payments/add_item_price', 'Fees_and_payments::add_item_
 $routes->post('/fees_and_payments/add_transport_items', 'Fees_and_payments::add_transport_items');
 $routes->post('/fees_and_payments/add_fees_type', 'Fees_and_payments::add_fees_type');
 $routes->post('/fees_and_payments/edit_fees_name/(:any)', 'Fees_and_payments::edit_fees_name/$1');
-
-
 $routes->post('/fees_and_payments/edit_items/(:any)', 'Fees_and_payments::edit_items/$1');
 $routes->get('/fees_and_payments/details/(:any)', 'Fees_and_payments::details/$1');
 $routes->post('/fees_and_payments/generate_invoices/(:any)/(:any)', 'Fees_and_payments::generate_invoices/$1/$2');
-
 $routes->post('/fees_and_payments/generate_invoices_custom/(:any)/(:any)', 'Fees_and_payments::generate_invoices_custom/$1/$2');
-
-
-
 $routes->post('/fees_and_payments/generate_invoices_for_class/(:any)/(:any)', 'Fees_and_payments::generate_invoices_for_class/$1/$2');
 
 
@@ -996,6 +990,10 @@ $routes->get('/sleep_mode', 'Calendar::sleep_mode');
 
 //sleep
 $routes->get('/reminder', 'Reminders::index');
+
+
+//Share
+$routes->post('aitsun_share/get_form', 'Aitsun_share::get_form');
 
 
 ////// REST API ////

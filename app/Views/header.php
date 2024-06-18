@@ -24,9 +24,17 @@
          ?>
    
        
+<?php 
+    $name_of_page='';
+    if (isset($page_name)) {
+        $name_of_page=$page_name; 
+    } 
+  ?> 
 
-   
-<link rel="stylesheet" type="text/css" href="<?= base_url('public/css/pos.css') ?>?ver=<?= style_version(); ?>">
+<?php if ($name_of_page=='pos'): ?>
+    <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/pos.css') ?>?ver=<?= style_version(); ?>">
+<?php endif ?>
+
 <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/appoinments.css') ?>?ver=<?= style_version(); ?>">
 <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/rental.css') ?>?ver=<?= style_version(); ?>">
 
