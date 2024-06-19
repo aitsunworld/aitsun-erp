@@ -82,6 +82,7 @@ use App\Models\PosRegisters as PosRegisters;
 use App\Models\PosTables as PosTables;
 use App\Models\PermissionsModel as PermissionsModel;
 use App\Models\Permissionlist as Permissionlist;
+use App\Models\RentalLogsModel as RentalLogsModel;
 
 
 function style_version(){
@@ -149,6 +150,25 @@ function site_key(){
     }else{
         return '6LeLFIQlAAAAAF2nc9eyEn0iYWhZUJm4qKXLeYGm';
     }  
+}
+
+
+function total_picked_quantity($invoice_id,$product_id,$log_type){
+    $RentalLogsModel=new RentalLogsModel;
+    $res=0;
+    $gettotal=$RentalLogsModel->select('SUM(quantity) as totalqty')->where('invoice_id',$invoice_id)->where('item_id',$product_id)->where('log_type',$log_type)->where('deleted',0)->first();
+    if ($gettotal) {
+        if ($gettotal['totalqty']>0) {
+            $res=$gettotal['totalqty'];
+        } 
+    }
+    return $res;
+}
+
+function all_rental_logs($invoice_id){
+    $RentalLogsModel=new RentalLogsModel;
+    $alllogs=$RentalLogsModel->where('invoice_id',$invoice_id)->where('deleted',0)->orderBy('id','desc')->findAll();
+    return $alllogs;
 }
 
 function transpose($array) {

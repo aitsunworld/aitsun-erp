@@ -1,5 +1,90 @@
 $(document).ready(function(){
 
+    $(document).on('click','.pickup_status',function(){
+        var pickup_button=$(this);
+        var invoice_id=$(this).data('invoice_id');
+        var status=$(this).data('status');
+        var action=$(this).data('action');  
+
+        $.ajax({
+            type: 'GET',
+            url: base_url()+'/rental/get_rental_items/'+invoice_id+'/'+action+'/'+status,
+            success: function(response) { 
+                $("#aitsun-content").html(response);
+                $("#aitsun_modal").modal('show');
+            }
+        }); 
+    });
+    
+
+    $(document).on('click','.validate_rental_items',function(){
+        var this_button=$(this); 
+        var action=$('#action').val(); 
+        
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+        
+        var is_sub=true;
+        var total_picked=0;
+        $('.picked_qty').each(function() {
+            var picked_qty = $(this).val(); // Assuming picked_qty is stored as a data attribute
+            var row_id=$(this).data('row_id');
+
+            var total_picked_quantity=$('#total_picked_quantity'+row_id).val();
+            var total_returned_quantity=$('#total_returned_quantity'+row_id).val();
+            var in_quantity=$('#in_quantity'+row_id).val();
+            var product_name=$('#product_name'+row_id).val();
+
+
+            if (picked_qty>0) {
+
+                if (action=='pickup') {
+                    if ((parseFloat(total_picked_quantity)+parseFloat(picked_qty))>in_quantity) {
+                        is_sub=false; 
+                        show_failed_msg('error','Quantity of '+product_name+' should be less than or equal to '+in_quantity);
+                    }
+                    total_picked+=parseFloat(picked_qty);
+                }else{
+                    if (picked_qty>parseFloat(total_picked_quantity-total_returned_quantity)) {
+                        is_sub=false; 
+                        show_failed_msg('error','Returning quantity should be less than or equal to picked quantity');
+                    }
+                    total_picked+=parseFloat(picked_qty);
+                }
+                
+            }
+        });
+
+        if (total_picked>0) {
+
+        }else{
+            is_sub=false; 
+            show_failed_msg('error','Quantity should be greater than 0.');
+        }
+        
+        if (is_sub) {
+            $.ajax({
+                type: "POST", 
+                url: $('#validate_rental_items_form').attr('action'),
+                data: $('#validate_rental_items_form').serialize(),
+                beforeSend:function(){  
+                  $(this_button).html('<span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span> Validating...');  
+               },
+                success: function(response) { 
+                    if ($.trim(response)==1) {
+                        show_success_msg('success','Rental data updated!');
+                        setTimeout(function(){location.reload();},1500);
+                    }else{
+                        show_success_msg('success','Try again!'); 
+                    }
+                }
+            });
+        }
+
+        
+    });
+
     $(document).on('click','.aitsun-share',function(){
         var share_button=$(this);
         var share_type=$(this).data('type');
@@ -19,8 +104,8 @@ $(document).ready(function(){
                 [csrfName]: csrfHash
             },
             success: function(response) { 
-                $("#share-content").html(response);
-                $("#share_modal").modal('show');
+                $("#aitsun-content").html(response);
+                $("#aitsun_modal").modal('show');
             }
         }); 
     });

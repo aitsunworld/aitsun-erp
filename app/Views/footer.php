@@ -7,9 +7,9 @@
         
 
 <!-- /////////////////////////////////////////////////////email///////////////////////////////////////// -->
-<div class="modal aitsun-modal fade" id="share_modal"  role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content" id="share-content">
+<div class="modal aitsun-modal fade" id="aitsun_modal"  role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content" id="aitsun-content">
              
         </div>
     </div>

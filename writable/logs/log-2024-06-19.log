@@ -1,0 +1,306 @@
+CRITICAL - 2024-06-19 04:15:02 --> Undefined variable $to
+in APPPATH\Views\rental\rental_items.php on line 11.
+ 1 APPPATH\Views\rental\rental_items.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $to', 'APPPATH\\Views\\rental\\rental_items.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(70): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:15:03 --> Undefined variable $to
+in APPPATH\Views\rental\rental_items.php on line 11.
+ 1 APPPATH\Views\rental\rental_items.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $to', 'APPPATH\\Views\\rental\\rental_items.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(70): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:15:41 --> Undefined variable $to
+in APPPATH\Views\rental\rental_items.php on line 11.
+ 1 APPPATH\Views\rental\rental_items.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $to', 'APPPATH\\Views\\rental\\rental_items.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(70): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:15:45 --> Undefined variable $to
+in APPPATH\Views\rental\rental_items.php on line 11.
+ 1 APPPATH\Views\rental\rental_items.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $to', 'APPPATH\\Views\\rental\\rental_items.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(70): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:22:14 --> Undefined variable $items
+in APPPATH\Views\rental\rental_items.php on line 19.
+ 1 APPPATH\Views\rental\rental_items.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $items', 'APPPATH\\Views\\rental\\rental_items.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(76): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:22:16 --> Undefined variable $items
+in APPPATH\Views\rental\rental_items.php on line 19.
+ 1 APPPATH\Views\rental\rental_items.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $items', 'APPPATH\\Views\\rental\\rental_items.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(76): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:22:18 --> Undefined variable $items
+in APPPATH\Views\rental\rental_items.php on line 19.
+ 1 APPPATH\Views\rental\rental_items.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $items', 'APPPATH\\Views\\rental\\rental_items.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(76): view('rental/rental_items')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:22:32 --> Undefined array key "product_name"
+in APPPATH\Views\rental\rental_items.php on line 21.
+ 1 APPPATH\Views\rental\rental_items.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Views\\rental\\rental_items.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_items', [], true)
+ 5 APPPATH\Controllers\Rental.php(76): view('rental/rental_items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->get_rental_items('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:57:27 --> Undefined variable $inid
+in APPPATH\Controllers\Rental.php on line 117.
+ 1 APPPATH\Controllers\Rental.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $inid', 'APPPATH\\Controllers\\Rental.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:58:07 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Rental.php(118): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:58:08 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Rental.php(118): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 05:54:50 --> Undefined array key "product_name"
+in APPPATH\Controllers\Rental.php on line 109.
+ 1 APPPATH\Controllers\Rental.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Rental.php', 109)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 05:55:21 --> Undefined array key "product_name"
+in APPPATH\Controllers\Rental.php on line 110.
+ 1 APPPATH\Controllers\Rental.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Rental.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 05:57:07 --> Undefined array key "product_name"
+in APPPATH\Controllers\Rental.php on line 110.
+ 1 APPPATH\Controllers\Rental.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Rental.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 05:57:36 --> Undefined array key "product_name"
+in APPPATH\Controllers\Rental.php on line 110.
+ 1 APPPATH\Controllers\Rental.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Rental.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->save_rental_items('pickup')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:22 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:23 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:24 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:24 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:25 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:25 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 06:13:29 --> syntax error, unexpected single-quoted string "user_id", expecting "]"
+in APPPATH\Controllers\Rental.php on line 128.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Rental.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Rental')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Rental')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Rental', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 09:02:47 --> Too few arguments to function all_rental_logs(), 1 passed in C:\xampp\htdocs\aitsun-erp\app\Views\invoices\invoice_details.php on line 362 and exactly 3 expected
+in APPPATH\Helpers\apanel_helper.php on line 168.
+ 1 APPPATH\Views\invoices\invoice_details.php(362): all_rental_logs('71')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 09:03:02 --> Too few arguments to function all_rental_logs(), 1 passed in C:\xampp\htdocs\aitsun-erp\app\Views\invoices\invoice_details.php on line 362 and exactly 2 expected
+in APPPATH\Helpers\apanel_helper.php on line 168.
+ 1 APPPATH\Views\invoices\invoice_details.php(362): all_rental_logs('71')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-19 09:04:00 --> mysqli_sql_exception: Unknown column 'deleted' in 'where clause' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(170): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\invoice_details.php(362): all_rental_logs('71')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/invoic...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(210): view('invoices/invoic...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->details('71')
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-06-19 09:04:00 --> Unknown column 'deleted' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `rental_logs`
+WHERE `invoice_id` = :invoice_id:
+AND `deleted` = :deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(170): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\invoice_details.php(362): all_rental_logs('71')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 9 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('71')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 09:04:30 --> Call to undefined function product_data()
+in APPPATH\Views\invoices\invoice_details.php on line 364.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 4 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('71')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 09:33:29 --> Undefined array key "in_unit"
+in APPPATH\Views\invoices\invoice_details.php on line 363.
+ 1 APPPATH\Views\invoices\invoice_details.php(363): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "in_unit"', 'APPPATH\\Views\\invoices\\invoice_details.php', 363)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('71')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 11:11:10 --> Undefined variable $action
+in APPPATH\Views\invoices\invoice_details.php on line 376.
+ 1 APPPATH\Views\invoices\invoice_details.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $action', 'APPPATH\\Views\\invoices\\invoice_details.php', 376)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('74')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 11:11:30 --> Undefined variable $action
+in APPPATH\Views\invoices\invoice_details.php on line 376.
+ 1 APPPATH\Views\invoices\invoice_details.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $action', 'APPPATH\\Views\\invoices\\invoice_details.php', 376)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('74')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -136,26 +136,7 @@
 
 
     <!-- export pdf-->
-
-
-    <?php if ($invoice_data['bill_from']=='rental' &&  $invoice_data['invoice_type']!='sales'): ?>
-        <?php if ($invoice_data['rental_status']==0): ?>
-            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="1" data-invoice_id="<?= $invoice_id ?>">
-                <i class="bx bx-check-circle"></i> 
-                <span class="hidden-xs">Confirm</span>
-            </a>
-        <?php elseif($invoice_data['rental_status']==1): ?>
-            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="2" data-invoice_id="<?= $invoice_id ?>">
-                <i class="bx bx-bus"></i> 
-                <span class="hidden-xs">Pick Up</span>
-            </a>
-        <?php elseif($invoice_data['rental_status']==2): ?>
-            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" data-status="3" data-invoice_id="<?= $invoice_id ?>">
-                <i class="bx bx-reply"></i> 
-                <span class="hidden-xs">Return</span>
-            </a>
-        <?php endif ?>
-    <?php endif ?>
+ 
 
 
     <?php if ($invoice_data['deleted']==0): ?>
@@ -166,6 +147,29 @@
 
 
     <div>
+
+    <?php if ($invoice_data['bill_from']=='rental' &&  $invoice_data['invoice_type']!='sales'): ?>
+        <?php if ($invoice_data['rental_status']==0): ?>
+            <a class=" font-size-footer me-2  rental_status tob_bar_status_btn" style="background: purple;color: white;" data-status="1" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-check-circle"></i> 
+                <span class="hidden-xs">Confirm</span>
+            </a>
+        <?php endif ?>
+       
+        <?php if ($invoice_data['rental_status']!=0): ?>
+            <a class=" font-size-footer me-2  pickup_status bg-warning text-dark tob_bar_status_btn" data-status="2" data-action="pickup" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-bus"></i> 
+                <span class="hidden-xs">Pick Up</span>
+            </a>
+        
+            <a class=" font-size-footer me-2  pickup_status bg-success text-white tob_bar_status_btn" data-status="3" data-action="return" data-invoice_id="<?= $invoice_id ?>">
+                <i class="bx bx-reply"></i> 
+                <span class="hidden-xs">Return</span>
+            </a>
+        <?php endif ?>
+        
+    <?php endif ?>
+
         <?php if ($invoice_data['deleted']==0): ?>
     <!-- payment-->
     <?php if ($invoice_data['invoice_type']=='sales' || $invoice_data['invoice_type']=='proforma_invoice' || $invoice_data['invoice_type']=='purchase' || $invoice_data['invoice_type']=='sales_return' || $invoice_data['invoice_type']=='purchase_return'): ?>
@@ -321,49 +325,91 @@ Thanks and Regards,
      
 
 <!-- ////////////////////////// MAIN PAGE START ///////////////////////// -->
-<div class="sub_main_page_content overflow-scroll bg-invoice">
-    <div class="aitsun-row justify-content-center ">
-
-
-    
+<div class="d-flex">
+    <div class="sub_main_page_content overflow-scroll bg-invoice"> 
         
-        <div class="invoice_card paper_shadow" >
-            <div class="card-body" >
-                <div id="">
-                   <div class=" ">
-                        <!-- <iframe src="<= base_url('invoices/get_invoice_pdf'); ?>/<?= $invoice_id ?>" class="erp_iframe"></iframe> -->
+            <div class="aitsun-row w-100 justify-content-center ">
+                <div class="invoice_card paper_shadow" >
+                    <div class="card-body" >
+                        <div id="">
+                           <div class=" ">  
+                                <div id="pdfthis" class="pdfthis"> 
+                                   <iframe class="aitsun-embed" id="aitsun-embed" src="<?= base_url('invoices/get_invoice_pdf'); ?>/<?= $invoice_id ?>/view#toolbar=0&navpanes=0&scrollbar=0" width="900" height="600"></iframe>
+                          
+                                </div>
+                                <div id="pdfthermalthis" class="rounded-3 py-3"></div>
+                                <div id="editor"></div>
+                           </div>
 
 
 
-                        <div id="pdfthis" class="pdfthis">
-                         <iframe class="aitsun-embed" id="aitsun-embed"
-src="<?= base_url('invoices/get_invoice_pdf'); ?>/<?= $invoice_id ?>/view#toolbar=0&navpanes=0&scrollbar=0" width="900" height="600"/></iframe>
+                            <?php if (!empty($invoice_data['private_notes'])): ?>
+                              <div class="card">
+                                  <div class="card-body">
+                                    <h6><?= langg(get_setting(company($user['id']),'language'),'Private Note'); ?></h6>
+                                      <p><?= $invoice_data['private_notes']; ?></p>
+                                  </div>
+                              </div>
+                            <?php endif ?>
+
                         </div>
-                        <div id="pdfthermalthis" class="rounded-3 py-3"></div>
-                        <div id="editor"></div>
-                   </div>
-
-
-
-                    <?php if (!empty($invoice_data['private_notes'])): ?>
-                      <div class="card">
-                          <div class="card-body">
-                            <h6><?= langg(get_setting(company($user['id']),'language'),'Private Note'); ?></h6>
-                              <p><?= $invoice_data['private_notes']; ?></p>
-                          </div>
-                      </div>
-                    <?php endif ?>
-
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </div>
+ 
 </div>
+
+<?php if ($invoice_data['bill_from']=='rental'): ?>
+            <div class="rental_logs">
+
+                <div>
+                    <h6 class="mb-1 text-aitsun-red">Items</h6>
+                     <?php 
+                     $isl=0;
+                        foreach (invoice_items_array($invoice_data['id']) as $ii): 
+                        $isl++;
+                        $productid=$ii['product_id']; 
+                        $in_unit=$ii['in_unit'];  
+                        $in_quantity=$ii['quantity'];
+     
+                        $total_picked_quantity=total_picked_quantity($invoice_id,$ii['product_id'],'pickup');
+                        $total_returned_quantity=total_picked_quantity($invoice_id,$ii['product_id'],'return');
+
+                ?> 
+                    <div class="rent_item_card">
+                        <div><b style="font-weight: 700;"><?= $isl ?>. <?= $ii['product'] ; ?></b></div>
+                        <div>Total: <b style="font-weight: 700;" class="text-dark"><?= $ii['quantity']; ?> <?= unit_name($ii['in_unit']); ?></b></div>
+                        <div>Picked: <b style="font-weight: 700;" class="text-warning"><?= $total_picked_quantity ?> <?= unit_name($ii['in_unit']); ?></b></div>
+                        <div>Returned: <b style="font-weight: 700;" class="text-success"><?= $total_returned_quantity ?> <?= unit_name($ii['in_unit']); ?></b></div> 
+ 
+                    </div>
+                    
+                <?php endforeach ?> 
+                </div>
+                <hr>
+                <h6 class="mt-2 text-aitsun-red">Rental activities</h6>
+                <ul>
+                    <?php foreach (all_rental_logs($invoice_data['id']) as $ld): ?>  
+                    <li class="mb-1 d-flex">
+                        <div class="my-auto me-2">
+                            <i style="font-size: 26px;" class="bx bx-<?= ($ld['log_type']=='pickup')?'bus text-warning':'reply text-success'; ?>"></i>
+                        </div> 
+                        <div>
+                            <small class="log_date">
+                                <?= get_date_format($ld['datetime'],'d M Y h:i A'); ?> - <?=  user_name($ld['user_id']); ?>
+                            </small>
+                            <p class="mb-1">
+                               <b><?= $ld['quantity'] ?> <?= unit_name($ld['in_unit']) ?></b> <?= get_products_data($ld['item_id'],'product_name') ?> is <?= ($ld['log_type']=='pickup')?'picked up.':'returned.'; ?>
+                            </p>
+                        </div>
+                    </li>
+                    <?php endforeach ?>
+                </ul>
+            </div>
+            <?php endif ?>
 <!-- ////////////////////////// MAIN PAGE END ///////////////////////// -->
 
-
+</div>
 
 <!-- ////////////////////////// PAGE FOOTER END ///////////////////////// -->
 <div class="sub_footer_bar d-flex justify-content-between">

@@ -117,8 +117,7 @@
                 <thead>
                     <tr>
                         <th class="sorticon">No.</th>
-                        <th class="sorticon">Party</th>
-                        <th class="sorticon">Type</th>
+                        <th class="sorticon">Party</th> 
                         <th class="sorticon">Amount</th> 
                         <th class="sorticon">Paid</th>
                         <th class="sorticon">Due</th>
@@ -158,10 +157,7 @@
                                     <?php endif ?>
 
                                   </a>
-                            </td>
-                            <td>
-                                <?= full_invoice_type($di['invoice_type']) ?>
-                            </td>
+                            </td> 
                             <td class="text-end">
                                 <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['total'],get_setting(company($user['id']),'round_of_value')); ?> 
 

@@ -85,7 +85,9 @@ $routes->get('/appointments/reports', 'Appointments::reports');
 $routes->post('/appointments/update_resource_img/(:any)', 'Appointments::update_resource_img/$1');
  
 //rental management 
-$routes->get('/rental', 'Rental::index');
+$routes->get('/rental', 'Rental::index'); 
+$routes->get('/rental/get_rental_items/(:any)/(:any)/(:any)', 'Rental::get_rental_items/$1/$2/$3');
+$routes->post('/rental/save_rental_items/(:any)', 'Rental::save_rental_items/$1');
 
 ////////// Parties /////////////
 $routes->get('/customers', 'Customers::index'); 
