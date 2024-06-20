@@ -361,9 +361,25 @@ Thanks and Regards,
 
 <?php if ($invoice_data['bill_from']=='rental'): ?>
             <div class="rental_logs">
-
+              
                 <div>
-                    <h6 class="mb-1 text-aitsun-red">Items</h6>
+                    <div class="d-flex mb-2 justify-content-between">
+                        <h6 class="my-auto text-aitsun-red">Items</h6> 
+                        <div class="d-flex my-auto">
+                            <span class="my-auto me-2">Rental status:</span>
+                            <?php if ($invoice_data['rental_status']==0): ?> 
+                                <span class="my-auto badge bg-light text-dark">Quotation</span>
+                            <?php elseif ($invoice_data['rental_status']==1): ?>
+                                <span class="my-auto badge bg-primary text-white">Reserved</span>
+                            <?php elseif ($invoice_data['rental_status']==2): ?>
+                                <span class="my-auto badge bg-warning text-dark">Picked Up</span>
+                            <?php elseif ($invoice_data['rental_status']==3): ?>
+                                <span class="my-auto badge bg-success text-white">Returned</span>
+                            <?php else: ?>
+                                -
+                            <?php endif; ?> 
+                        </div>
+                    </div>
                      <?php 
                      $isl=0;
                         foreach (invoice_items_array($invoice_data['id']) as $ii): 

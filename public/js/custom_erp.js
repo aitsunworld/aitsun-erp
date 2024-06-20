@@ -70,7 +70,7 @@ $(document).ready(function(){
                 data: $('#validate_rental_items_form').serialize(),
                 beforeSend:function(){  
                   $(this_button).html('<span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span> Validating...');  
-               },
+                },
                 success: function(response) { 
                     if ($.trim(response)==1) {
                         show_success_msg('success','Rental data updated!');

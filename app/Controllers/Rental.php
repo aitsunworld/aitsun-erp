@@ -152,11 +152,21 @@ class Rental extends BaseController
                     $InvoiceitemsModel->save($in_item);
                 }
 
-                // $in_data=[ 
-                //     'rental_status'=>$final_rental_status,  
-                // ]; 
+                if (total_picked_quantity_of_invoice($inid,'pickup')>=total_actual_quantity_of_invoice($inid)) {
+                    $in_data=[ 
+                        'rental_status'=>2,  
+                    ]; 
 
-                // $in_ins=$InvoiceModel->update($inid,$in_data);
+                    $in_ins=$InvoiceModel->update($inid,$in_data);
+                }
+
+                if (total_picked_quantity_of_invoice($inid,'return')>=total_actual_quantity_of_invoice($inid)) {
+                    $in_data=[ 
+                        'rental_status'=>3,  
+                    ]; 
+
+                    $in_ins=$InvoiceModel->update($inid,$in_data);
+                }
                  
                 $in_ins=1;
                 if ($in_ins) {

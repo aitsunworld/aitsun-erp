@@ -113,7 +113,8 @@
                     </a> 
 
                 </div>
-            <table id="rental_table" class=" erp_table sortable">
+                <div class="table-responsive"> 
+            <table id="rental_table" class=" erp_table sortable no-wrap">
                 <thead>
                     <tr>
                         <th class="sorticon">No.</th>
@@ -121,10 +122,14 @@
                         <th class="sorticon">Amount</th> 
                         <th class="sorticon">Paid</th>
                         <th class="sorticon">Due</th>
+                        <th class="sorticon text-center">Items</th>  
+                        <th class="sorticon text-center">Picked</th>  
+                        <th class="sorticon text-center">Returned</th>
+                        <th class="sorticon">Status</th>  
                         <th class="sorticon text-center">Rental date</th>  
                         <th class="sorticon text-center">Duration</th>  
                         <th class="sorticon text-center">Bill</th>  
-                        <th class="sorticon">Status</th> 
+                         
                     </tr>
                 </thead>
                 <tbody>
@@ -189,6 +194,22 @@
 
                              
                             </td>
+                            <td class="text-center"><?= total_actual_quantity_of_invoice($di['id']) ?></td>
+                            <td class="text-center"><b class="text-warning"><?= total_picked_quantity_of_invoice($di['id'],'pickup') ?></b></td>
+                            <td class="text-center"><b class="text-success"><?= total_picked_quantity_of_invoice($di['id'],'return') ?></b></td>
+                            <td class="">
+                                <?php if ($di['rental_status']==0): ?> 
+                                    <span class="badge bg-light text-dark">Quotation</span>
+                                <?php elseif ($di['rental_status']==1): ?>
+                                    <span class="badge bg-primary text-white">Reserved</span>
+                                <?php elseif ($di['rental_status']==2): ?>
+                                    <span class="badge bg-warning text-dark">Picked Up</span>
+                                <?php elseif ($di['rental_status']==3): ?>
+                                    <span class="badge bg-success text-white">Returned</span>
+                                <?php else: ?>
+                                    -
+                                <?php endif; ?>  
+                            </td> 
                             <td class="text-center">
                                 <?= get_date_format($di['rent_from'],'d M Y h:i A') ?>
                              -
@@ -209,26 +230,14 @@
                                 <?php endif; ?>
                                 
                             </td>
-                            <td class="">
-                                <?php if ($di['rental_status']==0): ?> 
-                                    <span class="badge bg-light text-dark">Quotation</span>
-                                <?php elseif ($di['rental_status']==1): ?>
-                                    <span class="badge bg-primary text-white">Reserved</span>
-                                <?php elseif ($di['rental_status']==2): ?>
-                                    <span class="badge bg-warning text-dark">Picked Up</span>
-                                <?php elseif ($di['rental_status']==3): ?>
-                                    <span class="badge bg-success text-white">Returned</span>
-                                <?php else: ?>
-                                    -
-                                <?php endif; ?>  
-                            </td> 
+                            
                         </tr>
                     <?php endforeach ?>
 
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3"></td>
+                        <td colspan="2"></td>
                         <td class="text-end"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
                         <td class="text-success"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_paid_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
                     <td class="text-danger"><b><?= currency_symbol(company($user['id'])); ?><?= aitsun_round($total_due_amount,get_setting(company($user['id']),'round_of_value')) ?></b></td>
@@ -236,6 +245,7 @@
                     </tr>
                 </tfoot>
             </table>
+            </div>
         </div>
         </div>  
     </div>

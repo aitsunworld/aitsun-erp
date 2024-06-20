@@ -152,6 +152,30 @@ function site_key(){
     }  
 }
 
+function total_picked_quantity_of_invoice($invoice_id,$log_type){
+    $RentalLogsModel=new RentalLogsModel;
+    $res=0;
+    $gettotal=$RentalLogsModel->select('SUM(quantity) as totalqty')->where('invoice_id',$invoice_id)->where('log_type',$log_type)->where('deleted',0)->first();
+    if ($gettotal) {
+        if ($gettotal['totalqty']>0) {
+            $res=$gettotal['totalqty'];
+        } 
+    }
+    return $res;
+}
+
+function total_actual_quantity_of_invoice($invoice_id){
+    $InvoiceitemsModel=new InvoiceitemsModel;
+    $res=0;
+    $gettotal=$InvoiceitemsModel->select('SUM(quantity) as totalqty')->where('invoice_id',$invoice_id)->where('deleted',0)->first();
+    if ($gettotal) {
+        if ($gettotal['totalqty']>0) {
+            $res=$gettotal['totalqty'];
+        } 
+    }
+    return $res;
+}
+
 
 function total_picked_quantity($invoice_id,$product_id,$log_type){
     $RentalLogsModel=new RentalLogsModel;
