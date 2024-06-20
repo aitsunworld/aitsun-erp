@@ -144,7 +144,7 @@ class Import_and_export extends BaseController
                 $sheet->setCellValue('B'.$p_row, name_of_unit($element['unit']));
                 $sheet->setCellValue('C'.$p_row, name_of_subunit($element['sub_unit']));
                 $sheet->setCellValue('D'.$p_row, $element['conversion_unit_rate']);
-                $sheet->setCellValue('E'.$p_row, $element['stock']);
+                $sheet->setCellValue('E'.$p_row, $element['opening_balance']);
                 $sheet->setCellValue('F'.$p_row, $element['at_price']);
                 $sheet->setCellValue('G'.$p_row, percent_of_tax($element['tax']));
                 $sheet->setCellValue('H'.$p_row, $element['mrp']);

@@ -6,19 +6,19 @@
 </div>
 <div class="modal-body">
   
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label for="to-input">To</label>
-        <input type="email" class="form-control" id="emailto"  placeholder="To" value="<?= $to; ?>" required>
-        <div class="text-danger mt-2" id="ermsg"></div>
+        <input type="email" class="form-control" id="emailto"  placeholder="To" value="<?= $to; ?>" required> 
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label for="subject-input">Subject</label>
-        <input type="text" class="form-control" id="subject" placeholder="Subject" value="Your Purchase invoice details">
+        <input type="text" class="form-control" id="subject" placeholder="Subject" value="<?= $subject ?>">
     </div>
-    <div class="form-group ">
+
+    <div class="form-group mb-2 ">
         <label for="message-input">Message</label>
-        <textarea style="white-space: pre-wrap;" class="form-control" value="" id="message" rows="10"></textarea>
+        <textarea style="white-space: pre-wrap;" class="form-control" value="" id="message" rows="10"><?= $message ?></textarea>
     </div> 
 
     <div class="btn-toolbar form-group mt-2">

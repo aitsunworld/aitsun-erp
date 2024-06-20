@@ -90,6 +90,8 @@ $(document).ready(function(){
         var share_type=$(this).data('type');
         var to=$(this).data('to');
         var template=$(this).data('template');
+        var subject=$(this).data('subject');
+        var message=$(this).data('message'); 
         
         var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
         var csrfHash = $('#csrf_token').val(); // CSRF hash
@@ -101,6 +103,8 @@ $(document).ready(function(){
                 to:to,
                 share_type:share_type,
                 template:template, 
+                subject:subject,
+                message:message,
                 [csrfName]: csrfHash
             },
             success: function(response) { 

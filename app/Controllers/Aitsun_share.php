@@ -35,11 +35,12 @@ class Aitsun_share extends BaseController
     public function get_form(){
         $session=session(); 
         if ($session->has('isLoggedIn')){ 
-            if ($this->request->getMethod() == 'post') { 
+            if ($this->request->getMethod() == 'post') {  
 
                 $data=[
                     'to'=>$this->request->getVar('to'),
-                    'template'=>$this->request->getVar('template')
+                    'subject'=>$this->request->getVar('subject'),
+                    'message'=>$this->request->getVar('message'),
                 ];
 
                 if ($this->request->getVar('share_type')=='email') {

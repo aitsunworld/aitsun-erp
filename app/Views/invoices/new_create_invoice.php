@@ -29,6 +29,11 @@
     animation: spin_me 1s infinite linear;
   }
 
+  
+.lobibox-notify-wrapper{
+    z-index: 90000000000!important;
+}
+
 
 @keyframes spin_me {
     from {
@@ -1502,8 +1507,14 @@
 <input type="hidden" id="thermalcheck" value="<?= get_setting(company($user['id']),'print_thermal'); ?>">
 
 <input type="hidden" id="csrf_token" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>"/>
-
- 
+  
+<input type="hidden" id="silent" value="<?= printer_data($user['id'],'silent') ?>">
+<input type="hidden" id="printer_name" value="<?= printer_data($user['id'],'printer_name') ?>">
+<input type="hidden" id="top" value="<?= printer_data($user['id'],'top') ?>">
+<input type="hidden" id="right" value="<?= printer_data($user['id'],'right') ?>">
+<input type="hidden" id="bottom" value="<?= printer_data($user['id'],'bottom') ?>">
+<input type="hidden" id="left" value="<?= printer_data($user['id'],'left') ?>">
+<input type="hidden" id="scale" value="<?= printer_data($user['id'],'scale') ?>">
 
 <script src="<?= base_url('public'); ?>/js/sweetalert2.min.js"></script>
     

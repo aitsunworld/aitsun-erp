@@ -86,11 +86,11 @@ use App\Models\RentalLogsModel as RentalLogsModel;
 
 
 function style_version(){
-    return '1.2.5';
+    return '1.2.6';
 }
 
 function script_version(){
-    return '1.2.5';
+    return '1.2.6';
 }
 
 function round_after(){
@@ -655,7 +655,7 @@ function numberTowords($num,$company_id)
         1 => "ten",
         2 => "twenty", 
         3 => "thirty", 
-        4 => "forty", 
+        4 => "fourty", 
         5 => "fifty", 
         6 => "sixty", 
         7 => "seventy", 
@@ -1914,15 +1914,14 @@ function timetest($date){
     }
 
 
-    function get_company_data($user,$option){
-        $Companies = new Companies;
-        $get_res=$Companies->where('id',$user)->first();
-        if ($get_res) {
-         return $get_res[$option];
-     }else{
+function get_company_data($user,$option){
+    $Companies = new Companies;
+    $get_res=$Companies->where('id',$user)->first();
+    if ($get_res) {
+     return $get_res[$option];
+    }else{
         return '';
-    }
-
+    } 
 }
 
 function child_of_categories($parent_id){
@@ -4367,7 +4366,7 @@ function word($val){
         '13' => 'thirteen', '14' => 'fourteen',
         '15' => 'fifteen', '16' => 'sixteen', '17' => 'seventeen',
         '18' => 'eighteen', '19' =>'nineteen', '20' => 'twenty',
-        '30' => 'thirty', '40' => 'forty', '50' => 'fifty',
+        '30' => 'thirty', '40' => 'fourty', '50' => 'fifty',
         '60' => 'sixty', '70' => 'seventy',
         '80' => 'eighty', '90' => 'ninety');
     $digits = array('', 'hundred', 'thousand', 'lakh', 'crore','trillion');
@@ -4768,11 +4767,14 @@ function currency_symbolfor_sms($company){
     } 
 }
 
+ 
+
 function my_company($user){
     $Companies = new Companies;
     $stcnt=$Companies->where('id',$user);
     return $stcnt->findAll();
 }
+
 function  my_company_name($user){
     $Companies = new Companies;
     $stcnt=$Companies->where('id',$user);

@@ -468,7 +468,7 @@ public function get_invoice_pdf($cusval="",$type='view'){
 public function view_pdf($inid=0)
     {
         
-        $view_method='download';
+         $view_method='download';
         $InvoiceModel=new InvoiceModel;
         
         if ($_GET) {
@@ -512,6 +512,41 @@ public function view_pdf($inid=0)
             'scaling'=>get_setting2($invoice_data['company_id'],'pdf_scaling')
         );
         $data_string = json_encode($data);
+        
+        // Initialize cURL session
+        $curl = curl_init();
+        
+        // Set the cURL options for POST request
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); // Return the response as a string instead of outputting it directly
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($data_string))
+        );
+        
+        // Execute the cURL request and fetch the response
+        $response = curl_exec($curl);
+        
+        // Check for errors
+        if ($response === false) {
+            $error = curl_error($curl);
+            echo "Error occurred: $error";
+        } else {
+            header('Content-type: application/pdf');
+            if($view_method=='view'){
+                header('Content-Disposition: inline; filename="' . $data['file_name'] . '"');
+            }else{
+                header('Content-Disposition: attachment; filename="' . $data['file_name'] . '"');
+            }
+            // Handle the response
+            echo "Response: $response";
+            exit();
+        }
+        
+        // Close cURL session
+        curl_close($curl);
         
     }
 

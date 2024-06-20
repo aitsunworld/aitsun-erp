@@ -917,96 +917,44 @@ $(document).on('click','.tranname',function(){
     var csrfHash = $('#csrf_token').val(); // CSRF hash
     var thermalcheck=0;
 
-    if ($('#thermalcheck').val()==1) {
-			thermalcheck=1;
-		}
-		if (thermalcheck==0) {
+    var silent=$('#silent').val();
+    var printer_name=$('#printer_name').val();
+    var top=$('#top').val();
+    var right=$('#right').val();
+    var bottom=$('#bottom').val();
+    var left=$('#left').val();
+    var scale=$('#scale').val();
 
-      var buttons='';
+    var buttons=''; 
+    buttons+='<a class="text-white btn btn-sm btn-success font-size-footer aitsun-print cursor-pointer me-3" data-url="'+base_url()+'invoices/get_invoice_pdf/'+invoice+'/view#toolbar=0&navpanes=0&scrollbar=0"><i class="bx bx-printer"></i> <span class="hidden-xs">Print</span></a>';
+    buttons+='<a class="text-white btn btn-sm btn-success font-size-footer aitsun-print cursor-pointer me-3" data-url="'+base_url()+'invoices/view_pdf/'+invoice+'?method=view"><i class="bx bx-printer"></i><span class="hidden-xs">PDF Print</span></a>';
+    
 
-      buttons+='<a class="text-white btn btn-sm btn-success font-size-footer aitsun-print cursor-pointer me-3" data-url="'+base_url()+'invoices/get_invoice_pdf/'+invoice+'/view#toolbar=0&navpanes=0&scrollbar=0"><i class="bx bx-printer"></i> <span class="hidden-xs">Print</span></a>';
+    buttons+=`<a  class="text-white btn btn-sm btn-dark font-size-footer cursor-pointer me-3 aitsun-electron-print" 
+            data-url="${base_url()}/invoices/get_pos_invoice/${invoice}" 
+            data-silent="${silent}"
+            data-devicename="${printer_name}"
+            data-top="${top}"
+            data-right="${right}"
+            data-bottom="${bottom}"
+            data-left="${left}"
+            data-scalefactor="${scale}"
+    >
+        <i class="bx bx-printer"></i> 
+        <span class="hidden-xs">Print Thermal</span>
+    </a>`;
 
-
-      buttons+='<a class="text-white btn btn-sm btn-success font-size-footer aitsun-print cursor-pointer me-3" data-url="'+base_url()+'invoices/view_pdf/'+invoice+'?method=view"><i class="bx bx-printer"></i><span class="hidden-xs">PDF Print</span></a>';
-
-      $('#print_buttoons').html(buttons);
-			
-			$('#receipt_show').html('<iframe src="'+base_url()+'invoices/get_invoice_pdf/'+invoice+'/view" class="erp_iframe" id="erp_iframe"></iframe>');
-
+    $('#print_buttoons').html(buttons);
+		
+		$('#receipt_show').html('<iframe src="'+base_url()+'invoices/get_invoice_pdf/'+invoice+'/view" class="erp_iframe" id="erp_iframe"></iframe>');
 
 
 		const iframe = document.getElementById('erp_iframe');
 	  iframe.srcdoc = '<!DOCTYPE html><div style="color: green; width: 100%;height: 90vh;display: flex;"><div style="margin:auto; font-family: system-ui;">Rendering Content...</div></div>';
 	   iframe.addEventListener('load', () => setTimeout(function(){iframe.removeAttribute('srcdoc')}, 2500));
 
-			// $.ajax({
-      //     url: base_url()+"invoices/get_invoice/"+invoice,
-      //     data:{
-			// 			[csrfName]: csrfHash
-			// 		},
-      //     success:function(response) {
-         
-      //     	$('#receipt_show').html(response);
-      //     	var hhref=base_url()+'invoices/get_invoice_pdf/'+invoice;
-      //     	$('#pdf_button').data('href',hhref);
-          
-            
-      //    },
-      //    error:function(){
-      //     alert("error");
-      //    }
-      //  });
-
-		}else{
-
-			$.ajax({
-	      url:  base_url()+"invoices/get_thermal_script/"+invoice,
-          data:{
-						[csrfName]: csrfHash
-					},
-	      success:function(response) {
-
-	      		 $("#remove_style").removeAttr("style")
-          	 $('#pdfthermalthis').html(response);
-          	
-          	var hhref=base_url()+'invoices/get_invoice_pdf/'+invoice;
-          	$('#pdf_button').data('href',hhref);
-	       
-	        var btnnn='<button type="button" data-inv="'+invoice+'"  class="thermal_print btn btn-primary" ><i class="fa fa-print"></i> <span>Print Thermal Receipt</span></button>';
-	        
-
-	        // $('#thermal_btn').html(btnnn);
-	    
-	        
-	     },
-	     error:function(){
-	      alert("error");
-	     }
-	    });
-			// $.ajax({
-	    //   url:  base_url()+"invoices/get_thermal_invoice/"+invoice,
-      //     data:{
-			// 			[csrfName]: csrfHash
-			// 		},
-	    //   success:function(response) {
-	      	
-      //     	 $('#pdfthermalthis').html(response);
-          
-	       
-	    //     var btnnn='<button type="button" data-inv="'+invoice+'"  class="thermal_print btn btn-primary" ><i class="fa fa-print"></i> <span>Print Thermal Receipt</span></button>';
-	        
-
-	    //     // $('#thermal_btn').html(btnnn);
-	    
-	        
-	    //  },
-	    //  error:function(){
-	    //   alert("error");
-	    //  }
-	    // });
-		}
-        
-
+	 
+ 
 
         
 	}
