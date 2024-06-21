@@ -1,5 +1,46 @@
 $(document).ready(function(){
 
+
+    $(document).on('blur','.message_template_update',function(){
+    
+        var template_name=$(this).data('template_name');
+        var p_element_val=$(this).val();
+        var p_element=$(this).data('element_name');
+        
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+       
+        
+          $.ajax({
+              type: 'POST',
+              url: base_url()+'/settings/update_message_template/'+template_name,
+              data: { 
+                p_element_val:p_element_val,
+                p_element:p_element,
+                [csrfName]: csrfHash
+              },
+              beforeSend: function() {
+              },
+              success: function(response) {
+                  if ($.trim(response)==1) {
+
+                    $('.add_cls-'+p_element+'-'+template_name).addClass('is-valid'); 
+                            setTimeout(function(){
+                                $('.add_cls-'+p_element+'-'+template_name).removeClass('is-valid');
+                            },2000)
+
+                      // round_success_noti('Saved');
+                  }else{
+                     $('.add_cls-'+p_element+'-'+template_name).addClass('is-invalid'); 
+                            setTimeout(function(){
+                                $('.add_cls-'+p_element+'-'+template_name).removeClass('is-invalid');
+                            },2000)
+                  }
+              }
+          });
+            
+    });
+
     $(document).on('click','.pickup_status',function(){
         var pickup_button=$(this);
         var invoice_id=$(this).data('invoice_id');
@@ -88,6 +129,7 @@ $(document).ready(function(){
     $(document).on('click','.aitsun-share',function(){
         var share_button=$(this);
         var share_type=$(this).data('type');
+        var name=$(this).data('name');
         var to=$(this).data('to');
         var template=$(this).data('template');
         var subject=$(this).data('subject');
@@ -100,6 +142,7 @@ $(document).ready(function(){
             type: 'POST',
             url: base_url()+'/aitsun_share/get_form',
             data:{
+                name:name,
                 to:to,
                 share_type:share_type,
                 template:template, 
@@ -113,6 +156,139 @@ $(document).ready(function(){
             }
         }); 
     });
+
+    $(document).on('click','.send_email',function(){
+        
+        var thisbutton=$(this);
+        var thisbuttoncontent=$(this).html();
+        var thisid=$(this).data('id');
+         
+        var to=$.trim($('#emailto'+thisid).val());
+        var name=$.trim($('#name'+thisid).val());
+        var subject=$('#subject'+thisid).val();
+        var message=$('#message'+thisid).val();
+        var automatic_share=$('#automatic_share').val();
+
+
+        message=message.replace(/\n/g, '%0D%0A'); 
+
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+
+        var link = "https://mail.google.com/mail/?view=cm&fs=1&to="+to+"&su="+subject+"&body="+message;
+        if (automatic_share==0) {
+            var a = document.createElement('a');
+            a.target="_blank";
+            a.href=link;
+        }
+            
+        $('#ermsg').html('');
+        if (name!='') {
+            if (to!='') {
+                if (!emailReg.test(to)) {
+                    show_failed_msg('error','Please enter valid email');
+                }else{
+                    if (automatic_share==0) {
+                        a.click();
+                        // $(thisbutton).html('<i class="bx bx-check-double me-0"></i> Sent')
+                    }else{
+                        $(thisbutton).attr('disabled', true);
+                        $.ajax({
+                            type: 'GET',
+                            url: base_url()+'reminders/send_email/',
+                            data:{
+                                name:name,
+                                to:to,
+                                subject:subject,
+                                message:message,
+                                [csrfName]: csrfHash
+                            },
+                            success: function(response) { 
+                                if ($.trim(response)==1) {
+                                    $(thisbutton).attr('disabled', false);
+                                    show_success_msg('success','Email sent');
+                                    // location.reload();
+                                }else{
+                                    show_success_msg('success','Try again!'); 
+                                }
+                            }
+                        });
+                    }
+                }
+            }else{ 
+                show_failed_msg('error','Please write email address');
+            }
+        }else{
+            show_failed_msg('error','Please write name');
+        }
+        
+    });
+
+    $(document).on('click','.send_whatsapp',function(){
+        
+        var thisbutton=$(this);
+        var thisbuttoncontent=$(this).html();
+        var thisid=$(this).data('id');
+         
+        var to=$.trim($('#emailto'+thisid).val());
+       
+        var message=$('#message'+thisid).val();
+        var automatic_share=$('#automatic_share').val();
+
+
+        message=message.replace(/\n/g, '%0D%0A'); 
+
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+ 
+            
+        $('#ermsg').html(''); 
+            if (to!='') { 
+                if (automatic_share==0) {
+                    // var anchor = document.createElement('a');
+                    // anchor.href = `https://wa.me/${to}?text=${message}`;
+                    // anchor.target="_blank";
+                    // anchor.click();
+
+                    const formattedPhoneNumber = to.replace('+', '%2B');
+                    location.href = `whatsapp://send?phone=${formattedPhoneNumber}&text=${message}`;
+                    // $(thisbutton).html('<i class="bx bx-check-double me-0"></i> Sent')
+                }else{
+                    $(thisbutton).attr('disabled', true);
+                    // $.ajax({
+                    //     type: 'GET',
+                    //     url: base_url()+'reminders/send_email/',
+                    //     data:{
+                    //         name:name,
+                    //         to:to,
+                    //         subject:subject,
+                    //         message:message,
+                    //         [csrfName]: csrfHash
+                    //     },
+                    //     success: function(response) { 
+                    //         if ($.trim(response)==1) {
+                    //             $(thisbutton).attr('disabled', false);
+                    //             show_success_msg('success','Email sent');
+                    //             // location.reload();
+                    //         }else{
+                    //             show_success_msg('success','Try again!'); 
+                    //         }
+                    //     }
+                    // });
+                }
+                 
+            }else{ 
+                show_failed_msg('error','Please write email address');
+            }
+        
+        
+    });
+
+    
 
     
      $(document).on('blur','.duration_input',function() {
@@ -8003,68 +8179,68 @@ $(document).on('click','.generate_challan_for_student',function(){
     });
 
 
-    $(document).on('click','#send_email',function(){
+    // $(document).on('click','#send_email',function(){
             
             
-            var email_to=$('#email_to').val();
-            var email_subject=$('#email_subject').val();
-            var email_template=$('#email_template').val();
-            var emailtoReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    //         var email_to=$('#email_to').val();
+    //         var email_subject=$('#email_subject').val();
+    //         var email_template=$('#email_template').val();
+    //         var emailtoReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-            var emailList = email_to.split(',');
-
-
-            var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
-            var csrfHash = $('#csrf_token').val(); // CSRF hash
+    //         var emailList = email_to.split(',');
 
 
-            $('#emailmsg').html('');
-            $('#em_sub_msg').html('');
-            $('#em_temp_msg').html('');
+    //         var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+    //         var csrfHash = $('#csrf_token').val(); // CSRF hash
 
 
-            for (var i = 0; i < emailList.length; i++) {
-                var email = emailList[i].trim(); // Remove whitespace around email address
-
-                if ($.trim(email) == '') {
-                    $('#emailmsg').html('<span class="ct_error">Please enter email!</span>');
-                    return; // Stop further processing if any email is empty
-                } else if (!emailtoReg.test(email)) {
-                    $('#emailmsg').html('<span class="ct_error">Email not valid!</span>');
-                    return; // Stop further processing if any email is invalid
-                }
-            }
+    //         $('#emailmsg').html('');
+    //         $('#em_sub_msg').html('');
+    //         $('#em_temp_msg').html('');
 
 
-            if($.trim(email_subject)==''){
-                $('#em_sub_msg').html('<span class="ct_error">Please enter subject!</span>');
-            }else if($.trim(email_template)==''){
-                $('#em_temp_msg').html('<span class="ct_error">Please add your email template!</span>');
-            }else{
+    //         for (var i = 0; i < emailList.length; i++) {
+    //             var email = emailList[i].trim(); // Remove whitespace around email address
 
-             $.ajax({
-                    url:base_url()+'e-mailer/send-email',
-                    type:'POST',
-                    data:{
-                      email_to:email_to,
-                      email_subject:email_subject,
-                      email_template:email_template,
-                      [csrfName]: csrfHash
-                    },
-                    beforeSend: function() {
-                        $("#send_email").html('Sending...<i class="icofont-spinner-alt-1"></i>');
-                    },
-                    success:function(result){
-                        $("#send_email").html('Send');
-                        $("#suc_msg").html(result);
-                        $(".tag_remove").click();
-                        $('#send_email_form')[0].reset();
-                    }
+    //             if ($.trim(email) == '') {
+    //                 $('#emailmsg').html('<span class="ct_error">Please enter email!</span>');
+    //                 return; // Stop further processing if any email is empty
+    //             } else if (!emailtoReg.test(email)) {
+    //                 $('#emailmsg').html('<span class="ct_error">Email not valid!</span>');
+    //                 return; // Stop further processing if any email is invalid
+    //             }
+    //         }
 
-                });  
-            }
 
-        });
+    //         if($.trim(email_subject)==''){
+    //             $('#em_sub_msg').html('<span class="ct_error">Please enter subject!</span>');
+    //         }else if($.trim(email_template)==''){
+    //             $('#em_temp_msg').html('<span class="ct_error">Please add your email template!</span>');
+    //         }else{
+
+    //          $.ajax({
+    //                 url:base_url()+'e-mailer/send-email',
+    //                 type:'POST',
+    //                 data:{
+    //                   email_to:email_to,
+    //                   email_subject:email_subject,
+    //                   email_template:email_template,
+    //                   [csrfName]: csrfHash
+    //                 },
+    //                 beforeSend: function() {
+    //                     $("#send_email").html('Sending...<i class="icofont-spinner-alt-1"></i>');
+    //                 },
+    //                 success:function(result){
+    //                     $("#send_email").html('Send');
+    //                     $("#suc_msg").html(result);
+    //                     $(".tag_remove").click();
+    //                     $('#send_email_form')[0].reset();
+    //                 }
+
+    //             });  
+    //         }
+
+    //     });
 
     $(document).on('change','.otamtSelect',function(){
 

@@ -1918,7 +1918,7 @@ function get_company_data($user,$option){
     $Companies = new Companies;
     $get_res=$Companies->where('id',$user)->first();
     if ($get_res) {
-     return $get_res[$option];
+        return $get_res[$option];
     }else{
         return '';
     } 
@@ -4201,6 +4201,21 @@ function billing_address_of($customer){
     $output.="<br>".$billing_address."";
     return $output; 
 }
+
+
+function country_code($customer){
+    $UserModel = new Main_item_party_table;
+    $get_r= $UserModel->where('id',$customer)->first();
+    $output='';
+    if (!empty($get_r['country_code'])) { 
+        $billing_address="".$get_r['country_code'];
+    }else{
+        $billing_address="";
+    }
+    $output.="".$billing_address."";
+    return $output; 
+}
+
 
 function gst_no_of($customer){
     $UserModel = new Main_item_party_table;

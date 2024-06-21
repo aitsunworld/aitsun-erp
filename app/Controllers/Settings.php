@@ -27,6 +27,8 @@ use App\Models\AcademicYearModel;
 use App\Models\CompanySettings2;
 use App\Models\InvoiceSettings;  
 use App\Models\PrintersModel;  
+use App\Models\MessageTemplatesModel;  
+
 
 
 class Settings extends BaseController
@@ -3139,97 +3141,82 @@ public function preferences(){
 
 
 
-        public function sms_and_emails(){
-            $session=session();
+    public function message_templates(){
+        $session=session();
 
-             if($session->has('isLoggedIn')){
+         if($session->has('isLoggedIn')){
 
-                $UserModel= new Main_item_party_table;
-                $CompanySettings= new CompanySettings;
+            $UserModel= new Main_item_party_table;
+            $MessageTemplatesModel= new MessageTemplatesModel;
 
-                $myid=session()->get('id');
-                $con = array( 
-                    'id' => session()->get('id') 
-                );
+            $myid=session()->get('id');
+            $con = array( 
+                'id' => session()->get('id') 
+            );
 
-                $user=$UserModel->where('id',$myid)->first();
+            $user=$UserModel->where('id',$myid)->first();
 
-                if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
+            if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));} 
 
+            if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+
+
+            $data = [
+                'title' => 'Aitsun ERP - Message templates',
+                'user' => $user, 
+            ];
+
+            if (usertype($myid)=='admin'){
+                echo view('header',$data);
+                echo view('settings/message_templates', $data);
+                echo view('footer');
                 
-
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
-
-
-                $etqry = $CompanySettings->where('company_id',company($myid))->first();
-
-
-                $data = [
-                    'title' => 'Aitsun ERP- Printers & Devices',
-                    'user' => $user,
-                    'conf' => $etqry
-                ];
-
-                if (usertype($myid)=='admin'){
-                    echo view('header',$data);
-                    echo view('settings/sms_and_emails', $data);
-                    echo view('footer');
-                    
-                }else{
-                     return redirect()->to(base_url());
-                }
-                    
-                
-
-
-                if (isset($_POST['save_sms_email'])) {
-
-                        $pu_data = [
-                            'sms_sender'=>htmlentities(strip_tags(trim($this->request->getVar('sms_sender')))),
-                            'receivers_phone'=>htmlentities(strip_tags(trim($this->request->getVar('receivers_phone')))),
-                            'source_ref'=>htmlentities(strip_tags(trim($this->request->getVar('source_ref')))),
-                            'smtp_host'=>htmlentities(strip_tags(trim($this->request->getVar('smtp_host')))),
-                            'smtp_port'=>htmlentities(strip_tags(trim($this->request->getVar('smtp_port')))),
-                            'smtp_user'=>htmlentities(strip_tags(trim($this->request->getVar('smtp_user')))),
-                            'smtp_password'=>htmlentities(strip_tags(trim($this->request->getVar('smtp_password')))),
-                            'from_name'=>htmlentities(strip_tags(trim($this->request->getVar('from_name')))),
-                            'from_email'=>htmlentities(strip_tags(trim($this->request->getVar('from_email'))))
-                        ];
-
-                    
-                $update_user=$CompanySettings->update(get_setting(company($myid),'id'),$pu_data);
-
-                    if ($update_user) {
-
-                         ////////////////////////CREATE ACTIVITY LOG//////////////
-                        $log_data=[
-                            'user_id'=>$myid,
-                            'action'=>'Company/branch (#'.company($myid).') <b>'.my_company_name(company($myid)).'</b> sms & email configurations changed.',
-                            'ip'=>get_client_ip(),
-                            'mac'=>GetMAC(),
-                            'created_at'=>now_time($myid),
-                            'updated_at'=>now_time($myid),
-                            'company_id'=>company($myid),
-                        ];
-
-                        add_log($log_data);
-                        ////////////////////////END ACTIVITY LOG/////////////////
-
-
-                        $session->setFlashdata('pu_msg', 'Saved!');
-                        return redirect()->to(base_url('settings/sms_and_emails'));
-                    }else{
-                        $session->setFlashdata('pu_er_msg', 'Failed to save!');
-                        return redirect()->to(base_url('settings/sms_and_emails'));
-                    }
-                }
-
-          
             }else{
-                return redirect()->to(base_url('users/login'));
+                 return redirect()->to(base_url());
             }
-        }
+                 
 
+      
+        }else{
+            return redirect()->to(base_url('users/login'));
+        }
+    }
+
+    public function update_message_template($template_name=""){
+        $session=session();
+        $user=new Main_item_party_table();
+        $MessageTemplatesModel=new MessageTemplatesModel();
+        $myid=session()->get('id');
+        if ($this->request->getMethod() == 'post') {
+
+            $pele=strip_tags(trim($this->request->getVar('p_element')));
+
+            $message_tem_data=$MessageTemplatesModel->where('template_name',$template_name)->where('company_id',company($myid))->first();
+            
+            $ac_data = [
+                $pele=>strip_tags(trim($this->request->getVar('p_element_val'))),
+                'edit_effected'=>0, 
+                'opening_balance'=>$opstock,
+                'closing_balance'=>$fullstock,
+                'final_closing_value'=>$final_closing_value,
+                'final_closing_value_fifo'=>$final_closing_value_fifo,
+            ];
+                     
+            if ($message_tem_data) {
+                $ac_data['id']=$pro_data['id'];
+            }
+            
+            $save_pro_data=$MessageTemplatesModel->save($ac_data);
+             
+           
+            if ($save_pro_data) {
+                echo 1;
+            }else{
+                echo 0;
+            }
+           
+        }
+    }
 
 
 

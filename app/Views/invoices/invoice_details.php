@@ -145,15 +145,41 @@
             $subject=$email_data['subject'];
            
             $replacing_data = [
-                '[customer-name]' => user_name($invoice_data['customer']),
+                '[customer-name]' => user_name($invoice_data['customer']), 
                 '[currency-icon]' => currency_symbol(company($user['id'])),
                 '[total-amount]' => aitsun_round($invoice_data['total'],get_setting(company($user['id']),'round_of_value')),
                 '[due-amount]' => aitsun_round($invoice_data['due_amount'],get_setting(company($user['id']),'round_of_value')),
                 '[company-name]' => get_company_data(company($user['id']),'company_name'),
+                '[company-contact]' => get_company_data(company($user['id']),'email'),
+                '[invoice-number]' => inventory_prefix($invoice_data['company_id'],$invoice_data['invoice_type']).$invoice_data['serial_no'],
+                '[invoice-link]' => base_url('invoices/download').'/'.$invoice_data['id'],
+                '[invoice-type]' => ucwords(strtolower(inventory_heading($invoice_data['company_id'],$invoice_data['invoice_type'])))
             ];
             $message=str_replace(array_keys($replacing_data), array_values($replacing_data), $email_data['message']);
+            $subject=str_replace(array_keys($replacing_data), array_values($replacing_data), $email_data['subject']);
          ?>
-      <a class="text-dark font-size-footer ms-2 aitsun-share" data-type="email" data-to="<?= user_email($invoice_data['customer']) ?>" data-template="invoice_share" data-subject="<?= $subject ?>" data-message="<?= $message ?>"><i class="bx bx-envelope"></i> Email</a>
+      <a class="text-dark font-size-footer ms-2 aitsun-share" data-type="email" data-name="<?= user_name($invoice_data['customer']) ?>" data-to="<?= user_email($invoice_data['customer']) ?>" data-template="invoice_share" data-subject="<?= $subject ?>" data-message="<?= $message ?>"><i class="bx bx-envelope"></i> Email</a>
+
+      <?php 
+            $whatsapp_data=aitsun_share_data('whatsapp','invoice_share');
+            $whatsapp_subject=$whatsapp_data['subject'];
+           
+            $wa_replacing_data = [
+                '[customer-name]' => user_name($invoice_data['customer']), 
+                '[currency-icon]' => currency_symbol(company($user['id'])),
+                '[total-amount]' => aitsun_round($invoice_data['total'],get_setting(company($user['id']),'round_of_value')),
+                '[due-amount]' => aitsun_round($invoice_data['due_amount'],get_setting(company($user['id']),'round_of_value')),
+                '[company-name]' => get_company_data(company($user['id']),'company_name'),
+                '[company-contact]' => get_company_data(company($user['id']),'email'),
+                '[invoice-number]' => inventory_prefix($invoice_data['company_id'],$invoice_data['invoice_type']).$invoice_data['serial_no'],
+                '[invoice-link]' => base_url('invoices/download').'/'.$invoice_data['id'],
+                '[invoice-type]' => ucwords(strtolower(inventory_heading($invoice_data['company_id'],$invoice_data['invoice_type'])))
+            ];
+            $whatsapp_message=str_replace(array_keys($wa_replacing_data), array_values($wa_replacing_data), $whatsapp_data['message']);
+            $whatsapp_subject=str_replace(array_keys($wa_replacing_data), array_values($wa_replacing_data), $whatsapp_data['subject']);
+         ?>
+
+      <a class="text-dark font-size-footer ms-2 aitsun-share" data-type="whatsapp" data-name="<?= user_name($invoice_data['customer']) ?>" data-to="<?= country_code($invoice_data['customer']) ?><?= user_phone($invoice_data['customer']) ?>" data-template="invoice_share" data-subject="<?= $whatsapp_subject ?>" data-message="<?= $whatsapp_message ?>"><i class="lni lni-whatsapp"></i> WhatsApp</a>
     <?php endif ?>
 
     </div>

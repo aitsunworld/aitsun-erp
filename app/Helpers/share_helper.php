@@ -3,11 +3,18 @@
 		$message_data=[
 			'email'=>[
 				'invoice_share'=>[
-					'subject'=>'Your Purchase invoice details',
-					'message'=>"Dear [customer-name], \n\nWith Secure Private Limited truly appreciate your business, and we’re so grateful for the trust you’ve placed in us. \nWe sincerely hope you are satisfied with your purchase, and look forward to serving you again. \n\nAmount: [currency-icon] [total-amount] \n\nDue Amount: [currency-icon] [due-amount]  \n\nThanks and Regards \nWith \n[company-name]"
+					'subject'=>'Your [invoice-type] from [company-name]', 
+					'message'=>"Dear [customer-name],\n\nI hope this message finds you well.\n\nPlease find your latest [invoice-type] below: \n\n[invoice-type] Number: [invoice-number]\nTotal Amount: [currency-icon] [total-amount]\nDue Amount: [currency-icon] [due-amount]\n\nYou can view your [invoice-type] using the following link:\n\n[invoice-link]\n\nWe appreciate your prompt attention to this matter. If you have any questions or need further assistance, please do not hesitate tocontact us.\n\nThank you for your business!\nBest regards,\n[company-name]\nContact: [company-contact]"
+				]
+			],
+			'whatsapp'=>[
+				'invoice_share'=>[
+					'subject'=>'Your [invoice-type] from [company-name]', 
+					'message'=>"Dear [customer-name],\n\nI hope this message finds you well.\n\nPlease find your latest [invoice-type] below: \n\n[invoice-type] Number: [invoice-number]\nTotal Amount: [currency-icon] [total-amount]\nDue Amount: [currency-icon] [due-amount]\n\nYou can view your [invoice-type] using the following link:\n\n[invoice-link]\n\nWe appreciate your prompt attention to this matter. If you have any questions or need further assistance, please do not hesitate tocontact us.\n\nThank you for your business!\nBest regards,\n[company-name]\nContact: [company-contact]"
 				]
 			]
 		];
+
 
 		return $message_data[$type][$template];
 	}	

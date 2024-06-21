@@ -4542,40 +4542,7 @@ $(document).on('click','.generate_barcode',function(){
     });
   
 
-  $(document).on('click','.inventory_email',function(){
-		
-			var thisbutton=$(this);
-			var thisbuttoncontent=$(this).html();
-      var thisid=$(this).data('id');
-     
-      var to=$.trim($('#emailto'+thisid).val());
-      var subject=$('#subject'+thisid).val();
-      var message=$('#message'+thisid).val();
-
-      message=message.replace(/\n/g, '%0D%0A'); 
-
-			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
-      var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
-      var csrfHash = $('#csrf_token').val(); // CSRF hash
-
-      var link = "https://mail.google.com/mail/?view=cm&fs=1&to="+to+"&su="+subject+"&body="+message;
-      var a = document.createElement('a');
-      a.target="_blank";
-      a.href=link;
-      	
-      $('#ermsg').html('');
-      if (to!='') {
-       	if (!emailReg.test(to)) {
-      			$('#ermsg').html('<div class="alert alert-danger mb-3 mb-3">Please enter valid email</div>');
-      	}else{
-      			a.click();
-      			$(thisbutton).html('<i class="bx bx-check-double me-0" style="font-size: 20px;"></i> Sent')
-      	}
-      }else{
-      	$('#ermsg').html('Please write email address');
-      }
-    });
+  
 
 
 

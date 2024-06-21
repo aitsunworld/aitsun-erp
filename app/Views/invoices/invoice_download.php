@@ -7,26 +7,12 @@
 	<!--favicon-->
 	
 	<link rel="icon" href="<?= base_url('public'); ?>/images/app_icon.ico" type="image/png" />
- 
-	<!-- loader-->
-	<link href="<?= base_url('public'); ?>/css/pace.min.css" rel="stylesheet" />
-	<script src="<?= base_url('public'); ?>/js/pace.min.js"></script>
+  
 	<!-- Bootstrap CSS -->
 	<link href="<?= base_url('public'); ?>/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="<?= base_url('public'); ?>/css/app.css" rel="stylesheet">
-	<link href="<?= base_url('public'); ?>/css/icons.css" rel="stylesheet">
-	<!-- Theme Style CSS -->
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/dark-theme.css" />
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/custom.css?ver=<?= style_version(); ?>" />
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/crm.css?ver=<?= style_version(); ?>" />
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/invoice_design.css?ver=<?= style_version(); ?>" />
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/semi-dark.css" />
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/header-colors.css" />
-
-	<link rel="stylesheet" href="<?= base_url('public'); ?>/css/dark.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="<?= base_url('public'); ?>/js/popper.min.js"></script>
+ 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 	
 	<title><?= $title; ?></title>
 </head>
@@ -65,6 +51,9 @@
 		    background: white;
 		    z-index: 9999999;
     	}
+      a{
+        text-decoration: none;
+      }
     </style>
 
     <div class="downloading_mes">
@@ -75,27 +64,34 @@
     	</div>
     </div>
 
-    <div class="main_buttons d-flex justify-content-between">
-
-    	<div class="m-auto text-center">
-    		<div class="mb-2">
-    			Download  as
-    		</div>
-    		<div class="d-flex">
-
-          <a class="btn downloading_mes_press btn-dark btn-sm me-1 download_complete" href="<?= base_url('invoices/get_invoice_pdf'); ?>/<?= $invoice_id ?>/view">
-              <i class="bx bx-image"></i> 
-              <span class="hidden-xs"><?= langg(get_setting($invoice_data['company_id'],'language'),'Open PDF'); ?></span>
+    <div class="main_buttons  justify-content-between">
+ 
+        <div class="d-flex py-2 justify-content-center">
+ 
+          <a class="font-size-footer btn-sm btn-dark cursor-pointer aitsun-print me-2" data-url="<?= base_url('invoices/get_invoice_pdf/'.$invoice_id.'/view#toolbar=0&navpanes=0&scrollbar=0')?>">
+              <i class="bx bx-printer"></i> 
+              <span class="hidden-xs"><?= langg(get_setting($invoice_data['company_id'],'language'),'Print'); ?></span>
           </a>
 
-          <a class="btn downloading_mes_press btn-dark btn-sm me-1 download_complete" href="<?= base_url('invoices/get_invoice_pdf'); ?>/<?= $invoice_id ?>/download">
-              <i class="bx bx-image"></i> 
-              <span class="hidden-xs"><?= langg(get_setting($invoice_data['company_id'],'language'),'Download PDF'); ?></span>
+
+          <a class="font-size-footer btn-sm btn-dark cursor-pointer aitsun-print me-2" data-url="<?= base_url('invoices/view_pdf/'.$invoice_id.'?method=view'); ?>">
+              <i class="bx bx-printer"></i> 
+              <span class="hidden-xs"><?= langg(get_setting($invoice_data['company_id'],'language'),'PDF Print'); ?></span>
           </a>
  
+
+          <a href="<?= base_url('invoices/view_pdf/'.$invoice_id.'?method=download'); ?>" class="font-size-footer btn-sm btn-dark cursor-pointer download_complete">
+                <i class="bx bx-download"></i>
+                <span class="hidden-xs"><?= langg(get_setting($invoice_data['company_id'],'language'),'Download PDF'); ?></span>
+          </a>
+ 
+        </div>
+
+    		<div class="mb-2">
+    			<iframe style="border: 0;width: 100%;height: 100vh;" src="https://docs.google.com/gview?embedded=true&url=<?= base_url('invoices/view_pdf/'.$invoice_id.'?method=view'); ?>"></iframe>
     		</div>
-    	</div>
-    </div>
+    		
+    	</div> 
 
 
 <div class="position-relative">
@@ -107,195 +103,13 @@
 	<div id="pdfthis" class="pdfthis"></div>
 </div>
 
- 
-
-<script type="text/javascript" src="<?= base_url('public'); ?>/js/printThis.js?v=<?= script_version(); ?>"></script> 
-<script src="<?= base_url('public/js/jspm'); ?>/zip-full.min.js"></script>
-<script src="<?= base_url('public/js/jspm'); ?>/JSPrintManager.js"></script>
-<script src="<?= base_url('public/js/jspm'); ?>/html2canvas.min.js"></script>
+  
 <script src="<?= base_url('public'); ?>/js/pos_print.js?v=<?= script_version(); ?>"></script>
-
-<script src="<?= base_url('public') ?>/js/htmltoimage.js"></script>
-  <script src="<?= base_url('public') ?>/js/canvas2image.js"></script>
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> 
-
-   <script>
-   	$(document).on('click','.downloading_mes_press',function(){
-   		$('.downloading_mes').css("display","block");
-   		setTimeout(function(){
-   			// $('.downloading_mes').css("display","none");
-   			$('.down_text').html('Downloaded 👍🏻');
-
-   		},2000);
-   	});
-   </script>
-   <script>  
-    $(document).on('click','#create_pdf',function(){
-      var filename=$(this).data('filename');
-      var invoice_html=$('#pdfthis').html();
-      $('body').append('<div id="image_pdf" style="position: fixed;width: 850px;padding: 30px 30px 30px 30px;background: white;height: max-content;z-index: 15;top: 0;">'+invoice_html+'</div>');
-
-      var div = document.querySelector('#image_pdf');
-      var scaleBy = 1.5;
-      var w = 860;
-      var h = $('#pdfthis').height()+100;
-     
-      var canvas = document.createElement('canvas');
-      canvas.width = w * scaleBy;
-      canvas.height = h * scaleBy;
-      canvas.style.width = w + 'px';
-      canvas.style.height = h + 'px';
-      var context = canvas.getContext('2d');
-      context.scale(scaleBy, scaleBy);
-
-      html2canvas(div, {
-          canvas:canvas,
-          useCORS: true,
-          onrendered: function (canvas) {
-              var width = canvas.width;
-                  var height = canvas.height;
-                  var millimeters = {};
-                  millimeters.width = Math.floor(width * 0.264583);
-                  millimeters.height = Math.floor(height * 0.264583);
-
-                  var imgData = canvas.toDataURL(
-                      'image/png');
-                  var doc = new jsPDF("p", "mm", "a4");
-                  doc.deletePage(1);
-                  doc.addPage(millimeters.width, millimeters.height);
-                  doc.addImage(imgData, 'PNG', 0, 0);
-                  doc.save(filename+'.pdf');
-                  $('#image_pdf').remove();
-          }
-      });
-  });
-</script> 
-
-
-<script>  
-    $(document).on('click','#create_pdf_receipt',function(){
-      var filename=$(this).data('filename');
-      var invoice_html=$('#pdfthis').html();
-      $('body').append('<div id="image_pdf_receipt" style="position: fixed;width: 850px;padding: 30px 30px 30px 30px;background: white;height: max-content;z-index: 15;top: 0;">'+invoice_html+'</div>');
-
-      var div = document.querySelector('#image_pdf_receipt');
-      var scaleBy = 1.5;
-      var w = 860;
-      var h = $('#pdfthis').height()+100;
-     
-      var canvas = document.createElement('canvas');
-      canvas.width = w * scaleBy;
-      canvas.height = h * scaleBy;
-      canvas.style.width = w + 'px';
-      canvas.style.height = h + 'px';
-      var context = canvas.getContext('2d');
-      context.scale(scaleBy, scaleBy);
-
-      html2canvas(div, {
-          canvas:canvas,
-          useCORS: true,
-          onrendered: function (canvas) {
-              var width = canvas.width;
-                  var height = canvas.height;
-                  var millimeters = {};
-                  millimeters.width = Math.floor(width * 0.264583);
-                  millimeters.height = Math.floor(height * 0.264583);
-
-                  var imgData = canvas.toDataURL(
-                      'image/png');
-                  var doc = new jsPDF("p", "mm", "a4");
-                  doc.deletePage(1);
-                  doc.addPage(millimeters.width, millimeters.height);
-                  doc.addImage(imgData, 'PNG', 0, 0);
-                  doc.save(filename+'.pdf');
-                  $('#image_pdf_receipt').remove();
-          }
-      });
-  });
-</script> 
-
-<script type="text/javascript">
-
-  $(document).on('click','#make_image',function(){
-    var filename=$(this).data('filename');
-    var invoice_html=$('#pdfthis').html();
-    $('body').append('<div id="image_pdf" style="position: fixed;width: 850px;padding: 30px 30px 30px 30px;background: white;height: max-content;z-index: 15;top: 0;">'+invoice_html+'</div>');
-
-    var div = document.querySelector('#image_pdf');
-    var scaleBy = 3;
-    var w = 860;
-    var h = $('#pdfthis').height()+100;
-   
-    var canvas = document.createElement('canvas');
-    canvas.width = w * scaleBy;
-    canvas.height = h * scaleBy;
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    var context = canvas.getContext('2d');
-    context.scale(scaleBy, scaleBy);
-
-    html2canvas(div, {
-        canvas:canvas,
-        useCORS: true,
-        onrendered: function (canvas) {
-            theCanvas = canvas;
-            // document.body.appendChild(canvas);
-
-            Canvas2Image.saveAsPNG(canvas);
-            // $(body).append(canvas);
-            $('#image_pdf').remove();
-        }
-    });
-  });
-
-
-
-</script>
-
-
-<script type="text/javascript">
-
-  $(document).on('click','#make_image_receipt',function(){
-    var filename=$(this).data('filename');
-    var invoice_html=$('#pdfthis').html();
-    $('body').append('<div id="image_pdf_receipt" style="position: fixed;width: 850px;padding: 30px 30px 30px 30px;background: white;height: max-content;z-index: 15;top: 0;">'+invoice_html+'</div>');
-
-    var div = document.querySelector('#image_pdf_receipt');
-    var scaleBy = 3;
-    var w = 860;
-    var h = $('#pdfthis').height()+100;
-   
-    var canvas = document.createElement('canvas');
-    canvas.width = w * scaleBy;
-    canvas.height = h * scaleBy;
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    var context = canvas.getContext('2d');
-    context.scale(scaleBy, scaleBy);
-
-    html2canvas(div, {
-        canvas:canvas,
-        useCORS: true,
-        onrendered: function (canvas) {
-            theCanvas = canvas;
-            // document.body.appendChild(canvas);
-
-            Canvas2Image.saveAsPNG(canvas);
-            // $(body).append(canvas);
-            $('#image_pdf_receipt').remove();
-        }
-    });
-  });
-
-
-
-</script>
-
+ 
 <script type="text/javascript">
   $(document).ready(function(){
     $.ajax({
-      url: "<?= base_url('invoices/get_invoice'); ?>/<?= $invoice_id ?>",
+      url: "<?= base_url('invoices/get_invoice_pdf'); ?>/<?= $invoice_id ?>/view",
       success:function(response) {
         $('#pdfthis').html(response);
      },

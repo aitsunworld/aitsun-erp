@@ -67,6 +67,7 @@
         <input type="hidden" id="loc" value="<?= get_setting(company($user['id']),'loc'); ?>">
         <input type="hidden" id="thermalcheck" value="<?= get_setting(company($user['id']),'print_thermal'); ?>">
         <input type="hidden" value="<?= get_setting(company($user['id']),'printer1'); ?>" id="installedPrinterName">
+        <input type="hidden" value="0" id="automatic_share">
 
 
          <?php 

@@ -38,6 +38,7 @@ class Aitsun_share extends BaseController
             if ($this->request->getMethod() == 'post') {  
 
                 $data=[
+                    'name'=>$this->request->getVar('name'),
                     'to'=>$this->request->getVar('to'),
                     'subject'=>$this->request->getVar('subject'),
                     'message'=>$this->request->getVar('message'),

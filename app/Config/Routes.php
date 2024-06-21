@@ -505,7 +505,8 @@ $routes->post('settings/invoice_settings', 'Settings::invoice');
 // new app settings
 $routes->get('/app_info', 'Settings::app_info'); 
 $routes->get('/settings/product-scrapper', 'Product_scrapper::configuration'); 
-$routes->get('/settings/sms_and_emails', 'Settings::sms_and_emails'); 
+$routes->get('/settings/message_templates', 'Settings::message_templates'); 
+$routes->post('/settings/update_message_template/(:any)', 'Settings::update_message_template/$1');
 $routes->get('/settings/printers', 'Settings::printers');
 $routes->post('/settings/printers', 'Settings::printers/0');
 $routes->post('/settings/printers/(:any)', 'Settings::printers/$1');
@@ -990,8 +991,9 @@ $routes->post('home/get_adjust_payment/(:any)', 'Home::get_adjust_payment/$1');
 //sleep
 $routes->get('/sleep_mode', 'Calendar::sleep_mode');
 
-//sleep
-$routes->get('/reminder', 'Reminders::index');
+//reminders
+$routes->get('/reminders', 'Reminders::index');
+$routes->get('/reminders/send_email', 'Reminders::send_email');
 
 
 //Share

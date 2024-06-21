@@ -27,9 +27,9 @@
                 </li>
 
                 <li>
-                    <a href="<?= base_url('settings/sms_and_emails'); ?>" class="href_loader">
+                    <a href="<?= base_url('settings/message_templates'); ?>" class="href_loader">
                         <div class="icon_parent"><i class='bx bx-envelope-open'></i></div>
-                        <div class="icon-title">SMS & Emails</div>
+                        <div class="icon-title">Message templates</div>
                     </a>
                 </li>
 

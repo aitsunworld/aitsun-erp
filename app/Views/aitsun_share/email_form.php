@@ -6,6 +6,10 @@
 </div>
 <div class="modal-body">
   
+  <div class="form-group mb-2">
+        <label for="to-input">Name</label>
+        <input type="text" class="form-control" id="name"  placeholder="Name" value="<?= $name; ?>" required> 
+    </div>
     <div class="form-group mb-2">
         <label for="to-input">To</label>
         <input type="email" class="form-control" id="emailto"  placeholder="To" value="<?= $to; ?>" required> 
@@ -22,6 +26,6 @@
     </div> 
 
     <div class="btn-toolbar form-group mt-2">
-            <button class="aitsun-primary-btn inventory_email" data-id=""> <span>Send</span> <i class="lni lni-telegram-original ml-1"></i> </button>
+            <button class="aitsun-primary-btn send_email" data-id=""> <span>Send</span> <i class="lni lni-telegram-original ml-1"></i> </button>
     </div>  
 </div>

@@ -1,0 +1,308 @@
+CRITICAL - 2024-06-21 04:19:17 --> syntax error, unexpected single-quoted string "fdsfdsf", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 8.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:19:23 --> syntax error, unexpected single-quoted string "fdsfdsf", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 8.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:19:24 --> syntax error, unexpected single-quoted string "fdsfdsf", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 8.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:19:26 --> syntax error, unexpected single-quoted string "fdsfdsf", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 8.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:19:27 --> syntax error, unexpected single-quoted string "fdsfdsf", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 8.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:19:33 --> syntax error, unexpected single-quoted string "fdsfdsf", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 8.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:27:55 --> Invalid file: "invoices/invoice_templates/invoice_show1.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invoices/invoice_templates/invoice_show1.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_templates/invoice_show1', [], true)
+ 3 APPPATH\Controllers\Invoices.php(387): view('invoices/invoice_templates/invoice_show1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice('95')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:28:08 --> Invalid file: "invoices/invoice_templates/invoice_show1.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invoices/invoice_templates/invoice_show1.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_templates/invoice_show1', [], true)
+ 3 APPPATH\Controllers\Invoices.php(387): view('invoices/invoice_templates/invoice_show1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice('95')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:29:07 --> Invalid file: "invoices/invoice_templates/invoice_show1.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invoices/invoice_templates/invoice_show1.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_templates/invoice_show1', [], true)
+ 3 APPPATH\Controllers\Invoices.php(387): view('invoices/invoice_templates/invoice_show1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice('95')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 04:30:13 --> Invalid file: "invoices/invoice_templates/invoice_show1.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invoices/invoice_templates/invoice_show1.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_templates/invoice_show1', [], true)
+ 3 APPPATH\Controllers\Invoices.php(387): view('invoices/invoice_templates/invoice_show1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice('95')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 05:59:01 --> Undefined variable $apiInstance
+in APPPATH\Controllers\Reminders.php on line 99.
+ 1 APPPATH\Controllers\Reminders.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apiInstance', 'APPPATH\\Controllers\\Reminders.php', 99)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 05:59:41 --> [401] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:05:40 --> [400] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `400 Bad Request` response:
+{"code":"missing_parameter","message":"name is missing in to"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:05:45 --> [400] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `400 Bad Request` response:
+{"code":"missing_parameter","message":"name is missing in to"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:06:06 --> [400] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `400 Bad Request` response:
+{"code":"invalid_parameter","message":"to is not valid"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:06:28 --> [400] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `400 Bad Request` response:
+{"code":"invalid_parameter","message":"to is not valid"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:15:34 --> [401] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:17:19 --> [400] Client error: `POST https://api.sendinblue.com/v3/transactionalSMS/sms` resulted in a `400 Bad Request` response:
+{"code":"invalid_parameter","message":"Unable to send sms. Your SMS sending status is not yet activated. Please contact  (truncated...)
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalSMSApi.php on line 1098.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalSMSApi.php(1073): SendinBlue\Client\Api\TransactionalSMSApi->sendTransacSmsWithHttpInfo(Object(SendinBlue\Client\Model\SendTransacSms))
+ 2 APPPATH\Controllers\Reminders.php(57): SendinBlue\Client\Api\TransactionalSMSApi->sendTransacSms(Object(SendinBlue\Client\Model\SendTransacSms))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:32:45 --> Invalid file: "aitsun_share/whatsapp_form.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('aitsun_share/whatsapp_form.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_share/whatsapp_form', [], true)
+ 3 APPPATH\Controllers\Aitsun_share.php(52): view('aitsun_share/whatsapp_form', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_share->get_form()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_share))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:32:46 --> Invalid file: "aitsun_share/whatsapp_form.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('aitsun_share/whatsapp_form.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_share/whatsapp_form', [], true)
+ 3 APPPATH\Controllers\Aitsun_share.php(52): view('aitsun_share/whatsapp_form', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_share->get_form()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_share))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:32:47 --> Invalid file: "aitsun_share/whatsapp_form.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('aitsun_share/whatsapp_form.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('aitsun_share/whatsapp_form', [], true)
+ 3 APPPATH\Controllers\Aitsun_share.php(52): view('aitsun_share/whatsapp_form', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_share->get_form()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_share))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 06:59:34 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 07:00:34 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 07:00:45 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 08:59:15 --> Undefined array key "whatsapp"
+in APPPATH\Helpers\share_helper.php on line 12.
+ 1 APPPATH\Helpers\share_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "whatsapp"', 'APPPATH\\Helpers\\share_helper.php', 12)
+ 2 APPPATH\Views\invoices\invoice_details.php(164): aitsun_share_data('whatsapp', 'invoice_share')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 6 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('95')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:00:01 --> Undefined array key "whatsapp"
+in APPPATH\Helpers\share_helper.php on line 12.
+ 1 APPPATH\Helpers\share_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "whatsapp"', 'APPPATH\\Helpers\\share_helper.php', 12)
+ 2 APPPATH\Views\invoices\invoice_details.php(164): aitsun_share_data('whatsapp', 'invoice_share')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 6 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('95')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:00:12 --> Cannot access offset of type string on string
+in APPPATH\Views\invoices\invoice_details.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 4 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('95')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:00:44 --> Trying to access array offset on value of type null
+in APPPATH\Views\invoices\invoice_details.php on line 165.
+ 1 APPPATH\Views\invoices\invoice_details.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\invoices\\invoice_details.php', 165)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('95')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:25:17 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5361.
+ 1 APPPATH\Helpers\apanel_helper.php(5361): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5361)
+ 2 APPPATH\Helpers\apanel_helper.php(5323): company('19970')
+ 3 APPPATH\Controllers\Home.php(31): now_time('19970')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:25:25 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5361.
+ 1 APPPATH\Helpers\apanel_helper.php(5361): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5361)
+ 2 APPPATH\Helpers\apanel_helper.php(5323): company('19970')
+ 3 APPPATH\Controllers\Users.php(409): now_time('19970')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->logout()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:25:29 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5361.
+ 1 APPPATH\Helpers\apanel_helper.php(5361): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5361)
+ 2 APPPATH\Helpers\apanel_helper.php(5323): company('19970')
+ 3 APPPATH\Controllers\Users.php(409): now_time('19970')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->logout()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 09:46:40 --> Class "App\Controllers\MessageTemplatesModel" not found
+in APPPATH\Controllers\Settings.php on line 3148.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->message_templates()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-21 10:16:23 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
