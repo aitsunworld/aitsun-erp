@@ -1,43 +1,42 @@
 $(document).ready(function(){
 
+ 
+    $(document).on('click', '.shortcodes_ul li', function() { 
+        var codee = $(this).text();  
+        var tempTextarea = $('<textarea>');
+        tempTextarea.val(codee).css({position: 'fixed', left: '-9999px'}).appendTo($('body')).select(); 
+        document.execCommand('copy'); 
+        tempTextarea.remove(); 
+        show_success_msg('success', 'Shortcode copied!')
+    });
+
 
     $(document).on('blur','.message_template_update',function(){
-    
+        
+
         var template_name=$(this).data('template_name');
-        var p_element_val=$(this).val();
+        var p_element_val=$.trim($(this).val());
         var p_element=$(this).data('element_name');
         
         var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
         var csrfHash = $('#csrf_token').val(); // CSRF hash
-       
         
-          $.ajax({
-              type: 'POST',
-              url: base_url()+'/settings/update_message_template/'+template_name,
-              data: { 
-                p_element_val:p_element_val,
-                p_element:p_element,
-                [csrfName]: csrfHash
-              },
-              beforeSend: function() {
-              },
-              success: function(response) {
-                  if ($.trim(response)==1) {
-
-                    $('.add_cls-'+p_element+'-'+template_name).addClass('is-valid'); 
-                            setTimeout(function(){
-                                $('.add_cls-'+p_element+'-'+template_name).removeClass('is-valid');
-                            },2000)
-
-                      // round_success_noti('Saved');
-                  }else{
-                     $('.add_cls-'+p_element+'-'+template_name).addClass('is-invalid'); 
-                            setTimeout(function(){
-                                $('.add_cls-'+p_element+'-'+template_name).removeClass('is-invalid');
-                            },2000)
-                  }
+        $.ajax({
+          type: 'POST',
+          url: base_url()+'/settings/update_message_template/'+template_name,
+          data: { 
+            p_element_val:p_element_val,
+            p_element:p_element,
+            [csrfName]: csrfHash
+          },
+          beforeSend: function() {
+          },
+          success: function(response) {
+              if ($.trim(response)==1) {
+                show_success_msg('success','Template updated!');
               }
-          });
+          }
+      }); 
             
     });
 

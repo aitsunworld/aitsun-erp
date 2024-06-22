@@ -38,24 +38,49 @@
 <div class="main_page_content ">
     <?= view('settings/settings_sidebar') ?>
     <div class="row setting_margin">
-          
+        <?php foreach (templates_list() as $td): ?>  
         <!-- Inventory share -->
-        <div class="col-md-12" >
-            <h6 class="text-aitsun-red">Inventory share</h6>    
+        <div class="col-md-12" > 
+            <h6 class="text-aitsun-red"><?= $td['template_heading'] ?></h6>  
         </div>
+
+        
 
         <div class="form-group col-md-6 mb-3">
             <label for="input-5" class="form-label d-block"><b><i class="lni lni-envelope text-danger"></i></b> Email</label>
-            <input type="text" name="subject" class="message_template_update form-control mb-2" data-template_name="" data-element_name="" placeholder="Subject">
-            <textarea rows="5" name="message" class="message_template_update form-control" placeholder="Message"></textarea>
+            <input type="text" class="message_template_update form-control mb-2" placeholder="Subject"
+                data-template_name="<?= $td['em_template_name'] ?>" 
+                data-element_name="subject"
+                value="<?= get_template(company($user['id']),$td['em_template_name'],'subject') ?>" 
+            >
+            <textarea rows="5" class="message_template_update form-control" placeholder="Message"
+                data-template_name="<?= $td['em_template_name'] ?>" 
+                data-element_name="message"
+                ><?= get_template(company($user['id']),$td['em_template_name'],'message') ?></textarea> 
         </div> 
 
         <div class="form-group col-md-6 mb-3">
             <label for="input-5" class="form-label d-block"><b><i class="lni lni-whatsapp text-success"></i></b> WhatsApp</label>
-            <input type="text" name="subject" class="message_template_update form-control mb-2" placeholder="Subject">
-            <textarea rows="5" name="message" class="message_template_update form-control" placeholder="Message"></textarea>
+            <input type="text" name="subject" class="message_template_update form-control mb-2" placeholder="Subject"
+                data-template_name="<?= $td['wa_template_name'] ?>" 
+                data-element_name="subject"
+                value="<?= get_template(company($user['id']),$td['wa_template_name'],'subject') ?>"
+            >
+            <textarea rows="5" name="message" class="message_template_update form-control" placeholder="Message"
+                data-template_name="<?= $td['wa_template_name'] ?>" 
+                data-element_name="message"
+            ><?= get_template(company($user['id']),$td['wa_template_name'],'message') ?></textarea>
+        </div> 
+
+        <div class="form-group col-md-12 mb-3">
+            <ul class="shortcodes_ul">
+                <?php foreach ($td['short_codes'] as $shortcode): ?>
+                    <li><?= $shortcode ?></li>
+                <?php endforeach ?> 
+            </ul>
         </div> 
         <hr>
+        <?php endforeach ?> 
          
     </div>
 </div>

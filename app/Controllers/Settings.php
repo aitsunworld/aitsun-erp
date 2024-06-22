@@ -3195,15 +3195,12 @@ public function preferences(){
             
             $ac_data = [
                 $pele=>strip_tags(trim($this->request->getVar('p_element_val'))),
-                'edit_effected'=>0, 
-                'opening_balance'=>$opstock,
-                'closing_balance'=>$fullstock,
-                'final_closing_value'=>$final_closing_value,
-                'final_closing_value_fifo'=>$final_closing_value_fifo,
-            ];
-                     
+                'company_id'=>company($myid),
+                'template_name'=>$template_name 
+            ]; 
+
             if ($message_tem_data) {
-                $ac_data['id']=$pro_data['id'];
+                $ac_data['id']=$message_tem_data['id'];
             }
             
             $save_pro_data=$MessageTemplatesModel->save($ac_data);

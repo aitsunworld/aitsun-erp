@@ -1,0 +1,88 @@
+CRITICAL - 2024-06-22 03:31:04 --> syntax error, unexpected single-quoted string "template_name", expecting "]"
+in APPPATH\Controllers\Settings.php on line 3199.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Settings.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Settings')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Settings')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Settings', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 03:49:51 --> Undefined variable $email_data
+in APPPATH\Views\invoices\invoice_details.php on line 144.
+ 1 APPPATH\Views\invoices\invoice_details.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email_data', 'APPPATH\\Views\\invoices\\invoice_details.php', 144)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 03:54:02 --> Undefined variable $whatsapp_subject
+in APPPATH\Views\invoices\invoice_details.php on line 180.
+ 1 APPPATH\Views\invoices\invoice_details.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $whatsapp_subject', 'APPPATH\\Views\\invoices\\invoice_details.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 04:08:42 --> syntax error, unexpected token "!", expecting "("
+in APPPATH\Helpers\share_helper.php on line 9.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 04:08:43 --> syntax error, unexpected token "!", expecting "("
+in APPPATH\Helpers\share_helper.php on line 9.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 04:08:44 --> syntax error, unexpected token "!", expecting "("
+in APPPATH\Helpers\share_helper.php on line 9.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 05:15:13 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\settings\message_templates.php on line 41.
+ 1 APPPATH\Views\settings\message_templates.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\settings\\message_templates.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\message_templates.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/message_templates', [], true)
+ 5 APPPATH\Controllers\Settings.php(3171): view('settings/message_templates', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->message_templates()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 05:20:06 --> Undefined array key "email_appointmnt"
+in APPPATH\Helpers\share_helper.php on line 32.
+ 1 APPPATH\Helpers\share_helper.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email_appointmnt"', 'APPPATH\\Helpers\\share_helper.php', 32)
+ 2 APPPATH\Helpers\share_helper.php(15): aitsun_share_data('email_appointmnt', 'subject')
+ 3 APPPATH\Views\settings\message_templates.php(54): get_template('1', 'email_appointmnt', 'subject')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings\\message_templates.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('settings/message_templates', [], true)
+ 7 APPPATH\Controllers\Settings.php(3171): view('settings/message_templates', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->message_templates()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 09:18:55 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\apanel_helper.php on line 5361.
+ 1 APPPATH\Helpers\apanel_helper.php(5361): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\apanel_helper.php', 5361)
+ 2 APPPATH\Helpers\apanel_helper.php(5323): company('19970')
+ 3 APPPATH\Controllers\Home.php(31): now_time('19970')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

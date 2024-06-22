@@ -140,9 +140,9 @@
 
 
     <?php if ($invoice_data['deleted']==0): ?>
-        <?php 
-            $email_data=aitsun_share_data('email','invoice_share');
-            $subject=$email_data['subject'];
+        <?php  
+            $subject=get_template(company($user['id']),'email_invoice_share','subject');
+            $message=get_template(company($user['id']),'email_invoice_share','message');
            
             $replacing_data = [
                 '[customer-name]' => user_name($invoice_data['customer']), 
@@ -155,14 +155,16 @@
                 '[invoice-link]' => base_url('invoices/download').'/'.$invoice_data['id'],
                 '[invoice-type]' => ucwords(strtolower(inventory_heading($invoice_data['company_id'],$invoice_data['invoice_type'])))
             ];
-            $message=str_replace(array_keys($replacing_data), array_values($replacing_data), $email_data['message']);
-            $subject=str_replace(array_keys($replacing_data), array_values($replacing_data), $email_data['subject']);
+            $subject=str_replace(array_keys($replacing_data), array_values($replacing_data), $subject);
+            $message=str_replace(array_keys($replacing_data), array_values($replacing_data), $message);
+            
          ?>
       <a class="text-dark font-size-footer ms-2 aitsun-share" data-type="email" data-name="<?= user_name($invoice_data['customer']) ?>" data-to="<?= user_email($invoice_data['customer']) ?>" data-template="invoice_share" data-subject="<?= $subject ?>" data-message="<?= $message ?>"><i class="bx bx-envelope"></i> Email</a>
 
-      <?php 
-            $whatsapp_data=aitsun_share_data('whatsapp','invoice_share');
-            $whatsapp_subject=$whatsapp_data['subject'];
+      <?php  
+            $whatsapp_subject=get_template(company($user['id']),'whatsapp_invoice_share','subject');
+            $whatsapp_message=get_template(company($user['id']),'whatsapp_invoice_share','message');
+
            
             $wa_replacing_data = [
                 '[customer-name]' => user_name($invoice_data['customer']), 
@@ -175,8 +177,8 @@
                 '[invoice-link]' => base_url('invoices/download').'/'.$invoice_data['id'],
                 '[invoice-type]' => ucwords(strtolower(inventory_heading($invoice_data['company_id'],$invoice_data['invoice_type'])))
             ];
-            $whatsapp_message=str_replace(array_keys($wa_replacing_data), array_values($wa_replacing_data), $whatsapp_data['message']);
-            $whatsapp_subject=str_replace(array_keys($wa_replacing_data), array_values($wa_replacing_data), $whatsapp_data['subject']);
+            $whatsapp_subject=str_replace(array_keys($wa_replacing_data), array_values($wa_replacing_data), $whatsapp_subject);
+            $whatsapp_message=str_replace(array_keys($wa_replacing_data), array_values($wa_replacing_data), $whatsapp_message);
          ?>
 
       <a class="text-dark font-size-footer ms-2 aitsun-share" data-type="whatsapp" data-name="<?= user_name($invoice_data['customer']) ?>" data-to="<?= country_code($invoice_data['customer']) ?><?= user_phone($invoice_data['customer']) ?>" data-template="invoice_share" data-subject="<?= $whatsapp_subject ?>" data-message="<?= $whatsapp_message ?>"><i class="lni lni-whatsapp"></i> WhatsApp</a>

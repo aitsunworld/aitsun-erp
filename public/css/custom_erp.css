@@ -3981,3 +3981,23 @@ body {
 .lobibox-notify-wrapper{
     z-index: 90000000000!important;
 }
+
+.shortcodes_ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    margin-bottom: 0;
+}
+
+.shortcodes_ul li{
+    border: 1px solid #cf20574f;
+    background: #cf20574f;
+    color: black;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-weight: 400;
+    border-radius: 20px;
+}
