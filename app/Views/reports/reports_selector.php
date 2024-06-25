@@ -132,7 +132,7 @@
         </a> 
 
          <a class="menu_icon text-dark cursor-pointer href_loader" href="<?= base_url('reports/receipt_payment'); ?>">
-            <img src="<?= base_url('public/images/menu_icons/receipt_payment.png') ?>" class="menu_img">
+            <img src="<?= base_url('public/images/menu_icons/receipt_payment.webp') ?>" class="menu_img">
             <div class="menu-title">Receipt & Payment</div>
         </a> 
 
