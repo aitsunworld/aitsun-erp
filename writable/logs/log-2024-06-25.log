@@ -1,0 +1,33 @@
+CRITICAL - 2024-06-25 05:34:21 --> Unclosed '{' on line 6
+in APPPATH\Controllers\Cheque_management.php on line 37.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Cheque_management.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Cheque_management')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Cheque_management')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Cheque_management', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:35:07 --> Class "App\Controllers\EventModel" not found
+in APPPATH\Controllers\Cheque_management.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cheque_management->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cheque_management))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:59:59 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:38:34 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

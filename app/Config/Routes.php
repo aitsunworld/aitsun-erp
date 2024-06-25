@@ -269,7 +269,8 @@ $routes->get('/hr_manage/delete_punch/(:any)', 'Hr_manage::delete_punch/$1');
 $routes->post('/hr_manage/edit_punch/(:any)', 'Hr_manage::edit_punch/$1'); 
 $routes->post('/hr_manage/update_note/(:any)', 'Hr_manage::update_note/$1'); 
 
-
+///////////// HR Management ////////////////////
+$routes->get('/cheque-management', 'Cheque_management::index');
  
 $routes->get('/hr_manage/attendance_report', 'Hr_manage::attendance_report'); 
 $routes->get('/hr_manage/detailed_attendance_report', 'Hr_manage::detailed_attendance_report'); 

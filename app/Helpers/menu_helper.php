@@ -84,6 +84,12 @@
 		        "condition" => is_hrmanage(company($user_id)) && (check_permission($user_id, 'manage_hr') || $u_type == 'admin')
 		    ],
 		    [
+		    	"menu_name"=>'Cheques',
+		        "url" => base_url('cheque-management'),
+		        "icon" => base_url('public/images/menu_icons/cheque-management.webp'),
+		        "title" => "Cheques"
+		    ],
+		    [
 		    	"menu_name"=>'Business Operations',
 		        "url" => base_url('business-operations'),
 		        "icon" => base_url('public/images/menu_icons/business_operations.webp'),
