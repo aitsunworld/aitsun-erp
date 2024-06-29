@@ -242,3 +242,36 @@ in APPPATH\Views\products\product_edit.php on line 638.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 11:47:07 --> [401] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 11:49:01 --> [401] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-29 11:49:03 --> [401] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(105): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->send_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
