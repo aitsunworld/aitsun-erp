@@ -83,6 +83,8 @@ use App\Models\PosTables as PosTables;
 use App\Models\PermissionsModel as PermissionsModel;
 use App\Models\Permissionlist as Permissionlist;
 use App\Models\RentalLogsModel as RentalLogsModel;
+use App\Models\RentalHoursModel as RentalHoursModel;
+use App\Models\ProductPriceListModel as ProductPriceListModel;
 
 
 function style_version(){
@@ -150,6 +152,20 @@ function site_key(){
     }else{
         return '6LeLFIQlAAAAAF2nc9eyEn0iYWhZUJm4qKXLeYGm';
     }  
+}
+
+
+
+function price_list_of_product($product_id){
+    $ProductPriceListModel= new ProductPriceListModel();
+    $pricelist = $ProductPriceListModel->where('product_id',$product_id)->where('deleted',0)->findAll();
+    return $pricelist;
+}
+
+function rental_periods_array($company_id){
+    $RentalHoursModel= new RentalHoursModel();
+    $rental_hours_data = $RentalHoursModel->where('company_id',$company_id)->orderBy("id", "desc")->findAll();
+    return $rental_hours_data;
 }
 
 function total_picked_quantity_of_invoice($invoice_id,$log_type){

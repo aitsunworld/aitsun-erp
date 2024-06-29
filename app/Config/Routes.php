@@ -427,6 +427,13 @@ $routes->post('/products', 'Products::index');
 $routes->get('/import_and_export/export', 'Import_and_export::export');
 $routes->post('/import_and_export/save', 'Import_and_export::save');
 $routes->get('/products/easy_edit', 'Easy_edit::index');
+$routes->get('/product/rental_periods', 'Products::rental_periods');
+$routes->post('/product/save_rental_periods', 'Products::save_rental_periods');
+$routes->post('/product/update_period/(:any)', 'Products::update_period/$1');
+$routes->get('/product/delete_period/(:any)', 'Products::delete_period/$1');
+
+
+
 $routes->post('/easy_edit/update_product/(:any)', 'Easy_edit::update_product/$1');
 $routes->post('/import_and_export/sync_products_to_branch/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Import_and_export::sync_products_to_branch/$1/$2/$3/$4/$5/$6/$7');
 $routes->get('/products/get_sub_select/(:any)', 'Products::get_sub_select/$1');

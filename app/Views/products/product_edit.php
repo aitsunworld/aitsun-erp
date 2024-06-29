@@ -149,6 +149,54 @@
 
                     </div>
 
+         <div class="mb-3 d-none-on-bill">
+            <div class="form-check form-switch " > 
+            <label for="is_rental"><input type="checkbox" class="form-check-input is_rental" id="is_rental" name="is_rental" value="1" <?= ($pro['is_rental'])?'checked':''; ?> > Is rental product</label>
+        </div>
+
+
+        <div id="pricelist_block" class="<?= ($pro['is_rental'])?'':'d-none'; ?> ">
+            <div class="aitsun_table">
+                    <table class="erp_table aitsun_table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Period</th> 
+                      <th>Price</th>
+                      <th><button class="no_load btn btn-outline-light rental_price_add-more  btn-sm" type="button"><b>+</b></button></th>
+                    </tr>
+                  </thead>
+                  <tbody class="after-rental_price_add-more">
+                    <input type="hidden" name="i_id[]">
+                    <input type="hidden" name="period_id[]">
+                    <input type="hidden" name="rental_price[]">
+
+
+
+                    <?php $pl_no=0; foreach (price_list_of_product($pro['id']) as $pl): $pl_no++; ?> 
+                        <input type="hidden" name="i_id[]" value="<?= $pl['id'] ?>">
+                      <tr class="after-rental_price_add-more-tr"> 
+                        <td class="w-100">
+                            <div class="d-flex w-100">
+                                <div class="position-relative fsc field_select_container w-100">
+                                    <select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
+                                        <?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
+                                            <option value="<?= $rp['id'] ?>" <?= ($pl['period_id']==$rp['id'])?'selected':'' ?>><?= $rp['period_name'] ?></option> 
+                                        <?php endforeach ?>
+                                </select>  
+                                </div> 
+                            </div>
+                        </td>
+                        <td><input type="number" step="any" name="rental_price[]" class="form-control " style="width: 200px;" value="<?= aitsun_round($pl['price'],get_setting(company($user['id']),'round_of_value')) ?>"></td>
+                        <td class="change"> 
+                            <a class="btn btn-danger btn-sm no_load rental_remove text-white"><b>-</b></a> 
+                        </td>
+                      </tr>
+                    <?php endforeach ?>
+                  </tbody>
+                </table>
+            </div> 
+        </div>
+          </div>
                                   
                                   
                   <div class="mb-3 ">
@@ -563,6 +611,72 @@
 <script type="text/javascript">
             
             $(document).ready(function(){
+
+
+    $(document).on('click','.is_rental',function(){
+        if ($(this).is(':checked')) {
+        $('#pricelist_block').removeClass('d-none');
+    } else {
+        $('#pricelist_block').addClass('d-none');
+    }  
+    });
+
+
+    var rental_no=0;
+
+
+    $(document).on("click",".rental_price_add-more",function(){  
+
+            var options_fields=$('#add_field_items').html();
+
+            rental_no++;
+
+
+      var html = `<tr class="after-rental_price_add-more-tr">
+        <td class="w-100">
+            <div class="d-flex w-100">
+            <input type="hidden" name="i_id[]" value="">
+                <div class="position-relative fsc field_select_container w-100">
+                    <select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
+                        <?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
+                            <option value="<?= $rp['id'] ?>"><?= $rp['period_name'] ?></option> 
+                        <?php endforeach ?>
+                </select>  
+                </div> 
+            </div>
+        </td>
+        <td><input type="number" step="any" name="rental_price[]" class="form-control " style="width: 200px;"></td>
+        <td class="change"><a class="btn btn-danger btn-sm no_load rental_remove text-white"><b>-</b></a></td>
+      </tr>`; 
+      
+      $(".after-rental_price_add-more").append(html);
+
+      $('.newsele').select2();
+
+    });
+
+    $(document).on("click",".rental_remove",function(){ 
+      $(this).parents(".after-rental_price_add-more-tr").remove();
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 var no=0;
             $(document).on("click",".add-more",function(){ 
           var options_fields=$('#add_field_items').html();

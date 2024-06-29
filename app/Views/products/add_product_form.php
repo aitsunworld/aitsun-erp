@@ -62,6 +62,46 @@
 			  </div> 
 		  </div>
 
+
+		  <div class="mb-3 d-none-on-bill">
+		  	<div class="form-check form-switch " > 
+            <label for="is_rental"><input type="checkbox" class="form-check-input is_rental" id="is_rental" name="is_rental" value="1"> Is rental product</label>
+        </div>
+
+
+        <div id="pricelist_block" class="d-none">
+        	<div class="aitsun_table">
+	        		<table class="erp_table aitsun_table table-bordered">
+	              <thead>
+	                <tr>
+	                  <th>Period</th> 
+	                  <th>Price</th>
+	                  <th><button class="no_load btn btn-outline-light rental_price_add-more  btn-sm" type="button"><b>+</b></button></th>
+	                </tr>
+	              </thead>
+	              <tbody class="after-rental_price_add-more">
+	                  <tr class="after-rental_price_add-more-tr">
+	                   
+	                    <td class="w-100">
+	                    	<div class="d-flex w-100">
+	                    		<div class="position-relative fsc field_select_container w-100">
+	                    			<select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
+	                    				<?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
+	                    					<option value="<?= $rp['id'] ?>"><?= $rp['period_name'] ?></option> 
+	                    				<?php endforeach ?>
+	                        	</select>  
+	                    		</div> 
+	                    	</div>
+	                    </td>
+	                    <td><input type="number" step="any" name="rental_price[]" class="form-control " style="width: 200px;"></td>
+	                    <td class="change"></td>
+	                  </tr>
+	              </tbody>
+	            </table>
+        	</div> 
+        </div>
+		  </div>
+
 		  <div class="mb-3 ">
 			<label for="inputProductDescription" class="form-label">Description</label>
 			<textarea class="form-control" name="description" id="description" rows="3"></textarea>
@@ -94,7 +134,7 @@
 		  <div class="remove_service">
 		  <div class="mb-3 d-none-on-bill <?php if (is_online_shop(company($user['id']))!=1) {echo "d-none";} ?>">
 			<label for="inputProductDescription" class="form-label">Long Description</label>
-			<textarea class="form-control summernote" id="long_description" name="long_description" rows="3"></textarea>
+			<textarea class="form-control" id="long_description" name="long_description" rows="3"></textarea>
 		  </div>
 
 
@@ -133,11 +173,11 @@
                             	</div>
                             </th>
                             <th>Value <small>(Ex: 2GB)</small></th>
-                            <th><button class="no_load btn btn-outline-dark add-more  btn-sm" type="button"><b>+</b></button></th>
+                            <th><button class="no_load btn btn-outline-dark add_field_add-more  btn-sm" type="button"><b>+</b></button></th>
                           </tr>
                         </thead>
-                        <tbody class="after-add-more">
-                            <tr class="after-add-more-tr">
+                        <tbody class="after-add_field_add-more">
+                            <tr class="after-add_field_add-more-tr">
                               <td>
                               	<div class="form-check form-switch">
 																	<input class="form-check-input checkingrollbox" type="checkbox" id="switchableid">
@@ -303,7 +343,7 @@
 						<select class="ssselect form-select" data-proid="" name="unit" id="unit">
 							<option value="">Select Unit</option>
 							<?php foreach (products_units_array(company($user['id'])) as $pu): ?>
-							<option value="<?= $pu['value']; ?>"><?= $pu['name']; ?></option>
+							<option value="<?= $pu['value']; ?>" <?= ($pu['value']=='Nos')?'selected':''; ?>><?= $pu['name']; ?></option>
 							<?php endforeach ?>
 						 </select>
 			  </div>
@@ -473,26 +513,76 @@
 
 
 <script type="text/javascript">
+
+	$(document).on('click','.is_rental',function(){
+		if ($(this).is(':checked')) {
+        $('#pricelist_block').removeClass('d-none');
+    } else {
+        $('#pricelist_block').addClass('d-none');
+    }  
+	});
+
+
 	var no=0;
 
 
-	$(document).on("click",".add-more",function(){  
+	$(document).on("click",".add_field_add-more",function(){  
 
 			var options_fields=$('#add_field_items').html();
 
 			no++;
 
 
-      var html = '<tr class="after-add-more-tr"><td><div class="form-check form-switch"><input class="form-check-input checkingrollbox" type="checkbox" id="switchableid'+no+'"><input class="mt-1 mr-1 rollcheckinput checkBoxmrngAll" name="switchable[]" type="hidden" value="0"><label class="form-check-label" for="switchableid'+no+'"></label></div></td><td><div class="d-flex"><div class="position-relative fsc field_select_container'+no+'"><select name="field_name[]" class="form-select select2 field_select newsele" data-blockid="'+no+'" id="field_select'+no+'" style="width: 200px;"><option value="">Search</option>'+options_fields+'</select></div><a class="ml-2 my-auto btn btn-sm btn-info add_fields_input" id="add_fields_input'+no+'" data-blockid="'+no+'">+</a><a class="ml-2 d-none my-auto btn btn-sm btn-facebook save_fields_input" id="save_add_field'+no+'" data-blockid="'+no+'"><i class="bx bx-x"></i></a></div></td><td><input type="text" name="field_value[]" class="form-control" ></td><td class="change"><a class="btn btn-danger btn-sm no_load  remove text-white"><b>-</b></a></td></tr>'; 
+      var html = '<tr class="after-add_field_add-more-tr"><td><div class="form-check form-switch"><input class="form-check-input checkingrollbox" type="checkbox" id="switchableid'+no+'"><input class="mt-1 mr-1 rollcheckinput checkBoxmrngAll" name="switchable[]" type="hidden" value="0"><label class="form-check-label" for="switchableid'+no+'"></label></div></td><td><div class="d-flex"><div class="position-relative fsc field_select_container'+no+'"><select name="field_name[]" class="form-select select2 field_select newsele" data-blockid="'+no+'" id="field_select'+no+'" style="width: 200px;"><option value="">Search</option>'+options_fields+'</select></div><a class="ml-2 my-auto btn btn-sm btn-info add_fields_input" id="add_fields_input'+no+'" data-blockid="'+no+'">+</a><a class="ml-2 d-none my-auto btn btn-sm btn-facebook save_fields_input" id="save_add_field'+no+'" data-blockid="'+no+'"><i class="bx bx-x"></i></a></div></td><td><input type="text" name="field_value[]" class="form-control" ></td><td class="change"><a class="btn btn-danger btn-sm no_load  remove text-white"><b>-</b></a></td></tr>'; 
       
-      $(".after-add-more").append(html);
+      $(".after-add_field_add-more").append(html);
 
       $('.newsele').select2();
 
     });
 
     $(document).on("click",".remove",function(){ 
-      $(this).parents(".after-add-more-tr").remove();
+      $(this).parents(".after-add_field_add-more-tr").remove();
+    });
+
+
+  
+
+
+	var rental_no=0;
+
+
+	$(document).on("click",".rental_price_add-more",function(){  
+
+			var options_fields=$('#add_field_items').html();
+
+			rental_no++;
+
+
+      var html = `<tr class="after-rental_price_add-more-tr">
+        <td class="w-100">
+        	<div class="d-flex w-100">
+        		<div class="position-relative fsc field_select_container w-100">
+        			<select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
+        				<?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
+        					<option value="<?= $rp['id'] ?>"><?= $rp['period_name'] ?></option> 
+        				<?php endforeach ?>
+            	</select>  
+        		</div> 
+        	</div>
+        </td>
+        <td><input type="number" step="any" name="rental_price[]" class="form-control " style="width: 200px;"></td>
+        <td class="change"><a class="btn btn-danger btn-sm no_load rental_remove text-white"><b>-</b></a></td>
+      </tr>`; 
+      
+      $(".after-rental_price_add-more").append(html);
+
+      $('.newsele').select2();
+
+    });
+
+    $(document).on("click",".rental_remove",function(){ 
+      $(this).parents(".after-rental_price_add-more-tr").remove();
     });
 
     $(document).on("click",".removeitemkit",function(){ 

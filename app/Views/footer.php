@@ -484,11 +484,7 @@
 
 <script src="<?= base_url('public/js/lozad.js') ?>"></script>
 
-<script>
-    var editor1cfg = {}
-    editor1cfg.toolbar = "basic";
-    var editor1 = new RichTextEditor("#rich_editor", editor1cfg);
-</script>
+ 
 
   <script type="text/javascript">
     $(".tags_input").tagsinput('items');

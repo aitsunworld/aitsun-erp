@@ -1,5 +1,154 @@
 $(document).ready(function(){
 
+
+       $(document).on('click', '#add_rental_period', function() {
+        var form_data = new FormData($('#add_rental_period_form')[0]);
+
+        $("#add_rental_period_form").validate({
+            // Specify validation rules
+            rules: {
+                period_name: "required",
+                period_duration: "required",
+            },
+            // Specify validation error messages
+            messages: {
+                period_name: "Please period name is required!",
+                period_duration: "Please enter period duration!",
+            }
+        });
+
+        var valid = $('#add_rental_period_form').valid();
+
+        if (valid) {
+            $('#add_rental_period').prop('disabled', true);
+            $.ajax({
+                type: 'POST',
+                url: $('#add_rental_period_form').prop('action'),
+                data: form_data,
+                processData: false,
+                contentType: false,
+                beforeSend: function() {
+                    $('#add_rental_period').html('Saving...<i class="bx bx-loader bx-spin"></i>');
+                },
+                success: function(result) {
+                    if ($.trim(result)=='1') {
+                        $('#add_rental_period').html('Save');
+                        $('#add_rental_period_form')[0].reset();
+                        show_success_msg('success', 'Added successfully!', 'Saved!');
+                        $('#add_rental_period').prop('disabled', false);
+                    }else{
+                        $('#add_rental_period').prop('disabled', false);
+                        $('#add_rental_period').html('Save');
+                        show_failed_msg('error', 'File size exceeds the 300 KB limit', 'Failed!');
+                    }
+                    
+                },
+                
+                
+            });
+        }
+    });
+
+
+    $(document).on('blur','.periods_update',function(){
+    
+        var period_id=$(this).data('period_id');
+        var r_element_val=$(this).val();
+        var r_element=$(this).data('r_element');
+        
+        var csrfName = $('#csrf_token').attr('name'); // CSRF Token name
+        var csrfHash = $('#csrf_token').val(); // CSRF hash
+       
+        
+          $.ajax({
+              type: 'POST',
+              url: base_url()+'product/update_period/'+period_id,
+              data: {
+
+                  r_element_val:r_element_val,
+                  r_element:r_element,
+                  [csrfName]: csrfHash
+              },
+              beforeSend: function() {
+              },
+              success: function(response) {
+                  if ($.trim(response)==1) {
+
+                    $('.add_cls-'+r_element+'-'+period_id).addClass('is-valid'); 
+                            setTimeout(function(){
+                                $('.add_cls-'+r_element+'-'+period_id).removeClass('is-valid');
+                            },2000)
+
+                      // round_success_noti('Saved');
+                  }else{
+                     $('.add_cls-'+r_element+'-'+period_id).addClass('is-invalid'); 
+                            setTimeout(function(){
+                                $('.add_cls-'+r_element+'-'+period_id).removeClass('is-invalid');
+                            },2000)
+                  }
+              }
+          });
+            
+    });
+
+
+
+    $(document).on('click','#deleteperiodsCheckAll',function () {
+        var thisbox=$(this);
+        if ($(thisbox).hasClass('select')) {
+            $(".checkBoxperiodsAll").prop('checked', true);
+            $(thisbox).removeClass('select');
+        }else{
+            $(".checkBoxperiodsAll").prop('checked', false);
+             $(thisbox).addClass('select');
+        }
+
+        var checkedNum = $('input[name="delete_all_periods[]"]:checked').length;
+        if (checkedNum>=1) {
+            $('#deleteperllbtn').removeClass('d-none');
+        }else{
+            $('#deleteperllbtn').addClass('d-none');
+        }
+        
+    });
+
+
+
+    $(document).on('click','.checkBoxperiodsAll',function(e){ 
+        var checkedNum = $('input[name="delete_all_periods[]"]:checked').length;
+        if (checkedNum>=1) {
+            $('#deleteperllbtn').removeClass('d-none');
+        }else{
+            $('#deleteperllbtn').addClass('d-none');
+        }
+    });
+
+    $(document).on('click','#deleteperllbtn',function(){
+
+      
+        var val = []; 
+        $('input[name="delete_all_periods[]"]:checked').each(function(i){
+          val[i] = $(this).val();
+
+        }); 
+        
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You cant retrive this after delete",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Yes, Delete!",
+            closeOnConfirm: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = base_url()+"/product/delete_period/"+val; 
+            }
+        });
+       
+       
+    });
+
  
     $(document).on('click', '.shortcodes_ul li', function() { 
         var codee = $(this).text();  
@@ -7820,8 +7969,7 @@ $(document).on('click','.generate_challan_for_student',function(){
                             $('#send_notice').html('Saved');
                             show_success_msg('success','Notice Sent successfully!');
                             $('#notice_add_form')[0].reset();
-
-                            $('#summernote').summernote('reset');
+ 
 
                             
                             $('#send_notice').prop('disabled', false);

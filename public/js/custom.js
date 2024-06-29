@@ -756,14 +756,7 @@ $(document).on('click','.editcategory',function(){
 		$.ajax({
       url: base_url()+"products/get_form",
       success:function(response) {
-        $('#add_product_form_container').html(response);
- 
-        
-
-				$('.summernote').summernote({
-		      tabsize: 2,
-		      height: 100
-		    });
+        $('#add_product_form_container').html(response); 
      }
     });
 	}

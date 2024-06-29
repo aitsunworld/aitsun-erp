@@ -1,0 +1,1 @@
+ALTER TABLE `main_item_party_table` ADD `is_rental` INT NOT NULL AFTER `is_self_order`;

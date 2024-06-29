@@ -713,7 +713,8 @@
         <a href="<?= base_url('products/easy_edit'); ?>?page=1" class="text-dark font-size-footer me-2 href_loader"><i class="bx bxs-edit-alt ms-2"></i> <span class="my-auto">Easy Edit</span></a>/
         <a data-bs-toggle="modal" data-bs-target="#sync_select" class="text-dark font-size-footer me-2"><i class="bx bxs-book-bookmark ms-2"></i> <span class="my-auto">Sync to branch</span></a>/
         <a data-url="<?php echo base_url('google_services/sync_product_to_google/'); ?>"id="sync_all_to_google_shop" title="Google Shopping" class="text-dark font-size-footer me-2"><i class="lni lni-google text-google ms-2"></i> <span class="my-auto">Sync all</span></a>/
-        <a href="<?= base_url('settings/product'); ?>" class="text-dark font-size-footer me-2 href_loader"><i class="bx bx-cog ms-2"></i> <span class="my-auto">Product Category & Brand</span></a>
+        <a href="<?= base_url('settings/product'); ?>" class="text-dark font-size-footer me-2 href_loader"><i class="bx bx-cog ms-2"></i> <span class="my-auto">Product Category & Brand</span></a>/
+        <a href="<?= base_url('product/rental_periods'); ?>" class="text-dark font-size-footer me-2 href_loader"><i class="bx bx-time ms-2"></i> <span class="my-auto">Rental periods</span></a>
     </div>
     <div class="aitsun_pagination">  
         <?= $pager->links() ?>
