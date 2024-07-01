@@ -1892,7 +1892,7 @@ function week_off_days($userid,$date){
 
 function products_array($company){
     $ProductsModel=new Main_item_party_table();
-    $getuse=$ProductsModel->where('company_id',$company)->where('deleted',0)->findAll();
+    $getuse=$ProductsModel->where('company_id',$company)->where('main_type','product')->where('deleted',0)->findAll();
     return $getuse;
 }
 

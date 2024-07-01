@@ -1224,14 +1224,13 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 					        },
 					          success:function(response) {
 					          	$('#loadbox_'+input).html('');
-					            $('#tandsproducts').html(response);
+					            // $('#tandsproducts').html(response);
 					         },
 					         error:function(){
 					          alert("error");
 					         }
 					    });
-						} else {
-							$('#tandsproducts').html('');
+						} else { 
 						}
 
 					}else{ 
@@ -1250,7 +1249,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 					        },
 					          success:function(response) {
 					          	$('#loadbox_'+input).html('');
-					            $('#tandsproducts').html(response);
+					            // $('#tandsproducts').html(response);
 					         },
 					         error:function(){
 					          alert("error");
@@ -1259,27 +1258,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 							}
 
 			 
-						}else if ($.trim(typeandsearch_category)!='') {
-							search_text='';
-							$('#typeandsearch').val('');
-							$.ajax({
-					          url: base_url()+"sales/display_products?product_name="+search_text+"&category="+typeandsearch_category+"&subcategory=&view_type="+view_type+"&product_type="+input,
-				          data:{
-										[csrfName]: csrfHash
-									},
-									beforeSend:function(){  
-										$('#loadbox_'+input).html('<i class="bx bx-loader-alt bx-spin"></i>');
-					        },
-					          success:function(response) {
-					          	$('#loadbox_'+input).html('');
-					            $('#tandsproducts').html(response);
-					         },
-					         error:function(){
-					          alert("error");
-					         }
-					        });
-						} else {
-							$('#tandsproducts').html('');
+						} else { 
 						}
 					}
 					
@@ -1311,7 +1290,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 	      },
 	        success:function(response) {
 	        	$('#loadbox_'+input).html('');
-	          $('#tandsproducts').html(response);
+	          // $('#tandsproducts').html(response);
 	       },
 	       error:function(){
 	        alert("error");
@@ -1319,32 +1298,29 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 	    });
    
   }); 
-
+ 
 
 
 	$(document).keydown(
+      function(e)
+      {      
+          if (e.keyCode == 40) {      
+              // $(".item_box:focus").next().focus();
+           
+                if (foucc==1) {
+			    $(".item_box:focus").next().focus();
+			}else{
+				$('.item_box:first').focus();
+				foucc=1;
+			}
 
-          function(e)
-          {    
-
-
-              if (e.keyCode == 40) {      
-                  // $(".item_box:focus").next().focus();
-               
-                    if (foucc==1) {
-					    $(".item_box:focus").next().focus();
-					}else{
-						$('.item_box:first').focus();
-						foucc=1;
-					}
-
-              }
-              if (e.keyCode == 38) {      
-                  $(".item_box:focus").prev().focus();
-
-              }
           }
-      );
+          if (e.keyCode == 38) {      
+              $(".item_box:focus").prev().focus();
+
+          }
+      }
+  );
 
 
 
@@ -1938,7 +1914,7 @@ function split_from(value, index)
 				calculate_due_amount();
 				calculate_invoice();
 				$('#typeandsearch').val('');
-				$('#tandsproducts').html('');
+				// $('#tandsproducts').html('');
 				if (focus_element==1) {
 					$('#product_code').focus();
 					$('#product_code').val('');
