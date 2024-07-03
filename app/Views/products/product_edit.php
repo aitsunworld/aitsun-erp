@@ -174,23 +174,23 @@
 
                     <?php $pl_no=0; foreach (price_list_of_product($pro['id']) as $pl): $pl_no++; ?> 
                         <input type="hidden" name="i_id[]" value="<?= $pl['id'] ?>">
-                      <tr class="after-rental_price_add-more-tr"> 
-                        <td class="w-100">
-                            <div class="d-flex w-100">
-                                <div class="position-relative fsc field_select_container w-100">
-                                    <select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
-                                        <?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
-                                            <option value="<?= $rp['id'] ?>" <?= ($pl['period_id']==$rp['id'])?'selected':'' ?>><?= $rp['period_name'] ?></option> 
-                                        <?php endforeach ?>
-                                </select>  
-                                </div> 
-                            </div>
-                        </td>
-                        <td><input type="number" step="any" name="rental_price[]" class="form-control " style="width: 200px;" value="<?= aitsun_round($pl['price'],get_setting(company($user['id']),'round_of_value')) ?>"></td>
-                        <td class="change"> 
-                            <a class="btn btn-danger btn-sm no_load rental_remove text-white"><b>-</b></a> 
-                        </td>
-                      </tr>
+                          <tr class="after-rental_price_add-more-tr"> 
+                            <td class="w-100">
+                                <div class="d-flex w-100">
+                                    <div class="position-relative fsc field_select_container w-100">
+                                        <select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
+                                            <?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
+                                                <option value="<?= $rp['id'] ?>" <?= ($pl['period_id']==$rp['id'])?'selected':'' ?>><?= $rp['period_name'] ?></option> 
+                                            <?php endforeach ?>
+                                    </select>  
+                                    </div> 
+                                </div>
+                            </td>
+                            <td><input type="number" step="any" name="rental_price[]" class="form-control " style="width: 200px;" value="<?= aitsun_round($pl['price'],get_setting(company($user['id']),'round_of_value')) ?>"></td>
+                            <td class="change"> 
+                                <a class="btn btn-danger btn-sm no_load rental_remove text-white"><b>-</b></a> 
+                            </td>
+                          </tr>
                     <?php endforeach ?>
                   </tbody>
                 </table>

@@ -456,9 +456,13 @@
         <button type="button" id="addnewproductbutton" class="btn btn-sm btn-success ml-5">
           <i class="bx bx-plus"></i>
         </button>
-        <div id="tandsproducts">
-          <?php foreach (products_array(company($user['id'])) as $pro): ?>
-            <a class="item_box col-md-3 my-2" href="javascript:void(0);"
+        <div id="tandsproducts" class="d-none">
+          <?php 
+            foreach (products_array(company($user['id'])) as $pro): 
+              $price_list=price_list_of_product($pro['id']);
+              $price_list=json_encode($price_list);
+          ?>
+            <a class="item_box col-md-3 my-2 procode_<?= $pro['product_code']; ?> barcode_item_<?= substr($pro['barcode'], 0, 6); ?> custom_barcode_item_<?= $pro['barcode']; ?>" href="javascript:void(0);"
               data-productid="<?= $pro['id']; ?>" 
               data-product_name="<?= str_replace('"', '&#34;', $pro['product_name']); ?>" 
               data-batch_number="<?= $pro['batch_no']; ?>" 
@@ -468,6 +472,7 @@
               <?php else: ?>
                   data-price="<?= $pro['purchased_price']; ?>"
               <?php endif ?>
+              data-price_list="<?= $price_list ?>"
               data-tax="<?= $pro['tax']; ?>"
 
               data-prounit='<?php foreach (products_units_array(company($user['id'])) as $pu): ?><option value="<?= $pu['value']; ?>" <?php if ($pro['unit']==$pu['value']) {echo 'selected';} ?>><?= $pu['name']; ?></option><?php endforeach ?>'
@@ -490,6 +495,8 @@
                data-mrp="<?= $pro['mrp']; ?>"
                data-purchase_margin="<?= $pro['purchase_margin']; ?>"
                data-sale_margin="<?= $pro['sale_margin']; ?>"
+               data-custom_barcode="<?= $pro['custom_barcode']; ?>"
+
 
                data-unit_disabled="<?php if (item_has_transaction($pro['id'])): ?>readonly<?php endif ?>"
                data-in_unit_options="<option value='<?= $pro['unit'] ?>'><?= $pro['unit'] ?></option><?php if (!empty($pro['sub_unit'])): ?><option value='<?= $pro['sub_unit'] ?>'><?= $pro['sub_unit'] ?></option><?php endif ?>"

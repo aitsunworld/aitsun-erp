@@ -12,21 +12,17 @@
                     <a href="<?= base_url(); ?>" class="href_loader"><i class="bx bx-home-alt text-aitsun-red"></i></a>
                 </li>
               
-                 <li class="breadcrumb-item active" aria-current="page">
+                <li class="breadcrumb-item active" aria-current="page">
                     <b class="page_heading text-dark">Products</b>
-                </li>
-
-                
+                </li>  
             </ol>
         </nav>
-
-        
-     
+ 
         <div class="d-flex"> 
             <a class="my-auto ms-2 text-dark cursor-pointer font-size-topbar href_loader" title="Refresh" onclick="location.reload();">
                 <i class="bx bx-refresh"></i>
             </a>
-             <a class="my-auto ms-2 text-aitsun-red href_loader cursor-pointer font-size-topbar" href="<?= base_url() ?>" title="Back">
+            <a class="my-auto ms-2 text-aitsun-red href_loader cursor-pointer font-size-topbar" href="<?= base_url() ?>" title="Back">
                 <i class="bx bxs-category"></i>
             </a>
         </div>

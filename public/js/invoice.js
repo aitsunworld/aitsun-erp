@@ -1193,10 +1193,9 @@ $(document).on('click','.tranname',function(){
 
 $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_category,#product_code',function(e){
 		var search_text= $.trim($('#typeandsearch').val());
-		var input=$(this).data('input');
+		var input=$(this).data('input'); 
 
-	
-				
+				$('#tandsproducts').addClass('d-none');
 					foucc=0;
 					var pro_start=0; 
 					$('#loadbox_code').html('');
@@ -1211,54 +1210,41 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 				  ('#csrf_token').val(); // CSRF hash
 
 				  if (input=='code') {
-
-						if (search_code!='' && search_code.length==3) {
-
-							$.ajax({
-					          url: base_url()+"sales/display_products?product_name="+search_code+"&category="+typeandsearch_category+"&subcategory=&view_type="+view_type+"&product_type="+input+"&start="+pro_start,
-				          data:{
-										[csrfName]: csrfHash
-									},
-									beforeSend:function(){ 
-									$('#loadbox_'+input).html('<i class="bx bx-loader-alt bx-spin"></i>'); 
-					        },
-					          success:function(response) {
-					          	$('#loadbox_'+input).html('');
-					            // $('#tandsproducts').html(response);
-					         },
-					         error:function(){
-					          alert("error");
-					         }
-					    });
+            $('#tandsproducts').addClass('d-none');
+						if (search_code!='' && search_code.length==3) { 
+              $('#tandsproducts').removeClass('d-none');
+              if (search_code === '') { 
+                $('.item_box').hide();
+            } else {   
+                $('.item_box').hide(); 
+                $('.procode_' + search_code).show();
+            } 
+							 
 						} else { 
 						}
 
 					}else{ 
-						if ($.trim(search_text)!='') {
-							if (e.keyCode != 8 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40 && e.keyCode == 13 ) {
+            $('#tandsproducts').addClass('d-none'); 
+						if ($.trim(search_text)!='') { 
+                $('#tandsproducts').removeClass('d-none');
 								typeandsearch_category=''; 
-						    $('#typeandsearch_category').val(''); 
+                var search_text = $(this).val().toLowerCase();
+                $('.product_box h6').each(function(){
+                  var productName = $(this).text().toLowerCase();
+                  var searchTerms = search_text.toLowerCase().split(' ');
+ 
+                  var allMatch = searchTerms.every(function(term) {
+                      return productName.includes(term);
+                  });
 
-								$.ajax({
-					        url: base_url()+"sales/display_products?product_name="+search_text+"&category="+typeandsearch_category+"&subcategory=&view_type="+view_type+"&product_type="+input+"&start="+pro_start,
-					        data:{
-										[csrfName]: csrfHash
-									},
-									beforeSend:function(){  
-										$('#loadbox_'+input).html('<i class="bx bx-loader-alt bx-spin"></i>');
-					        },
-					          success:function(response) {
-					          	$('#loadbox_'+input).html('');
-					            // $('#tandsproducts').html(response);
-					         },
-					         error:function(){
-					          alert("error");
-					         }
-				        });
-							}
-
-			 
+                  if (allMatch) {
+                      $(this).closest('.item_box').show();
+                  } else {
+                      $(this).closest('.item_box').hide();
+                  }
+                });   
 						} else { 
+
 						}
 					}
 					
@@ -1387,12 +1373,13 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 
 
 
+
 	$(document).on('click','.item_box',function(){
 		var productid=$(this).data('productid');
 		var product_name=$(this).data('product_name');
 		product_name=product_name.replace('"','&#x22;')
 		var unit=$(this).data('unit');
-		
+		$('#product_code').val('');
 		var description=$(this).data('description');
 		var stock=$(this).data('stock');
 		var product_type=$(this).data('product_type');
@@ -1413,10 +1400,22 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 		var sale_margin=$(this).data('sale_margin');
 		var unit_disabled=$(this).data('unit_disabled');
 		var in_unit_options=$(this).data('in_unit_options');
-		var batch_number=$(this).data('batch_number');
+    var batch_number=$(this).data('batch_number');
+
+		var price_list=$(this).data('price_list');
 
 
-
+     
+    $.each(price_list, function(index, obj) {
+        // Access each property of the object
+        console.log("Object at index " + index + ":");
+        console.log("ID: " + obj.id);
+        console.log("Company ID: " + obj.company_id);
+        console.log("Product ID: " + obj.product_id);
+        console.log("Period ID: " + obj.period_id);
+        console.log("Price: " + obj.price);
+        console.log("Deleted: " + obj.deleted); 
+    });
 
 		add_sale_item(
 		 	productid,
@@ -1470,100 +1469,155 @@ function split_from(value, index)
       var sub_unit='';
       if (barcode!='') {
 
-      	// if (barcode_type==1) {
-      		final_barcode=barcode.substring(0, 6);;
-      		var get_from_last=barcode.substr(barcode.length - 6);
-	      	var after_split=split_from(get_from_last,3);
-	      	var p_b_data = after_split.split(",");
-	      	var unit=p_b_data[0];
-	      	var sub_unit=p_b_data[1];
+      // if (barcode_type==1) {
+  		final_barcode=barcode.substring(0, 6);
+  		var get_from_last=barcode.substr(barcode.length - 6);
+    	var after_split=split_from(get_from_last,3);
+    	var p_b_data = after_split.split(",");
+    	var fi_unit=p_b_data[0];
+    	var fi_subunit=p_b_data[1]; 
+      // } 
+       if (final_barcode.length>0) { 
+        var this_element=$('.barcode_item_'+final_barcode);
 
-      	// }
+        if (this_element.length) {  
+       	  var productid=$(this_element).data('productid');
+          var product_name=$(this_element).data('product_name');
+          product_name=product_name.replace('"','&#x22;');
+          var unit=$(this_element).data('unit');
+          
+          var description=$(this_element).data('description');
+          var stock=$(this_element).data('stock');
+          var product_type=$(this_element).data('product_type');
+          var selling_price=$(this_element).data('selling_price');
+          var purchaseprice=$(this_element).data('purchased_price');
+          var tax=$(this_element).data('tax');
+          var tax_percent=$(this_element).data('tax_percent');
+          var tax_name=$(this_element).data('tax_name');
+          var barcode=$(this_element).data('barcode');
+          var prounit=$(this_element).data('prounit');
+          var prosubunit=$(this_element).data('prosubunit');
+          var proconversion_unit_rate=$(this_element).data('proconversion_unit_rate');
+          var protax=$(this_element).data('protax');
+          var purchase_tax=$(this_element).data('purchase_tax');
+          var sale_tax=$(this_element).data('sale_tax');
+          var mrp=$(this_element).data('mrp');
+          var purchase_margin=$(this_element).data('purchase_margin');
+          var sale_margin=$(this_element).data('sale_margin');
+          var unit_disabled=$(this_element).data('unit_disabled');
+          var in_unit_options=$(this_element).data('in_unit_options');
+          var batch_number=$(this_element).data('batch_number');
+          var custom_barcode=$(this_element).data('custom_barcode');
+
+ 
+            if (custom_barcode==1) { 
+              fi_unit=1;
+              fi_subunit=0;
+            }
+            if (custom_barcode!=1) {
+              add_sale_item(
+                productid,
+                product_name,
+                unit,
+                description,
+                stock,
+                product_type,
+                selling_price,
+                purchaseprice,
+                tax,
+                tax_percent,
+                tax_name,
+                barcode,
+                prounit,
+                prosubunit,
+                proconversion_unit_rate,
+                protax,
+                purchase_tax,
+                sale_tax,
+                mrp,
+                purchase_margin,
+                sale_margin,
+                unit_disabled,
+                in_unit_options,
+                batch_number,
+                fi_unit,
+                fi_subunit
+              );
+            }
+            
+            
+           
+        }
 
 
-       if (final_barcode.length>0) {
-       		$.ajax({
-	          url: base_url()+"sales/get_barcode_product/"+view_type+"?barcode="+final_barcode+"&row="+row+"&i_unit="+unit+"&i_subunit="+sub_unit+"&full_barcode="+barcode,
-	          data:{
-							[csrfName]: csrfHash
-						},
-	          success:function(response) {
+        var this_element=$('.custom_barcode_item_'+barcode);
+        if (this_element.length) { 
+          var productid=$(this_element).data('productid');
+          var product_name=$(this_element).data('product_name');
+          product_name=product_name.replace('"','&#x22;');
+          var unit=$(this_element).data('unit');
+          
+          var description=$(this_element).data('description');
+          var stock=$(this_element).data('stock');
+          var product_type=$(this_element).data('product_type');
+          var selling_price=$(this_element).data('selling_price');
+          var purchaseprice=$(this_element).data('purchased_price');
+          var tax=$(this_element).data('tax');
+          var tax_percent=$(this_element).data('tax_percent');
+          var tax_name=$(this_element).data('tax_name');
+          var barcode=$(this_element).data('barcode');
+          var prounit=$(this_element).data('prounit');
+          var prosubunit=$(this_element).data('prosubunit');
+          var proconversion_unit_rate=$(this_element).data('proconversion_unit_rate');
+          var protax=$(this_element).data('protax');
+          var purchase_tax=$(this_element).data('purchase_tax');
+          var sale_tax=$(this_element).data('sale_tax');
+          var mrp=$(this_element).data('mrp');
+          var purchase_margin=$(this_element).data('purchase_margin');
+          var sale_margin=$(this_element).data('sale_margin');
+          var unit_disabled=$(this_element).data('unit_disabled');
+          var in_unit_options=$(this_element).data('in_unit_options');
+          var batch_number=$(this_element).data('batch_number');
+          var custom_barcode=$(this_element).data('custom_barcode');
 
-				        var objJSON = JSON.parse(response);
+ 
+            if (custom_barcode==1) { 
+              fi_unit=1;
+              fi_subunit=0;
+            
 
-				        if (objJSON!='') {
-				        	var productid=objJSON.productid;
-									var product_name=objJSON.product_name;
-									var unit=objJSON.unit; 
-									var description=objJSON.description;
-									var stock=objJSON.stock;
-									var product_type=objJSON.product_type;
-									var selling_price=objJSON.selling_price;
-									var purchaseprice=objJSON.purchased_price;
-									var tax=objJSON.tax;
-									var tax_percent=objJSON.tax_percent;
-									var tax_name=objJSON.tax_name;
-									var barcode=objJSON.barcode;
-									var prounit=objJSON.prounit;
-									var prosubunit=objJSON.prosubunit;
-									var proconversion_unit_rate=objJSON.proconversion_unit_rate;
-									var protax=objJSON.protax;
-									var purchase_tax=objJSON.purchase_tax;
-									var sale_tax=objJSON.sale_tax;
-									var mrp=objJSON.mrp;
-									var purchase_margin=objJSON.purchase_margin;
-									var sale_margin=objJSON.sale_margin;
-									var unit_disabled=objJSON.unit_disabled;
-									var in_unit_options=objJSON.in_unit_options;
-									var batch_number=objJSON.batch_number;
-									var fi_unit=objJSON.i_unit;
-									var fi_subunit=objJSON.i_subunit;
-									var custom_barcode=objJSON.custom_barcode;
-
-               
-
-	 								if (custom_barcode==1) { 
-	 									fi_unit=1;
-										fi_subunit=0;
-	 								}
-
-									add_sale_item(
-									 	productid,
-									 	product_name,
-									 	unit,
-									 	description,
-									 	stock,
-									 	product_type,
-									 	selling_price,
-									 	purchaseprice,
-									 	tax,
-									 	tax_percent,
-									 	tax_name,
-									 	barcode,
-									 	prounit,
-									 	prosubunit,
-									 	proconversion_unit_rate,
-									 	protax,
-									 	purchase_tax,
-									 	sale_tax,
-									 	mrp,
-									 	purchase_margin,
-									 	sale_margin,
-									 	unit_disabled,
-									 	in_unit_options,
-									 	batch_number,
-									 	fi_unit,
-										fi_subunit
-									);
-									
-				        }
-				        
-							   
-			      },
-		         error:function(){
-		          alert("error");
-		         }
-		      });
+              add_sale_item(
+                productid,
+                product_name,
+                unit,
+                description,
+                stock,
+                product_type,
+                selling_price,
+                purchaseprice,
+                tax,
+                tax_percent,
+                tax_name,
+                barcode,
+                prounit,
+                prosubunit,
+                proconversion_unit_rate,
+                protax,
+                purchase_tax,
+                sale_tax,
+                mrp,
+                purchase_margin,
+                sale_margin,
+                unit_disabled,
+                in_unit_options,
+                batch_number,
+                fi_unit,
+                fi_subunit
+              );
+            }
+            
+           
+        }
 
        }
 
@@ -1914,7 +1968,7 @@ function split_from(value, index)
 				calculate_due_amount();
 				calculate_invoice();
 				$('#typeandsearch').val('');
-				// $('#tandsproducts').html('');
+				$('#tandsproducts').addClass('d-none');
 				if (focus_element==1) {
 					$('#product_code').focus();
 					$('#product_code').val('');
@@ -1926,7 +1980,7 @@ function split_from(value, index)
 				foucc=0;
 
 			   if (++x === 5) {
-			       window.clearInterval(intervalID);
+			     window.clearInterval(intervalID);
 			   }
 			}, 100);
 
