@@ -158,7 +158,10 @@ function site_key(){
 
 function price_list_of_product($product_id){
     $ProductPriceListModel= new ProductPriceListModel();
-    $pricelist = $ProductPriceListModel->where('product_id',$product_id)->where('deleted',0)->findAll();
+    $RentalHoursModel= new RentalHoursModel();
+    $ProductPriceListModel->select('product_price_list.*,rental_hours.*');
+    $ProductPriceListModel->join('rental_hours', 'rental_hours.id = product_price_list.period_id', 'left');
+    $pricelist = $ProductPriceListModel->where('product_price_list.product_id',$product_id)->where('product_price_list.deleted',0)->findAll();
     return $pricelist;
 }
 

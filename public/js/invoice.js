@@ -1401,21 +1401,13 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 		var unit_disabled=$(this).data('unit_disabled');
 		var in_unit_options=$(this).data('in_unit_options');
     var batch_number=$(this).data('batch_number');
+    var custom_barcode=$(this).data('custom_barcode');
 
 		var price_list=$(this).data('price_list');
 
-
-     
-    $.each(price_list, function(index, obj) {
-        // Access each property of the object
-        console.log("Object at index " + index + ":");
-        console.log("ID: " + obj.id);
-        console.log("Company ID: " + obj.company_id);
-        console.log("Product ID: " + obj.product_id);
-        console.log("Period ID: " + obj.period_id);
-        console.log("Price: " + obj.price);
-        console.log("Deleted: " + obj.deleted); 
-    });
+    fi_unit=1;
+    fi_subunit=0;
+  
 
 		add_sale_item(
 		 	productid,
@@ -1441,10 +1433,13 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 		 	sale_margin,
 		 	unit_disabled,
 		 	in_unit_options,
-		 	batch_number
+		 	batch_number,
+      fi_unit,
+      fi_subunit,
+      price_list
 		);
 	
-		
+		 
 	});
 
  
@@ -1507,13 +1502,15 @@ function split_from(value, index)
           var unit_disabled=$(this_element).data('unit_disabled');
           var in_unit_options=$(this_element).data('in_unit_options');
           var batch_number=$(this_element).data('batch_number');
-          var custom_barcode=$(this_element).data('custom_barcode');
+          var price_list=$(this_element).data('price_list');
 
- 
+    
+
             if (custom_barcode==1) { 
               fi_unit=1;
               fi_subunit=0;
             }
+
             if (custom_barcode!=1) {
               add_sale_item(
                 productid,
@@ -1541,7 +1538,8 @@ function split_from(value, index)
                 in_unit_options,
                 batch_number,
                 fi_unit,
-                fi_subunit
+                fi_subunit,
+                price_list
               );
             }
             
@@ -1579,6 +1577,7 @@ function split_from(value, index)
           var in_unit_options=$(this_element).data('in_unit_options');
           var batch_number=$(this_element).data('batch_number');
           var custom_barcode=$(this_element).data('custom_barcode');
+          var price_list=$(this_element).data('price_list');
 
  
             if (custom_barcode==1) { 
@@ -1612,7 +1611,8 @@ function split_from(value, index)
                 in_unit_options,
                 batch_number,
                 fi_unit,
-                fi_subunit
+                fi_subunit,
+                price_list
               );
             }
             
@@ -1657,15 +1657,16 @@ function split_from(value, index)
 		 	in_unit_options,
 		 	batch_number,
 		 	fi_unit,
-			fi_subunit){
+			fi_subunit,
+      price_list){
  
 			row++;
 			
 			selling_price=parseFloat(selling_price);
       purchaseprice=parseFloat(purchaseprice);
-
+      console.log(price_list)
       
-
+      var invoice_for=$('#invoice_for').val();
       
 
 			var unit_disabled_message="";
@@ -1743,10 +1744,33 @@ function split_from(value, index)
 				input_quatity=fi_unit+'.'+fi_subunit;
 			}else{
 				input_quatity=1;
-			}
-			
+			} 
 
+      var price_selector='<select class="form-control" id="pricelist_select'+row+'" name="rental_price_type">'; 
+      var pl_count=0;
+        $.each(price_list, function(index, obj) {
+          pl_count++;
+            //   console.log("Object at index " + index + ":");
+            // console.log("ID: " + obj.id);
+            // console.log("Company ID: " + obj.company_id);
+            // console.log("Product ID: " + obj.product_id);
+            // console.log("Period ID: " + obj.period_id);
+            // console.log("Price: " + obj.price);
+            // console.log("Deleted: " + obj.deleted); 
+            var selected_val='';
+            if (pl_count==1) {selected_val='selected';}
+            price_selector += '<option value="' + obj.id + '" data-rental_price="'+ obj.price +'" '+selected_val+'>' + obj.period_name + '</option>';
+        });
 
+      price_selector+='</select>';
+      console.log(price_list)
+
+      // alert(invoice_for)
+      if (invoice_for=='rental') {
+
+      }
+
+     
 		
 			if ($(".productidforcheck"+productid).length) {
 				last_inserted_row=$(".productidforcheck"+productid).data('thisrow')
@@ -1778,14 +1802,12 @@ function split_from(value, index)
 	                '<input type="hidden" name="old_p_conversion_unit_rate[]" value="0">'+
 
 	                '<div class="d-flex justify-content-between">'+
-	                  '<div class="my-auto">'+
-	                    	
+	                  '<div class="my-auto">'+ 
 
-
-	                    '<div> <input type="hidden" name="split_taxx[]" value="'+isplit_tax+'"> '+ 
-	                      '<a data-proid="'+row+'" class="open_popup" data-bs-toggle="modal" data-bs-target="#price_edit_popup'+row+'"><i class="bx bx-pencil"></i></a>'+ 
-	                      'Price: '+currency_symbol()+'<input type="number" step="any" class=" price mb-0 control_ro"  name="price[]" value="'+price+'" id="price_bx'+row+'" readonly >'+
-	                    '</div>'+
+	                    '<div class="d-flex"> <input type="hidden" name="split_taxx[]" value="'+isplit_tax+'"> '+ 
+	                      '<a data-proid="'+row+'" class="open_popup my-auto" data-bs-toggle="modal" data-bs-target="#price_edit_popup'+row+'"><i class="bx bx-pencil"></i></a>'+ 
+	                      '<div class="w-100 my-auto">Price: '+currency_symbol()+'</div><input type="number" step="any" class=" price mb-0 control_ro price_box" oninput="updateWidth(this)"  name="price[]" value="'+price+'" id="price_bx'+row+'" readonly ><div class="my-auto">/</div>'+price_selector+
+	                    '</div>'+ 
 	                    '<div><span id="tax_hider'+row+'">Tax: '+tax_name+' ('+tax_percent+'%)</span> '+currency_symbol()+'<input type="hidden" name="p_tax_amount[]" value="'+(price*tax_percent/100).toFixed(round_of_value())+'" id="p_tax_box'+row+'"><span class="tbox" id="taxboxlabel'+row+'">'+(price*tax_percent/100).toFixed(round_of_value())+'</span> <a class="delete_tax text-danger" data-rowid="'+row+'" data-pricesss="'+price+'"><i class="bx bxs-x-circle"></i></a>'+
 
 	                    '<input type="hidden" step="any" class="numpad control_ro" data-row="'+row+'" data-product="'+productid+'" id="taxbox'+row+'" name="p_tax_percent[]" min="" value="'+tax_percent+'" readonly></div> '+

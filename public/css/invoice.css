@@ -16,6 +16,9 @@ a{
 .ml-10{
 	margin-left: 10px;
 }
+.price_box{
+    width: 67px;
+}
 .aitsun-primary-btn{ 
     width: max-content;
     padding: 8px 14px 8px 14px;

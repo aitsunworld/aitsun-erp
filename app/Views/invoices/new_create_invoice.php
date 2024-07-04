@@ -472,7 +472,7 @@
               <?php else: ?>
                   data-price="<?= $pro['purchased_price']; ?>"
               <?php endif ?>
-              data-price_list="<?= $price_list ?>"
+              data-price_list='<?= $price_list ?>' 
               data-tax="<?= $pro['tax']; ?>"
 
               data-prounit='<?php foreach (products_units_array(company($user['id'])) as $pu): ?><option value="<?= $pu['value']; ?>" <?php if ($pro['unit']==$pu['value']) {echo 'selected';} ?>><?= $pu['name']; ?></option><?php endforeach ?>'
@@ -1618,6 +1618,14 @@
     function toggleSidebar(){
       document.getElementById("sidebar").classList.toggle('active');
     }
+
+    function updateWidth(input) {
+      // Reset the width to auto to recalculate the content-based width
+      input.style.width = 'auto';
+      // Then set the width to the scrollWidth (actual width of the content)
+      input.style.width = input.scrollWidth + 'px';
+    }
+
 </script>   
         
 <input type="hidden" value="<?= get_setting(company($user['id']),'printer1'); ?>" id="installedPrinterName">
