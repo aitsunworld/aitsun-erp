@@ -307,6 +307,9 @@
                             $p_discount=0;
                         }
 
+                        
+                        $rental_price_type=$_POST["rental_price_type"][$i];
+
 
                         if (is_numeric($_POST["discount_percent"][$i])) {
                              $discount_percent=$_POST["discount_percent"][$i];
@@ -363,6 +366,7 @@
                             'type'=>'single',
                             'tax'=>$tax,
                             'invoice_date'=>strip_tags($this->request->getVar('invoice_date')),
+                            'rental_price_type'=>$rental_price_type, 
                             'purchase_tax'=>$p_purchase_tax,
                             'sale_tax'=>$p_sale_tax, 
                             'mrp'=>aitsun_round($mrp,get_setting(company($myid),'round_of_value')), 
@@ -636,7 +640,7 @@
                             'sub_total'=>strip_tags(aitsun_round($this->request->getVar('sub_total'),get_setting(company($myid),'round_of_value'))),
                             'discount'=>aitsun_round($bigdiscount,get_setting(company($myid),'round_of_value')),
                             'tax'=>strip_tags(aitsun_round($this->request->getVar('tax_amount'),get_setting(company($myid),'round_of_value'))),
-                            'invoice_date'=>strip_tags($this->request->getVar('invoice_date')),
+                            'invoice_date'=>strip_tags($this->request->getVar('invoice_date')),  
                             'status'=>'sent',
                             'paid_status'=>$paid_stat,
                             'due_amount'=>aitsun_round($duee_amt,get_setting(company($myid),'round_of_value')),
@@ -988,7 +992,7 @@
                                 $batch_number=$_POST["batch_number"][$i];
 
 
-                                   
+                                   $rental_price_type=$_POST["rental_price_type"][$i];
 
  
                                      $qqq=$quantity;
@@ -1020,6 +1024,7 @@
                                             'desc'=>$product_desc, 
                                             'tax'=>$tax,
                                             'invoice_date'=>strip_tags($this->request->getVar('invoice_date')),
+                                            'rental_price_type'=>$rental_price_type, 
                                             'purchase_tax'=>$p_purchase_tax,
                                             'sale_tax'=>$p_sale_tax, 
                                             'unit'=>$p_unit,
@@ -1216,6 +1221,7 @@
                                             'type'=>'single',
                                             'tax'=>$tax,
                                             'invoice_date'=>strip_tags($this->request->getVar('invoice_date')),
+                                            'rental_price_type'=>$rental_price_type, 
                                             'purchase_tax'=>$p_purchase_tax,
                                             'sale_tax'=>$p_sale_tax, 
                                             'unit'=>$p_unit,

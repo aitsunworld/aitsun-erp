@@ -581,7 +581,15 @@ a{
 }
 
 .rental_details{
-        border: 1px solid #919191;
+    border: 1px solid #919191;
     padding: 6px;
     border-radius: 5px;
+}
+
+.pricelist_select{
+    width: 80px;
+    border: navajowhite;
+    border-bottom: 1px solid #00000040;
+    border-radius: 0;
+    padding: 0 5px 0 5px;
 }

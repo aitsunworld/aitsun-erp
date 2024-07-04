@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+  
+
+$(document).on('click','.open_popup',function() { 
+  var rowid=$(this).data('proid');
+  var rental_pricelist=$('#pricelist_select'+rowid).val();
+  if (rental_pricelist==0) {
+    $('#price_edit_popup'+rowid).modal('show');
+  }else{
+    show_failed_msg('error','Please select default price');
+  }
+});
+
+
 $(document).on('blur','.rental_duration',function() {
         
        const value = $(this).val().trim();
@@ -84,8 +97,44 @@ $(document).on('blur','.rental_duration',function() {
         var minutesString = minutes.toString().padStart(2, '0');
 
         $('#rental_duration').val(hoursString + ':' + minutesString);
+
+        calculate_item_price();
     });
 
+  function calculate_item_price(){
+    $('.probox').each(function(){
+      var changing_row=$(this).data('thisrow');  
+      
+      calculate_item_table(changing_row,0);
+      
+     
+    });
+
+    
+    var x = 0;
+    var intervalID = setInterval(function () {
+ 
+      calculate_tax_amount();
+      calculate_due_amount();
+      calculate_invoice();
+      $('#typeandsearch').val('');
+      $('#tandsproducts').addClass('d-none');
+      if (focus_element==1) {
+        $('#product_code').focus();
+        $('#product_code').val('');
+      }else if (focus_element==2) {
+        $('#productbarcodesearch').focus();
+      }else{
+        $('#typeandsearch').focus();
+      }
+      foucc=0;
+
+       if (++x === 5) {
+         window.clearInterval(intervalID);
+       }
+    }, 100);
+
+  }
 
   $(document).on('keydown','input[type="number"]',function(event) {
         const keysToPrevent = ['-', '+','*','/','e','E'];
@@ -1746,8 +1795,9 @@ function split_from(value, index)
 				input_quatity=1;
 			} 
 
-      var price_selector='<select class="form-control" id="pricelist_select'+row+'" name="rental_price_type">'; 
+      var price_selector='<select class="form-control pricelist_select" id="pricelist_select'+row+'" data-row_id="'+row+'" name="rental_price_type[]">'; 
       var pl_count=0;
+      price_selector += '<option value="0" data-rental_price="'+price+'" selected>Default</option>';
         $.each(price_list, function(index, obj) {
           pl_count++;
             //   console.log("Object at index " + index + ":");
@@ -1758,9 +1808,10 @@ function split_from(value, index)
             // console.log("Price: " + obj.price);
             // console.log("Deleted: " + obj.deleted); 
             var selected_val='';
-            if (pl_count==1) {selected_val='selected';}
-            price_selector += '<option value="' + obj.id + '" data-rental_price="'+ obj.price +'" '+selected_val+'>' + obj.period_name + '</option>';
+            price_selector += '<option value="' + obj.id + '" data-rental_price="'+ obj.price +'" data-period_duration="'+ obj.period_duration +'" data-unit="'+ obj.unit +'" '+selected_val+'>' + obj.period_name + '</option>';
         });
+
+        
 
       price_selector+='</select>';
       console.log(price_list)
@@ -1805,7 +1856,7 @@ function split_from(value, index)
 	                  '<div class="my-auto">'+ 
 
 	                    '<div class="d-flex"> <input type="hidden" name="split_taxx[]" value="'+isplit_tax+'"> '+ 
-	                      '<a data-proid="'+row+'" class="open_popup my-auto" data-bs-toggle="modal" data-bs-target="#price_edit_popup'+row+'"><i class="bx bx-pencil"></i></a>'+ 
+	                      '<a data-proid="'+row+'" class="open_popup my-auto"><i class="bx bx-pencil"></i></a>'+ 
 	                      '<div class="w-100 my-auto">Price: '+currency_symbol()+'</div><input type="number" step="any" class=" price mb-0 control_ro price_box" oninput="updateWidth(this)"  name="price[]" value="'+price+'" id="price_bx'+row+'" readonly ><div class="my-auto">/</div>'+price_selector+
 	                    '</div>'+ 
 	                    '<div><span id="tax_hider'+row+'">Tax: '+tax_name+' ('+tax_percent+'%)</span> '+currency_symbol()+'<input type="hidden" name="p_tax_amount[]" value="'+(price*tax_percent/100).toFixed(round_of_value())+'" id="p_tax_box'+row+'"><span class="tbox" id="taxboxlabel'+row+'">'+(price*tax_percent/100).toFixed(round_of_value())+'</span> <a class="delete_tax text-danger" data-rowid="'+row+'" data-pricesss="'+price+'"><i class="bx bxs-x-circle"></i></a>'+
@@ -1984,7 +2035,7 @@ function split_from(value, index)
 			var x = 0;
 			var intervalID = setInterval(function () {
 
-			    calculate_item_table(last_inserted_row,price);
+			  calculate_item_table(last_inserted_row,price);
 				
 				calculate_tax_amount();
 				calculate_due_amount();
@@ -2007,6 +2058,39 @@ function split_from(value, index)
 			}, 100);
 
 	}
+
+
+  $(document).on('change','.pricelist_select',function(){
+      var changing_row=$(this).data('row_id'); 
+      var product_price = $('#pricelist_select'+changing_row+' option:selected').data('rental_price');
+      // alert(product_price)
+      $('#price_bx'+changing_row).val(product_price);
+      var x = 0;
+      price=0;
+      var intervalID = setInterval(function () {
+
+        calculate_item_table(changing_row,price);
+        
+        calculate_tax_amount();
+        calculate_due_amount();
+        calculate_invoice();
+        $('#typeandsearch').val('');
+        $('#tandsproducts').addClass('d-none');
+        if (focus_element==1) {
+          $('#product_code').focus();
+          $('#product_code').val('');
+        }else if (focus_element==2) {
+          $('#productbarcodesearch').focus();
+        }else{
+          $('#typeandsearch').focus();
+        }
+        foucc=0;
+
+         if (++x === 5) {
+           window.clearInterval(intervalID);
+         }
+      }, 100);
+  });
 
 
 			$(document).on('change','.box_subu',function(){
@@ -2564,9 +2648,9 @@ $(document).on('click','.delete_tax',function(){
 	function calculate_item_table(this_row,product_price){
 		// var product_price=0;
 		// $.ajax({
-  //           url: base_url()+"sales/get_price?prod="+this_product,
-  //           success:function(response) {
-  //           	product_price=$.trim(response);
+    //           url: base_url()+"sales/get_price?prod="+this_product,
+    //           success:function(response) {
+    //           	product_price=$.trim(response);
 
             	
             	
@@ -2579,6 +2663,55 @@ $(document).on('click','.delete_tax',function(){
 
 	    // $('#price_bx'+this_row).val(response);
 
+
+    var price_type = $('#pricelist_select' + this_row).val();
+    var product_price = $('#pricelist_select' + this_row + ' option:selected').data('rental_price');
+    var rental_unit = $('#pricelist_select' + this_row + ' option:selected').data('unit');
+    var period_duration = $('#pricelist_select' + this_row + ' option:selected').data('period_duration');
+    var rental_duration=$('#rental_duration').val();
+
+    // alert(rental_duration+' - '+rental_unit+' - '+period_duration)
+
+    if (price_type!=0) {
+      // Get values from input fields
+      var rentalPrice = product_price;
+      var rentalDuration = rental_duration;
+      var rentalUnit = rental_unit;
+      var periodDuration = period_duration;
+      
+      // Parse the rental duration (HH:MM)
+      var parts = rentalDuration.split(':');
+      var hours = parseFloat(parts[0]);
+      var minutes = parseFloat(parts[1]);
+       
+      var totalHours = hours + (minutes / 60);
+       
+      var unitInHours = 0;
+      switch(rentalUnit) {
+          case 'hour':
+              unitInHours = 1;
+              break;
+          case 'day':
+              unitInHours = 24;
+              break;
+          case 'week':
+              unitInHours = 24 * 7;
+              break;
+          case 'month':
+              unitInHours = 24 * 30;
+              break;
+          case 'year':
+              unitInHours = 24 * 365;
+              break;
+      }
+      
+      var pricePerUnit = rentalPrice / unitInHours;
+      var product_price = pricePerUnit * totalHours * periodDuration;
+      
+      console.log(product_price);
+    }
+
+    // alert(product_price)
 		var qty = $('#quantity_input'+this_row).val();
 	  var discount = $('#discountbox'+this_row).val();
 	  var discount_percentbox = $('#discount_percentbox'+this_row).val();

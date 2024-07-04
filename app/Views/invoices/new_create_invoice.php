@@ -1129,7 +1129,7 @@
 
                   <div>
                     <label for="input-1" class="modal_lab">Duration</label>
-                    <input type="text" class="form-control modal_inpu  rental_duration" name="rental_duration" id="rental_duration" value="<?= $duration ?>">
+                    <input type="text" class="form-control modal_inpu  rental_duration" name="rental_duration" id="rental_duration" value="<?= $duration ?>" readonly>
                   </div>
                 </div>
                 <?php endif ?>
