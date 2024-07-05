@@ -638,7 +638,9 @@
 
                       <select class="form-control pricelist_select" id="pricelist_select<?= $row; ?>" data-row_id="<?= $row; ?>" name="rental_price_type[]">
                         <option value="0" data-rental_price="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" selected>Default</option>
-                  
+                        <?php foreach (price_list_of_product($productid) as $obj): ?>
+                          <option value="<?= $obj['id'] ?>" data-rental_price="<?= $obj['price'] ?>" data-period_duration="<?= $obj['period_duration'] ?>" data-unit="<?= $obj['unit'] ?>"><?= $obj['period_name'] ?></option>
+                        <?php endforeach ?> 
                       </select>
 
                     </div>
