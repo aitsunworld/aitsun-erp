@@ -630,9 +630,17 @@
                     
                     <input type="hidden" name="split_taxx[]" value="<?= $pros['split_tax'] ?>">
 
-                    <div data-bs-toggle="modal" data-bs-target="#price_edit_popup<?= $row; ?>" class="cursor-pointer"> 
-                      <a data-proid="<?= $row; ?>" class="open_popup" data-bs-toggle="modal" data-bs-target="#price_edit_popup<?= $row; ?>"><i class="bx bx-pencil"></i></a> 
-                      Price: <?= currency_symbol($user['company_id']); ?><input type="number" step="any" class=" price mb-0 control_ro"  name="price[]" value="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" id="price_bx<?= $row; ?>" readonly >
+                    <div class="d-flex cursor-pointer"> 
+                      <a data-proid="<?= $row; ?>" class="open_popup"><i class="bx bx-pencil"></i></a> 
+                      Price: <?= currency_symbol($user['company_id']); ?><input type="number" step="any" class=" price price_box mb-0 control_ro"  name="price[]" value="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" id="price_bx<?= $row; ?>" readonly >
+
+                      <div class="my-auto">/</div>
+
+                      <select class="form-control pricelist_select" id="pricelist_select<?= $row; ?>" data-row_id="<?= $row; ?>" name="rental_price_type[]">
+                        <option value="0" data-rental_price="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" selected>Default</option>
+                  
+                      </select>
+
                     </div>
                     <div><span id="tax_hider<?= $row; ?>">Tax: 
                       <?php if ($tax>0): ?>
