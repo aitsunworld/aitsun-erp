@@ -135,7 +135,7 @@
             }
           }
 
-          if ($view_method=='convert') {
+          if ($view_method=='convert' || $view_method=='edit') {
             $invoice_for=$in_data['bill_from'];
           }
          ?>
@@ -1139,7 +1139,10 @@
 
                   <div>
                     <label for="input-1" class="modal_lab">Duration</label>
-                    <input type="text" class="form-control modal_inpu  rental_duration" name="rental_duration" id="rental_duration" value="<?= $duration ?>" readonly>
+                    <div class="d-flex">
+                      <input type="text" class="form-control modal_inpu d-none  w-50 rental_duration" name="rental_duration" id="rental_duration" value="<?= $duration ?>" readonly>
+                      <b class="my-auto ">1 Day & 2 hours</b>
+                    </div>
                   </div>
                 </div>
                 <?php endif ?>
