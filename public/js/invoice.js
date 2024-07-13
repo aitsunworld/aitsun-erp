@@ -2355,15 +2355,15 @@ $(document).on('click','.delete_tax',function(){
 	$(document).on('click','.qty_minus', function(){
 		var this_row=$(this).data('row');
 		var this_product=$(this).data('product');
-		var price=$(this).data('price');
+		var price=$('#pricelist_select'+this_row+' option:selected').data('rental_price');
 
 		var qnumber4=$('#quantity_input'+this_row).val();
 		if (qnumber4 != 0) {
 			var upval=parseFloat(qnumber4)-1;
 			$('#quantity_input'+this_row).val(upval);
 
-			var this_val=$('#discount_percentbox'+this_row).val(); 
-			$('#discountbox'+this_row).val(set_decimal((price*upval)*this_val/100));
+			// var this_val=$('#discount_percentbox'+this_row).val(); 
+			// $('#discountbox'+this_row).val(set_decimal((price*upval)*this_val/100));
 
 			var x = 0;
 			var intervalID = setInterval(function () {
@@ -2387,12 +2387,12 @@ $(document).on('click','.delete_tax',function(){
 		var this_row=$(this).data('row');
 		var this_product=$(this).data('product');
 		var qnumber4=$('#quantity_input'+this_row).val();
-		var price=$(this).data('price');
+		var price=$('#pricelist_select'+this_row+' option:selected').data('rental_price');
 			var upval=parseFloat(qnumber4)+1;
 			$('#quantity_input'+this_row).val(upval);
 
-			var this_val=$('#discount_percentbox'+this_row).val(); 
-			$('#discountbox'+this_row).val(set_decimal((price*upval)*this_val/100));
+			// var this_val=$('#discount_percentbox'+this_row).val(); 
+			// $('#discountbox'+this_row).val(set_decimal((price*upval)*this_val/100));
 
 			var x = 0;
 			var intervalID = setInterval(function () {
@@ -2418,8 +2418,8 @@ $(document).on('click','.delete_tax',function(){
 		var qnumber4=$(this).val();
 		var x = 0;
 
-		var this_val=$('#discount_percentbox'+this_row).val(); 
-			$('#discountbox'+this_row).val(set_decimal((price*qnumber4)*this_val/100));
+		// var this_val=$('#discount_percentbox'+this_row).val(); 
+		// 	$('#discountbox'+this_row).val(set_decimal((price*qnumber4)*this_val/100));
 
 		var intervalID = setInterval(function () {
 
@@ -2436,7 +2436,7 @@ $(document).on('click','.delete_tax',function(){
 
 	});
 
-	$(document).on('blur','.discount_input,.discount_percent_input', function(){
+	$(document).on('input paste','.discount_input,.discount_percent_input', function(){
 		var this_row=$(this).data('row');
 		var this_val=$(this).val();
 		var type=$(this).data('type');
@@ -2444,7 +2444,7 @@ $(document).on('click','.delete_tax',function(){
 		var price=$(this).data('price');
     var price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
 		var p_price=$('#price_bx'+this_row).val(); 
-    var p_price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
+    // var p_price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
 		var p_qty=$('#quantity_input'+this_row).val(); 
 
 		
@@ -2456,56 +2456,61 @@ $(document).on('click','.delete_tax',function(){
 		}
 
 
-		var qty = $('#quantity_input'+this_row).val();
-	  var discount = $('#discountbox'+this_row).val(); 
+		// var qty = $('#quantity_input'+this_row).val();
+	  // var discount = $('#discountbox'+this_row).val(); 
  
 
-    if (qty=='') {
-    	qty=1;
-    }
-    if (discount=='') {
-    	discount=0;
-    }
+    // if (qty=='') {
+    // 	qty=1;
+    // }
+    // if (discount=='') {
+    // 	discount=0;
+    // }
 
 	        
 				            
-	    var calc_amt=(parseFloat(price)*parseFloat(qty))-parseFloat(discount);
-	    var tax = $('#taxbox'+this_row).val();
-			if (tax!='') {
-      	var taxamt=calc_amt*tax/100;
+	  //   var calc_amt=(parseFloat(price)*parseFloat(qty))-parseFloat(discount);
+	  //   var tax = $('#taxbox'+this_row).val();
+		// 	if (tax!='') {
+    //   	var taxamt=calc_amt*tax/100;
 
-      	if (1) {
+    //   	if (1) {
 
-      	}else{
-      		calc_amt+=parseFloat(taxamt);
-      	}
+    //   	}else{
+    //   		calc_amt+=parseFloat(taxamt);
+    //   	}
       	
-      }
-	    $('#proprice'+this_row).val(calc_amt+taxamt);
+    //   }
+	  //   $('#proprice'+this_row).val(calc_amt+taxamt);
 
-	    $('#propricelabel'+this_row).html(set_decimal(calc_amt+taxamt));
+	  //   $('#propricelabel'+this_row).html(set_decimal(calc_amt+taxamt));
 
-	    $('#taxboxlabel'+this_row).html(set_decimal(taxamt));
-	    $('#p_tax_box'+this_row).val(taxamt);
+	  //   $('#taxboxlabel'+this_row).html(set_decimal(taxamt));
+	  //   $('#p_tax_box'+this_row).val(taxamt);
 
 
 		
-		var x = 0;
-		var intervalID = setInterval(function () {
 
-			calculate_item_table(this_row,price);
-			calculate_invoice(); 
-			calculate_due_amount();  
-			calculate_due_amount(); 
-			calculate_tax_amount();
-
-		if (++x === 5) {
-		       window.clearInterval(intervalID);
-		   }
-		}, 100);
 
 
 	});
+
+$(document).on('blur','.discount_input,.discount_percent_input', function(){
+      var this_row=$(this).data('row');
+      var x = 0;
+      var intervalID = setInterval(function () {
+
+        calculate_item_table(this_row,0);
+        calculate_invoice(); 
+        calculate_due_amount();  
+        calculate_due_amount(); 
+        calculate_tax_amount();
+
+      if (++x === 5) {
+             window.clearInterval(intervalID);
+         }
+      }, 100);
+});
 
 
 

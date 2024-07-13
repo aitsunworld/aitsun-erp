@@ -923,7 +923,7 @@ if ($view_method=='load' || $view_method=='edit') {
             <?php $bcout=0; foreach (bank_accounts_of_account(company($user['id'])) as $ba): $bcout++; ?>
               <div class="pay_box d-flex justify-content-between <?= $bcout==1 ? 'active' :''; ?>" data-pay_id="<?= $ba['id']; ?>" data-target="pay_type_value<?= $ba['id'] ?>">
                 <div>
-                  <div><?= $ba['group_head']; ?></div>
+                  <div><?= $ba['group_head']; ?> <?= $ba['display_name']; ?></div>
                   <div class="d-flex">
                     <span class="methods_pay_cur me-1"><?= currency_symbol($user['company_id']); ?></span> 
                     <input type="number" id="pay_type_value<?= $ba['id'] ?>" class="methods_pay_input" name="payment_type_value[]" value="0">

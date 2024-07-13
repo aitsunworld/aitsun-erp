@@ -503,17 +503,20 @@
                
               >
                   <div class="product_box <?php if ($pro['product_type']=='item_kit'){ $cst=item_kit_stock($pro['id']);}else{$cst=$pro['closing_balance'];}if ($cst<=0){ echo 'out_of_stock'; } ?>">
-                      <h6 class="text-white textoverflow_x-none"><?= $pro['product_name']; ?> - <em><?= name_of_category($pro['category']) ?></em></h6>
-                      <span>
-                          <em><?= name_of_brand($pro['brand']); ?></em>
+                      <h6 class="text-white textoverflow_x-none d-flex w-100 justify-content-between"><div><?= $pro['product_name']; ?> - <em><?= name_of_category($pro['category']) ?></em></div>
 
-                              <?php if ($pro['product_method']=='product'): ?>
-                          
+                        <span>
+                           <em>-<?= name_of_brand($pro['brand']); ?></em>
+                          <?php if ($pro['product_method']=='product'): ?>
                           <small>
                               <?php if ($pro['product_type']=='item_kit'){ echo item_kit_stock($pro['id']).' item in stock';}else{ if ($pro['closing_balance']<=0 ){  echo '<small class="bg-body p-1 text-danger">Stock ('.$pro['closing_balance'].')</small>';}else{ echo $pro['closing_balance'].' '.name_of_unit(unit_of_product($pro['id'])).' in stock';  }} ?>
                           </small>
                           <?php endif ?>
                       </span >
+                       </h6>
+
+
+                      
                   </div>
                   
               </a>
@@ -638,9 +641,11 @@
 
                       <select class="form-control pricelist_select" id="pricelist_select<?= $row; ?>" data-row_id="<?= $row; ?>" name="rental_price_type[]">
                         <option value="0" data-rental_price="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" >Default</option>
-                        <?php foreach (price_list_of_product($productid) as $obj): ?>
+                        <?php if ($invoice_for=='rental'): ?>
+                          <?php foreach (price_list_of_product($productid) as $obj): ?>
                           <option value="<?= $obj['id'] ?>" data-rental_price="<?= $obj['price'] ?>" data-period_duration="<?= $obj['period_duration'] ?>" data-unit="<?= $obj['unit'] ?>" <?= ($obj['id']==$pros['rental_price_type'])?'selected':''; ?>><?= $obj['period_name'] ?></option>
                         <?php endforeach ?> 
+                        <?php endif ?> 
                       </select>
 
                     </div>
