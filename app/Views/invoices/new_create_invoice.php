@@ -1068,7 +1068,7 @@
                   <div class="d-flex justify-content-between mt-1">
                     <div class="my-auto me-1">Vehicle Number:</div>
                     <div>
-                    <input type="text" name="vehicle_number" class="form-control form-control-sm " value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['vehicle_number']; ?><?php else: ?> <?php endif; ?>">
+                    <input type="text" name="vehicle_number" id="vehicle_number" class="form-control form-control-sm " value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['vehicle_number']; ?><?php else: ?> <?php endif; ?>">
                     </div>
                   </div>
 
@@ -1319,8 +1319,8 @@
                
               <div class="modal-body">
                 <div class=" px-0 py-1">
-                  <textarea name="notes" class="form-control prodesc mb-2" placeholder="Note"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['notes']; ?><?php endif ?></textarea>
-                  <textarea name="private_notes" class="form-control prodesc" placeholder="Private Note"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['private_notes']; ?><?php endif ?></textarea>
+                  <textarea name="notes" id="notes" class="form-control prodesc mb-2" placeholder="Note"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['notes']; ?><?php endif ?></textarea>
+                  <textarea name="private_notes" id="private_notes" class="form-control prodesc" placeholder="Private Note"><?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['private_notes']; ?><?php endif ?></textarea>
                 </div>
 
                 <div class="w-100 text-center">
@@ -1370,7 +1370,7 @@
 
     <!-- ///////////////////////////////   FORM  EXLUDED MODALS //////////////////////////////// -->
 
-    <div class="modal aitposmodal fade" id="receiptmodal" data-bs-keyboard="false" data-bs-backdrop="static"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal aitposmodal fade" id="receiptmodal" data-bs-keyboard="false"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="remove_style" role="document" style="max-width: 80%;">
     <div class="modal-content">
       <div class="modal-header">
@@ -1381,7 +1381,7 @@
         </div>
       </div>
         <div>   
-           <button type="button" class="btn-sm btn-secondary close_receipt"><?= langg(get_setting(company($user['id']),'language'),'Close'); ?></button>
+           <button type="button" class="btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close"><?= langg(get_setting(company($user['id']),'language'),'Close'); ?></button>
         </div>
       </div>
 

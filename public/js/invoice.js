@@ -942,7 +942,7 @@ $(document).on('input click keypress','#gst_input',function(){
             $('#mess').html('');
             $('#receiptmodal').modal('show');
             display_invoice($.trim(response));
-            $('#invoice_form')[0].reset();
+            // $('#invoice_form')[0].reset();
             reset_invoice();
             display_products('','','');
             
@@ -999,8 +999,22 @@ $(document).on('click','.tranname',function(){
 	}
 
 	function reset_invoice(){
-		$('#products_table').html('');
-		$('#tax_table').html('');
+    $('#products_table').html(''); 
+    $('#total_taxamt_label_main').html(''); 
+    $('#round_off').val(0);  
+    $('#additional_discount').val(0);  
+    $('#additional_discount_percent').val(0); 
+    $('#vehicle_number').val(''); 
+    $('#transport_charge').val(''); 
+    $('#notes').val(''); 
+		$('#private_notes').val(''); 
+    
+
+
+ 
+    
+
+
 		calculate_invoice(); 
 		calculate_due_amount();  
 		calculate_due_amount(); 
@@ -3018,8 +3032,12 @@ $(document).on('blur','.discount_input,.discount_percent_input', function(){
            fin_grand_total=fin_grand_total+parseFloat(transport_charge);
         }
 
-        var txxmt=$("#total_taxamt_label_main").html();
-
+        var txxmt=0;
+        if ($.trim($("#total_taxamt_label_main").html()!='')) {
+          if ($("#total_taxamt_label_main").html()>0) {
+            txxmt=$("#total_taxamt_label_main").html();
+          } 
+        }
 		
         //displayinmg value
         $("#discountval").val(set_decimal(entire_discount));
