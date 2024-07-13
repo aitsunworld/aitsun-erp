@@ -489,13 +489,13 @@
               data-description="<?= str_replace('"','%22',$pro['description']); ?>"
               data-product_type="<?= $pro['product_type']; ?>"
               data-purchased_price="<?= $pro['purchased_price']; ?>"
-               data-selling_price="<?= $pro['price']; ?>"
-               data-purchase_tax="<?= $pro['purchase_tax']; ?>"
-               data-sale_tax="<?= $pro['sale_tax']; ?>"
-               data-mrp="<?= $pro['mrp']; ?>"
-               data-purchase_margin="<?= $pro['purchase_margin']; ?>"
-               data-sale_margin="<?= $pro['sale_margin']; ?>"
-               data-custom_barcode="<?= $pro['custom_barcode']; ?>"
+              data-selling_price="<?= $pro['price']; ?>"
+              data-purchase_tax="<?= $pro['purchase_tax']; ?>"
+              data-sale_tax="<?= $pro['sale_tax']; ?>"
+              data-mrp="<?= $pro['mrp']; ?>"
+              data-purchase_margin="<?= $pro['purchase_margin']; ?>"
+              data-sale_margin="<?= $pro['sale_margin']; ?>"
+              data-custom_barcode="<?= $pro['custom_barcode']; ?>"
 
 
                data-unit_disabled="<?php if (item_has_transaction($pro['id'])): ?>readonly<?php endif ?>"
@@ -637,9 +637,9 @@
                       <div class="my-auto">/</div>
 
                       <select class="form-control pricelist_select" id="pricelist_select<?= $row; ?>" data-row_id="<?= $row; ?>" name="rental_price_type[]">
-                        <option value="0" data-rental_price="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" selected>Default</option>
+                        <option value="0" data-rental_price="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" >Default</option>
                         <?php foreach (price_list_of_product($productid) as $obj): ?>
-                          <option value="<?= $obj['id'] ?>" data-rental_price="<?= $obj['price'] ?>" data-period_duration="<?= $obj['period_duration'] ?>" data-unit="<?= $obj['unit'] ?>"><?= $obj['period_name'] ?></option>
+                          <option value="<?= $obj['id'] ?>" data-rental_price="<?= $obj['price'] ?>" data-period_duration="<?= $obj['period_duration'] ?>" data-unit="<?= $obj['unit'] ?>" <?= ($obj['id']==$pros['rental_price_type'])?'selected':''; ?>><?= $obj['period_name'] ?></option>
                         <?php endforeach ?> 
                       </select>
 
@@ -1095,11 +1095,28 @@
                     $booking_id='';
                     $timeObject = DateTime::createFromFormat('H:i', $time);
                     $duration='01:00'; 
-                    list($hours, $minutes) = explode(':', $duration); 
-                    $intervalSpec = sprintf('PT%dH%dM', $hours, $minutes);
-                    $durationObject = new DateInterval($intervalSpec); 
-                    $timeObject->add($durationObject); 
-                    $newTime = $timeObject->format('H:i');
+                 
+ 
+                    $from_time = get_date_format(now_time($user['id']),'H:i');
+
+                     
+                    list($hours, $minutes) = sscanf($duration, "%d.%d");
+
+                    // Convert from_time to minutes
+                    list($from_hours, $from_minutes) = explode(':', $from_time);
+                    $total_from_minutes = $from_hours * 60 + $from_minutes;
+
+                    // Add duration in minutes
+                    $total_duration_minutes = $hours * 60 + $minutes;
+                    $total_minutes = $total_from_minutes + $total_duration_minutes;
+
+                    // Calculate new time
+                    $new_hours = floor($total_minutes / 60);
+                    $new_minutes = $total_minutes % 60;
+
+                    // Format new time
+                    $newTime = sprintf('%02d:%02d', $new_hours, $new_minutes);
+ 
                   } 
                 ?>
                 <?php if ($invoice_for=='rental'): ?>
@@ -1141,7 +1158,7 @@
                     <label for="input-1" class="modal_lab">Duration</label>
                     <div class="d-flex">
                       <input type="text" class="form-control modal_inpu d-none  w-50 rental_duration" name="rental_duration" id="rental_duration" value="<?= $duration ?>" readonly>
-                      <b class="my-auto ">1 Day & 2 hours</b>
+                      <b class="my-auto " id="rental_duration_label" ><?= duration_to_rental_days($duration) ?></b>
                     </div>
                   </div>
                 </div>
@@ -1646,8 +1663,10 @@
 <script src="<?= base_url('public'); ?>/js/pos_print.js?v=<?= script_version(); ?>"></script>
 
 <script src="<?= base_url('public/js/invoice.js'); ?>?v=<?= script_version(); ?>"></script>
+<?php if (SLEEP_MODE==true): ?>
  <script type="text/javascript">
     setInterval(function(){
                 location.href="<?= base_url('sleep_mode') ?>?red=<?= str_replace('/index.php', '', 'users/logout') ?>"
             },1800000)
  </script>
+ <?php endif ?>

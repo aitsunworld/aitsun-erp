@@ -85,7 +85,8 @@ use App\Models\Permissionlist as Permissionlist;
 use App\Models\RentalLogsModel as RentalLogsModel;
 use App\Models\RentalHoursModel as RentalHoursModel;
 use App\Models\ProductPriceListModel as ProductPriceListModel;
-
+use App\Models\ChequeDepartmentsModel as ChequeDepartmentsModel;
+use App\Models\ChequesModel as ChequesModel;
 
 function style_version(){
     return '1.2.6';
@@ -154,6 +155,128 @@ function site_key(){
     }  
 }
 
+function timeToExpire($currentDate,$expiryDate) {
+    // Current date
+    $currentDate = new DateTime($currentDate);
+    // Expiry date
+    $expiry = new DateTime($expiryDate);
+    
+    // Calculate the difference
+    $interval = $currentDate->diff($expiry);
+    
+    // Extract months and days remaining
+    $monthsRemaining = ($interval->y * 12) + $interval->m;
+    $daysRemaining = $interval->d;
+    
+    // Initialize result string
+    $result = [];
+    
+    // Add months to result if greater than 0
+    if ($monthsRemaining > 0) {
+        $result[] = $monthsRemaining . " month" . ($monthsRemaining > 1 ? "s" : "");
+    }
+    
+    // Add days to result if greater than 0
+    if ($daysRemaining > 0) {
+        $result[] = $daysRemaining . " day" . ($daysRemaining > 1 ? "s" : "");
+    }
+    
+    // Join the result array with ' & '
+    return implode(' & ', $result);
+}
+
+function get_rental_period_data($id,$column){
+    $RentalHoursModel = new RentalHoursModel;
+    $numrows=$RentalHoursModel->where('id', $id)->first();
+    if ($numrows) {
+        return $numrows[$column];
+    }else{
+        return '';
+    }  
+}
+
+function get_total_cheque_of_department($company_id,$cheque_department){
+    $ChequesModel=new ChequesModel;
+    if ($cheque_department>0) {
+        $ChequesModel->where('cheque_department',$cheque_department);
+    }
+    $ChequesModel->where('company_id',$company_id)->where('deleted',0);
+    $result=$ChequesModel->countAllResults();
+    return $result;
+}
+
+function get_total_cheque_of_category($company_id,$cheque_category){
+    $ChequesModel=new ChequesModel;
+    if ($cheque_category!='') {
+        $ChequesModel->where('cheque_category',$cheque_category);
+    }
+    $ChequesModel->where('company_id',$company_id)->where('deleted',0);
+    $result=$ChequesModel->countAllResults();
+    return $result;
+}
+
+
+
+function get_total_cheque_of_status($company_id,$cheque_status){
+    $ChequesModel=new ChequesModel;
+    if ($cheque_status>0) {
+        $ChequesModel->where('status',$cheque_status);
+    }
+    $ChequesModel->where('company_id',$company_id)->where('deleted',0);
+    $result=$ChequesModel->countAllResults();
+    return $result;
+}
+
+
+function duration_to_rental_days($duration){
+   // Split the duration into hours and minutes
+    list($hours, $minutes) = explode(':', $duration);
+
+    // Convert to total minutes
+    $totalMinutes = ($hours * 60) + $minutes;
+
+    // Convert total minutes to total hours
+    $totalHours = $totalMinutes / 60;
+
+    // Calculate years, months, weeks, days, and remaining hours
+    $years = floor($totalHours / (365 * 24));
+    $remainingHours = $totalHours - ($years * 365 * 24);
+
+    $months = floor($remainingHours / (30 * 24));
+    $remainingHours -= $months * 30 * 24;
+
+    $weeks = floor($remainingHours / (7 * 24));
+    $remainingHours -= $weeks * 7 * 24;
+
+    $days = floor($remainingHours / 24);
+    $remainingHours -= $days * 24;
+
+    // Round remaining hours
+    $remainingHours = round($remainingHours);
+
+    // Construct the result string
+    $result = '';
+
+    if ($years > 0) {
+        $result .= $years . ' year' . ($years > 1 ? 's' : '') . ' ';
+    }
+    if ($months > 0) {
+        $result .= $months . ' month' . ($months > 1 ? 's' : '') . ' ';
+    }
+    if ($weeks > 0) {
+        $result .= $weeks . ' week' . ($weeks > 1 ? 's' : '') . ' ';
+    }
+    if ($days > 0) {
+        $result .= $days . ' day' . ($days > 1 ? 's' : '') . ' ';
+    }
+    if ($remainingHours > 0 || ($years == 0 && $months == 0 && $weeks == 0 && $days == 0)) {
+        $result .= $remainingHours . ' hour' . ($remainingHours > 1 ? 's' : '');
+    }
+
+    return trim($result);
+}
+  
+
 
 
 function price_list_of_product($product_id){
@@ -167,7 +290,7 @@ function price_list_of_product($product_id){
 
 function rental_periods_array($company_id){
     $RentalHoursModel= new RentalHoursModel();
-    $rental_hours_data = $RentalHoursModel->where('company_id',$company_id)->orderBy("id", "desc")->findAll();
+    $rental_hours_data = $RentalHoursModel->where('company_id',$company_id)->where('deleted',0)->orderBy("id", "desc")->findAll();
     return $rental_hours_data;
 }
 
@@ -181,6 +304,23 @@ function total_picked_quantity_of_invoice($invoice_id,$log_type){
         } 
     }
     return $res;
+}
+
+function cheque_department(){
+    $ChequeDepartmentsModel= new ChequeDepartmentsModel();
+    $myid=session()->get('id');
+    $pricelist = $ChequeDepartmentsModel->where('company_id',company($myid))->where('deleted',0)->findAll();
+    return $pricelist;
+}
+
+function get_cheque_department($chdid,$column){
+    $ChequeDepartmentsModel=new ChequeDepartmentsModel;
+    $defaults=$ChequeDepartmentsModel->where('id',$chdid)->where('deleted',0)->first();
+    if ($defaults) {
+        return $defaults[$column];
+    }else{
+        return 0;
+    }
 }
 
 function total_actual_quantity_of_invoice($invoice_id){
@@ -261,14 +401,12 @@ function get_permission_heading_of_name($permission_name){
 
 function get_total_rental($company_id,$status){ 
     $InvoiceModel=new InvoiceModel; 
-  
-         
-        if ($status!='') {
-            $InvoiceModel->where('rental_status',$status);
-        }
-        
+   
+    if ($status!='') {
+        $InvoiceModel->where('rental_status',$status);
+    } 
        
-        $InvoiceModel->where('invoice_type!=','sales'); 
+    $InvoiceModel->where('invoice_type!=','sales'); 
     $total_rentals=$InvoiceModel->where('company_id',$company_id)->where('deleted',0)->where('bill_from','rental')->countAllResults();
     return $total_rentals;
 }
@@ -4217,7 +4355,7 @@ function billing_address_of($customer){
     if (!empty($phone)) {
         $output.='<br>'.$get_r['country_code'].' '.$phone;
     }
-    $output.="<br>".$billing_address."";
+    $output.="".$billing_address."";
     return $output; 
 }
 

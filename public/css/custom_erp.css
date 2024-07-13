@@ -494,6 +494,28 @@ input.search-control-2::placeholder {
     outline: none;
 }
 
+
+.filter_bar_bottom{ 
+    width: 100%;
+    padding: 10px 0; 
+}
+
+.filter_bar_bottom form{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.result_bar{
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #d02057;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
 .filter_bar{
         position: fixed;
     width: 100%;
@@ -2873,10 +2895,10 @@ abbr[title], abbr[data-original-title] {
 
 #product_list_table .pro_featured{
     width: 70px;
-    height: auto;
+    height: 70px;
     object-fit: contain;
     border: 1px solid #00000014;
-    border-radius: 5px; 
+    border-radius: 5px;
     min-height: 50px;
 }
 

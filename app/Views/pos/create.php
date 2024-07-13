@@ -579,6 +579,9 @@ if ($view_method=='load' || $view_method=='edit') {
             <input type="hidden" name="old_p_conversion_unit_rate[]" value="<?= $pro_conversion_unit_rate; ?>"> 
             <input type="hidden" name="split_taxx[]" value="<?= $pros['split_tax'] ?>">
             <input type="hidden" step="any" class=" price mb-0 control_ro"  name="price[]" value="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" data-row="<?= $row; ?>" id="price_bx<?= $row; ?>" readonly >
+            <select class="form-control d-none" id="pricelist_select<?= $row; ?>" data-row_id="<?= $row; ?>" name="rental_price_type[]">
+                        <option value="0" data-rental_price="<?= aitsun_round($price+$discoount,get_setting(company($user['id']),'round_of_value')); ?>" >Default</option> 
+                      </select>
             <input type="hidden" step="any" class="item_total form-control mb-0 control_ro"  name="amount[]" value="<?= aitsun_round($amount,get_setting(company($user['id']),'round_of_value')); ?>" id="proprice<?= $row; ?>" readonly>
         
             <div class="d-none"><span id="tax_hider<?= $row; ?>">Tax: 

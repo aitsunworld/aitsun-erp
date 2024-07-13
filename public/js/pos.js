@@ -1044,6 +1044,15 @@ function add_bill_item(productid,
         }else{
             input_quatity=1;
         }
+
+         var price_selector='<select class="form-control d-none" id="pricelist_select'+row+'" data-row_id="'+row+'" name="rental_price_type[]">'; 
+          var pl_count=0;
+          price_selector += '<option value="0" data-rental_price="'+price+'" selected>Default</option>';
+            
+
+            
+
+          price_selector+='</select>';
         
 
 
@@ -1077,7 +1086,7 @@ var append_data='<li class="orderline '+show_inputs+' active probox mb-2 positio
             '<input type="hidden" name="batch_number[]" value="'+batch_number+'">'+
             '<input type="hidden" name="p_purchase_tax[]" value="'+sale_tax+'" id="id_purchase_tax_pptax'+row+'">'+
             '<input type="hidden" name="p_sale_tax[]" value="'+purchase_tax+'" id="id_sale_tax_pptax'+row+'">'+
-
+            ''+price_selector+
             '<input type="hidden" name="i_id[]" value="0">'+
             '<input type="hidden" name="old_quantity[]" value="0">'+
             '<input type="hidden" class="form-control text-center form-control-sm mb-0 quantity_input numpad"  name="quantity[]" data-row="'+row+'" data-stock="'+stock+'" data-price="'+price+'" data-product="'+productid+'" id="quantity_input'+row+'"  min="1" value="'+input_quatity+'">'+

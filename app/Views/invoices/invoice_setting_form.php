@@ -457,6 +457,23 @@
                             </div>
                         </div>
                         <?php endif ?>
+
+                        <div class="col-md-4">
+                            <div class="form-check mt-3">
+                                <input class="form-check-input my-5" type="radio" name="invoice_temp" id="invoice_temp" value="6" <?php if (get_invoicesetting(company($user['id']),$invoice_type,'invoice_template') == '6') {echo 'checked';} ?>>
+                                <img src="<?= base_url('public'); ?>/images/in4.png" style="width: 100px; box-shadow: 0px 1px 2px 1px #0000002b;">
+                                <p class="mb-0">Rental</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="form-check mt-3">
+                                <input class="form-check-input my-5" type="radio" name="invoice_temp" id="invoice_temp" value="7" <?php if (get_invoicesetting(company($user['id']),$invoice_type,'invoice_template') == '7') {echo 'checked';} ?>>
+                                <img src="<?= base_url('public'); ?>/images/in4.png" style="width: 100px; box-shadow: 0px 1px 2px 1px #0000002b;">
+                                <p class="mb-0">Trsanportation</p>
+                            </div>
+                        </div>
  
                     </div>
                      

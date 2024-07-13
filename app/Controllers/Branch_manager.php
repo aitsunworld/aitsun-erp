@@ -169,6 +169,8 @@ class Branch_manager extends BaseController
                  $update_user=$Companies->save($ac_data);
                  $insert_id=$Companies->insertID();
 
+                 add_base_accounting_heads($insert_id,0);
+
 
 
                  ////////////////////////CREATE ACTIVITY LOG//////////////

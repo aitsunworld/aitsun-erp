@@ -269,9 +269,19 @@ $routes->get('/hr_manage/delete_punch/(:any)', 'Hr_manage::delete_punch/$1');
 $routes->post('/hr_manage/edit_punch/(:any)', 'Hr_manage::edit_punch/$1'); 
 $routes->post('/hr_manage/update_note/(:any)', 'Hr_manage::update_note/$1'); 
 
-///////////// HR Management ////////////////////
+///////////// Cheque Management ////////////////////
 $routes->get('/cheque-management', 'Cheque_management::index');
+$routes->get('/cheque-management/department', 'Cheque_management::department');
+$routes->post('/cheque-management/add_cheque_department', 'Cheque_management::add_cheque_department');
+$routes->post('/cheque-management/delete_department/(:any)', 'Cheque_management::delete_department/$1');
+$routes->post('/cheque-management/update_department/(:any)', 'Cheque_management::update_department/$1');
+$routes->post('/cheque-management/add_cheque', 'Cheque_management::add_cheque');
+$routes->post('/cheque-management/update_cheque/(:any)', 'Cheque_management::update_cheque/$1');
+$routes->post('/cheque-management/delete_cheque/(:any)', 'Cheque_management::delete_cheque/$1');
+$routes->get('/cheque-management/confirm_cheque/(:any)/(:any)', 'Cheque_management::confirm_cheque/$1/$2');
+
  
+///////////// HR Management ////////////////////
 $routes->get('/hr_manage/attendance_report', 'Hr_manage::attendance_report'); 
 $routes->get('/hr_manage/detailed_attendance_report', 'Hr_manage::detailed_attendance_report'); 
  

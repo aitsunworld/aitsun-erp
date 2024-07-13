@@ -107,7 +107,7 @@
             foreach (menus_array($user['id'],$user['u_type']) as $side_item) {
                 if (!isset($side_item['condition']) || $side_item['condition']) {
         ?>
-            <div class="item" onclick="location.href='<?= $side_item["url"] ?>'">
+            <div class="item href_loader" onclick="location.href='<?= $side_item["url"] ?>'">
                 <img src="<?= $side_item['icon'] ?>" class=" my-auto me-2">
                 <?= $side_item['title'] ?>
             </div> 
@@ -464,9 +464,8 @@
 
 
 
-<script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script>
-
-
+<script src="<?= base_url('public'); ?>/js/appoinments.js?v=<?= script_version(); ?>"></script> 
+<script src="<?= base_url('public'); ?>/js/cheque.js?v=<?= script_version(); ?>"></script>
 
 
 <script src="<?= base_url('public'); ?>/js/payroll.js?v=<?= script_version(); ?>"></script>

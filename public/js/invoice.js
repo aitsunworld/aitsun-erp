@@ -97,6 +97,9 @@ $(document).on('blur','.rental_duration',function() {
         var minutesString = minutes.toString().padStart(2, '0');
 
         $('#rental_duration').val(hoursString + ':' + minutesString);
+        $('#rental_duration_label').html(convertDuration(hoursString + ':' + minutesString));
+
+ 
 
         calculate_item_price();
     });
@@ -135,6 +138,56 @@ $(document).on('blur','.rental_duration',function() {
     }, 100);
 
   }
+
+
+  function convertDuration(duration) {
+     // Split the duration into hours and minutes
+    const [hours, minutes] = duration.split(':').map(Number);
+
+    // Convert to total minutes
+    const totalMinutes = (hours * 60) + minutes;
+
+    // Convert total minutes to total hours
+    const totalHours = totalMinutes / 60;
+
+    // Calculate years, months, weeks, days, and remaining hours
+    const years = Math.floor(totalHours / (365 * 24));
+    let remainingHours = totalHours - (years * 365 * 24);
+
+    const months = Math.floor(remainingHours / (30 * 24));
+    remainingHours -= months * 30 * 24;
+
+    const weeks = Math.floor(remainingHours / (7 * 24));
+    remainingHours -= weeks * 7 * 24;
+
+    const days = Math.floor(remainingHours / 24);
+    remainingHours -= days * 24;
+
+    // Round remaining hours
+    remainingHours = Math.round(remainingHours);
+
+    // Construct the result string
+    let result = '';
+
+    if (years > 0) {
+        result += `${years} year${years > 1 ? 's' : ''} `;
+    }
+    if (months > 0) {
+        result += `${months} month${months > 1 ? 's' : ''} `;
+    }
+    if (weeks > 0) {
+        result += `${weeks} week${weeks > 1 ? 's' : ''} `;
+    }
+    if (days > 0) {
+        result += `${days} day${days > 1 ? 's' : ''} `;
+    }
+    if (remainingHours > 0 || (years === 0 && months === 0 && weeks === 0 && days === 0)) {
+        result += `${remainingHours} hour${remainingHours > 1 ? 's' : ''}`;
+    }
+
+    return result.trim();
+}
+  
 
   $(document).on('keydown','input[type="number"]',function(event) {
         const keysToPrevent = ['-', '+','*','/','e','E'];
@@ -1378,7 +1431,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 
 		 				var finprice=$('#selling_price_text'+rowno).val();
 		 				var tz='1.'+n_tax_percent; 
-						var finprice=(finprice/tz).toFixed(2);
+						var finprice=set_decimal(finprice/tz);
 		 			}
 		 			
 		 		}else{
@@ -1387,7 +1440,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 		 			}else{
 		 				var finprice=$('#purchase_price_text'+rowno).val();
 		 				var tz='1.'+n_tax_percent; 
-						var finprice=(finprice/tz).toFixed(2);
+						var finprice=set_decimal(finprice/tz);
 		 			}
 		 			
 		 		}
@@ -1405,7 +1458,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 		 		
 				finprice=parseFloat(finprice); 
 
-		 		$('#price_bx'+rowno).val(finprice.toFixed(round_of_value()));  
+		 		$('#price_bx'+rowno).val(set_decimal(finprice));  
 		 		$('#quantity_input'+rowno).data('price',finprice); 
 		 		$('#qty_minus'+rowno).data('price',finprice); 
 		 		$('#qty_plus'+rowno).data('price',finprice); 
@@ -1740,17 +1793,17 @@ function split_from(value, index)
 					
 					if (sale_tax==1) {
 						var tz=(parseFloat(tax_percent)+100)/100;
-						var price=(selling_price/tz).toFixed(round_of_value());
+						var price=set_decimal(selling_price/tz);
 					}else{
-						var price=selling_price.toFixed(round_of_value());
+						var price=set_decimal(selling_price);
 					}
 				}else{
 					
 					if (purchase_tax==1) {
 						var pz=(parseFloat(tax_percent)+100)/100;
-						var price=(purchaseprice/pz).toFixed(round_of_value()); 
+						var price=set_decimal(purchaseprice/pz); 
 					}else{
-						var price=purchaseprice.toFixed(round_of_value());
+						var price=set_decimal(purchaseprice);
 					}
 				}
 
@@ -1798,6 +1851,7 @@ function split_from(value, index)
       var price_selector='<select class="form-control pricelist_select" id="pricelist_select'+row+'" data-row_id="'+row+'" name="rental_price_type[]">'; 
       var pl_count=0;
       price_selector += '<option value="0" data-rental_price="'+price+'" selected>Default</option>';
+        if (invoice_for=='rental') {
         $.each(price_list, function(index, obj) {
           pl_count++;
             //   console.log("Object at index " + index + ":");
@@ -1810,6 +1864,7 @@ function split_from(value, index)
             var selected_val='';
             price_selector += '<option value="' + obj.id + '" data-rental_price="'+ obj.price +'" data-period_duration="'+ obj.period_duration +'" data-unit="'+ obj.unit +'" '+selected_val+'>' + obj.period_name + '</option>';
         });
+      }
 
         
 
@@ -1820,7 +1875,7 @@ function split_from(value, index)
       if (invoice_for=='rental') {
 
       }
-
+// alert(price+' --- '+tax_percent)
      
 		
 			if ($(".productidforcheck"+productid).length) {
@@ -1859,7 +1914,7 @@ function split_from(value, index)
 	                      '<a data-proid="'+row+'" class="open_popup my-auto"><i class="bx bx-pencil"></i></a>'+ 
 	                      '<div class="w-100 my-auto">Price: '+currency_symbol()+'</div><input type="number" step="any" class=" price mb-0 control_ro price_box" oninput="updateWidth(this)"  name="price[]" value="'+price+'" id="price_bx'+row+'" readonly ><div class="my-auto">/</div>'+price_selector+
 	                    '</div>'+ 
-	                    '<div><span id="tax_hider'+row+'">Tax: '+tax_name+' ('+tax_percent+'%)</span> '+currency_symbol()+'<input type="hidden" name="p_tax_amount[]" value="'+(price*tax_percent/100).toFixed(round_of_value())+'" id="p_tax_box'+row+'"><span class="tbox" id="taxboxlabel'+row+'">'+(price*tax_percent/100).toFixed(round_of_value())+'</span> <a class="delete_tax text-danger" data-rowid="'+row+'" data-pricesss="'+price+'"><i class="bx bxs-x-circle"></i></a>'+
+	                    '<div><span id="tax_hider'+row+'">Tax: '+tax_name+' ('+tax_percent+'%)</span> '+currency_symbol()+'<input type="hidden" name="p_tax_amount[]" value="'+set_decimal(price*tax_percent/100)+'" id="p_tax_box'+row+'"><span class="tbox" id="taxboxlabel'+row+'">'+set_decimal(price*tax_percent/100)+'</span> <a class="delete_tax text-danger" data-rowid="'+row+'" data-pricesss="'+price+'"><i class="bx bxs-x-circle"></i></a>'+
 
 	                    '<input type="hidden" step="any" class="numpad control_ro" data-row="'+row+'" data-product="'+productid+'" id="taxbox'+row+'" name="p_tax_percent[]" min="" value="'+tax_percent+'" readonly></div> '+
 	                  '</div>'+
@@ -1898,7 +1953,7 @@ function split_from(value, index)
 	                          '<div class="form-group">'+
 	                            '<label class="text-dark">Purchase price</label>'+
 	                            '<div class="d-flex">'+
-	                            '<input type="number" id="purchase_price_text'+row+'" value="'+purchaseprice.toFixed(round_of_value())+'" class="form-control">'+
+	                            '<input type="number" id="purchase_price_text'+row+'" value="'+set_decimal(purchaseprice)+'" class="form-control">'+
 	                            '<div style="width: 134px;">'+
 	                            '<select class="form-control" id="purchase_tax_text'+row+'" name="purchase_tax">'+
 	                              '<option value="1" '+purchase_withtax_selected+'>With Tax</option>'+
@@ -1911,7 +1966,7 @@ function split_from(value, index)
 	                          '<div class="form-group mt-2">'+
 	                            '<label class="text-dark">Selling price</label>'+
 	                              '<div class="d-flex">'+
-	                            '<input type="number" id="selling_price_text'+row+'" value="'+selling_price.toFixed(round_of_value())+'" class="form-control">'+
+	                            '<input type="number" id="selling_price_text'+row+'" value="'+set_decimal(selling_price)+'" class="form-control">'+
 	                            '<div style="width: 134px;">'+
 	                            '<select class="form-control" id="sale_tax_text'+row+'" name="sale_tax">'+
 	                              
@@ -2308,7 +2363,7 @@ $(document).on('click','.delete_tax',function(){
 			$('#quantity_input'+this_row).val(upval);
 
 			var this_val=$('#discount_percentbox'+this_row).val(); 
-			$('#discountbox'+this_row).val(((price*upval)*this_val/100).toFixed(round_of_value()));
+			$('#discountbox'+this_row).val(set_decimal((price*upval)*this_val/100));
 
 			var x = 0;
 			var intervalID = setInterval(function () {
@@ -2337,7 +2392,7 @@ $(document).on('click','.delete_tax',function(){
 			$('#quantity_input'+this_row).val(upval);
 
 			var this_val=$('#discount_percentbox'+this_row).val(); 
-			$('#discountbox'+this_row).val(((price*upval)*this_val/100).toFixed(round_of_value()));
+			$('#discountbox'+this_row).val(set_decimal((price*upval)*this_val/100));
 
 			var x = 0;
 			var intervalID = setInterval(function () {
@@ -2359,11 +2414,12 @@ $(document).on('click','.delete_tax',function(){
 		var this_product=$(this).data('product');
 		var stock=$(this).data('stock');
 		var price=$(this).data('price');
+    var price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
 		var qnumber4=$(this).val();
 		var x = 0;
 
 		var this_val=$('#discount_percentbox'+this_row).val(); 
-			$('#discountbox'+this_row).val(((price*qnumber4)*this_val/100).toFixed(round_of_value()));
+			$('#discountbox'+this_row).val(set_decimal((price*qnumber4)*this_val/100));
 
 		var intervalID = setInterval(function () {
 
@@ -2380,35 +2436,36 @@ $(document).on('click','.delete_tax',function(){
 
 	});
 
-	$(document).on('click input','.discount_input,.discount_percent_input', function(){
+	$(document).on('blur','.discount_input,.discount_percent_input', function(){
 		var this_row=$(this).data('row');
 		var this_val=$(this).val();
 		var type=$(this).data('type');
 		var this_product=$(this).data('product');
 		var price=$(this).data('price');
+    var price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
 		var p_price=$('#price_bx'+this_row).val(); 
+    var p_price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
 		var p_qty=$('#quantity_input'+this_row).val(); 
 
 		
 
 		if (type=='percent') {
-			$('#discountbox'+this_row).val(((p_price*p_qty)*this_val/100).toFixed(round_of_value()));
+			$('#discountbox'+this_row).val(set_decimal((p_price*p_qty)*this_val/100));
 		}else{
-			$('#discount_percentbox'+this_row).val((this_val/(p_price*p_qty)*100).toFixed(round_of_value()));
+			$('#discount_percentbox'+this_row).val(set_decimal(this_val/(p_price*p_qty)*100));
 		}
 
 
-
-			var qty = $('#quantity_input'+this_row).val();
+		var qty = $('#quantity_input'+this_row).val();
 	  var discount = $('#discountbox'+this_row).val(); 
  
 
-	        if (qty=='') {
-	        	qty=1;
-	        }
-	        if (discount=='') {
-	        	discount=0;
-	        }
+    if (qty=='') {
+    	qty=1;
+    }
+    if (discount=='') {
+    	discount=0;
+    }
 
 	        
 				            
@@ -2426,9 +2483,9 @@ $(document).on('click','.delete_tax',function(){
       }
 	    $('#proprice'+this_row).val(calc_amt+taxamt);
 
-	    $('#propricelabel'+this_row).html((calc_amt+taxamt).toFixed(round_of_value()));
+	    $('#propricelabel'+this_row).html(set_decimal(calc_amt+taxamt));
 
-	    $('#taxboxlabel'+this_row).html(taxamt.toFixed(round_of_value()));
+	    $('#taxboxlabel'+this_row).html(set_decimal(taxamt));
 	    $('#p_tax_box'+this_row).val(taxamt);
 
 
@@ -2436,7 +2493,7 @@ $(document).on('click','.delete_tax',function(){
 		var x = 0;
 		var intervalID = setInterval(function () {
 
-			// calculate_item_table(this_row,price);
+			calculate_item_table(this_row,price);
 			calculate_invoice(); 
 			calculate_due_amount();  
 			calculate_due_amount(); 
@@ -2484,7 +2541,7 @@ $(document).on('click','.delete_tax',function(){
 			if (sale_tax==1) {
 				var tz=(parseFloat(tax_percent)+100)/100;
 
-				var price=(selling_price/tz).toFixed(round_of_value());
+				var price=set_decimal(selling_price/tz);
 			}else{
 				// alert(selling_price)
 				var price=selling_price;
@@ -2493,7 +2550,7 @@ $(document).on('click','.delete_tax',function(){
 		}else{
 			if (purchase_tax==1) {
 					var pz=(parseFloat(tax_percent)+100)/100;
-					var price=(purchased_price/pz).toFixed(round_of_value()); 
+					var price=set_decimal(purchased_price/pz); 
 				}else{
 					var price=purchased_price;
 				}
@@ -2569,15 +2626,17 @@ $(document).on('click','.delete_tax',function(){
 
 				$('#id_purchase_tax_pptax'+rowid).val(purchase_tax);
 				$('#id_sale_tax_pptax'+rowid).val(sale_tax);
+ 
+				$('#price_bx'+rowid).val(set_decimal(parseFloat(final_price)));
+        $('#pricelist_select'+rowid+' option[value="0"]').attr('data-rental_price', set_decimal(parseFloat(final_price)));
+        // edit_purchase_price
 
-
-				$('#price_bx'+rowid).val(parseFloat(price).toFixed(round_of_value()));
 				$('#p_unitbox'+rowid).val(unit);
 
 				var tax_val=final_price*tax_percent/100;
 
 				$('#tax_hider'+rowid).html('Tax: '+tax_name);
-				$('#taxboxlabel'+rowid).html(tax_val.toFixed(round_of_value()));
+				$('#taxboxlabel'+rowid).html(set_decimal(tax_val));
 				$('#p_tax_box'+rowid).val(tax_val);
 
 			  $('#taxbox'+rowid).val(tax_percent);
@@ -2595,12 +2654,12 @@ $(document).on('click','.delete_tax',function(){
 
 				var x = 0;
 				var intervalID = setInterval(function () {
-
+          calculate_item_table(rowid,price);
 					calculate_invoice(); 
 					calculate_due_amount();  
 					calculate_due_amount(); 
 					calculate_tax_amount();
-					calculate_item_table(rowid,price);
+					
 					
 				if (++x === 5) {
 				       window.clearInterval(intervalID);
@@ -2635,10 +2694,10 @@ $(document).on('click','.delete_tax',function(){
 			var pay_amount=0;
 		}
 
-	    var due_amount = parseFloat(grand_total_amount)-parseFloat(pay_amount);
+	  var due_amount = parseFloat(grand_total_amount)-parseFloat(pay_amount);
 
-		$("#due_amount").val(due_amount.toFixed(round_of_value()));
-        $("#due_amount_label").html(due_amount.toFixed(round_of_value()));
+		$("#due_amount").val(set_decimal(due_amount));
+    $("#due_amount_label").html(set_decimal(due_amount));
 	});
         
 
@@ -2655,7 +2714,7 @@ $(document).on('click','.delete_tax',function(){
             	
             	
 
-  //           },
+   //           },
 	 //         error:function(){
 	 //          alert("error");
 	 //         }
@@ -2672,12 +2731,54 @@ $(document).on('click','.delete_tax',function(){
 
     // alert(rental_duration+' - '+rental_unit+' - '+period_duration)
 
+    
+    var purchased_price=$('#purchase_price_text'+this_row).val(); 
+    var selling_price=$('#selling_price_text'+this_row).val();
+    var purchase_tax=$('#purchase_tax_text'+this_row).val();
+    var sale_tax=$('#sale_tax_text'+this_row).val();
+
+    var view_type=$('#view_type').val();
+    var tax=$('#tax_text'+this_row).val();
+    var tax_percent=$('#tax_text'+this_row).find(':selected').data('perc');
+    var tax_name=$('#tax_text'+this_row).find(':selected').data('tname');
+
+
+    if (price_type!=0) {
+      final_selling_price=product_price;  
+      final_purchased_price=product_price;
+    }else{
+      final_selling_price=selling_price;
+      final_purchased_price=purchased_price;
+    }
+    if (view_type=='sales') {
+      if (sale_tax==1) {
+        var tz=(parseFloat(tax_percent)+100)/100;
+
+        product_price=final_selling_price/tz;
+      }else{
+        // alert(selling_price)
+        product_price=final_selling_price;
+      }
+       
+    }else{
+      if (purchase_tax==1) {
+          var pz=(parseFloat(tax_percent)+100)/100;
+          product_price=final_purchased_price/pz; 
+        }else{
+          product_price=final_purchased_price;
+        }
+    }
+
+
     if (price_type!=0) {
       // Get values from input fields
       var rentalPrice = product_price;
       var rentalDuration = rental_duration;
       var rentalUnit = rental_unit;
       var periodDuration = period_duration;
+
+
+      // alert(periodDuration)
       
       // Parse the rental duration (HH:MM)
       var parts = rentalDuration.split(':');
@@ -2705,8 +2806,8 @@ $(document).on('click','.delete_tax',function(){
               break;
       }
       
-      var pricePerUnit = rentalPrice / unitInHours;
-      var product_price = pricePerUnit * totalHours * periodDuration;
+      var pricePerUnit = rentalPrice / (unitInHours*periodDuration);
+      var product_price = pricePerUnit * totalHours;
       
       console.log(product_price);
     }
@@ -2716,7 +2817,7 @@ $(document).on('click','.delete_tax',function(){
 	  var discount = $('#discountbox'+this_row).val();
 	  var discount_percentbox = $('#discount_percentbox'+this_row).val();
 
-	  $('#discount_percentbox'+this_row).val((discount/(product_price*qty)*100).toFixed(round_of_value()));
+	  $('#discount_percentbox'+this_row).val(set_decimal(discount/(product_price*qty)*100));
 
 	        if (qty=='') {
 	        	qty=1;
@@ -2731,29 +2832,22 @@ $(document).on('click','.delete_tax',function(){
 	    var tax = $('#taxbox'+this_row).val();
 			if (tax!='') {
       	var taxamt=calc_amt*tax/100;
-
+ 
       	if (1) {
 
       	}else{
       		calc_amt+=parseFloat(taxamt);
       	}
       	
-      }
+      } 
+      $('#price_bx'+this_row).val(product_price);
 	    $('#proprice'+this_row).val(calc_amt+taxamt);
+// console.log(calc_amt+taxamt)
+	    $('#propricelabel'+this_row).html(set_decimal(calc_amt+taxamt));
 
-	    $('#propricelabel'+this_row).html((calc_amt+taxamt).toFixed(round_of_value()));
-
-	    $('#taxboxlabel'+this_row).html(taxamt.toFixed(round_of_value()));
-	    $('#p_tax_box'+this_row).val(taxamt);
-
+	    $('#taxboxlabel'+this_row).html(set_decimal(taxamt));
+	    $('#p_tax_box'+this_row).val(taxamt); 
 	            
-	            
-
-	            // alert(this_row+this_product);
-
-				
-		
-		
 	}
 
 	function calculate_due_amount(){
@@ -2765,8 +2859,8 @@ $(document).on('click','.delete_tax',function(){
 
 	    var due_amount = parseFloat(grand_total_amount)-parseFloat(pay_amount);
 
-		  $("#due_amount").val(due_amount.toFixed(round_of_value()));
-      $("#due_amount_label").html(due_amount.toFixed(round_of_value()));
+		  $("#due_amount").val(set_decimal(due_amount));
+      $("#due_amount_label").html(set_decimal(due_amount));
 	}
 
 	function calculate_tax_amount(){
@@ -2788,10 +2882,7 @@ $(document).on('click','.delete_tax',function(){
           $("#taxamountlabel"+ti).html(taxamount);
           taxsum += parseFloat(taxamount);
         });
-
-
-
-        
+ 
 
         var total_taxamt_label_main=0;
         $(".tbox").each(function() {          
@@ -2800,7 +2891,7 @@ $(document).on('click','.delete_tax',function(){
         });
 
         
-        $("#total_taxamt_label_main").html(total_taxamt_label_main.toFixed(round_of_value()));
+        $("#total_taxamt_label_main").html(set_decimal(total_taxamt_label_main));
         $("#total_taxamt").val(total_taxamt_label_main);
         $("#total_taxamt_label").html(total_taxamt_label_main);
 
@@ -2822,7 +2913,7 @@ $(document).on('click','.delete_tax',function(){
 		var dsubtotal=$('#subtotal_label').html();
 		 var ddtax=$('#total_taxamt_label_main').html();
 		 var dprice=parseFloat(dsubtotal)+parseFloat(ddtax); 
-	   $('#additional_discount_percent').val((round_off/(dprice)*100).toFixed(round_of_value()));
+	   $('#additional_discount_percent').val(set_decimal((round_off/(dprice)*100)));
 		 calculate_invoice();
 		 calculate_due_amount();  
 	});
@@ -2832,7 +2923,7 @@ $(document).on('click','.delete_tax',function(){
 		 var dsubtotal=$('#subtotal_label').html();
 		 var ddtax=$('#total_taxamt_label_main').html();
 		 var dprice=parseFloat(dsubtotal)+parseFloat(ddtax); 
-     $('#additional_discount').val(((dprice.toFixed())*this_val/100).toFixed(round_of_value()));
+     $('#additional_discount').val(set_decimal((set_decimal(dprice))*this_val/100));
 		calculate_invoice();
 		calculate_due_amount();  
 	});
@@ -2852,7 +2943,7 @@ $(document).on('click','.delete_tax',function(){
 		var dsubtotal=$('#subtotal_label').html();
 		 var ddtax=$('#total_taxamt_label_main').html();
 		 var dprice=parseFloat(dsubtotal)+parseFloat(ddtax); 
-	   $('#cash_discount_percent').val((round_off/(dprice)*100).toFixed(round_of_value()));
+	   $('#cash_discount_percent').val(set_decimal(round_off/(dprice)*100));
 		 calculate_invoice();
 		 calculate_due_amount();  
 	});
@@ -2862,23 +2953,14 @@ $(document).on('click','.delete_tax',function(){
 		 var dsubtotal=$('#subtotal_label').html();
 		 var ddtax=$('#total_taxamt_label_main').html();
 		 var dprice=parseFloat(dsubtotal)+parseFloat(ddtax); 
-     $('#round_off').val(((dprice.toFixed())*this_val/100).toFixed(round_of_value()));
+     $('#round_off').val(set_decimal((set_decimal(dprice))*this_val/100));
 		calculate_invoice();
 		calculate_due_amount();  
 	});
 
-
-
+ 
 	 
-
-	 
-	function calculate_invoice(){
-
-
-		 
-
-
-
+	function calculate_invoice(){ 
 
 		var sum = 0;        
         $(".item_total").each(function() {          
@@ -2935,16 +3017,16 @@ $(document).on('click','.delete_tax',function(){
 
 		
         //displayinmg value
-        $("#discountval").val(entire_discount.toFixed(round_of_value()));
-        $("#discountval_label").html(entire_discount.toFixed(round_of_value()));
-        $("#subtotal").val(sub_total.toFixed(round_of_value()));
-        $("#subtotal_label").html((sub_total-parseFloat(txxmt)).toFixed(round_of_value()));
+        $("#discountval").val(set_decimal(entire_discount));
+        $("#discountval_label").html(set_decimal(entire_discount));
+        $("#subtotal").val(set_decimal(sub_total));
+        $("#subtotal_label").html(set_decimal(sub_total-parseFloat(txxmt)));
 
-        $("#grand_total").val(fin_grand_total.toFixed(round_of_value()));
-        $("#grand_total_label").html(fin_grand_total.toFixed(round_of_value()));
+        $("#grand_total").val(set_decimal(fin_grand_total));
+        $("#grand_total_label").html(set_decimal(fin_grand_total));
 
-        $("#cash_input").val(fin_grand_total.toFixed(round_of_value()));
-        $("#payment_type_value").val(fin_grand_total.toFixed(round_of_value()));
+        $("#cash_input").val(set_decimal(fin_grand_total));
+        $("#payment_type_value").val(set_decimal(fin_grand_total));
         $("#cheque_input").val(fin_grand_total);
         $("#bt_input").val(fin_grand_total);
 
@@ -2953,7 +3035,27 @@ $(document).on('click','.delete_tax',function(){
 
 	}
 
+    function set_decimal(numberStr) {
+      return numberStr.toFixed(round_of_value());
+      // var numberStr = numberStr.toString();
+      // var decimalPlaces=2;
+      // var decimalIndex = numberStr.indexOf(".");
+      // var result;
 
+      // if (decimalIndex !== -1) {
+      //     result = numberStr.substring(0, decimalIndex + decimalPlaces + 1); // get the specified number of decimal places without rounding
+      // } else {
+      //     result = numberStr + "." + "0".repeat(decimalPlaces); // if no decimal part, add the required number of zeroes
+      // }
+
+      // // If the result has fewer decimal places than required, pad with zeroes
+      // var actualDecimals = result.length - decimalIndex - 1;
+      // if (decimalIndex !== -1 && actualDecimals < decimalPlaces) {
+      //     result += "0".repeat(decimalPlaces - actualDecimals);
+      // }
+
+      // return result;
+  };
 
 
 	function loc(){

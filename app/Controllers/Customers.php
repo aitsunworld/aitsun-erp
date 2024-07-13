@@ -337,9 +337,7 @@ class Customers extends BaseController
 
             if (isset($_POST['cus_name'])) {
 
-                if (total_user(company($myid))>=user_limit(company($myid))) {
-                   echo 'limit_reached';
-                }else{
+           
   
                     $customer_data = [
                         'company_id'=>company($myid),
@@ -411,9 +409,7 @@ class Customers extends BaseController
                     }
 
  
-
-            }
-
+ 
         }
     }
 }

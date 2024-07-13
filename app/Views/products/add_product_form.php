@@ -86,6 +86,7 @@
 	                    	<div class="d-flex w-100">
 	                    		<div class="position-relative fsc field_select_container w-100">
 	                    			<select name="period_id[]" class="form-select position-relative w-100" data-blockid="" > 
+	                    				
 	                    				<?php foreach (rental_periods_array(company($user['id'])) as $rp): ?>
 	                    					<option value="<?= $rp['id'] ?>"><?= $rp['period_name'] ?></option> 
 	                    				<?php endforeach ?>

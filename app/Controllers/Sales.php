@@ -626,7 +626,16 @@
                         $old_due_amount=strip_tags($this->request->getVar('old_due_amount'));
                         $old_paid_amount=strip_tags($this->request->getVar('old_paid_amount'));
 
-                        
+                    $rent_from='';
+                    $rent_to='';
+
+                    $rent_from_date=strip_tags($this->request->getVar('rent_from_date'));
+                    $rent_from_time=strip_tags($this->request->getVar('rent_from_time'));
+                    $rent_to_date=strip_tags($this->request->getVar('rent_to_date'));
+                    $rent_to_time=strip_tags($this->request->getVar('rent_to_time'));
+                    $rent_from=$rent_from_date.' '.$rent_from_time;
+                    $rent_to=$rent_to_date.' '.$rent_to_time;
+
 
                        
                        $in_data=[
@@ -660,7 +669,10 @@
                             'mrn_number'=>strip_tags($this->request->getVar('mrn_number')),
                             'doctor_name'=>strip_tags($this->request->getVar('doctor_name')),
                              'bill_number'=>strip_tags($this->request->getVar('bill_number')),
-                            'validity'=>strip_tags($this->request->getVar('validity'))  
+                            'validity'=>strip_tags($this->request->getVar('validity')),
+                            'rent_from'=>$rent_from,
+                            'rent_to'=>$rent_to,
+                            'rental_duration'=>strip_tags($this->request->getVar('rental_duration'))
 
                         ];
 

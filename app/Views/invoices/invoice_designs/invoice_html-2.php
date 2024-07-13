@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,8 +37,7 @@
       color: black;
       font-weight: 400;
     }
-    .new_pad td{
-/*      font-size: 13px;*/
+    .new_pad td{ 
       padding: 6px;
     }
     .foot_table td{

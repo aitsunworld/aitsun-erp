@@ -1,3 +1,4 @@
 ALTER TABLE `main_item_party_table` ADD `is_rental` INT NOT NULL AFTER `is_self_order`;
 ALTER TABLE `invoice_items` ADD `rental_price_type` BIGINT NOT NULL AFTER `returned_in_unit`;
+ALTER TABLE `cheques` ADD `cheque_category` INT NOT NULL AFTER `cheque_department`;
 

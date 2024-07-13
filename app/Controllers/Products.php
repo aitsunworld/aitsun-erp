@@ -562,26 +562,31 @@ public function add_product(){
                             add_log($log_data);
                             ////////////////////////END ACTIVITY LOG/////////////////
 
-                            foreach ($_POST["period_id"] as $i => $value ) {
-                                $period_id=trim(strip_tags($_POST["period_id"][$i]));
-                                $rental_price=trim(strip_tags($_POST["rental_price"][$i])); 
-                                
-                                
-                                
-                                $price_list=[
-                                    'product_id'=>$proid,
-                                    'period_id'=>$period_id,
-                                    'price'=>$rental_price, 
-                                    'company_id'=>company($myid),
-                                ];
+                            if (isset($_POST["period_id"])) {
+                                foreach ($_POST["period_id"] as $i => $value ) {
+                                    if ($_POST["period_id"][$i]!='' && $_POST["period_id"][$i]!=0) {
+                                        $period_id=trim(strip_tags($_POST["period_id"][$i]));
+                                        $rental_price=trim(strip_tags($_POST["rental_price"][$i])); 
+                                        
+                                      
+                                        $price_list=[
+                                            'product_id'=>$proid,
+                                            'period_id'=>$period_id,
+                                            'price'=>$rental_price, 
+                                            'company_id'=>company($myid),
+                                        ];
 
-                                if (!empty($period_id) && !empty($rental_price)) {
-                                    $checkrentalpriceexist=$ProductPriceListModel->where('period_id',$period_id)->where('product_id',$proid)->where('deleted',0)->first();
-                                    if (!$checkrentalpriceexist) {
-                                        $ProductPriceListModel->save($price_list);
-                                    }  
-                                } 
+                                        if (!empty($period_id) && !empty($rental_price)) {
+                                            $checkrentalpriceexist=$ProductPriceListModel->where('period_id',$period_id)->where('product_id',$proid)->where('deleted',0)->first();
+                                            if (!$checkrentalpriceexist) {
+                                                $ProductPriceListModel->save($price_list);
+                                            }  
+                                        } 
+                                    }
+                                    
+                                }
                             }
+                            
                             
                             if ($this->request->getVar('from_import')==0) {
                                     //uploading multiple image
@@ -2783,7 +2788,7 @@ public function get_adjust_stock($proid){
                 }
 
 
-                $rental_hours_data = $RentalHoursModel->where('company_id',company($myid))->orderBy("id", "desc")->findAll();
+                $rental_hours_data = $RentalHoursModel->where('company_id',company($myid))->where('deleted',0)->orderBy("id", "desc")->findAll();
  
             
 
@@ -2863,8 +2868,9 @@ public function get_adjust_stock($proid){
              $multyiple = explode(',', $rs_id);
 
              foreach ($multyiple as $inid) { 
-                
-                $RentalHoursModel->delete($inid);
+                $rentd=['id'=>$inid,'deleted'=>1];
+
+                $RentalHoursModel->save($rentd);
 
              }
 
