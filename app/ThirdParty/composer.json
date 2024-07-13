@@ -1,6 +1,0 @@
-{
-    "require": {
-        "google/apiclient": "2.11",
-        "dompdf/dompdf": "^2.0"
-    }
-}
