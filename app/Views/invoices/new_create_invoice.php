@@ -1,3 +1,17 @@
+<?php 
+$products_array=[];
+// $products_array=products_array(company($user['id']));
+if ($view_method=='load' || $view_method=='edit') {
+   
+}else{
+  if (session()->has('sales_session')) {
+    $session_data=session()->get('sales_session');
+    $products_array=$session_data['products']; 
+
+  }
+} 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,27 +36,27 @@
         z-index: 99999999!important;
     }
     .modal {
-      z-index: 1111111!important;
-  }
+        z-index: 1111111!important;
+    }
 
-  .spin_me{
-    animation: spin_me 1s infinite linear;
-  }
+    .spin_me{
+      animation: spin_me 1s infinite linear;
+    }
 
   
-.lobibox-notify-wrapper{
-    z-index: 90000000000!important;
-}
+    .lobibox-notify-wrapper{
+      z-index: 90000000000!important;
+    }
 
 
-@keyframes spin_me {
-    from {
-        transform:rotate(0deg);
+    @keyframes spin_me {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
     }
-    to {
-        transform:rotate(360deg);
-    }
-}
 
 .discount_percent_input{
   max-width: 100px;
@@ -458,7 +472,7 @@
         </button>
         <div id="tandsproducts" class="d-none">
           <?php 
-            foreach (products_array(company($user['id'])) as $pro): 
+            foreach ($products_array as $pro): 
               $price_list=price_list_of_product($pro['id']);
               $price_list=json_encode($price_list);
           ?>
