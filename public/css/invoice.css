@@ -593,3 +593,26 @@ a{
     border-radius: 0;
     padding: 0 5px 0 5px;
 }
+
+.items_loader{
+    background: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.items_loader div{
+     animation: blink 1s step-start 0s infinite;
+     transition: 0.5s ease;
+}
+ 
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+ 

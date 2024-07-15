@@ -89,11 +89,11 @@ use App\Models\ChequeDepartmentsModel as ChequeDepartmentsModel;
 use App\Models\ChequesModel as ChequesModel;
 
 function style_version(){
-    return '1.2.7';
+    return '1.2.8';
 }
 
 function script_version(){
-    return '1.2.7';
+    return '1.2.8';
 }
 
 function round_after(){
@@ -229,6 +229,9 @@ function get_total_cheque_of_status($company_id,$cheque_status){
 
 
 function duration_to_rental_days($duration){
+    if ($duration=='') {
+        $duration='00:00';
+    }
    // Split the duration into hours and minutes
     list($hours, $minutes) = explode(':', $duration);
 
@@ -2031,11 +2034,59 @@ function week_off_days($userid,$date){
     return $dayss;
 }
 
+function item_has_transaction($product_id){
+    $InvoiceitemsModel = new InvoiceitemsModel;
+    $invo_items=$InvoiceitemsModel->where('product_id',$product_id)->where('deleted',0)->first();
+    if ($invo_items) {
+        return true;
+    }else{
+        return false;
+    } 
+}
+
+
 function products_array($company){
-    $ProductsModel=new Main_item_party_table();
-    $getuse=$ProductsModel->where('company_id',$company)->where('main_type','product')->where('deleted',0)->findAll();
+    $ProductsModel=new Main_item_party_table(); 
+    $ProductsModel->select('main_item_party_table.*,product_categories.cat_name,product_brand.brand_name');
+    $ProductsModel->join('product_categories', 'product_categories.id = main_item_party_table.category', 'left');
+    $ProductsModel->join('product_brand', 'product_brand.id = main_item_party_table.brand', 'left');
+
+    $getuse=$ProductsModel->where('main_item_party_table.company_id',$company)->where('main_item_party_table.main_type','product')->where('main_item_party_table.deleted',0)->findAll();
     return $getuse;
 }
+
+function name_of_category($categoryid){
+    $ProductCategories = new ProductCategories;
+    $user=$ProductCategories->where('id', $categoryid)->first();
+    if ($user) {
+        $fn=$user['cat_name'];
+        return $fn;
+    }else{
+        return '';
+    } 
+} 
+
+
+function name_of_brand($categoryid){
+    $ProductBrand = new ProductBrand;
+    $pr=$ProductBrand->where('id',$categoryid)->first();
+    
+    if ($pr) {
+        return $pr['brand_name'];
+    }else{
+        return '';
+    }
+    
+}
+
+
+function unit_of_product($product){
+    $ProductsModel = new Main_item_party_table;
+    $un=$ProductsModel->where('id',$product);
+    $namu=$un->first();
+    return $namu['unit'];
+}
+
 
 function get_users_by_permission($company_id,$solumn){
     $PermissionModel=new PermissionModel();
@@ -4071,15 +4122,6 @@ function invoice_items_array_kits($invoice){
     return $invo_items->findAll();
 }
 
-function item_has_transaction($product_id){
-    $InvoiceitemsModel = new InvoiceitemsModel;
-    $invo_items=$InvoiceitemsModel->where('product_id',$product_id)->where('deleted',0)->first();
-    if ($invo_items) {
-        return true;
-    }else{
-        return false;
-    } 
-}
 
 function delete_from_payments($invoice_id){
     $PaymentsModel = new PaymentsModel;
@@ -4813,13 +4855,6 @@ function stock($product){
     return $namu['stock'];
 }
 
-function unit_of_product($product){
-    $ProductsModel = new Main_item_party_table;
-    $un=$ProductsModel->where('id',$product);
-    $namu=$un->first();
-    return $namu['unit'];
-}
-
 
 
 
@@ -4853,18 +4888,6 @@ function is_manufactured($product_id){
 }
 
 
-
-function name_of_brand($categoryid){
-    $ProductBrand = new ProductBrand;
-    $pr=$ProductBrand->where('id',$categoryid)->first();
-    
-    if ($pr) {
-        return $pr['brand_name'];
-    }else{
-        return '';
-    }
-    
-}
 
 function get_id_of_brand($company,$brand_id){
     $ProductBrand = new ProductBrand;
@@ -5647,16 +5670,7 @@ function next_request($rq_id,$action){
 
 
 
-function name_of_category($categoryid){
-    $ProductCategories = new ProductCategories;
-    $user=$ProductCategories->where('id', $categoryid)->first();
-    if ($user) {
-        $fn=$user['cat_name'];
-        return $fn;
-    }else{
-        return '';
-    } 
-}
+
 
 function name_of_post_category($categoryid){
     $PostCategoryModel = new PostCategoryModel;

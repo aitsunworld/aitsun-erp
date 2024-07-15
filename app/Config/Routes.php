@@ -130,6 +130,7 @@ $routes->post('/floors/save_floors', 'Pos::save_floors');
 
 ////////// Inventories /////////////
 $routes->get('/invoices/sales', 'Invoices::sales'); 
+$routes->get('/invoices/get_sales_products/(:any)', 'Invoices::get_sales_products/$1'); 
 $routes->get('/purchases/purchases', 'Purchases::purchases'); 
 $routes->get('/invoices/create_invoice', 'Invoices::create_invoice'); 
 $routes->get('/sales/display_products', 'Sales::display_products'); 

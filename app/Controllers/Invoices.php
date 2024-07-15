@@ -349,6 +349,22 @@ public function copy($inv_id=''){
 
 }
 
+public function get_sales_products($pro_view_type='sales'){
+    $session=session();
+    $UserModel=new Main_item_party_table;
+    if ($session->has('isLoggedIn')){
+
+        $myid=session()->get('id');
+        $user=$UserModel->where('id',$myid)->first(); 
+
+        $data = [ 
+            'user'=>$user,
+            'view_type'=>$pro_view_type
+        ];
+        echo view('invoices/get_invoice_products',$data);
+    } 
+}
+
 
 
 public function get_invoice($cusval=""){

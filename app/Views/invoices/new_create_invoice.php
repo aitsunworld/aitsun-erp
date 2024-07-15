@@ -1,17 +1,3 @@
-<?php 
-$products_array=[];
-// $products_array=products_array(company($user['id']));
-if ($view_method=='load' || $view_method=='edit') {
-   
-}else{
-  if (session()->has('sales_session')) {
-    $session_data=session()->get('sales_session');
-    $products_array=$session_data['products']; 
-
-  }
-} 
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +12,7 @@ if ($view_method=='load' || $view_method=='edit') {
   <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/icons.css'); ?>?ver=<?= style_version(); ?>">
   <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/sweetalert2.min.css') ?>">
   <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/lobibox.min.css') ?>">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="<?= base_url('public'); ?>/js/lobibox.min.js"></script>
   <style type="text/css">.bg-no{background: transparent!important;} .bg-no .row{padding: 0!important;}</style>
 
@@ -128,7 +114,8 @@ if ($view_method=='load' || $view_method=='edit') {
   </style>
 </head>
 <body style="overflow: hidden;">
-    
+ 
+    <input type="hidden" value="1" id="is_sales_session">
     <div class="invoice_container">
 
         <?php 
@@ -257,8 +244,6 @@ if ($view_method=='load' || $view_method=='edit') {
                 <?= langg(get_setting(company($user['id']),'language'),'- Convert'); ?>
               <?php elseif ($view_method=='edit'): ?>
                 <?= langg(get_setting(company($user['id']),'language'),'- Edit'); ?>
-
-
               <?php elseif ($view_method=='copy'): ?>
                 <?= langg(get_setting(company($user['id']),'language'),'- Copy'); ?>
               <?php endif ?>  
@@ -471,70 +456,7 @@ if ($view_method=='load' || $view_method=='edit') {
           <i class="bx bx-plus"></i>
         </button>
         <div id="tandsproducts" class="d-none">
-          <?php 
-            foreach ($products_array as $pro): 
-              $price_list=price_list_of_product($pro['id']);
-              $price_list=json_encode($price_list);
-          ?>
-            <a class="item_box col-md-3 my-2 procode_<?= $pro['product_code']; ?> barcode_item_<?= substr($pro['barcode'], 0, 6); ?> custom_barcode_item_<?= $pro['barcode']; ?>" href="javascript:void(0);"
-              data-productid="<?= $pro['id']; ?>" 
-              data-product_name="<?= str_replace('"', '&#34;', $pro['product_name']); ?>" 
-              data-batch_number="<?= $pro['batch_no']; ?>" 
-              data-unit="<?= $pro['unit']; ?>"
-              <?php if ($view_type=='sales'): ?>
-                  data-price="<?= $pro['price']; ?>"
-              <?php else: ?>
-                  data-price="<?= $pro['purchased_price']; ?>"
-              <?php endif ?>
-              data-price_list='<?= $price_list ?>' 
-              data-tax="<?= $pro['tax']; ?>"
-
-              data-prounit='<?php foreach (products_units_array(company($user['id'])) as $pu): ?><option value="<?= $pu['value']; ?>" <?php if ($pro['unit']==$pu['value']) {echo 'selected';} ?>><?= $pu['name']; ?></option><?php endforeach ?>'
-              data-prosubunit='<option value="">None</option><?php foreach (products_units_array(company($user['id'])) as $pu): ?><option value="<?= $pu['value']; ?>" <?php if ($pro['sub_unit']==$pu['value']) {echo 'selected';} ?>><?= $pu['name']; ?></option><?php endforeach ?>'
-
-              data-proconversion_unit_rate="<?= $pro['conversion_unit_rate']; ?>"
-
-               data-protax='<?php foreach (tax_array(company($user['id'])) as $tx): ?><option data-perc="<?= $tx['percent']; ?>" data-tname="<?= $tx['name']; ?>" value="<?= $tx['name']; ?>" <?php if ($pro['tax']==$tx['name']) {echo 'selected';} ?>><?= $tx['name']; ?></option><?php endforeach ?>'
-
-              data-tax_name="<?= tax_name($pro['tax']); ?>"
-              data-barcode="<?= $pro['barcode']; ?>"
-              data-tax_percent="<?= percent_of_tax($pro['tax']); ?>"
-              data-stock="<?= $pro['closing_balance'] ?>"
-              data-description="<?= str_replace('"','%22',$pro['description']); ?>"
-              data-product_type="<?= $pro['product_type']; ?>"
-              data-purchased_price="<?= $pro['purchased_price']; ?>"
-              data-selling_price="<?= $pro['price']; ?>"
-              data-purchase_tax="<?= $pro['purchase_tax']; ?>"
-              data-sale_tax="<?= $pro['sale_tax']; ?>"
-              data-mrp="<?= $pro['mrp']; ?>"
-              data-purchase_margin="<?= $pro['purchase_margin']; ?>"
-              data-sale_margin="<?= $pro['sale_margin']; ?>"
-              data-custom_barcode="<?= $pro['custom_barcode']; ?>"
-
-
-               data-unit_disabled="<?php if (item_has_transaction($pro['id'])): ?>readonly<?php endif ?>"
-               data-in_unit_options="<option value='<?= $pro['unit'] ?>'><?= $pro['unit'] ?></option><?php if (!empty($pro['sub_unit'])): ?><option value='<?= $pro['sub_unit'] ?>'><?= $pro['sub_unit'] ?></option><?php endif ?>"
-               
-              >
-                  <div class="product_box <?php if ($pro['product_type']=='item_kit'){ $cst=item_kit_stock($pro['id']);}else{$cst=$pro['closing_balance'];}if ($cst<=0){ echo 'out_of_stock'; } ?>">
-                      <h6 class="text-white textoverflow_x-none d-flex w-100 justify-content-between"><div><?= $pro['product_name']; ?> - <em><?= name_of_category($pro['category']) ?></em></div>
-
-                        <span>
-                           <em>-<?= name_of_brand($pro['brand']); ?></em>
-                          <?php if ($pro['product_method']=='product'): ?>
-                          <small>
-                              <?php if ($pro['product_type']=='item_kit'){ echo item_kit_stock($pro['id']).' item in stock';}else{ if ($pro['closing_balance']<=0 ){  echo '<small class="bg-body p-1 text-danger">Stock ('.$pro['closing_balance'].')</small>';}else{ echo $pro['closing_balance'].' '.name_of_unit(unit_of_product($pro['id'])).' in stock';  }} ?>
-                          </small>
-                          <?php endif ?>
-                      </span >
-                       </h6>
-
-
-                      
-                  </div>
-                  
-              </a>
-          <?php endforeach ?>
+         
         </div>
 
       </div>
@@ -740,7 +662,7 @@ if ($view_method=='load' || $view_method=='edit') {
                             <label class="text-dark">Unit</label> 
  
                               <?php if (item_has_transaction($pros['product_id'])): ?>
-                                <span style="display: block; color:red; font-size: 11px;">You are unable to alter the primary unit because this item has transactions.</span>
+                                <span style="display: block; color:red; font-size: 11px;">You are unable to alter the primary unit here. Edit product and update</span>
                                 <div class="form-control bg-light-transparent"><?= $pro_unit ?></div>
                               <?php endif ?> 
 

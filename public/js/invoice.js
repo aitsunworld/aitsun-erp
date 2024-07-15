@@ -1,6 +1,27 @@
 $(document).ready(function(){
 
+load_sale_products();
+
+function load_sale_products(){
   
+    $('body').append(` <div class="items_loader" id="items_loader">
+    <div class="m-auto">
+      Synching items. Please wait...
+    </div>
+  </div>`);
+
+    var pro_view_type=$('#view_type').val();
+    $.ajax({
+      url: base_url()+"/invoices/get_sales_products/"+pro_view_type,
+      success:function(response) { 
+        $('#tandsproducts').html(response);
+        $('#items_loader').remove();
+      },
+     error:function(){
+      alert("error");
+     }
+    }); 
+}
 
 $(document).on('click','.open_popup',function() { 
   var rowid=$(this).data('proid');
@@ -1787,7 +1808,7 @@ function split_from(value, index)
 
 			var unit_disabled_message="";
 			if (unit_disabled=='readonly') {
-				unit_disabled_message='<span style="display: block; color:red; font-size: 11px;">You are unable to alter the primary unit because this item has transactions.</span> <div class="form-control bg-light-transparent">'+unit+'</div>';
+				unit_disabled_message='<span style="display: block; color:red; font-size: 11px;">You are unable to alter the primary unit here. Edit product and update</span> <div class="form-control bg-light-transparent">'+unit+'</div>';
 			} 
 			
 

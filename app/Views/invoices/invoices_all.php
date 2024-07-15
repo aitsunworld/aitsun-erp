@@ -354,11 +354,12 @@
                          <td class="text-right text-success" <?php if ($di['deleted']!=0): ?>style="text-decoration: line-through;"<?php endif ?>>
                             
                             <?php if (!has_converted($di['id']) || $di['invoice_type']!='proforma_invoice'): ?>
-                             
+                             <?php if ($di['invoice_type']=='sales' || $di['invoice_type']=='proforma_invoice' || $di['invoice_type']=='sales_return' || $di['invoice_type']=='purchase' || $di['invoice_type']=='purchase_return'): ?> 
                             <?= currency_symbol(company($user['id'])); ?> <?= aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?> 
 
                             <?php if ($di['deleted']==0): ?>
                                 <?php $total_paid_amount+=aitsun_round($di['paid_amount'],get_setting(company($user['id']),'round_of_value')); ?>
+                            <?php endif ?>
                             <?php endif ?>
                             <?php endif; ?>
                             

@@ -1,0 +1,406 @@
+CRITICAL - 2024-07-15 05:37:10 --> Undefined variable $PosSessions
+in APPPATH\Controllers\Invoices.php on line 354.
+ 1 APPPATH\Controllers\Invoices.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $PosSessions', 'APPPATH\\Controllers\\Invoices.php', 354)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 05:37:28 --> Undefined variable $company
+in APPPATH\Controllers\Invoices.php on line 357.
+ 1 APPPATH\Controllers\Invoices.php(357): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $company', 'APPPATH\\Controllers\\Invoices.php', 357)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 05:41:19 --> Undefined variable $company
+in APPPATH\Controllers\Invoices.php on line 367.
+ 1 APPPATH\Controllers\Invoices.php(367): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $company', 'APPPATH\\Controllers\\Invoices.php', 367)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:05:49 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:09:37 --> Undefined variable $is_sales_session
+in APPPATH\Views\invoices\new_create_invoice.php on line 122.
+ 1 APPPATH\Views\invoices\new_create_invoice.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $is_sales_session', 'APPPATH\\Views\\invoices\\new_create_invoice.php', 122)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 5 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:28:28 --> Undefined array key "cat_name"
+in APPPATH\Views\invoices\new_create_invoice.php on line 510.
+ 1 APPPATH\Views\invoices\new_create_invoice.php(510): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cat_name"', 'APPPATH\\Views\\invoices\\new_create_invoice.php', 510)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 5 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:32:29 --> Undefined variable $ProductCategories
+in APPPATH\Helpers\apanel_helper.php on line 2037.
+ 1 APPPATH\Helpers\apanel_helper.php(2037): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ProductCategories', 'APPPATH\\Helpers\\apanel_helper.php', 2037)
+ 2 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('6')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 6 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-15 06:32:51 --> mysqli_sql_exception: Unknown column 'product_categories.cat_name' in 'field list' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\new_create_invoice.php(3): products_array('6')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/new_cr...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(849): view('invoices/new_cr...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-07-15 06:32:51 --> Unknown column 'product_categories.cat_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `product_categories`.`cat_name`, `product_brand`.`brand_name`
+FROM `main_item_party_table`
+WHERE `main_item_party_table`.`company_id` = :main_item_party_table.company_id:
+AND `main_item_party_table`.`main_type` = :main_item_party_table.main_type:
+AND `main_item_party_table`.`deleted` = :main_item_party_table.deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('6')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 9 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-15 06:34:18 --> mysqli_sql_exception: Unknown column 'product_categories.cat_name' in 'field list' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\new_create_invoice.php(3): products_array('6')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/new_cr...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(849): view('invoices/new_cr...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-07-15 06:34:18 --> Unknown column 'product_categories.cat_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `product_categories`.`cat_name`, `product_brand`.`brand_name`
+FROM `main_item_party_table`
+WHERE `main_item_party_table`.`company_id` = :main_item_party_table.company_id:
+AND `main_item_party_table`.`main_type` = :main_item_party_table.main_type:
+AND `main_item_party_table`.`deleted` = :main_item_party_table.deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('6')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 9 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-15 06:37:21 --> mysqli_sql_exception: Unknown table 'aitsun_app_db.product_categories' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\new_create_invoice.php(3): products_array('6')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/new_cr...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(849): view('invoices/new_cr...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-07-15 06:37:22 --> Unknown table 'aitsun_app_db.product_categories'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `product_categories`.*, `product_brand`.*
+FROM `main_item_party_table`
+WHERE `main_item_party_table`.`company_id` = :main_item_party_table.company_id:
+AND `main_item_party_table`.`main_type` = :main_item_party_table.main_type:
+AND `main_item_party_table`.`deleted` = :main_item_party_table.deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('6')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 9 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-15 06:38:19 --> mysqli_sql_exception: Unknown column 'product_categories.cat_name' in 'field list' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\new_create_invoice.php(3): products_array('6')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/new_cr...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(849): view('invoices/new_cr...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-07-15 06:38:19 --> Unknown column 'product_categories.cat_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `product_categories`.`cat_name`, `product_brand`.`brand_name`
+FROM `main_item_party_table`
+WHERE `main_item_party_table`.`company_id` = :main_item_party_table.company_id:
+AND `main_item_party_table`.`main_type` = :main_item_party_table.main_type:
+AND `main_item_party_table`.`deleted` = :main_item_party_table.deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('6')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 9 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-15 06:39:00 --> mysqli_sql_exception: Unknown column 'product_categories.cat_name' in 'field list' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\new_create_invoice.php(3): products_array('1')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/new_cr...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(849): view('invoices/new_cr...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-07-15 06:39:00 --> Unknown column 'product_categories.cat_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `product_categories`.`cat_name`, `product_brand`.`brand_name`
+FROM `main_item_party_table`
+WHERE `main_item_party_table`.`company_id` = :main_item_party_table.company_id:
+AND `main_item_party_table`.`main_type` = :main_item_party_table.main_type:
+AND `main_item_party_table`.`deleted` = :main_item_party_table.deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('1')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 9 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-15 06:39:33 --> mysqli_sql_exception: Unknown column 'product_categories.cat_name' in 'field list' in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `main_it...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `main_it...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `main_it...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_it...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\aitsun-erp\app\Views\invoices\new_create_invoice.php(3): products_array('6')
+#8 C:\xampp\htdocs\aitsun-erp\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\aitsun-erp\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\xampp\htdocs\aitsun-erp\system\Common.php(1184): CodeIgniter\View\View->render('invoices/new_cr...', Array, true)
+#11 C:\xampp\htdocs\aitsun-erp\app\Controllers\Invoices.php(849): view('invoices/new_cr...', Array)
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+#13 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+#14 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-07-15 06:39:33 --> Unknown column 'product_categories.cat_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `main_item_party_table`.*, `product_categories`.`cat_name`, `product_brand`.`brand_name`
+FROM `main_item_party_table`
+WHERE `main_item_party_table`.`company_id` = :main_item_party_table.company_id:
+AND `main_item_party_table`.`main_type` = :main_item_party_table.main_type:
+AND `main_item_party_table`.`deleted` = :main_item_party_table.deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Helpers\apanel_helper.php(2042): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Views\invoices\new_create_invoice.php(3): products_array('6')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 9 APPPATH\Controllers\Invoices.php(849): view('invoices/new_create_invoice', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:44:46 --> Invalid file: "invoices/get_invoice_products.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invoices/get_invoice_products.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/get_invoice_products', [], true)
+ 3 APPPATH\Controllers\Invoices.php(356): view('invoices/get_invoice_products')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:47:20 --> Undefined variable $user
+in APPPATH\Views\invoices\get_invoice_products.php on line 3.
+ 1 APPPATH\Views\invoices\get_invoice_products.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\invoices\\get_invoice_products.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\get_invoice_products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/get_invoice_products', [], true)
+ 5 APPPATH\Controllers\Invoices.php(356): view('invoices/get_invoice_products')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:48:12 --> Undefined variable $user
+in APPPATH\Views\invoices\get_invoice_products.php on line 3.
+ 1 APPPATH\Views\invoices\get_invoice_products.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\invoices\\get_invoice_products.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\get_invoice_products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/get_invoice_products', [], true)
+ 5 APPPATH\Controllers\Invoices.php(363): view('invoices/get_invoice_products')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:48:34 --> Undefined variable $view_type
+in APPPATH\Views\invoices\get_invoice_products.php on line 14.
+ 1 APPPATH\Views\invoices\get_invoice_products.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view_type', 'APPPATH\\Views\\invoices\\get_invoice_products.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\get_invoice_products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/get_invoice_products', [], true)
+ 5 APPPATH\Controllers\Invoices.php(363): view('invoices/get_invoice_products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_sales_products()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:50:30 --> Undefined variable $is_sales_session
+in APPPATH\Views\invoices\new_create_invoice.php on line 118.
+ 1 APPPATH\Views\invoices\new_create_invoice.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $is_sales_session', 'APPPATH\\Views\\invoices\\new_create_invoice.php', 118)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 5 APPPATH\Controllers\Invoices.php(834): view('invoices/new_create_invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:50:57 --> Undefined variable $is_sales_session
+in APPPATH\Views\invoices\new_create_invoice.php on line 118.
+ 1 APPPATH\Views\invoices\new_create_invoice.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $is_sales_session', 'APPPATH\\Views\\invoices\\new_create_invoice.php', 118)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 5 APPPATH\Controllers\Invoices.php(835): view('invoices/new_create_invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 06:51:47 --> Undefined variable $is_sales_session
+in APPPATH\Views\invoices\new_create_invoice.php on line 118.
+ 1 APPPATH\Views\invoices\new_create_invoice.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $is_sales_session', 'APPPATH\\Views\\invoices\\new_create_invoice.php', 118)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 5 APPPATH\Controllers\Invoices.php(835): view('invoices/new_create_invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 07:00:58 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 07:02:18 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 07:03:45 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-15 10:03:55 --> Undefined array key 1
+in APPPATH\Helpers\apanel_helper.php on line 233.
+ 1 APPPATH\Helpers\apanel_helper.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Helpers\\apanel_helper.php', 233)
+ 2 APPPATH\Views\invoices\invoice_designs\invoice_html-6.php(285): duration_to_rental_days('C:\\xampp\\htdocs\\aitsun-erp')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_designs\\invoice_html-6.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_designs/invoice_html-6', [], true)
+ 6 APPPATH\Controllers\Invoices.php(474): view('invoices/invoice_designs/invoice_html-6', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->get_invoice_pdf('5460', 'view')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -270,23 +270,21 @@
     <td style=" text-align:center;border:1px solid #cccccc;"><b><?= langg(get_setting($invoice_data['company_id'],'language'),'Duration'); ?>. </b></td>
   </tr>
 
- 
-  <?php $taxcount=0; $slno=0; foreach (invoice_items_array($invoice_data['id']) as $ii): $slno++; ?>
+  
   <tr style="color: black;font-size: 13px;" id="thisheight"> 
     <td style=" border:1px solid #cccccc;" valign="baseline">
-      <div ><?=invoice_data($ii['invoice_id'],'rent_from')?></div>
+      <div ><?= get_date_format($invoice_data['rent_from'], 'd M Y h:i A') ?></div>
      
      
     </td>
     
-      <td style=" text-align:center; border:1px solid #cccccc;" valign="baseline"><?=invoice_data($ii['invoice_id'],'rent_to')?></td>
+      <td style=" text-align:center; border:1px solid #cccccc;" valign="baseline"><?= get_date_format($invoice_data['rent_to'], 'd M Y h:i A') ?></td>
  
 
    
-      <td style=" text-align:center; border:1px solid #cccccc;" valign="baseline" ><?=invoice_data($ii['invoice_id'],'rental_duration')?></td>
+      <td style=" text-align:center; border:1px solid #cccccc;" valign="baseline" ><?= duration_to_rental_days($invoice_data['rental_duration']) ?></td>
        
-  </tr>
-  <?php endforeach ?>
+  </tr> 
 </table>
 
 
@@ -387,11 +385,10 @@
     <?php endif ?>
 
     <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_price')==1): ?>
-    <td style=" text-align:right; border:1px solid #cccccc;" valign="baseline" class=""><?= aitsun_round($ii['price'],get_setting($invoice_data['company_id'],'round_of_value')); ?> 
+    <td style=" text-align:right; border:1px solid #cccccc;" valign="baseline" class="">
 
-
-
-  /<?= get_rental_period_data($ii['rental_price_type'],'period_name'); ?></td>
+      <?= aitsun_round($ii['price'],get_setting($invoice_data['company_id'],'round_of_value')); ?> 
+      <?= (!empty(get_rental_period_data($ii['rental_price_type'],'period_name')))?'/'.get_rental_period_data($ii['rental_price_type'],'period_name'):'' ?></td>
     <?php endif ?>
 
 
