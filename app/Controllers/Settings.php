@@ -4901,6 +4901,8 @@ public function preferences(){
             // $finalfile_payslip_signature='';
             $finalfile_invoice_seal='';
             $finalfile_invoice_qr_code='';
+            $final_footer_image='';
+            
 
             // if (!empty($_FILES['payslip_signature']['name'])) {
             //     $target_dir = "public/images/company_docs/";
@@ -4951,6 +4953,18 @@ public function preferences(){
             }else{
                 $finalfile_invoice_qr_code=strip_tags($this->request->getVar('old_invoice_qr_code'));
             }
+
+            if (!empty($_FILES['footer_image']['name'])) {
+                $target_dir = "public/images/company_docs/";
+                $target_file = $target_dir . time().basename($_FILES["footer_image"]["name"]);
+                $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                $final_footer_image = time().basename($_FILES["footer_image"]["name"]);
+                move_uploaded_file($_FILES["footer_image"]["tmp_name"], $target_file);
+            }else{
+                $final_footer_image=strip_tags($this->request->getVar('old_footer_image'));
+            }
+
+            
 
             $ac_data=[
                 'company_id'=>company($myid),
@@ -5009,6 +5023,8 @@ public function preferences(){
                 'show_business_name'=>strip_tags($this->request->getVar('show_business_name')),
                 'show_business_address'=>strip_tags($this->request->getVar('show_business_address')),
                 'show_tax_details'=>strip_tags($this->request->getVar('show_tax_details')),
+                'show_footer_image'=>strip_tags($this->request->getVar('show_footer_image')),
+                'footer_image'=>$final_footer_image, 
                 'invoice_type'=>$invoice_type,
 
 

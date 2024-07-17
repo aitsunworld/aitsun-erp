@@ -963,9 +963,14 @@ $(document).on('input click keypress','#gst_input',function(){
             $('#mess').html('');
             $('#receiptmodal').modal('show');
             display_invoice($.trim(response));
-            // $('#invoice_form')[0].reset();
-            reset_invoice();
-            display_products('','','');
+            var view_method=$('#view_method').val();
+            // $('#invoice_form')[0].reset(); 
+            if (view_method=='create') {
+              reset_invoice(); 
+            }else{
+
+            }
+               
             
             if ($('#view_method').val()=='convert') {
               try {
@@ -1030,12 +1035,7 @@ $(document).on('click','.tranname',function(){
     $('#notes').val(''); 
 		$('#private_notes').val(''); 
     
-
-
  
-    
-
-
 		calculate_invoice(); 
 		calculate_due_amount();  
 		calculate_due_amount(); 

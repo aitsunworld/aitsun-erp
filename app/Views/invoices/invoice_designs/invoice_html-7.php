@@ -266,7 +266,7 @@ if (get_invoicesetting($invoice_data['company_id'], $invoice_data['invoice_type'
 
       <td valign="baseline" style="border-right:1px solid black; font-size: 14px;">
         <b><?= $ii['product'] ; ?></b><br>
-        MONTH OF JULY 2024
+        MONTH OF <span style="text-transform: uppercase;"><?= get_date_format($invoice_data['invoice_date'],'F Y') ?></span>
         <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_pro_desc')==1): ?>
           <small><?= nl2br($ii['desc']) ?></small>   
         <?php endif; ?>
@@ -405,12 +405,22 @@ if (get_invoicesetting($invoice_data['company_id'], $invoice_data['invoice_type'
     </th>
   </tr>
 
+ 
 
-  <tr>
-    <td colspan="<?= $first_row_fixed ?>" class="pt-3 pb-10" style="border: 0;">
-      <img src="<?= base_url('public'); ?>/images/footer1.png" style="width: 100%;">
-    </td>
-  </tr>
+  <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_footer_image')==1): ?>
+    <tr>
+      <td colspan="<?= $first_row_fixed ?>" class="pt-3 pb-10" style="border: 0;">
+        <img src="<?= base_url('public'); ?>/images/company_docs/<?= get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'footer_image'); ?>" style="width: 100%;"> 
+      </td>
+    </tr>
+  <?php else: ?>
+     <tr>
+      <td colspan="<?= $first_row_fixed ?>" class="pt-3 pb-10" style="border: 0;">
+        <img src="<?= base_url('public'); ?>/images/footer1.png" style="width: 100%;"> 
+      </td>
+    </tr>
+  <?php endif ?>
+
 
   <?php if (is_payment_method($invoice_data['company_id'])): ?>
     <tr>

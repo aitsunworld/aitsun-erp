@@ -249,9 +249,27 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12">
-                         <label class="form-label"><?= langg(get_setting(company($user['id']),'language'),'Footer'); ?></label>
-                            <textarea class="form-control" name="invoice_footer"><?= get_invoicesetting(company($user['id']),$invoice_type,'invoice_footer'); ?></textarea>
+                    <div class="col-md-12 mt-2">
+                        <label class="form-label"><?= langg(get_setting(company($user['id']),'language'),'Footer text'); ?></label>
+                        <textarea class="form-control" name="invoice_footer"><?= get_invoicesetting(company($user['id']),$invoice_type,'invoice_footer'); ?></textarea>
+                    </div>
+
+                    <div class="form-check form-switch col-md-6 mt-2">
+                        <input type="checkbox" class="form-check-input" name="show_footer_image" value="1" <?php if (get_invoicesetting(company($user['id']),$invoice_type,'show_footer_image') == '1') {echo 'checked';} ?>>
+                        <label class="form-check-label font-weight-normal"><?= langg(get_setting(company($user['id']),'language'),'Show footer image'); ?></label>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-2">
+                        <div class="my-auto">
+                            <label class="form-label"><?= langg(get_setting(company($user['id']),'language'),'Footer Image'); ?></label>
+                            <input type="file" accept="image/*" class="form-control" name="footer_image"  style="height: 35px;">
+                            <input type="hidden" name="old_footer_image" value="<?= get_invoicesetting(company($user['id']),$invoice_type,'footer_image') ?>">
+                        </div>
+                        <div class="my-auto">
+                            <?php if(!empty(get_invoicesetting(company($user['id']),$invoice_type,'footer_image'))){ ?>
+                                <img src="<?= base_url('public/images/company_docs') ?>/<?php if(!empty(get_invoicesetting(company($user['id']),$invoice_type,'footer_image'))){echo (get_invoicesetting(company($user['id']),$invoice_type,'footer_image'));}else{echo 'alt.png';} ?>" class="my-auto py-2" style="max-height: 60px;">
+                            <?php } ?>
+                        </div>
                     </div>
 
                 </div>
