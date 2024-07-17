@@ -155,7 +155,7 @@
                      
 
                   <?php else: ?>
-                    <b>Invoice:</b>
+                    <b>No:</b>
                   <?php endif ?>
 
                   
