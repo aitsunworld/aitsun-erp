@@ -304,7 +304,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php $i=0; foreach ($cheque_data as $chq): $i++; ?>
+                <?php $i=0; $total_=0; foreach ($cheque_data as $chq): $i++; $total_+=$chq['amount'];?>
                  <tr>
                      <td><?= $chq['cheque_no']; ?></td>
                      <td><?= get_date_format($chq['cheque_date'],'d M Y'); ?></td>
@@ -315,7 +315,7 @@
                             <small class="d-block">(<?= $chq['cheque_note'] ?>)</small>
                         <?php endif ?>
                     </td>
-                      <td style="max-width:100px;width: 100px;"><?= (!empty(timeToExpire(now_time($user['id']),$chq['cheque_date'])))?timeToExpire(now_time($user['id']),$chq['cheque_date']):'-'; ?></td>
+                      <td style=""><?= (!empty(timeToExpire(now_time($user['id']),$chq['cheque_date'])))?timeToExpire(now_time($user['id']),$chq['cheque_date']):'-'; ?></td>
                       <td class="text-center">
                         <?php if ($chq['cheque_category']==1): ?> 
                             <span class="">Issued</span>
@@ -352,7 +352,7 @@
                             </div>
                         </div>
                     </td>
-                     <td><?= $chq['amount']; ?></td>
+                     <td class="text-end"><?= aitsun_round($chq['amount'],get_setting(company($user['id']),'round_of_value')); ?></td>
                      <td><?= get_cheque_department($chq['cheque_department'],'department_name'); ?></td>
                      
                   
@@ -411,7 +411,7 @@
                                         </div>
                                         <div class="form-group col-md-6 mb-2">
                                             <label for="amount">Amount</label>
-                                            <input type="number" class="form-control" name="amount" id="amount" value="<?= $chq['amount'] ?>">
+                                            <input type="number" class="form-control" name="amount" id="amount" value="<?= aitsun_round($chq['amount'],get_setting(company($user['id']),'round_of_value')) ?>">
                                         </div>
                                         <div class="form-group col-md-6 mb-2">
                                             <label for="remarks">Remarks</label>
