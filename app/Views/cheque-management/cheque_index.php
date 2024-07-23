@@ -19,7 +19,7 @@
             $report_date=get_date_format($dto,'l').' - '.get_date_format($dto,'d M Y');
         }
         if (!empty($dto) && !empty($from)) {
-            $report_date='From - '.get_date_format($from,'d M Y').'&nbsp; &nbsp; To - '.get_date_format($dto,'d M Y');
+            $report_date='<span class="text-dark">from </span>'.get_date_format($from,'d M Y').'&nbsp; &nbsp; <span class="text-dark">to</span> '.get_date_format($dto,'d M Y');
         }
 
     }else{
@@ -217,17 +217,17 @@
             </div>
         </div>
         <div class="col-md-10">
-             <b class="result_bar"><?= (!empty(trim($report_date)))?'Showing result '.$report_date:''; ?></b>
+             <b class="result_bar"><?= (!empty(trim($report_date)))?'<span class="text-dark">Showing result </span>'.$report_date:''; ?></b>
             <div class="mt-2 ms-3 aitsun_table">
                 <div class="my-auto d-flex justify-content-between pb-2">
                     <div>
-                        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="excel" data-table="#cheque_table" data-filename="Cheques data - <?= $report_date ?>"> 
+                        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="excel" data-table="#cheque_table" data-filename="Cheques data - <?= strip_tags($report_date) ?>"> 
                             <span class="my-auto">Excel</span>
                         </a>
-                        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="csv" data-table="#cheque_table" data-filename="Cheques data - <?= $report_date ?>"> 
+                        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="csv" data-table="#cheque_table" data-filename="Cheques data - <?= strip_tags($report_date) ?>"> 
                             <span class="my-auto">CSV</span>
                         </a>
-                        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="pdf" data-table="#cheque_table" data-filename="Cheques data - <?= $report_date ?>"> 
+                        <a href="javascript:void(0);" class="aitsun_table_export text-dark font-size-footer me-2" data-type="pdf" data-table="#cheque_table" data-filename="Cheques data - <?= strip_tags($report_date) ?>"> 
                             <span class="my-auto">PDF</span>
                         </a>
                        
@@ -241,13 +241,20 @@
                     </div> 
 
                     <div>
-                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= get_date_format(now_time($user['id']),'Y-m-d') ?>&to=<?= get_date_format(now_time($user['id']),'Y-m-t') ?>">Up coming</a>
 
-                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= get_date_format(now_time($user['id']),'Y-m-01') ?>&to=<?= get_date_format(now_time($user['id']),'Y-m-t') ?>">This month</a>
+                        
 
-                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= date('Y-m-d', strtotime('-7 days', strtotime(get_date_format(now_time($user['id']),'Y-m-d')))) ?>&to=<?= get_date_format(now_time($user['id']),'Y-m-d') ?>">Last 7 days</a>
 
-                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= get_date_format(now_time($user['id']),'Y-m-d') ?>&to=">Today</a>
+
+
+
+                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= get_date_format(now_time($user['id']),'Y-m-d') ?>&to=<?= get_date_format(now_time($user['id']),'Y-m-t') ?>&department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>">Up coming</a>
+
+                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= get_date_format(now_time($user['id']),'Y-m-01') ?>&to=<?= get_date_format(now_time($user['id']),'Y-m-t') ?>&department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>">This month</a>
+
+                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= date('Y-m-d', strtotime('-7 days', strtotime(get_date_format(now_time($user['id']),'Y-m-d')))) ?>&to=<?= get_date_format(now_time($user['id']),'Y-m-d') ?>&department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>">Last 7 days</a>
+
+                        <a class="btn-dark href_loader rounded-pill btn-sm my-auto ms-2" style="height:max-content;" href="<?= base_url('cheque-management') ?>?from=<?= get_date_format(now_time($user['id']),'Y-m-d') ?>&to=&department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>">Today</a>
                     </div>
 
                 </div>
@@ -446,9 +453,13 @@
 
                 <?php if ($i==0): ?>
                     <tr>
-                        <td colspan="7"><h6 class="p-4 text-center text-danger">No Cheques Found... </h6></td>
+                        <td colspan="9"><h6 class="p-4 text-center text-danger">No Cheques Found... </h6></td>
                     </tr>
                 <?php endif ?>
+                <tr>
+                    <td colspan="6" class="text-end">Total</td>
+                    <td class="text-end"><b><?= aitsun_round($total_,get_setting(company($user['id']),'round_of_value')); ?></b></td>
+                </tr>
              </tbody>
                 
                
