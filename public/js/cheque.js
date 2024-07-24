@@ -26,22 +26,25 @@ $(document).ready(function() {
 	$(document).on('click', '#add_cheque_department', function() {
         var form_data = new FormData($('#add_cheque_department_form')[0]);
 
-        $("#add_cheque_department_form").validate({
-            // Specify validation rules
-            rules: {
-                department_name: "required",
-                bank: "required",
-                responsible_person: "required",
-            },
-            // Specify validation error messages
-            messages: {
-                appointment_resource: "Please enter cheque title!",
-                bank: "Please select bank!",
-                responsible_person: "Please select responsible person!",
-            }
-        });
+        var valid = true;
+        var department_name=$.trim($('#department_name').val());
+        var bank=$.trim($('#bank').val());
+        var responsible_person=$.trim($('#responsible_person').val());
 
-        var valid = $('#add_cheque_department_form').valid();
+        if (department_name=='') {
+            valid = false;
+            show_failed_msg('error', '', 'Please enter department name!');
+        }else if(bank=='' || bank==''){
+            valid = false;
+            show_failed_msg('error', '', 'Please select bank!');
+        }else if(responsible_person=='' || responsible_person==0){
+            valid = false;
+            show_failed_msg('error', '', 'Please select responsible person!');
+        }  
+
+     
+
+        
 
         if (valid) {
             $('#add_cheque_department').prop('disabled', true);
@@ -116,21 +119,22 @@ $(document).ready(function() {
             var chqid=$(this).data('id');
             var techerbt=$(this);
             var form_data = new FormData($('#edit_department_form'+chqid)[0]);
-            $("#edit_department_form"+chqid).validate({
-            // Specify validation rules
-            rules: {
-            	department_name: "required",
-            	bank: "required",
-            	responsible_person: "required",
-            },
-            // Specify validation error messages
-            messages: {
-                appointment_resource: "Please enter cheque title!",
-                bank: "Please select bank!",
-                responsible_person: "Please select responsible person!",
-            }
-          });  
-           var valid = $('#edit_department_form'+chqid).valid();  
+           
+            var valid = true;
+            var department_name=$.trim($('#department_name'+chqid).val());
+            var bank=$.trim($('#bank'+chqid).val());
+            var responsible_person=$.trim($('#responsible_person'+chqid).val());
+          
+            if (department_name=='') {
+                valid = false;
+                show_failed_msg('error', '', 'Please enter department name!');
+            }else if(bank=='' || bank==''){
+                valid = false;
+                show_failed_msg('error', '', 'Please select bank!');
+            }else if(responsible_person=='' || responsible_person==0){
+                valid = false;
+                show_failed_msg('error', '', 'Please select responsible person!');
+            }  
 
            if (valid == true) {
                $.ajax({

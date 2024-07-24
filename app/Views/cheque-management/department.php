@@ -162,12 +162,12 @@
                                     <div class="row">
                                         <div class="form-group col-md-12 mb-2">
                                             <label for="department_name">Department Name</label>
-                                            <input type="text" class="form-control" name="department_name" id="department_name" value="<?= $ch['department_name'] ?>">
+                                            <input type="text" class="form-control" name="department_name" id="department_name<?= $ch['id'] ?>" value="<?= $ch['department_name'] ?>">
                                         </div>
 
                                         <div class="form-group col-md-12 mb-2">
                                             <label for="bank">Bank</label>
-                                                <select class="form-select" required id="bank" name="bank">
+                                                <select class="form-select" required id="bank<?= $ch['id'] ?>" name="bank">
                                                     <?php foreach (only_bank_accounts_of_account(company($user['id'])) as $ba): ?>
                                                     <option value="<?= $ba['id'] ?>"  <?php if ($ch['bank_id']==$ba['id']) {echo 'selected';} ?>><?= $ba['group_head']; ?></option> 
                                                     <?php endforeach ?>
@@ -181,7 +181,7 @@
                                                                        
                                                 <input type="text" class="form-control d-none" data-select_url="<?= base_url('selectors/all_staffs'); ?>">
                                                 <a class="select_close d-none"><i class="bx bx-x"></i></a>
-                                                <select class="form-select" required id="responsible_person" name="responsible_person">
+                                                <select class="form-select" required id="responsible_person<?= $ch['id'] ?>" name="responsible_person">
                                                     <option value="">Select Person</option> 
                                                     <option value="<?= $ch['responsible_person'] ?>" selected><?= user_name($ch['responsible_person']); ?></option> 
                                                 </select>

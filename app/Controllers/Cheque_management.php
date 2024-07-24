@@ -85,7 +85,7 @@ class Cheque_management extends BaseController {
 
             }
 
-            $cheque_data = $cheque_data->orderBy('id','desc')->findAll();
+            $cheque_data = $cheque_data->orderBy('cheque_date','asc')->findAll();
             $data=[
                'title'=>'Cheque Management | Aitsun ERP',
                'user'=>$usaerdata, 
