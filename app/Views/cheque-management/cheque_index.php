@@ -324,7 +324,7 @@
                     </td>
                       <td style=""><?= (!empty(timeToExpire(now_time($user['id']),$chq['cheque_date'])))?timeToExpire(now_time($user['id']),$chq['cheque_date']):'-'; ?></td>
                       <td class="text-center">
-                        <?php if ($chq['cheque_category']==1): ?> 
+                        <?php if ($chq['cheque_category']==0): ?> 
                             <span class="">Issued</span>
                         <?php else: ?>
                             <span class="">Received</span>
