@@ -77,7 +77,7 @@ class Aitsun_special_reports extends BaseController {
 
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
             
-            if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+             
             if (usertype($myid)=='customer') {
                 return redirect()->to(base_url('customer_dashboard'));
             }
@@ -155,7 +155,7 @@ class Aitsun_special_reports extends BaseController {
 
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
             
-            if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+             
             if (usertype($myid)=='customer') {
                 return redirect()->to(base_url('customer_dashboard'));
             }
@@ -239,7 +239,7 @@ class Aitsun_special_reports extends BaseController {
 
                    
 
-                    if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+                     
 
                      if (usertype($myid)=='customer') {
                         return redirect()->to(base_url('customer_dashboard'));
@@ -339,7 +339,7 @@ class Aitsun_special_reports extends BaseController {
                     if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
 
                   
-                    if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+                     
 
                      if (usertype($myid)=='customer') {
                         return redirect()->to(base_url('customer_dashboard'));
@@ -438,7 +438,7 @@ class Aitsun_special_reports extends BaseController {
 
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
           
-            if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+             
             if (usertype($myid)=='customer') {
                 return redirect()->to(base_url('customer_dashboard'));
             }

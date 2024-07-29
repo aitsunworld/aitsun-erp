@@ -141,13 +141,10 @@
                 <?php foreach ($customer_data as $cust) { $data_count++; ?>
                   <tr>
                     <td>
-                        <?php  if (check_permission($user['id'],'manage_parties')==true || $user['u_type']=='admin'): ?>
+                         
                         <a class="href_loader aitsun_link" href="<?php echo base_url('customers/details'); ?>/<?= $cust['id']; ?>">
                             <?= $cust['display_name']; ?>
-                        </a>
-                        <?php else: ?>
-                            <a><?= $cust['display_name']; ?></a>
-                        <?php endif; ?>
+                        </a> 
                     </td>
                     <td><?= $cust['phone'] ?></td>
                     <td><?= $cust['email'] ?></td> 

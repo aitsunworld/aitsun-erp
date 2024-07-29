@@ -40,7 +40,7 @@ class Gst_report extends BaseController {
 
                     
 
-                    if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+                     
 
                      if (usertype($myid)=='customer') {
                         return redirect()->to(base_url('customer_dashboard'));
@@ -122,7 +122,7 @@ class Gst_report extends BaseController {
 
                     
 
-                    if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+                     
 
                      if (usertype($myid)=='customer') {
                         return redirect()->to(base_url('customer_dashboard'));
@@ -208,7 +208,7 @@ class Gst_report extends BaseController {
 
                     
 
-                    if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+                     
 
                      if (usertype($myid)=='customer') {
                         return redirect()->to(base_url('customer_dashboard'));

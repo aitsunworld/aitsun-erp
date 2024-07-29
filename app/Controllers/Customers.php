@@ -433,7 +433,7 @@ class Customers extends BaseController
 
             // if (current_financial_year('financial_from',company($myid))=='no_financial_years') {redirect(base_url('settings/financial_years'));}
 
-            if (check_permission($myid,'manage_parties')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
 

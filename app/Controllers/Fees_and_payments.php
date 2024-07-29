@@ -3216,7 +3216,7 @@ public function generate_invoices_for_class($fees_id='',$class_id='')
 
                     
 
-                     if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+                      
 
                     if (usertype($myid)=='customer') {
                        return redirect()->to(base_url('customer_dashboard'));

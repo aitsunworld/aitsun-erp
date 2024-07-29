@@ -749,7 +749,7 @@ class Payroll extends BaseController
                     if (app_status(company($myid))==0) {redirect(base_url('app_error'));}
 
                     
-                    if (check_permission($myid,'manage_parties')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
                     $query=$UserModel->where('id',$myid)->first();
 
                      $acti=activated_year(company($myid));

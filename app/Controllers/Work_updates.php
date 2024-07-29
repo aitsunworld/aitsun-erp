@@ -264,7 +264,7 @@ class Work_updates extends BaseController{
 
 	        $user=$UserModel->where('id',$myid)->first();
 
-	        if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+	        
 
 	        if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
 

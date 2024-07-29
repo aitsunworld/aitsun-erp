@@ -34,7 +34,7 @@ class Reports_selector extends BaseController {
 
            
 
-            if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+             
                 $acti=activated_year(company($myid));
 
                 $data = [
@@ -67,7 +67,7 @@ class Reports_selector extends BaseController {
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
             
 
-            if (check_permission($myid,'manage_reports')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());} 
+             
             $acti=activated_year(company($myid));
             $data = [
                 'title' => 'Aitsun ERP-Reports',

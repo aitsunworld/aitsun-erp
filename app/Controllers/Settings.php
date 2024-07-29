@@ -350,11 +350,7 @@ class Settings extends BaseController
         if ($session->has('isLoggedIn')) {
             $usaerdata=$user->where('id', session()->get('id'))->first();
 
-          if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
-
-         
-
-              if (check_permission($myid,'manage_account_setting')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+          if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));} 
                 
 
                 $company_data=$Companies->where('id',company($myid))->first();
@@ -821,7 +817,7 @@ public function preferences(){
 
              
 
-             if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+             
 
              $cquery = $CompanySettings->where('company_id', company($myid))->first();
 
@@ -920,7 +916,7 @@ public function preferences(){
 
                    
 
-                    if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
 
                    $cquery = $CompanySettings->where('company_id', company($myid))->first();
 
@@ -1094,7 +1090,7 @@ public function preferences(){
 
                     $user=$UserModel->where('id',$myid)->first();
 
-                    if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
 
                     if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));}
 
@@ -1749,7 +1745,7 @@ public function preferences(){
 
                    
 
-                    if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
 
                    $cquery = $CompanySettings->where('company_id', company($myid))->first();
 
@@ -1840,7 +1836,7 @@ public function preferences(){
 
                 
 
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
                $cquery = $CompanySettings->where('company_id', company($myid))->first();
 
@@ -1927,7 +1923,7 @@ public function preferences(){
 
                 
 
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
 
                 $cquery = $CompanySettings->where('company_id', company($myid))->first();
@@ -2677,7 +2673,7 @@ public function preferences(){
 
                 
 
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
                 $tqry =$TaxtypeModel->where('company_id',company($myid))->where('deleted',0)->orderBy('id','DESC')->findAll();
 
 
@@ -2860,7 +2856,7 @@ public function preferences(){
 
                
 
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
 
                 $all_printers = $PrintersModel->where('company_id',company($myid))->where('user_id',$myid)->orderBy('id','desc')->findAll();
@@ -3034,7 +3030,7 @@ public function preferences(){
 
                
 
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
 
                 $etqry = $CompanySettings->where('company_id',company($myid))->first();
@@ -3158,7 +3154,7 @@ public function preferences(){
 
             if (app_status(company($myid))==0) { return redirect()->to(base_url('app_error'));} 
 
-            if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             $data = [
@@ -3239,7 +3235,7 @@ public function preferences(){
 
                     
 
-                    if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
 
                     // $company_members_array=array();
 
@@ -4174,7 +4170,7 @@ public function preferences(){
 
                
 
-                if (check_permission($myid,'manage_settings')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
  
 
