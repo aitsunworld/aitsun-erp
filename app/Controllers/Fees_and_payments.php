@@ -63,7 +63,7 @@ class Fees_and_payments extends BaseController
 	    		$fees_type=$FeesModel->where('company_id',company($myid))->where('academic_year',academic_year($myid))->where('deleted',0)->orderBy('id','DESC')->paginate(12);
 
 
-	    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+	    		
 	    		
 	    		$data=[
 	    			'title'=>'Fees And Payments | Aitsun ERP',
@@ -104,7 +104,7 @@ class Fees_and_payments extends BaseController
 
 		    	
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$InvoiceModel->where('company_id',company($myid))->where('invoice_type','challan')->where('deleted',0);
 
@@ -233,7 +233,7 @@ public function generate_invoices_for_transport($fees_id='',$student_id='',$loca
 
 	    		
 
-	    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+	    		
 
 	    		$ft=$FeesModel->where('company_id',company($myid))->where('id',$fees_id)->where('academic_year',academic_year($myid))->where('deleted',0)->first();
 
@@ -394,7 +394,7 @@ public function generate_invoices_for_transport($fees_id='',$student_id='',$loca
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$ft=$FeesModel->where('company_id',company($myid))->where('id',$fees_id)->where('academic_year',academic_year($myid))->where('deleted',0)->first();
 
@@ -561,7 +561,7 @@ public function generate_invoices_for_transport($fees_id='',$student_id='',$loca
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$ft=$FeesModel->where('company_id',company($myid))->where('id',$fees_id)->where('academic_year',academic_year($myid))->where('deleted',0)->first();
 
@@ -734,7 +734,7 @@ public function generate_invoices_custom($fees_id='',$student_id='')
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$ft=$FeesModel->where('company_id',company($myid))->where('id',$fees_id)->where('academic_year',academic_year($myid))->where('deleted',0)->first();
 
@@ -916,7 +916,7 @@ public function generate_invoices_for_class($fees_id='',$class_id='')
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$ft=$FeesModel->where('company_id',company($myid))->where('id',$fees_id)->where('academic_year',academic_year($myid))->where('deleted',0)->first();
 
@@ -1081,7 +1081,7 @@ public function generate_invoices_for_class($fees_id='',$class_id='')
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$ft=$FeesModel->where('company_id',company($myid))->where('id',$fees_id)->where('academic_year',academic_year($myid))->where('deleted',0)->first();
 
@@ -1653,7 +1653,7 @@ public function generate_invoices_for_class($fees_id='',$class_id='')
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$items=$ProductsModel->where('company_id',company($myid))->where('product_method','service')->where('main_type','product')->where('product_type','fees')->where('view_as!=','transport')->where('deleted',0)->orderBy('id','DESC')->findAll();
 
@@ -1706,7 +1706,7 @@ public function generate_invoices_for_class($fees_id='',$class_id='')
 
 		    		
 
-		    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+		    		
 
 		    		$items=$ProductsModel->where('company_id',company($myid))->where('product_method','service')->where('main_type','product')->where('main_type','product')->where('product_type','fees')->where('view_as','transport')->where('deleted',0)->orderBy('id','DESC')->findAll();
 

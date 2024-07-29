@@ -49,7 +49,6 @@ class Products extends BaseController
             $acti=activated_year(company($myid));
             // PRODUCTS FETCHING AND PAGINATION START
             $results_per_page = 12; 
-            if (check_permission($myid,'manage_pro_ser')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
             
  
 

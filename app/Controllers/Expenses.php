@@ -36,7 +36,7 @@ class Expenses extends BaseController {
                    
 
 
-                    if (check_permission($myid,'manage_cash_ex')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
 
                     // $this->db->where('bill_type!=','purchase');
                     // $this->db->where('bill_type!=','payment');

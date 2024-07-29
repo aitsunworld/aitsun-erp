@@ -86,7 +86,7 @@
         <div class="error_box">
             <div>
                 <h1 class="head-text">Access Denied</h1>
-                <h2 class="semi-text">Sorry, you do not have permission to <?= get_permission_heading_of_name($permission_name) ?>. <br>Please contact your administrator to request the necessary permissions</h2>
+                <h2 class="semi-text">Sorry, you do not have permission to this module. <br>Please contact your administrator to request the necessary permissions</h2>
                 <img class="wait-img" src="<?= base_url('public') ?>/images/no-permission.webp" alt="">
             </div>
             <div class="" >

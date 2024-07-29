@@ -46,7 +46,7 @@ class Invoices extends BaseController
 
        
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
         if (usertype($myid)=='customer') {
             return redirect()->to(base_url('customer_dashboard'));
@@ -182,7 +182,7 @@ public function details($cusval=""){
 
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
           
 
@@ -238,7 +238,7 @@ public function edit($inv_id=''){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
         if (usertype($myid)=='customer') {
             return redirect()->to(base_url('customer_dashboard'));
@@ -318,7 +318,7 @@ public function copy($inv_id=''){
 
          
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
         if (usertype($myid)=='customer') {
             return redirect()->to(base_url('customer_dashboard'));
@@ -817,7 +817,7 @@ public function create_invoice(){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
 
         if (usertype($myid)=='customer') {
@@ -854,7 +854,7 @@ public function create_proforma_invoice(){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
 
         if (usertype($myid)=='customer') {
@@ -892,7 +892,7 @@ public function create_sales_quotation(){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
 
         if (usertype($myid)=='customer') {
@@ -928,7 +928,7 @@ public function create_sales_order(){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
 
         if (usertype($myid)=='customer') {
@@ -964,7 +964,7 @@ public function create_sales_delivery_note(){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
 
         if (usertype($myid)=='customer') {
@@ -1006,7 +1006,7 @@ public function convert_to_sale($inv_id=''){
             return redirect()->to(base_url('customer_dashboard'));
         }
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
         $inquery=$InvoiceModel->where('id',$inv_id)->first();
         $multyiple = explode(',', $inv_id);
@@ -1058,7 +1058,7 @@ public function convert_to_sale_order($inv_id=''){
             return redirect()->to(base_url('customer_dashboard'));
         }
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
         $inquery=$InvoiceModel->where('id',$inv_id)->first();
         $multyiple = explode(',', $inv_id);
@@ -1108,7 +1108,7 @@ public function convert_to_sale_delivery_note($inv_id=''){
             return redirect()->to(base_url('customer_dashboard'));
         }
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
         $inquery=$InvoiceModel->where('id',$inv_id)->first();
         $multyiple = explode(',', $inv_id);
@@ -1153,7 +1153,7 @@ public function sales_return(){
 
         
 
-        if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
 
         if (usertype($myid)=='customer') {
@@ -1465,7 +1465,7 @@ public function restore($inid=""){
     );
     $user=$UserModel->where('id',$myid)->first();
 
-    if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+    
 
 
     if ($session->has('isLoggedIn')){
@@ -1544,7 +1544,7 @@ public function pay($cusval=""){
                 return redirect()->to(base_url('customer_dashboard'));
             }
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             $ind=$InvoiceModel->where('id',$cusval)->first();
@@ -1924,7 +1924,7 @@ public function generate_short_link($inid=''){
 
     if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
 
-    if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+    
 
     
 

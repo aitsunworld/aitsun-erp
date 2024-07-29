@@ -96,7 +96,7 @@ class Trash extends BaseController
 
                     
 
-                    if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                    
 
                     if (usertype($myid)=='customer') {
                         return redirect()->to(base_url('customer_dashboard'));
@@ -162,7 +162,7 @@ class Trash extends BaseController
 
             
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             if($session->has('isLoggedIn')){
@@ -219,7 +219,7 @@ class Trash extends BaseController
             $user=$UserModel->where('id',$myid)->first();
 
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             if($session->has('isLoggedIn')){
@@ -271,7 +271,7 @@ class Trash extends BaseController
             $user=$UserModel->where('id',$myid)->first();
 
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
             if($session->has('isLoggedIn')){
 
@@ -326,7 +326,7 @@ class Trash extends BaseController
             );
             $user=$UserModel->where('id',$myid)->first();
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             if($session->has('isLoggedIn')){
@@ -395,7 +395,7 @@ class Trash extends BaseController
                 if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
                 
 
-                if (check_permission($myid,'manage_purchase')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
                 if (usertype($myid)=='customer') {
                     return redirect()->to(base_url('customer_dashboard'));
@@ -459,7 +459,7 @@ class Trash extends BaseController
             $user=$UserModel->where('id',$myid)->first();
 
 
-            if (check_permission($myid,'manage_purchase')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             if($session->has('isLoggedIn')){
@@ -517,7 +517,7 @@ class Trash extends BaseController
             $user=$UserModel->where('id',$myid)->first();
 
 
-            if (check_permission($myid,'manage_purchase')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
             if($session->has('isLoggedIn')){
                 $in_type=$InvoiceModel->where('id',$inid)->first();
@@ -568,7 +568,7 @@ class Trash extends BaseController
             $user=$UserModel->where('id',$myid)->first();
 
 
-        if (check_permission($myid,'manage_purchase')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+        
 
             if($session->has('isLoggedIn')){
 
@@ -631,7 +631,7 @@ class Trash extends BaseController
             $user=$UserModel->where('id',$myid)->first();
 
 
-            if (check_permission($myid,'manage_purchase')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
 
             if($session->has('isLoggedIn')){

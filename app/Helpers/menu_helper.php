@@ -40,28 +40,24 @@
 		        "url" => base_url('products') . "?page=1",
 		        "icon" => base_url('public/images/menu_icons/products.webp'),
 		        "title" => "Products",
-		        "condition" => check_permission($user_id, 'manage_pro_ser') || $u_type == 'admin'
 		    ],
 		    [
 		    	"menu_name"=>'POS',
 		        "url" => base_url('pos'),
 		        "icon" => base_url('public/images/menu_icons/pos.webp'),
 		        "title" => "POS",
-		        "condition" => check_permission($user_id, 'manage_sales') || $u_type == 'admin'
 		    ],
 		    [
 		    	"menu_name"=>'Sales',
 		        "url" => base_url('invoices/sales'),
 		        "icon" => base_url('public/images/menu_icons/inventories.webp'),
 		        "title" => "Sales",
-		        "condition" => check_permission($user_id, 'manage_sales') || $u_type == 'admin'
 		    ],
 		    [
 		    	"menu_name"=>'Purchases',
 		        "url" => base_url('purchases/purchases'),
 		        "icon" => base_url('public/images/menu_icons/inventories.webp'),
 		        "title" => "Purchases",
-		        "condition" => check_permission($user_id, 'manage_purchase') || $u_type == 'admin'
 		    ],
 		    [
 		    	"menu_name"=>'Rental',
@@ -74,14 +70,6 @@
 		        "url" => base_url('voucher_entries'),
 		        "icon" => base_url('public/images/menu_icons/vouchers.webp'),
 		        "title" => "Vouchers",
-		        "condition" => check_permission($user_id, 'manage_cash_ex') || $u_type == 'admin'
-		    ],
-		    [
-		    	"menu_name"=>'HR Management',
-		        "url" => base_url('hr_manage'),
-		        "icon" => base_url('public/images/menu_icons/hr_manage.webp'),
-		        "title" => "HR Management",
-		        "condition" => is_hrmanage(company($user_id)) && (check_permission($user_id, 'manage_hr') || $u_type == 'admin')
 		    ],
 		    [
 		    	"menu_name"=>'Cheques',
@@ -89,13 +77,7 @@
 		        "icon" => base_url('public/images/menu_icons/cheque-management.webp'),
 		        "title" => "Cheques"
 		    ],
-		    [
-		    	"menu_name"=>'Business Operations',
-		        "url" => base_url('business-operations'),
-		        "icon" => base_url('public/images/menu_icons/business_operations.webp'),
-		        "title" => "Business Operations",
-		        "condition" => is_crm(company($user_id))
-		    ],
+		  
 		    [
 		    	"menu_name"=>'Appointments',
 		        "url" => base_url('appointments'),
@@ -156,7 +138,6 @@
 		        "url" => base_url('reports_selector'),
 		        "icon" => base_url('public/images/menu_icons/reports.webp'),
 		        "title" => "Reports",
-		        "condition" => check_permission($user_id, 'manage_reports') || $u_type == 'admin'
 		    ],
 		    [
 		    	"menu_name"=>'Calendar',

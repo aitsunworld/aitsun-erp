@@ -522,7 +522,7 @@ class My_online_shop extends BaseController
 
             if ($session->has('isLoggedIn')){
 
-                if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
                 update_stock_when_delete($inid);
                 update_item_stock_of_sales_when_delete($inid);

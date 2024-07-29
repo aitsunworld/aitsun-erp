@@ -767,7 +767,7 @@ class Student_master extends BaseController
 
 	    		$fees_type=$FeesModel->where('company_id',company($myid))->where('academic_year',academic_year($myid))->where('deleted',0)->orderBy('id','DESC')->findAll();
 
-	    		if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+	    		
 	    		$count=0;
 	    		foreach ($fees_type as $ft) { 
 					$count++;

@@ -177,7 +177,7 @@ class Users extends BaseController
 
                 $invoicessss=$InvoiceModel->where('company_id',company($myid))->where('paid_status','unpaid')->where('customer',$student_id)->where('deleted',0)->orderBy('id','DESC')->findAll();
 
-                if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+                
                 
                 if (count($invoicessss)>0) { 
                     $cou=0;
@@ -246,7 +246,7 @@ class Users extends BaseController
 
                 $fees=$FeesModel->where('company_id',company($myid))->where('fees_type',0)->where('deleted',0)->orderBy('id','DESC')->findAll();
 
-                if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+                
                 
                 if (count($fees)>0) { 
                     $cou=0;
@@ -297,7 +297,7 @@ class Users extends BaseController
 
                 $fees=$FeesModel->where('company_id',company($myid))->where('fees_type',1)->where('deleted',0)->orderBy('id','DESC')->findAll();
 
-                if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+                
                 
                 if (count($fees)>0) { 
                     $cou=0;
@@ -348,7 +348,7 @@ class Users extends BaseController
 
                  
 
-                if (check_permission($myid,'manage_fees')==true || usertype($myid)=='admin') {}else{ return redirect()->to(base_url('app_error/permission_denied'));}
+                
                 
                 $fees=transport_items(company($myid));
 

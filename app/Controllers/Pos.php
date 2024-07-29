@@ -35,7 +35,7 @@ class Pos extends BaseController
 
             
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
             if (usertype($myid)=='customer') {
                 return redirect()->to(base_url('customer_dashboard'));
@@ -120,7 +120,7 @@ class Pos extends BaseController
 
                 
 
-                if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
                 if (usertype($myid)=='customer') {
                     return redirect()->to(base_url('customer_dashboard'));
@@ -178,7 +178,7 @@ class Pos extends BaseController
 
                 
 
-                if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+                
 
                 if (usertype($myid)=='customer') {
                     return redirect()->to(base_url('customer_dashboard'));
@@ -377,7 +377,7 @@ class Pos extends BaseController
 
             if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
 
-            if (check_permission($myid,'manage_sales')==true || usertype($myid) =='admin') {}else{return redirect()->to(base_url());}
+            
 
             if (usertype($myid)=='customer') {
                 return redirect()->to(base_url('customer_dashboard'));
