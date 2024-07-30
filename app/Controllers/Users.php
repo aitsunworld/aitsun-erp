@@ -74,8 +74,7 @@ class Users extends BaseController
 
                     if ($capc==1) {
 
-                    $user = $model->where('email', $this->request->getVar('email'))
-                                                ->first();
+                    $user = $model->where('email', $this->request->getVar('email'))->where('deleted',0)->where('main_type','user')->first();
 
                     $this->setUserSession($user);
                     //$session->setFlashdata('success', 'Successful Registration');
