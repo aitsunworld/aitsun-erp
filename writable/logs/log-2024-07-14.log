@@ -1,0 +1,60 @@
+ERROR - 2024-07-14 04:00:17 --> mysqli_sql_exception: Table 'aitsun_app_db.main_item_party_table' doesn't exist in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(5517): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(5480): company('1')
+#8 C:\xampp\htdocs\aitsun-erp\app\Controllers\Home.php(31): now_time('1')
+#9 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#10 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-07-14 04:00:17 --> Table 'aitsun_app_db.main_item_party_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `main_item_party_table`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Helpers\apanel_helper.php(5517): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Helpers\apanel_helper.php(5480): company('1')
+ 6 APPPATH\Controllers\Home.php(31): now_time('1')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 04:03:14 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 04:03:19 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 04:20:14 --> Undefined variable $page_register_id
+in APPPATH\Views\invoices\new_create_invoice.php on line 7.
+ 1 APPPATH\Views\invoices\new_create_invoice.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page_register_id', 'APPPATH\\Views\\invoices\\new_create_invoice.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\new_create_invoice.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/new_create_invoice', [], true)
+ 5 APPPATH\Controllers\Invoices.php(819): view('invoices/new_create_invoice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->create_invoice()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

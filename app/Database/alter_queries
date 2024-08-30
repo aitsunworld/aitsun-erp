@@ -1,0 +1,1 @@
+ALTER TABLE `invoice_settings` ADD `show_footer_image` INT NOT NULL AFTER `show_tax_details`, ADD `footer_image` VARCHAR(1000) NOT NULL AFTER `show_footer_image`;

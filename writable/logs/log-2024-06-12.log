@@ -1,0 +1,175 @@
+CRITICAL - 2024-06-12 04:02:25 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Sales.php on line 1329.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Sales.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Sales')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Sales')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Sales', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 04:52:27 --> syntax error, unexpected token "endforeach"
+in APPPATH\Views\rental\rental_index.php on line 184.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_index', [], true)
+ 3 APPPATH\Controllers\Rental.php(57): view('rental/rental_index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 05:45:29 --> [401] Client error: `POST https://api.sendinblue.com/v3/whatsapp/sendMessage` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalWhatsAppApi.php on line 475.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalWhatsAppApi.php(450): SendinBlue\Client\Api\TransactionalWhatsAppApi->sendWhatsappMessageWithHttpInfo(Object(SendinBlue\Client\Model\SendWhatsappMessage))
+ 2 APPPATH\Controllers\Reminders.php(79): SendinBlue\Client\Api\TransactionalWhatsAppApi->sendWhatsappMessage(Object(SendinBlue\Client\Model\SendWhatsappMessage))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 05:46:08 --> [401] Client error: `POST https://api.sendinblue.com/v3/transactionalSMS/sms` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalSMSApi.php on line 1098.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalSMSApi.php(1073): SendinBlue\Client\Api\TransactionalSMSApi->sendTransacSmsWithHttpInfo(Object(SendinBlue\Client\Model\SendTransacSms))
+ 2 APPPATH\Controllers\Reminders.php(57): SendinBlue\Client\Api\TransactionalSMSApi->sendTransacSms(Object(SendinBlue\Client\Model\SendTransacSms))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 05:46:29 --> [401] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `401 Unauthorized` response:
+{"message":"Key not found","code":"unauthorized"}
+
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php on line 5441.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalEmailsApi.php(5416): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmailWithHttpInfo(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 2 APPPATH\Controllers\Reminders.php(35): SendinBlue\Client\Api\TransactionalEmailsApi->sendTransacEmail(Object(SendinBlue\Client\Model\SendSmtpEmail))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 05:47:36 --> [400] Client error: `POST https://api.sendinblue.com/v3/transactionalSMS/sms` resulted in a `400 Bad Request` response:
+{"code":"invalid_parameter","message":"Unable to send sms. Your SMS sending status is not yet activated. Please contact  (truncated...)
+
+in FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalSMSApi.php on line 1098.
+ 1 FCPATH\vendor\sendinblue\api-v3-sdk\lib\Api\TransactionalSMSApi.php(1073): SendinBlue\Client\Api\TransactionalSMSApi->sendTransacSmsWithHttpInfo(Object(SendinBlue\Client\Model\SendTransacSms))
+ 2 APPPATH\Controllers\Reminders.php(57): SendinBlue\Client\Api\TransactionalSMSApi->sendTransacSms(Object(SendinBlue\Client\Model\SendTransacSms))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reminders->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reminders))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:38:56 --> Call to undefined function is_allowed()
+in APPPATH\Views\appointments\appointments_index.php on line 45.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('appointments/appointments_index', [], true)
+ 4 APPPATH\Controllers\Appointments.php(69): view('appointments/appointments_index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Appointments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Appointments))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:40:15 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:01 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:14 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:14 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:15 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:17 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:36 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:38 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:42:40 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:44:40 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:44:41 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:44:41 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 06:44:42 --> syntax error, unexpected single-quoted string ""
+in APPPATH\Helpers\apanel_helper.php on line 177.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

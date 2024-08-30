@@ -1,0 +1,163 @@
+CRITICAL - 2024-06-20 07:15:06 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 07:15:27 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 07:15:37 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 08:31:35 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 08:31:52 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 09:04:03 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 09:04:13 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 09:46:08 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 10:19:12 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 10:32:09 --> Undefined variable $invoice_template
+in APPPATH\Views\dashboard.php on line 46.
+ 1 APPPATH\Views\dashboard.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $invoice_template', 'APPPATH\\Views\\dashboard.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(136): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 10:34:07 --> Trying to access array offset on value of type null
+in APPPATH\Views\dashboard.php on line 51.
+ 1 APPPATH\Views\dashboard.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\dashboard.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(136): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 10:58:19 --> syntax error, unexpected fully qualified name "\n", expecting "]"
+in APPPATH\Helpers\share_helper.php on line 7.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 11:15:56 --> Undefined variable $jjj
+in APPPATH\Helpers\share_helper.php on line 7.
+ 1 APPPATH\Helpers\share_helper.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jjj', 'APPPATH\\Helpers\\share_helper.php', 7)
+ 2 APPPATH\Controllers\Aitsun_share.php(40): invoice_share('email', 'invoice_share')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_share->get_form()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_share))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 11:15:58 --> Undefined variable $jjj
+in APPPATH\Helpers\share_helper.php on line 7.
+ 1 APPPATH\Helpers\share_helper.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jjj', 'APPPATH\\Helpers\\share_helper.php', 7)
+ 2 APPPATH\Controllers\Aitsun_share.php(40): invoice_share('email', 'invoice_share')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Aitsun_share->get_form()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aitsun_share))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 11:36:41 --> Undefined array key "body"
+in APPPATH\Views\dashboard.php on line 51.
+ 1 APPPATH\Views\dashboard.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "body"', 'APPPATH\\Views\\dashboard.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(136): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 11:36:43 --> Undefined array key "body"
+in APPPATH\Views\dashboard.php on line 51.
+ 1 APPPATH\Views\dashboard.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "body"', 'APPPATH\\Views\\dashboard.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(136): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 11:37:11 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\invoices\invoice_details.php on line 144.
+ 1 APPPATH\Views\invoices\invoice_details.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'APPPATH\\Views\\invoices\\invoice_details.php', 144)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_details', [], true)
+ 5 APPPATH\Controllers\Invoices.php(210): view('invoices/invoice_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Invoices->details('94')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoices))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 11:52:49 --> Cannot redeclare get_company_data() (previously declared in C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php:1917)
+in APPPATH\Helpers\apanel_helper.php on line 4777.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

@@ -1,0 +1,12 @@
+CRITICAL - 2024-07-17 04:30:08 --> Undefined array key "show_footer_image"
+in APPPATH\Helpers\apanel_helper.php on line 946.
+ 1 APPPATH\Helpers\apanel_helper.php(946): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "show_footer_image"', 'APPPATH\\Helpers\\apanel_helper.php', 946)
+ 2 APPPATH\Views\invoices\invoice_setting_form.php(258): get_invoicesetting('1', 'sales', 'show_footer_image')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invoices\\invoice_setting_form.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('invoices/invoice_setting_form', [], true)
+ 6 APPPATH\Controllers\Settings.php(4877): view('invoices/invoice_setting_form', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->get_form('sales')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,427 @@
+CRITICAL - 2024-06-14 05:57:20 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:02:10 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:02:51 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:03:11 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:03:18 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:14:46 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:14:56 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:17:40 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:18:16 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:18:21 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:18:24 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:18:32 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-14 06:20:06 --> mysqli_sql_exception: Column 'cat_name' cannot be null in C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\aitsun-erp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\aitsun-erp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\aitsun-erp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\aitsun-erp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(2206): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\aitsun-erp\app\Controllers\Import_and_export.php(541): check_category_during_import('11', NULL)
+#10 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+#11 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+#12 C:\xampp\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2024-06-14 06:20:06 --> Column 'cat_name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_categories` (`company_id`, `cat_name`, `cat_department`) VALUES (:company_id:, :cat_name:, :cat_department:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Helpers\apanel_helper.php(2206): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Import_and_export.php(541): check_category_during_import('11', null)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Import_and_export->save()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Import_and_export))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:21:51 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:28:16 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:37:30 --> Undefined array key "conveted_id"
+in APPPATH\Views\rental\rental_index.php on line 218.
+ 1 APPPATH\Views\rental\rental_index.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "conveted_id"', 'APPPATH\\Views\\rental\\rental_index.php', 218)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rental\\rental_index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('rental/rental_index', [], true)
+ 5 APPPATH\Controllers\Rental.php(57): view('rental/rental_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Rental->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rental))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:41:50 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 06:41:57 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:05:33 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:05:42 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:06:34 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 798.
+ 1 APPPATH\Controllers\Sales.php(798): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 798)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->update_invoice('55')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:07:27 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:08:16 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:08:55 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:09:02 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:09:05 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 07:09:41 --> Undefined array key "product_name"
+in APPPATH\Controllers\Sales.php on line 83.
+ 1 APPPATH\Controllers\Sales.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Sales.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 08:51:24 --> You should provide a barcode string.
+in FCPATH\vendor\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 136.
+ 1 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGenerator.php(103): Picqer\Barcode\Types\TypeCode128->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp')
+ 2 FCPATH\vendor\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(54): Picqer\Barcode\BarcodeGenerator->getBarcodeData('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 3 APPPATH\Controllers\Generate_barcode.php(81): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('C:\\xampp\\htdocs\\aitsun-erp', 'C128')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:37:21 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(115): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Pos.php(56): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:37:47 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(115): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Pos.php(56): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pos))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:13 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:15 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:25 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:27 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:47:38 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:48:07 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(124): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:48:50 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:48:52 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:49:16 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:49:31 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:51:11 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(127): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 09:51:33 --> Request URI segment is out of range: "3"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 APPPATH\Views\footer.php(187): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\footer.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('footer', [], true)
+ 6 APPPATH\Controllers\Customers.php(90): view('footer')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

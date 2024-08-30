@@ -1,0 +1,22 @@
+CRITICAL - 2024-08-13 09:34:57 --> Undefined variable $to
+in APPPATH\Views\cheque-management\cheque_index.php on line 191.
+ 1 APPPATH\Views\cheque-management\cheque_index.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $to', 'APPPATH\\Views\\cheque-management\\cheque_index.php', 191)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cheque-management\\cheque_index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('cheque-management/cheque_index', [], true)
+ 5 APPPATH\Controllers\Cheque_management.php(97): view('cheque-management/cheque_index')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cheque_management->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cheque_management))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-13 09:37:35 --> Undefined variable $from
+in APPPATH\Views\cheque-management\cheque_index.php on line 191.
+ 1 APPPATH\Views\cheque-management\cheque_index.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $from', 'APPPATH\\Views\\cheque-management\\cheque_index.php', 191)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cheque-management\\cheque_index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('cheque-management/cheque_index', [], true)
+ 5 APPPATH\Controllers\Cheque_management.php(97): view('cheque-management/cheque_index')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cheque_management->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cheque_management))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
