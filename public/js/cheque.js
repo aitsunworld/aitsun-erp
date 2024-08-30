@@ -179,6 +179,7 @@ $(document).ready(function() {
                 cheque_date: "required",
                 cheque_department: "required",
                 cheque_title: "required",
+                cheque_customer: "required",
                 amount: "required",
                 remarks: "required",
             },
@@ -188,6 +189,7 @@ $(document).ready(function() {
                 cheque_date: "Please select cheque date!",
                 cheque_department: "Please select cheque department!",
                 cheque_title: "Please enter cheque title!",
+                cheque_customer: "Please select customer!",
                 amount: "Please enter cheque amount!",
                 remarks: "Please select remark",
             }
@@ -237,6 +239,7 @@ $(document).ready(function() {
             cheque_date: "required",
             cheque_department: "required",
             cheque_title: "required",
+            cheque_customer: "required",
             amount: "required",
             remarks: "required",
         },
@@ -246,6 +249,7 @@ $(document).ready(function() {
             cheque_date: "Please select cheque date!",
             cheque_department: "Please select cheque department!",
             cheque_title: "Please enter cheque title!",
+            cheque_customer: "Please select customer!",
             amount: "Please enter cheque amount!",
             remarks: "Please select remark",
         }
