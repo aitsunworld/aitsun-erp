@@ -1,25 +1,27 @@
 <?php 
  
     $report_date=get_date_format(now_time($user['id']),'d M Y');
+    $from='';
+        $to='';
     if ($_GET) {
         $from='';
-        $dto='';
+        $to='';
         if (isset($_GET['from'])) {
             $from=$_GET['from'];
         }
 
         if (isset($_GET['to'])) {
-            $dto=$_GET['to'];
+            $to=$_GET['to'];
         }
 
-        if (!empty($from) && empty($dto)) {
+        if (!empty($from) && empty($to)) {
             $report_date=get_date_format($from,'l').' - '.get_date_format($from,'d M Y');
         }
-        if (!empty($dto) && empty($from)) {
-            $report_date=get_date_format($dto,'l').' - '.get_date_format($dto,'d M Y');
+        if (!empty($to) && empty($from)) {
+            $report_date=get_date_format($to,'l').' - '.get_date_format($to,'d M Y');
         }
-        if (!empty($dto) && !empty($from)) {
-            $report_date='<span class="text-dark">from </span>'.get_date_format($from,'d M Y').'&nbsp; &nbsp; <span class="text-dark">to</span> '.get_date_format($dto,'d M Y');
+        if (!empty($to) && !empty($from)) {
+            $report_date='<span class="text-dark">from </span>'.get_date_format($from,'d M Y').'&nbsp; &nbsp; <span class="text-dark">to</span> '.get_date_format($to,'d M Y');
         }
 
     }else{
@@ -188,36 +190,45 @@
             <div class="rental_fiters mt-4">
                 <h6><i class="bx bx-refresh"></i> Cheque category</h6>
                 <ul>
-                    <li><a class="href_loader <?= (''==$search_cheque_category)?'active':'' ?>" href="<?= base_url('cheque-management') ?>">All <b>(<?= get_total_cheque_of_category(company($user['id']), '') ?>)</b></a></li>
+                    <li><a class="href_loader <?= (''==$search_cheque_category)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=&from=<?= $from ?>&to=<?= $to ?>">All <b>(<?= get_total_cheque_of_category(company($user['id']), '') ?>)</b></a></li>
                     <li>
-                        <a class="href_loader <?= (0==$search_cheque_category)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=0">Issued cheque<b>(<?= get_total_cheque_of_category(company($user['id']), 0) ?>)</b></a>
+                        <a class="href_loader <?= (0==$search_cheque_category)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=0&from=<?= $from ?>&to=<?= $to ?>">Issued cheque<b>(<?= get_total_cheque_of_category(company($user['id']), 0) ?>)</b></a>
                     </li>
                     <li>
-                        <a class="href_loader <?= (1==$search_cheque_category)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=1">Received cheque<b>(<?= get_total_cheque_of_category(company($user['id']), 1) ?>)</b></a>
+                        <a class="href_loader <?= (1==$search_cheque_category)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=<?= $search_status ?>&cheque_category=1&from=<?= $from ?>&to=<?= $to ?>">Received cheque<b>(<?= get_total_cheque_of_category(company($user['id']), 1) ?>)</b></a>
                     </li>
                 </ul>
 
                 <h6><i class="bx bx-refresh"></i> Cheque Department</h6>
                 <ul>
-                    <li><a class="href_loader <?= (0==$search_department)?'active':'' ?>" href="<?= base_url('cheque-management') ?>">All Departments <b>(<?= get_total_cheque_of_department(company($user['id']), 0) ?>)</b></a></li>
+                    <li><a class="href_loader <?= (0==$search_department)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>">All Departments <b>(<?= get_total_cheque_of_department(company($user['id']), 0) ?>)</b></a></li>
                     <?php foreach (cheque_department() as $cqd): ?>
                         <li>
-                            <a class="href_loader <?= ($cqd['id']==$search_department)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= urlencode($cqd['id']) ?>&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>"><?= $cqd['department_name'] ?> <b>(<?= get_total_cheque_of_department(company($user['id']), $cqd['id']) ?>)</b></a>
+                            <a class="href_loader <?= ($cqd['id']==$search_department)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= urlencode($cqd['id']) ?>&status=<?= $search_status ?>&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>"><?= $cqd['department_name'] ?> <b>(<?= get_total_cheque_of_department(company($user['id']), $cqd['id']) ?>)</b></a>
                         </li>
                     <?php endforeach ?>
                 </ul>
                 <h6><i class="bx bx-refresh"></i> Remarks</h6>
                 <ul>
-                    <li><a class="href_loader <?= (0==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>">All Remarks <b>(<?= get_total_cheque_of_status(company($user['id']), '') ?>)</b></a></li>
-                    <li><a class="href_loader <?= ('pending'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=pending&cheque_category=<?= $search_cheque_category ?>">Pending <b>(<?= get_total_cheque_of_status(company($user['id']), 'pending') ?>)</b></a></li>
-                    <li><a class="href_loader <?= ('cleared'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=cleared&cheque_category=<?= $search_cheque_category ?>">Cleared <b>(<?= get_total_cheque_of_status(company($user['id']), 'cleared') ?>)</b></a></li>
-                    <li><a class="href_loader <?= ('bounced'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=bounced&cheque_category=<?= $search_cheque_category ?>">Bounced <b>(<?= get_total_cheque_of_status(company($user['id']), 'bounced') ?>)</b></a></li>
-                    <li><a class="href_loader <?= ('cancelled'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=cancelled&cheque_category=<?= $search_cheque_category ?>">Cancelled <b>(<?= get_total_cheque_of_status(company($user['id']), 'cancelled') ?>)</b></a></li>
+                    <li><a class="href_loader <?= (0==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>">All Remarks <b>(<?= get_total_cheque_of_status(company($user['id']), '') ?>)</b></a></li>
+                    <li><a class="href_loader <?= ('pending'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=pending&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>">Pending <b>(<?= get_total_cheque_of_status(company($user['id']), 'pending') ?>)</b></a></li>
+                    <li><a class="href_loader <?= ('cleared'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=cleared&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>">Cleared <b>(<?= get_total_cheque_of_status(company($user['id']), 'cleared') ?>)</b></a></li>
+                    <li><a class="href_loader <?= ('bounced'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=bounced&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>">Bounced <b>(<?= get_total_cheque_of_status(company($user['id']), 'bounced') ?>)</b></a></li>
+                    <li><a class="href_loader <?= ('cancelled'==$search_status)?'active':'' ?>" href="<?= base_url('cheque-management') ?>?department=<?= $search_department ?>&status=cancelled&cheque_category=<?= $search_cheque_category ?>&from=<?= $from ?>&to=<?= $to ?>">Cancelled <b>(<?= get_total_cheque_of_status(company($user['id']), 'cancelled') ?>)</b></a></li>
                 </ul>
+                <?php if ($_GET): ?>
+                    <a class="btn btn-edit-dark btn-sm w-100" href="<?= base_url('cheque-management') ?>">Clear filters</a>
+                <?php endif ?>
             </div>
         </div>
         <div class="col-md-10">
-             <b class="result_bar"><?= (!empty(trim($report_date)))?'<span class="text-dark">Showing result </span>'.$report_date:''; ?></b>
+            <b class="result_bar">
+                <?= (!empty(trim($report_date)))?'<span class="text-dark">Showing result </span>'.$report_date:''; ?>
+                <?= ($search_status!='' && $search_status!=0)?'<span class="text-dark">, remark</span> '.ucfirst($search_status):''; ?>
+                <?= ($search_cheque_category!='')?'<span class="text-dark">, category</span> '.ucfirst(($search_cheque_category==1)?'Received':'Issued'):''; ?>
+                <?= ($search_department!='' && $search_department!=0)?'<span class="text-dark">, department</span> '.ucfirst(get_cheque_department($search_department,'department_name')):''; ?>
+            </b>
+
             <div class="mt-2 ms-3 aitsun_table">
                 <div class="my-auto d-flex justify-content-between pb-2">
                     <div>

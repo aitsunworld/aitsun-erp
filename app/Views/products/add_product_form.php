@@ -132,6 +132,14 @@
 
 		  </div>
 
+		    <div class="mb-3 ">
+				<div class="form-group ">
+                    <label for="input-4" class="">Product Code</label>
+                    <input name="product_code" type="text" class="form-control">
+                    <input name="product_color" type="hidden" class="form-control">
+                	</div>
+			  </div>
+
 		  <div class="remove_service">
 		  <div class="mb-3 d-none-on-bill <?php if (is_online_shop(company($user['id']))!=1) {echo "d-none";} ?>">
 			<label for="inputProductDescription" class="form-label">Long Description</label>
@@ -147,11 +155,7 @@
 
 		  <div class="mb-3 bg-no" style=" background: #dadbdd; border-radius: 10px;">
               <div class="row p-2">
-                  <div class="form-group col-md-12 mb-3">
-                    <label for="input-4" class="">Product Code</label>
-                    <input name="product_code" type="text" class="form-control">
-                    <input name="product_color" type="hidden" class="form-control">
-                	</div>
+                  
 
                 	<div class="d-none d-none-on-bill ">
                 		<select class="d-none" id="add_field_items">

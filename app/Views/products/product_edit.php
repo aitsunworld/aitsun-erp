@@ -247,6 +247,12 @@
       </div>
   </div>
 
+    <div class="form-group col-md-12 mb-3">
+                      <label for="input-4" class="">Product Code</label>
+                      <input name="product_code" type="text" class="form-control" value="<?= $pro['product_code']; ?>">
+                      <input name="product_color" type="hidden" class="form-control" value="<?= $pro['product_color']; ?>">
+                  </div>
+
         <div class="remove_service <?php if ($pro['product_method']=='service') {echo 'd-none';} ?>">
                   
 
@@ -261,11 +267,7 @@
                         <div class="col-md-12 mb-3" style=" background: #dadbdd; border-radius: 10px;">
                 <div class="row p-2">
 
-                    <div class="form-group col-md-12 mb-3">
-                      <label for="input-4" class="">Product Code</label>
-                      <input name="product_code" type="text" class="form-control" value="<?= $pro['product_code']; ?>">
-                      <input name="product_color" type="hidden" class="form-control" value="<?= $pro['product_color']; ?>">
-                  </div>
+                  
 
                   <div class="d-none">
                         <select class="d-none" id="add_field_items">

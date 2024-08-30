@@ -438,7 +438,7 @@
     <!-- search product selector -->
       <div class="d-flex header_section_3 position-relative mt-2 justify-content-between d-flex>">
         <div class="position-relative">
-        <input type="number" id="product_code" data-input="code" placeholder="Type Product Code" class="mr-5 product_code_search po">
+        <input type="text" id="product_code" data-input="code" placeholder="Type Product Code" class="mr-5 product_code_search po">
         <div style="position: absolute;right: 14px;top: 6px; color: green;" id="loadbox_code">
           
         </div>

@@ -1348,7 +1348,7 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 
 				  if (input=='code') {
             $('#tandsproducts').addClass('d-none');
-						if (search_code!='' && search_code.length==3) { 
+						if (search_code!='') { 
               $('#tandsproducts').removeClass('d-none');
               if (search_code === '') { 
                 $('.item_box').hide();
@@ -1447,65 +1447,6 @@ $(document).on('append paste keyup keydown','#typeandsearch,#typeandsearch_categ
 
 
 
-
-  
- $(document).on('change','.in_unit',function(){
- 		var inu=$(this).val();
- 		var rowno=$(this).data('row'); 
- 		var proconversion_unit_rate=$(this).data('proconversion_unit_rate');
- 		var n_tax_percent=$('#tax_text'+rowno).find(':selected').data('perc');
- 		var view_type=$('#view_type').val();
- 		var is_subunit_divide=$('#is_subunit_divide').val();
-
- 		if (proconversion_unit_rate>0) {
- 			if (is_subunit_divide==1) {
-		 		if (view_type=='sales') {
-		 			if ($('#sale_tax_text'+rowno).val()==0) {
-		 				var finprice=$('#selling_price_text'+rowno).val();
-		 			}else{ 
-
-		 				var finprice=$('#selling_price_text'+rowno).val();
-		 				var tz='1.'+n_tax_percent; 
-						var finprice=set_decimal(finprice/tz);
-		 			}
-		 			
-		 		}else{
-		 			if ($('#purchase_tax_text'+rowno).val()==0) {
-		 				var finprice=$('#purchase_price_text'+rowno).val();
-		 			}else{
-		 				var finprice=$('#purchase_price_text'+rowno).val();
-		 				var tz='1.'+n_tax_percent; 
-						var finprice=set_decimal(finprice/tz);
-		 			}
-		 			
-		 		}
-		 		
-
-		 		
-		 		if ($(this).children('option:first-child').is(':selected')) {
-		       
-		    }else{
-		    	
-		    		finprice=finprice/proconversion_unit_rate;
-
-		    	
-		    }
-		 		
-				finprice=parseFloat(finprice); 
-
-		 		$('#price_bx'+rowno).val(set_decimal(finprice));  
-		 		$('#quantity_input'+rowno).data('price',finprice); 
-		 		$('#qty_minus'+rowno).data('price',finprice); 
-		 		$('#qty_plus'+rowno).data('price',finprice); 
-		 		$('#discountbox'+rowno).data('price',finprice); 
-		 		$('#discount_percentbox'+rowno).data('price',finprice); 
-
-		 		$('#quantity_input'+rowno).click();
-		 		}
- 		}
-
-
- });
 
 
 
@@ -2471,6 +2412,36 @@ $(document).on('click','.delete_tax',function(){
 
 	});
 
+
+  
+ $(document).on('change','.in_unit',function(){
+    var this_row=$(this).data('row');
+    var this_product=$(this).data('product');
+    var stock=$(this).data('stock');
+    var price=$(this).data('price');
+    var price = $('#pricelist_select'+this_row+' option:selected').data('rental_price');
+    var qnumber4=$(this).val();
+    var x = 0;
+
+    // var this_val=$('#discount_percentbox'+this_row).val(); 
+    //  $('#discountbox'+this_row).val(set_decimal((price*qnumber4)*this_val/100));
+
+    var intervalID = setInterval(function () {
+
+      calculate_item_table(this_row,price);
+      calculate_invoice(); 
+      calculate_due_amount();  
+      calculate_due_amount(); 
+      calculate_tax_amount();
+
+    if (++x === 5) {
+           window.clearInterval(intervalID);
+       }
+    }, 100); 
+
+ });
+
+
 	$(document).on('input paste','.discount_input,.discount_percent_input', function(){
 		var this_row=$(this).data('row');
 		var this_val=$(this).val();
@@ -2745,23 +2716,6 @@ $(document).on('blur','.discount_input,.discount_percent_input', function(){
 
 	//////////////////////////// CALCULATIONS //////////////////////////////////
 	function calculate_item_table(this_row,product_price){
-		// var product_price=0;
-		// $.ajax({
-    //           url: base_url()+"sales/get_price?prod="+this_product,
-    //           success:function(response) {
-    //           	product_price=$.trim(response);
-
-            	
-            	
-
-   //           },
-	 //         error:function(){
-	 //          alert("error");
-	 //         }
-	 //    });
-
-	    // $('#price_bx'+this_row).val(response);
-
 
     var price_type = $('#pricelist_select' + this_row).val();
     var product_price = $('#pricelist_select' + this_row + ' option:selected').data('rental_price');
@@ -2776,11 +2730,16 @@ $(document).on('blur','.discount_input,.discount_percent_input', function(){
     var selling_price=$('#selling_price_text'+this_row).val();
     var purchase_tax=$('#purchase_tax_text'+this_row).val();
     var sale_tax=$('#sale_tax_text'+this_row).val();
+    var is_subunit_divide=$('#is_subunit_divide').val();
 
     var view_type=$('#view_type').val();
     var tax=$('#tax_text'+this_row).val();
     var tax_percent=$('#tax_text'+this_row).find(':selected').data('perc');
     var tax_name=$('#tax_text'+this_row).find(':selected').data('tname');
+    
+    var proconversion_unit_rate=$('#in_unit'+this_row).data('proconversion_unit_rate');
+ 
+    
 
 
     if (price_type!=0) {
@@ -2789,7 +2748,27 @@ $(document).on('blur','.discount_input,.discount_percent_input', function(){
     }else{
       final_selling_price=selling_price;
       final_purchased_price=purchased_price;
-    }
+    } 
+
+    //////subunit change
+    if (proconversion_unit_rate>0) {
+      if (is_subunit_divide==1) {
+        
+        if ($('#in_unit'+this_row).children('option:first-child').is(':selected')) {
+           
+        }else{
+            final_selling_price=parseFloat(final_selling_price/proconversion_unit_rate);
+            final_purchased_price=parseFloat(final_purchased_price/proconversion_unit_rate); 
+          
+        }  
+        
+      }
+    } 
+  ////subunit change
+
+
+
+
     if (view_type=='sales') {
       if (sale_tax==1) {
         var tz=(parseFloat(tax_percent)+100)/100;

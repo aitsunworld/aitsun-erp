@@ -61,7 +61,7 @@ class Cheque_management extends BaseController {
                 } 
 
                 if (isset($_GET['cheque_category'])) {
-                    if (!empty($_GET['cheque_category'])) {
+                    if ($_GET['cheque_category']!='') {
                         $cheque_data->where('cheque_category',$_GET['cheque_category'],'both');
                     }
                 } 

@@ -164,7 +164,7 @@
                     </form>
                 </div>
                     <div class="col-md-5">
-                        <iframe src="<?= base_url(); ?>/products/barcode_preview/0"  class="w-100"  id="iframeid"></iframe>
+                        <iframe src="<?= base_url(); ?>/products/barcode_preview/0" style="height: 50vh;" class="w-100"  id="iframeid"></iframe>
                     </div>
 
                     
