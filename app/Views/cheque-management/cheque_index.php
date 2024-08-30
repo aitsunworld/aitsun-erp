@@ -143,12 +143,7 @@
                         </select>
                     </div>
 
-                    <div class="form-group col-md-6 mb-2">
-                        <label for="cheque_title">Cheque title</label>
-                        <input type="text" class="form-control" name="cheque_title" id="cheque_title" >
-                    </div>
-
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label for="cheque_title">Customer</label>
                          <div class="aitsun_select position-relative " >                   
                             <input type="text" class="aitsun-datebox d-none form-control" style="min-width:250px;height: 34px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
@@ -161,6 +156,12 @@
                             </div>
                         </div> 
                      </div>
+
+                    <div class="form-group col-md-4 mb-2">
+                        <label for="cheque_title">Cheque title</label>
+                        <input type="text" class="form-control" name="cheque_title" id="cheque_title" >
+                    </div>
+
 
                     <div class="form-group col-md-4 mb-2">
                         <label for="amount">Amount</label>
@@ -293,10 +294,20 @@
                         <form method="get" class="d-flex"> 
 
                             <input type="text" name="cheque_no" class="filter-control w-100 form-control" placeholder="Cheque No.">
+                            <div>
+                             <div class="aitsun_select position-relative " >                   
+                                <input type="text" class="aitsun-datebox d-none form-control" style="min-width:250px;height: 34px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
+                                <a class="select_close d-none" style="top:0px; color: black;"><i class="bx bx-x"></i></a>
+                                <select class="form-select" name="cheque_customer" id="cheque_customer" style="margin: auto; min-width:250px; height: 34px; padding: 7;">
+                                    <option value="">Select Customer</option> 
+                                   
+                                </select>
+                                <div class="aitsun_select_suggest">
+                                </div>
+                            </div> 
+                         </div>
                             <input type="text" name="cheque_title" class="filter-control w-100 form-control" placeholder="Title">
-         
-                     
-         
+
                             <input type="date" name="from" class="filter-control w-100" placeholder="From">
                     
                             <input type="date" name="to" class="filter-control w-100" placeholder="To">
@@ -326,9 +337,9 @@
                 <thead>
                     <tr>
                         <th class="sorticon">Cheque No.</th>
-                        <th class="sorticon">Date</th>   
+                        <th class="sorticon">Date</th>
+                        <th class="sorticon">Customer</th>   
                         <th class="sorticon">Title</th>
-                        <th class="sorticon">Customer</th>
                         <th class="sorticon">Expires in</th> 
                         <th class="sorticon">Category</th> 
                         <th class="sorticon">Remarks</th> 
@@ -344,14 +355,16 @@
                      <td><?= get_date_format($chq['cheque_date'],'d M Y'); ?></td>
 
                      <td>
+                        <?= user_name($chq['cheque_customer']); ?>
+                    </td>
+
+                     <td>
                         <?= $chq['cheque_title']; ?>
                         <?php if (!empty($chq['cheque_note'])): ?>
                             <small class="d-block">(<?= $chq['cheque_note'] ?>)</small>
                         <?php endif ?>
                     </td>
-                    <td>
-                        <?= user_name($chq['cheque_customer']); ?>
-                    </td>
+                    
                       <td style=""><?= (!empty(timeToExpire(now_time($user['id']),$chq['cheque_date'])))?timeToExpire(now_time($user['id']),$chq['cheque_date']):'-'; ?></td>
                       <td class="text-center">
                         <?php if ($chq['cheque_category']==0): ?> 
@@ -441,12 +454,7 @@
                                                 <?php endforeach ?>
                                             </select>
                                         </div>
-
-                                        <div class="form-group col-md-6 mb-2">
-                                            <label for="cheque_title">Cheque title</label>
-                                            <input type="text" class="form-control" name="cheque_title" id="cheque_title" value="<?= $chq['cheque_title'] ?>">
-                                        </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <label for="cheque_title">Customer</label>
                                              <div class="aitsun_select position-relative " >                   
                                                 <input type="text" class="aitsun-datebox d-none form-control" style="min-width:250px;height: 34px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
@@ -463,6 +471,12 @@
                                                 </div>
                                             </div> 
                                          </div>
+
+                                        <div class="form-group col-md-4 mb-2">
+                                            <label for="cheque_title">Cheque title</label>
+                                            <input type="text" class="form-control" name="cheque_title" id="cheque_title" value="<?= $chq['cheque_title'] ?>">
+                                        </div>
+                                        
                                         <div class="form-group col-md-4 mb-2">
                                             <label for="amount">Amount</label>
                                             <input type="number" class="form-control" name="amount" id="amount" value="<?= aitsun_round($chq['amount'],get_setting(company($user['id']),'round_of_value')) ?>">
