@@ -337,9 +337,8 @@
                 <thead>
                     <tr>
                         <th class="sorticon">Cheque No.</th>
-                        <th class="sorticon">Date</th>
-                        <th class="sorticon">Customer</th>   
-                        <th class="sorticon">Title</th>
+                        <th class="sorticon">Date</th>  
+                        <th class="sorticon">Customer/Cheque title</th>
                         <th class="sorticon">Expires in</th> 
                         <th class="sorticon">Category</th> 
                         <th class="sorticon">Remarks</th> 
@@ -354,11 +353,10 @@
                      <td><?= $chq['cheque_no']; ?></td>
                      <td><?= get_date_format($chq['cheque_date'],'d M Y'); ?></td>
 
-                     <td>
-                        <?= user_name($chq['cheque_customer']); ?>
-                    </td>
+                  
 
                      <td>
+                        <?= user_name($chq['cheque_customer']); ?>
                         <?= $chq['cheque_title']; ?>
                         <?php if (!empty($chq['cheque_note'])): ?>
                             <small class="d-block">(<?= $chq['cheque_note'] ?>)</small>
@@ -474,7 +472,7 @@
 
                                         <div class="form-group col-md-4 mb-2 d-none">
                                             <label for="cheque_title">Cheque title</label>
-                                            <input type="text" class="form-control" name="cheque_title" id="cheque_title" value="<?= $chq['cheque_title'] ?>">
+                                            <input type="text" class="form-control" name="cheque_title" id="cheque_title" value="">
                                         </div>
                                         
                                         <div class="form-group col-md-4 mb-2">
