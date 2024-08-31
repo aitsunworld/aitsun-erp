@@ -144,12 +144,12 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="cheque_title">Customer</label>
+                        <label for="cheque_title">Cheque title</label>
                          <div class="aitsun_select position-relative " >                   
                             <input type="text" class="aitsun-datebox d-none form-control" style="min-width:250px;height: 34px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
                             <a class="select_close d-none" style="top:0px; color: black;"><i class="bx bx-x"></i></a>
                             <select class="form-select" name="cheque_customer" id="cheque_customer" style="margin: auto; min-width:250px; height: 34px; padding: 7;">
-                                <option value="">Search Customer</option> 
+                                <option value="">Search Cheque</option> 
                                
                             </select>
                             <div class="aitsun_select_suggest">
@@ -157,7 +157,7 @@
                         </div> 
                      </div>
 
-                    <div class="form-group col-md-4 mb-2">
+                    <div class="form-group col-md-4 mb-2 d-none">
                         <label for="cheque_title">Cheque title</label>
                         <input type="text" class="form-control" name="cheque_title" id="cheque_title" >
                     </div>
@@ -299,14 +299,14 @@
                                 <input type="text" class="aitsun-datebox d-none form-control" style="min-width:250px;height: 34px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
                                 <a class="select_close d-none" style="top:0px; color: black;"><i class="bx bx-x"></i></a>
                                 <select class="form-select" name="cheque_customer" id="cheque_customer" style="margin: auto; min-width:250px; height: 34px; padding: 7;">
-                                    <option value="">Select Customer</option> 
+                                    <option value="">Select Cheque</option> 
                                    
                                 </select>
                                 <div class="aitsun_select_suggest">
                                 </div>
                             </div> 
                          </div>
-                            <input type="text" name="cheque_title" class="filter-control w-100 form-control" placeholder="Title">
+                            <input type="text" name="cheque_title"  class="d-none filter-control w-100 form-control" placeholder="Title">
 
                             <input type="date" name="from" class="filter-control w-100" placeholder="From">
                     
@@ -455,7 +455,7 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="cheque_title">Customer</label>
+                                            <label for="cheque_title">Cheque title</label>
                                              <div class="aitsun_select position-relative " >                   
                                                 <input type="text" class="aitsun-datebox d-none form-control" style="min-width:250px;height: 34px;" data-select_url="<?= base_url('selectors/all_parties'); ?>">
                                                 <a class="select_close d-none" style="top:0px; color: black;"><i class="bx bx-x"></i></a>
@@ -463,7 +463,7 @@
                                                     <?php if ($chq['cheque_customer']!=0): ?>
                                                         <option value="<?= $chq['cheque_customer'] ?>"><?= user_name($chq['cheque_customer']) ?></option> 
                                                     <?php else: ?>
-                                                        <option value="">Search Customer</option>
+                                                        <option value="">Search Cheque</option>
                                                     <?php endif ?>  
                                                    
                                                 </select>
@@ -472,7 +472,7 @@
                                             </div> 
                                          </div>
 
-                                        <div class="form-group col-md-4 mb-2">
+                                        <div class="form-group col-md-4 mb-2 d-none">
                                             <label for="cheque_title">Cheque title</label>
                                             <input type="text" class="form-control" name="cheque_title" id="cheque_title" value="<?= $chq['cheque_title'] ?>">
                                         </div>

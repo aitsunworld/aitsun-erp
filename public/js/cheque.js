@@ -177,8 +177,7 @@ $(document).ready(function() {
             rules: {
                 cheque_no: "required",
                 cheque_date: "required",
-                cheque_department: "required",
-                cheque_title: "required",
+                cheque_department: "required", 
                 cheque_customer: "required",
                 amount: "required",
                 remarks: "required",
@@ -187,8 +186,7 @@ $(document).ready(function() {
             messages: {
                 cheque_no: "Please enter cheque number!",
                 cheque_date: "Please select cheque date!",
-                cheque_department: "Please select cheque department!",
-                cheque_title: "Please enter cheque title!",
+                cheque_department: "Please select cheque department!", 
                 cheque_customer: "Please select customer!",
                 amount: "Please enter cheque amount!",
                 remarks: "Please select remark",
