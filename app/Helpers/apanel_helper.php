@@ -89,11 +89,11 @@ use App\Models\ChequeDepartmentsModel as ChequeDepartmentsModel;
 use App\Models\ChequesModel as ChequesModel;
 
 function style_version(){
-    return '1.3.2';
+    return '1.3.3';
 }
 
 function script_version(){
-    return '1.3.2';
+    return '1.3.3';
 }
 
 function round_after(){
