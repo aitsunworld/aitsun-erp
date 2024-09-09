@@ -185,9 +185,16 @@ if (get_invoicesetting($invoice_data['company_id'], $invoice_data['invoice_type'
                       <?php endif ?>
                     
 
-                    <?php if (!empty(billing_address_of($invoice_data['customer']))): ?>
+                    <?php if (!empty(party_billing_address($invoice_data['customer']))): ?>
                       <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_customer_address')==1): ?>
-                      <?= billing_address_of($invoice_data['customer']) ?>
+                      <?= party_billing_address($invoice_data['customer']) ?>
+                      <?php endif ?>
+                    <?php endif ?>
+
+                     <b style="display: block; margin-top: 10px;"><?= langg(get_setting($invoice_data['company_id'],'language'),'Shipping address'); ?></b>
+                    <?php if (!empty(party_shipping_address($invoice_data['customer']))): ?>
+                      <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_customer_shipping_address')==1): ?>
+                      <?= party_shipping_address($invoice_data['customer']) ?>
                       <?php endif ?>
                     <?php endif ?>
                   </p> 

@@ -1207,7 +1207,9 @@ $(document).on('click','.tranname',function(){
 		var gstno=$.trim($('#gst_input').val());
 		var opening_balance=$.trim($('#opening_balance').val());
 		var opening_type=$.trim($('#opening_type').val());
-		var billing_address=$.trim($('#billing_address').val());
+    var billing_address=$.trim($('#billing_address').val());
+		var shipping_address=$.trim($('#shipping_address').val());
+    
 		var state_select_box=$.trim($('#state_select_box').val());
 
 		var withajax=$.trim($('#withajax').val());
@@ -1257,7 +1259,8 @@ $(document).on('click','.tranname',function(){
 									gstno:gstno,
 									opening_balance:opening_balance,
 									opening_type:opening_type,
-									billing_address:billing_address,
+                  billing_address:billing_address,
+									shipping_address:shipping_address,
 									billing_state:state_select_box, 
 									withajax:withajax,
 									[csrfName]: csrfHash

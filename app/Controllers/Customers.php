@@ -212,6 +212,8 @@ class Customers extends BaseController
                         'credit_limit'=>aitsun_round(strip_tags($this->request->getVar('credit_limit')),get_setting(company($myid),'round_of_value')), 
                         'website'=>strip_tags($this->request->getVar('website')),
                         'billing_address'=>strip_tags($this->request->getVar('billing_address')),
+                        'shipping_address'=>strip_tags($this->request->getVar('shipping_address')),
+                        
                         'billing_state'=>strip_tags($this->request->getVar('billing_state')),
                         'area'=>strip_tags($this->request->getVar('area')),
                         'landline'=>strip_tags($this->request->getVar('landline')),

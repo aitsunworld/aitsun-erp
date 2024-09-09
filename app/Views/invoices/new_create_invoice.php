@@ -1490,6 +1490,11 @@
                                 <textarea class="form-control modal_inpu" name="billing_address" id="billing_address" cols="5"></textarea>
                                </div>
 
+                               <div class="form-group col-md-12">
+                                <label for="input-5" class="modal_lab"><?= langg(get_setting(company($user['id']),'language'),'Shipping Address'); ?></label>
+                                <textarea class="form-control modal_inpu" name="shipping_address" id="shipping_address" cols="5"></textarea>
+                               </div>
+
                                <div id="errrr" class="form-group col-md-12 text-danger"></div>
 
 

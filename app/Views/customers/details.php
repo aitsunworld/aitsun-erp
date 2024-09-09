@@ -260,10 +260,16 @@
     </div>
 
 <?php if ($cust['default_user']!=1): ?>
-     <div class="form-group col-md-12">
+    <div class="form-group mb-2 col-md-12">
       <label for="input-5" class="modal_lab"><?= langg(get_setting(company($user['id']),'language'),'Address'); ?></label>
       <textarea class="form-control modal_inpu" name="billing_address" id="input-5" cols="5"><?= $cust['billing_address']; ?></textarea>
-     </div>
+    </div>
+
+    <div class=" col-md-12  mb-3">
+        <label for="input-5" class="modal_lab"><?= langg(get_setting(company($user['id']),'language'),'Shipping Address'); ?></label>
+        <textarea class="form-control modal_inpu" name="shipping_address" id="shipping_address" cols="5"><?= $cust['shipping_address']; ?></textarea>
+   </div>
+
 <?php endif ?>
      <!-- //new -->
     <div class="form-group col-md-12 mt-2 d-none"> 
@@ -416,10 +422,7 @@
       <label for="input-5" class="modal_lab"><?= langg(get_setting(company($user['id']),'language'),'Postal code'); ?></label>
       <input type="text" class="form-control modal_inpu" name="shipping_postatlcode" id="input-5">
      </div>
-     <div class="form-group col-md-12">
-      <label for="input-5" class="modal_lab"><?= langg(get_setting(company($user['id']),'language'),'Address'); ?></label>
-      <textarea class="form-control modal_inpu" id="input-5" name="shipping_address" cols="5"></textarea>
-     </div>
+     
     
 </div>
 

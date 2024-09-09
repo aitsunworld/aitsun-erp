@@ -4402,6 +4402,53 @@ function billing_address_of($customer){
 }
 
 
+function party_billing_address($customer){
+    $UserModel = new Main_item_party_table;
+    $get_r= $UserModel->where('id',$customer)->first();
+    $output='';
+    if (!empty($get_r['phone'])) { 
+        $phone="<br>".$get_r['phone'];
+    }else{
+        $phone="";
+    }
+    if (!empty($get_r['email'])) { 
+        $email="<br>".$get_r['email'];
+    }else{
+        $email="";
+    }
+    if (!empty($get_r['billing_address'])) { 
+        $billing_address="<br>".$get_r['billing_address'];
+    }else{
+        $billing_address="";
+    }
+
+    if (!empty($email)) {
+        $output.='<br>'.$email;
+    }
+    if (!empty($phone)) {
+        $output.='<br>'.$get_r['country_code'].' '.$phone;
+    }
+    $output.="".$billing_address."";
+    return $output; 
+}
+
+function party_shipping_address($customer){
+    $UserModel = new Main_item_party_table;
+    $get_r= $UserModel->where('id',$customer)->first();
+    $output='';
+ 
+    if (!empty($get_r['shipping_address'])) { 
+        $billing_address="".$get_r['shipping_address'];
+    }else{
+        $billing_address="";
+    }
+
+  
+    $output.="".$billing_address."";
+    return $output; 
+}
+
+
 function country_code($customer){
     $UserModel = new Main_item_party_table;
     $get_r= $UserModel->where('id',$customer)->first();

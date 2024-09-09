@@ -4993,6 +4993,8 @@ public function preferences(){
                 'show_date'=>strip_tags($this->request->getVar('show_date')),
                 'show_bill_to'=>strip_tags($this->request->getVar('show_bill_to')),
                 'show_customer_address'=>strip_tags($this->request->getVar('show_customer_address')),
+                'show_customer_shipping_address'=>strip_tags($this->request->getVar('show_customer_shipping_address')),
+                
                 // 'show_head'=>strip_tags($this->request->getVar('show_head')),
                 'invoice_header'=>$finalfile_invoice_header,
                 'invoice_signature'=>$finalfile_invoice_signature,

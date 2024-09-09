@@ -119,7 +119,14 @@
                    <div class="form-group ">
                         <div class="form-check form-switch">
                             <input type="checkbox" class="form-check-input"  name="show_customer_address" value="1" <?php if (get_invoicesetting(company($user['id']),$invoice_type,'show_customer_address') == '1') {echo 'checked';} ?>>
-                            <label class="form-check-label font-weight-normal"><?= langg(get_setting(company($user['id']),'language'),'Show Customer Address'); ?></label>
+                            <label class="form-check-label font-weight-normal"><?= langg(get_setting(company($user['id']),'language'),'Show Customer Billing Address'); ?></label>
+                        </div>
+                   </div>
+
+                   <div class="form-group ">
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input"  name="show_customer_shipping_address" value="1" <?php if (get_invoicesetting(company($user['id']),$invoice_type,'show_customer_shipping_address') == '1') {echo 'checked';} ?>>
+                            <label class="form-check-label font-weight-normal"><?= langg(get_setting(company($user['id']),'language'),'Show Customer Shipping Address'); ?></label>
                         </div>
                    </div>
 
