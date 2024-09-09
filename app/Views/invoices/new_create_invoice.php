@@ -1014,7 +1014,18 @@
                     <input type="number" step="any" name="transport_charge" id="transport_charge" value="<?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['transport_charge']; ?><?php else: ?> <?php endif; ?>" class="form-control-sm form-control">
                     </div>
                   </div>
+ 
+
                </div>
+
+               <div class=" justify-content-between <?php if (get_invoicesetting(company($user['id']),$invoice_type,'show_customer_shipping_address')==0): ?>d-none<?php endif ?> mt-1">
+                    <div class="my-auto me-1">Shipping address:</div>
+                    <div>
+                    <textarea name="shipping_address" id="shipping_address" class="form-control-sm form-control"> <?php if ($view_method=='edit' || $view_method=='convert' || $view_method=='copy'): ?><?= $in_data['shipping_address']; ?><?php else: ?> <?php endif; ?></textarea>
+                    </div>
+                  </div>
+
+                
  
 
                 <!-- //////////////////////// rental details //////////////////////////// -->

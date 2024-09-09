@@ -159,6 +159,8 @@
                         'session_id'=>strip_tags($this->request->getVar('session_id')),
                         'register_id'=>strip_tags($this->request->getVar('register_id')),  
                         'bill_type'=>strip_tags($this->request->getVar('bill_type')),
+                        'shipping_address'=>strip_tags($this->request->getVar('shipping_address')),
+
                         'booking_id'=>$booking_id,
                         'bill_from'=>$bill_from,
                         'rental_status'=>0,
@@ -670,6 +672,7 @@
                             'doctor_name'=>strip_tags($this->request->getVar('doctor_name')),
                              'bill_number'=>strip_tags($this->request->getVar('bill_number')),
                             'validity'=>strip_tags($this->request->getVar('validity')),
+                            'shipping_address'=>strip_tags($this->request->getVar('shipping_address')),
                             'rent_from'=>$rent_from,
                             'rent_to'=>$rent_to,
                             'rental_duration'=>strip_tags($this->request->getVar('rental_duration'))
