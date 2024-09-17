@@ -4421,13 +4421,8 @@ function party_billing_address($customer){
     }else{
         $billing_address="";
     }
-
-    if (!empty($email)) {
-        $output.='<br>'.$email;
-    }
-    if (!empty($phone)) {
-        $output.='<br>'.$get_r['country_code'].' '.$phone;
-    }
+ 
+  
     $output.="".$billing_address."";
     return $output; 
 }

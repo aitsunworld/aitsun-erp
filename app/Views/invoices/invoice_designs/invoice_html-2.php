@@ -174,14 +174,14 @@ if (get_invoicesetting($invoice_data['company_id'], $invoice_data['invoice_type'
                         <?=  user_name($invoice_data['customer']); ?> 
 
                       <?php if (!empty(gst_no_of($invoice_data['customer']))): ?><br>
-                        <?= langg(get_setting($invoice_data['company_id'],'language'),'GST No'); ?>: <?= gst_no_of($invoice_data['customer']); ?> <br>
+                        <?= langg(get_setting($invoice_data['company_id'],'language'),'GST No'); ?>: <?= gst_no_of($invoice_data['customer']); ?>
                       <?php endif ?>  
                       <?php endif ?> 
                     
                       <?php elseif ($invoice_data['alternate_name']==''): ?>
-                        <?= langg(get_setting($invoice_data['company_id'],'language'),'CASH CUSTOMER'); ?>
+                         <br><?= langg(get_setting($invoice_data['company_id'],'language'),'CASH CUSTOMER'); ?>
                       <?php else: ?>
-                        <?= $invoice_data['alternate_name']; ?>
+                         <br><?= $invoice_data['alternate_name']; ?>
                       <?php endif ?>
                     
 

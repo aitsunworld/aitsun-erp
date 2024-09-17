@@ -266,10 +266,11 @@ if (get_invoicesetting($invoice_data['company_id'], $invoice_data['invoice_type'
 
       <td valign="baseline" style="border-right:1px solid black; font-size: 14px;">
         <b><?= $ii['product'] ; ?></b><br>
-        MONTH OF <span style="text-transform: uppercase;"><?= get_date_format($invoice_data['invoice_date'],'F Y') ?></span>
+        
         <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_pro_desc')==1): ?>
-          <small><?= nl2br($ii['desc']) ?></small>   
+          <small><?= nl2br($ii['desc']) ?></small>  <br> 
         <?php endif; ?>
+        MONTH OF <span style="text-transform: uppercase;"><?= get_date_format($invoice_data['invoice_date'],'F Y') ?></span>
         <?php if (has_show_item($invoice_data['company_id'])): ?>
           <?php foreach (item_kits_array_for_show($ii['product_id'],$invoice_data['id']) as $iti): ?>
             <small class="d-block">

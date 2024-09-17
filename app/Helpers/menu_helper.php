@@ -77,6 +77,12 @@
 		        "icon" => base_url('public/images/menu_icons/cheque-management.webp'),
 		        "title" => "Cheques"
 		    ],
+		    [
+		    	"menu_name"=>'Invoice Submit',
+		        "url" => base_url('invoice_submit'),
+		        "icon" => base_url('public/images/menu_icons/invoice_submit.webp'),
+		        "title" => "Invoice Submit"
+		    ], 
 		  
 		    [
 		    	"menu_name"=>'Appointments',
@@ -153,6 +159,7 @@
 		        "title" => "Exams",
 		        "condition" => is_school(company($user_id))
 		    ],
+
 		    [
 		    	"menu_name"=>'Transport',
 		        "url" => base_url('school_transport'),
