@@ -555,7 +555,7 @@ $darklight = adjustOpacity($baseColor, 0.03);
       <?php if ($invoice_data['order_type']==''): ?>
         <?php if (get_invoicesetting($invoice_data['company_id'],$invoice_data['invoice_type'],'show_discount')==1): ?> 
           <div style="display:flex; justify-content:space-between;">
-            <div><span style="font-weight: 500; color:#049b04;">Add. discount</span></div>
+            <div><span style="font-weight: 500; color:#049b04;">Discount</span></div>
             <div>
               <span style="font-weight: 500; color:#049b04;">
                   <?= currency_symbol($invoice_data['company_id']); ?>
