@@ -25,6 +25,36 @@ if (segment3=='add_new') {
    display_add_product_form();        
 }
 
+
+$(document).on('click','.sortable thead th',function() {
+    var table = $(this).parents('table').eq(0);
+    var rows = table.find('tbody tr').toArray().sort(comparer($(this).index()));
+    
+    this.asc = !this.asc;
+    if (!this.asc) {
+      rows = rows.reverse();
+    }
+
+    for (var i = 0; i < rows.length; i++) {
+      table.children('tbody').append(rows[i]);
+    }
+  });
+
+  function comparer(index) {
+    return function(a, b) {
+      var valA = getCellValue(a, index);
+      var valB = getCellValue(b, index);
+      return $.isNumeric(valA) && $.isNumeric(valB) 
+        ? valA - valB 
+        : valA.toString().localeCompare(valB);
+    };
+  }
+
+  function getCellValue(row, index) {
+    return $(row).children('td').eq(index).text();
+  }
+
+
 $(document).on('click','.aitsun_table_export',function(){
 	var table_selector=$(this).data('table');
 	var export_to=$(this).data('type');

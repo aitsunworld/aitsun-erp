@@ -515,12 +515,14 @@
                         <td colspan="9"><h6 class="p-4 text-center text-danger">No Cheques Found... </h6></td>
                     </tr>
                 <?php endif ?>
-                <tr>
-                    <td colspan="6" class="text-end">Total</td>
-                    <td class="text-end"><b><?= aitsun_round($total_,get_setting(company($user['id']),'round_of_value')); ?></b></td>
-                </tr>
-             </tbody>
                 
+             </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" class="text-end">Total</td>
+                        <td class="text-end"><b><?= aitsun_round($total_,get_setting(company($user['id']),'round_of_value')); ?></b></td>
+                    </tr>
+                </tfoot>
                
             </table>
             </div>

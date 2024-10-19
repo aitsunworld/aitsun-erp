@@ -447,7 +447,7 @@
 
 
 
-<script src="<?= base_url('public'); ?>/js/sortable.js"></script> 
+<!-- <script src="<= base_url('public'); ?>/js/sortable.js"></script>  -->
 <script src="<?= base_url('public'); ?>/js/tableexport.min.js"></script>  
  <script src="<?= base_url('public'); ?>/js/custom.js?v=<?= script_version(); ?>"></script>
      <script src="<?= base_url('public'); ?>/js/common.js?v=<?= script_version(); ?>"></script>
