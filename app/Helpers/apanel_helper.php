@@ -4386,7 +4386,7 @@ function billing_address_of($customer){
         $email="";
     }
     if (!empty($get_r['billing_address'])) { 
-        $billing_address="".$get_r['billing_address'];
+        $billing_address='<br>'.$get_r['billing_address'];
     }else{
         $billing_address="";
     }
