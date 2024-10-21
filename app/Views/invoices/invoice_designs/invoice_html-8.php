@@ -470,7 +470,7 @@ if (get_invoicesetting($invoice_data['company_id'], $invoice_data['invoice_type'
      <?php else: ?>
      <tr>
       <td colspan="<?= $first_row_fixed ?>" class="pt-3 pb-10" style="border: 0;">
-        
+        <img src="<?= base_url('public'); ?>/images/footer1.png" style="width: 100%;"> 
       </td>
     </tr>
   <?php endif ?>
