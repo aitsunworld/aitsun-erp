@@ -934,7 +934,7 @@ class Reports extends BaseController {
                             }
                             if ($bn>1) {
 
-                                if ($totalbc==($cn-1)) { 
+                                if ($totalbc==($bn-1)) { 
                                     $PaymentsModel->groupEnd();
                                      $cash_data=$PaymentsModel->orderBy('id','DESC')->findAll();
                                 }
@@ -1058,7 +1058,7 @@ class Reports extends BaseController {
                             }
                             if ($bn>1) {
 
-                                if ($totalbc==($cn-1)) { 
+                                if ($totalbc==($bn-1)) { 
                                     $PaymentsModel->groupEnd();
                                      $bank_data=$PaymentsModel->orderBy('id','DESC')->findAll();
                                 }
