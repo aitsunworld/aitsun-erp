@@ -185,6 +185,13 @@
                             <p class="mb-0 ms-1">Hide deleted inventories & vouchers</p>
                         </div>
 
+                        <div class="d-flex mb-2">
+                            <div class="form-check form-switch cursor-pointer mb-0">
+                                <input type="checkbox" class="form-check-input" id="switch-restart_serial" name="restart_serial" value="1" <?php if (get_setting(company($user['id']),'restart_serial')==1): echo 'checked'; endif; ?>>
+                            </div>
+                            <p class="mb-0 ms-1">Reset serial number for new year</p>
+                        </div>
+
                     </div> 
                     
                     

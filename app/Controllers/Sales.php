@@ -21,6 +21,7 @@
     use App\Models\Main_item_party_table; 
     use App\Models\AppointmentsBookings;
     use App\Models\PosSessions; 
+    use App\Models\InvoiceTaxesVertical; 
 
 
 
@@ -469,6 +470,7 @@
 
                             if ($tax=='None') { 
                             }elseif ($tax=='Exempted') { 
+                            }elseif ($tax=='GST @ 0%') { 
                             }else{
                                 insert_invoice_tax($ins_id,$tax,$p_tax_amount,(($price*$quantity)-$p_discount),strip_tags($this->request->getVar('invoice_date')),strip_tags($this->request->getVar('company_state')),strip_tags($this->request->getVar('state_of_supply')));
                             }
@@ -585,6 +587,7 @@
             $TaxModel=new TaxModel;
             $ProductsModel=new Main_item_party_table;
             $InvoiceTaxes=new InvoiceTaxes;
+            $InvoiceTaxesVertical=new InvoiceTaxesVertical; 
             $AccountingModel=new Main_item_party_table; 
 
 
@@ -810,6 +813,7 @@
 
                             // $deletepros=$InvoiceitemsModel->where('invoice_id',$inid)->delete();
                             $InvoiceTaxes->where('invoice_id',$inid)->delete();
+                            $InvoiceTaxesVertical->where('invoice_id',$inid)->delete();
 
 
 
@@ -1219,6 +1223,7 @@
 
                                         if ($tax=='None') { 
                                         }elseif ($tax=='Exempted') { 
+                                        }elseif ($tax=='GST @ 0%') { 
                                         }else{
                                             insert_invoice_tax($ins_id,$tax,$p_tax_amount,(($price*$quantity)-$p_discount),strip_tags($this->request->getVar('invoice_date')),strip_tags($this->request->getVar('company_state')),strip_tags($this->request->getVar('state_of_supply')));
                                         }
@@ -1337,6 +1342,7 @@
 
                                         if ($tax=='None') { 
                                         }elseif ($tax=='Exempted') { 
+                                        }elseif ($tax=='GST @ 0%') { 
                                         }else{
                                             insert_invoice_tax($ins_id,$tax,$p_tax_amount,(($price*$quantity)-$p_discount),strip_tags($this->request->getVar('invoice_date')),strip_tags($this->request->getVar('company_state')),strip_tags($this->request->getVar('state_of_supply')));
                                         }

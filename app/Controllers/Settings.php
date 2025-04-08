@@ -855,6 +855,8 @@ public function preferences(){
                         'allow_massanger'=>strip_tags($this->request->getVar('switch_massenger')),
                         'allow_receipt_date'=>strip_tags($this->request->getVar('allow_receipt_date')),
                         'hide_deleted'=>strip_tags($this->request->getVar('hide_deleted')),
+                        'restart_serial'=>strip_tags($this->request->getVar('restart_serial')),
+                        
                         
                         'subunit_devide'=>strip_tags($this->request->getVar('subunit_devide')),
                         

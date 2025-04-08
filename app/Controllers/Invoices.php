@@ -109,9 +109,9 @@ class Invoices extends BaseController
                     $InvoiceModel->where("invoice_date BETWEEN '$from' AND '$dto'");
                 }
 
-                            // if (empty($dto) && empty($from)) {
-                            //     $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
-                            // }
+                // if (empty($dto) && empty($from)) {
+                //     $InvoiceModel->where('invoice_date',get_date_format(now_time($myid),'Y-m-d'));
+                // }
             }
 
 

@@ -100,6 +100,92 @@ class Gst_report extends BaseController {
         }
         }
 
+
+        public function gst_report_new()
+        {
+
+            $session=session();
+
+            if($session->has('isLoggedIn')){
+
+
+                    $UserModel=new Main_item_party_table;
+                    $InvoiceModel= new InvoiceModel;
+                    $HidedTaxes= new HidedTaxes;
+
+                    $myid=session()->get('id');
+                    $con = array( 
+                        'id' => session()->get('id') 
+                    );
+                    $user=$UserModel->where('id',$myid)->first();
+
+
+                    if (app_status(company($myid))==0) {return redirect()->to(base_url('app_error'));}
+
+                    
+
+                    if (usertype($myid)=='customer') {
+                        return redirect()->to(base_url('customer_dashboard'));
+                    }
+
+                    $acti=activated_year(company($myid)); 
+
+                    $from='';
+                    $dto='';
+
+                    $InvoiceModel->select('invoices.*,invoice_taxes_vertical.*');
+                    $InvoiceModel->join('invoice_taxes_vertical', 'invoice_taxes_vertical.invoice_id = invoices.id', 'left');
+
+                    if ($_GET) {
+
+                        $from=$_GET['from'];
+                        $dto=$_GET['to'];
+
+
+
+                        if (!empty($from) && empty($dto)) {
+                            $InvoiceModel->where('date(invoices.invoice_date)',$from);
+                        }
+                        if (!empty($dto) && empty($from)) {
+                            $InvoiceModel->where('date(invoices.invoice_date)',$dto);
+                        }
+
+                        if (empty($dto) && empty($from)) {
+                             $InvoiceModel->where('date(invoices.invoice_date)',get_date_format(now_time($myid),'Y-m-d'));
+                        }
+                        if (!empty($dto) && !empty($from)) {
+                            $InvoiceModel->where("date(invoices.invoice_date) BETWEEN '$from' AND '$dto'");
+                        }
+
+                         
+                    }else{
+                        $InvoiceModel->where('date(invoices.invoice_date)',get_date_format(now_time($myid),'Y-m-d'));
+                    }
+
+
+                    $gst_reports = $InvoiceModel->where('invoices.company_id',company($myid))->where('invoices.invoice_type','sales')->where('invoices.deleted',0)->orderBy('invoices.id','DESC')->findAll();
+                     // $gst_reports = [];
+                     
+
+                    $data = [
+                        'title' => 'GST Report',
+                        'user'=>$user, 
+                        'gst_reports'=>$gst_reports,
+                        'from'=>$from,
+                        'to'=>$dto
+                    ];
+
+                    echo view('header',$data);
+                    echo view('reports/gst_report_new', $data);
+                    echo view('footer');
+
+            
+        }else{
+            return redirect()->to(base_url('users/login'));
+        }
+        }
+
+
         public function save_gst_columns(){
 
             $session=session();

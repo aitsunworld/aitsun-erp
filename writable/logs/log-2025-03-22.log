@@ -1,0 +1,16 @@
+CRITICAL - 2025-03-22 05:11:00 --> Undefined array key "GST_0_tax_amount"
+in APPPATH\Helpers\tax_helper.php on line 34.
+ 1 APPPATH\Helpers\tax_helper.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "GST_0_tax_amount"', 'APPPATH\\Helpers\\tax_helper.php', 34)
+ 2 APPPATH\Controllers\Sales.php(474): insert_invoice_tax(20675, 'GST @ 0%', '0', 170.0, '2025-03-22', 'Kerala', 'D:\\xampp\\htdocs\\aitsun-erp')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-22 05:13:05 --> Undefined array key "GST_0_tax_amount"
+in APPPATH\Helpers\tax_helper.php on line 34.
+ 1 APPPATH\Helpers\tax_helper.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "GST_0_tax_amount"', 'APPPATH\\Helpers\\tax_helper.php', 34)
+ 2 APPPATH\Controllers\Sales.php(474): insert_invoice_tax(20678, 'GST @ 0%', '0', 6.1, '2025-03-22', 'Kerala', 'D:\\xampp\\htdocs\\aitsun-erp')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

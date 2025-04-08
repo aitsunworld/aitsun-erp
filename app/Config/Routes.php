@@ -722,13 +722,16 @@ $routes->get('/messaging/send_credentials', 'Messaging::send_credentials');
 
 ///////////////// Testings ///////////////
 $routes->get('/testing', 'Testing::index');
-$routes->post('/testing', 'Testing::index');
-$routes->get('/send_sms_oman', 'Testing::send_sms_oman');
-$routes->get('/price_counting', 'Testing::price_counting');
-$routes->get('/reset_accounts', 'Testing::reset_accounts');
-$routes->get('/invoice_item_reset', 'Testing::invoice_item_reset');
-$routes->get('/total_working_days', 'Testing::total_working_days');
-$routes->get('/invoice_item_fees_id_update', 'Testing::invoice_item_fees_id_update');
+// $routes->get('/vertical_tax', 'Testing::vertical_tax');
+
+
+// $routes->post('/testing', 'Testing::index');
+// $routes->get('/send_sms_oman', 'Testing::send_sms_oman');
+// $routes->get('/price_counting', 'Testing::price_counting');
+// $routes->get('/reset_accounts', 'Testing::reset_accounts');
+// $routes->get('/invoice_item_reset', 'Testing::invoice_item_reset');
+// $routes->get('/total_working_days', 'Testing::total_working_days');
+// $routes->get('/invoice_item_fees_id_update', 'Testing::invoice_item_fees_id_update');
 
 
 
@@ -770,6 +773,10 @@ $routes->get('stock_report', 'Reports::stock_reports');
 $routes->post('stock_report', 'Reports::stock_reports');
 $routes->get('gst_report', 'Gst_report::index');
 $routes->get('gst_report/vat_report', 'Gst_report::vat_report');
+
+
+$routes->get('gst_report_new', 'Gst_report::gst_report_new');
+
 $routes->get('credit_statement/(:any)', 'Reports::credit_statement/$1');
 $routes->get('credit_statement/(:any)', 'Reports::credit_statement/$1');
 $routes->get('/day_book', 'Reports::index');

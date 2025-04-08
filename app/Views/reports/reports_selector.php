@@ -96,7 +96,7 @@
 
         <?php if (get_company_data(company($user['id']),'country')=='India'): ?>
 
-            <a class="menu_icon text-dark cursor-pointer href_loader" href="<?= base_url('gst_report'); ?>">
+            <a class="menu_icon text-dark cursor-pointer href_loader" href="<?= base_url('gst_report_new'); ?>">
                 <img src="<?= base_url('public/images/menu_icons/gst_report.webp') ?>" class="menu_img">
                 <div class="menu-title">GST Report</div>
             </a>  

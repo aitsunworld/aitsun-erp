@@ -4724,7 +4724,32 @@ function full_invoice_type($invoice_type){
 function serial_no_cash($company){
     $PaymentsModel = new PaymentsModel;
     $PaymentsModel->selectMax('serial_no');
+    $financial_from='0000-00-00';
+    $financial_to='0000-00-00';
+    $currentYear = date('Y');
+    $currentMonth = date('n');
+    if (company_year_end($company)=='dec') {
+        $financial_from=date("Y-01-01", strtotime("Y"));
+        $financial_to=date("Y-12-t", strtotime($financial_from));
+    }elseif (company_year_end($company)=='mar') {
+
+
+        if ($currentMonth >= 4) {
+            // If the current month is April or later, the financial year starts from April 1st of the current year
+            $financial_from = "$currentYear-04-01";
+            $financial_to = ($currentYear + 1) . "-03-31";
+
+        } else {
+            // If the current month is before April, the financial year starts from April 1st of the previous year
+            $financial_from = ($currentYear - 1) . "-04-01";
+            $financial_to = "$currentYear-03-31";
+        }
+
+    }
+
+    $PaymentsModel->where('datetime>=',$financial_from);
     $PaymentsModel->where('company_id',$company);
+    $PaymentsModel->where('deleted',0);
     $get_serial=$PaymentsModel->first();
     return $get_serial['serial_no']+1;
 }
@@ -4809,7 +4834,33 @@ function serial_no($company,$invoive_type){
     $InvoiceModel = new InvoiceModel;
     
     $InvoiceModel->selectMax('serial_no');
+
+    $financial_from='0000-00-00';
+    $financial_to='0000-00-00';
+    $currentYear = date('Y');
+    $currentMonth = date('n');
+    if (company_year_end($company)=='dec') {
+        $financial_from=date("Y-01-01", strtotime("Y"));
+        $financial_to=date("Y-12-t", strtotime($financial_from));
+    }elseif (company_year_end($company)=='mar') {
+
+
+        if ($currentMonth >= 4) {
+            // If the current month is April or later, the financial year starts from April 1st of the current year
+            $financial_from = "$currentYear-04-01";
+            $financial_to = ($currentYear + 1) . "-03-31";
+
+        } else {
+            // If the current month is before April, the financial year starts from April 1st of the previous year
+            $financial_from = ($currentYear - 1) . "-04-01";
+            $financial_to = "$currentYear-03-31";
+        }
+
+    }
+
+    $InvoiceModel->where('invoice_date>=',$financial_from); 
     $InvoiceModel->where('company_id',$company);
+    $InvoiceModel->where('deleted',0);
     $InvoiceModel->where('invoice_type',$invoive_type);
     $get_serial=$InvoiceModel->first();
     return $get_serial['serial_no']+1;
@@ -4819,6 +4870,32 @@ function pos_receipt_no($company,$invoive_type){
     $InvoiceModel = new InvoiceModel;
     
     $InvoiceModel->selectMax('pos_receipt_no');
+
+    $financial_from='0000-00-00';
+    $financial_to='0000-00-00';
+    $currentYear = date('Y');
+    $currentMonth = date('n');
+    if (company_year_end($company)=='dec') {
+        $financial_from=date("Y-01-01", strtotime("Y"));
+        $financial_to=date("Y-12-t", strtotime($financial_from));
+    }elseif (company_year_end($company)=='mar') {
+
+
+        if ($currentMonth >= 4) {
+            // If the current month is April or later, the financial year starts from April 1st of the current year
+            $financial_from = "$currentYear-04-01";
+            $financial_to = ($currentYear + 1) . "-03-31";
+
+        } else {
+            // If the current month is before April, the financial year starts from April 1st of the previous year
+            $financial_from = ($currentYear - 1) . "-04-01";
+            $financial_to = "$currentYear-03-31";
+        }
+
+    }
+
+    $InvoiceModel->where('invoice_date>=',$financial_from);
+
     $InvoiceModel->where('company_id',$company);
     $InvoiceModel->where('invoice_type',$invoive_type);
     $InvoiceModel->where('bill_from','pos');

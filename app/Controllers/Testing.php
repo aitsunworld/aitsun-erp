@@ -19,6 +19,7 @@ use App\Models\TestModel;
 use App\Models\PayrollitemsModel; 
 use App\Models\CustomerBalances;
 use App\Models\TempStockadjustmodel;
+use App\Models\InvoiceTaxesVertical; 
 
 
 use App\Libraries\PdfLibrary;
@@ -29,6 +30,58 @@ use Stripe;
 
 class Testing extends BaseController
 {
+
+
+
+    public function vertical_tax(){
+        $InvoiceTaxes=new InvoiceTaxes;
+        $InvoiceTaxesVertical=new InvoiceTaxesVertical;
+
+        $all_taxes=$InvoiceTaxes->findAll();
+
+        foreach ($all_taxes as $at) {
+
+
+           
+            $invoice_date=invoice_data($at['invoice_id'],'invoice_date');
+            $company_id=invoice_data($at['invoice_id'],'company_id');
+            
+
+            if ($company_id>0 && $company_id==2) { 
+                $check_vertical_tax_exist=$InvoiceTaxesVertical->where('invoice_id',$at['invoice_id'])->first();
+                $tax_key_amount = str_replace(['%',' @ ','.'], '_', $at['tax_name']).'tax_amount';
+                $tax_key_taxable = str_replace(['%',' @ ','.'], '_', $at['tax_name']).'taxable_amount'; 
+
+                if ($check_vertical_tax_exist) {
+                    $vartical_tx_data=[ 
+                        $tax_key_amount=>aitsun_round($at['tax_amount'],get_setting($company_id,'round_of_value')),
+                        $tax_key_taxable=>aitsun_round($at['taxable_amount'],get_setting($company_id,'round_of_value')),
+                        'created_at'=>$invoice_date
+                    ];
+
+                   
+                    $InvoiceTaxesVertical->update($check_vertical_tax_exist['id'],$vartical_tx_data); 
+                }else{
+                    $vartical_tx_data=[
+                        'invoice_id'=>$at['invoice_id'], 
+                        $tax_key_amount=>aitsun_round($at['tax_amount'],get_setting($company_id,'round_of_value')),
+                        $tax_key_taxable=>aitsun_round($at['taxable_amount'],get_setting($company_id,'round_of_value')),
+                        'created_at'=>$invoice_date
+                    ];
+
+                    $InvoiceTaxesVertical->save($vartical_tx_data); 
+
+                }
+            } 
+            
+           
+        }
+
+    
+    }
+
+
+
     public function index()
     {
         $session=session();
@@ -115,97 +168,8 @@ class Testing extends BaseController
                     }
                 }
             }
- 
-
- 
-
-            echo view('testing');
-            // echo $_SESSION['last_filename']."<br>";
-            // echo $_SESSION['last_row']."<br>";
-
-            // //???????/////////////Odoo///////////////////////
-
-            // $ConceptOdoo=new ConceptOdoo;
-            
-            // //Personal
-            // // $url = 'https://exevor.odoo.com';
-            // // $db = 'exevor';
-            // // $username = "rajbharath533@gmail.com";
-            // // $password ='11111111';
-            // // $uid=2;
-            // // $project_id=1;
-
-            // // Company
-            // $url = 'https://erp.ctechoman.com';
-            // $db = 'concept';
-            // $username = "bharath@conceptgrps.com";
-            // $password ='ConceptGroup@2024';
-            // $uid=6;
-            // $project_id=31;
-
-
-            // $odoo_data=[ 
-            //     'name'=>'Ganesh Kumar',
-            //     'email'=>'ganesh@gmail.com',
-            //     'subject'=>'Need internet rooter',
-            //     'phone'=>'556698558',
-            //     'company'=>'Exevor Solutions',
-            //     'message'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',  
-            //     'document_path'=>base_url('public/uploads/users/profile_av_female.png'),
-            //     'document_name'=>'profile_av_female.png',
-            //     'enquiry_type'=>'service',
-            //     'project_id'=>$project_id
-            // ];
-
-            // $odoostatus=$ConceptOdoo->add_data($url,$db,$username,$password,$uid,$odoo_data);
-            // echo $odoostatus;
   
-            //???????/////////////Odoo///////////////////////
-
-            // $TempStockadjustmodel=new TempStockadjustmodel;
-            // $InvoiceitemsModel=new InvoiceitemsModel;
-            // $ProductsModel=new Main_item_party_table;
-            // $AccountingModel=new AccountingModel;
-
-            // $all_stocks=$AccountingModel->where('company_id',company($myid))->where('type','stock')->findAll();
-
-            // foreach ($all_stocks as $as) {
-            //     $pds=[
-            //         'stock'=>$as['opening_balance'],
-            //         'at_price'=>get_products_data($as['customer_id'],'purchased_price'),
-            //         'ready_to_update'=>1
-            //     ];
-            //     $ProductsModel->update($as['customer_id'],$pds);
-            // }
-
-            // foreach ($TempStockadjustmodel->findAll() as $sa) {
-            //     $in_type='';
-            //     if ($sa['adjust_type']=='add') {
-            //         $in_type='purchase';
-            //     }else{
-            //         $in_type='sales';
-            //     }
-
-            //     $in_item=[  
-            //         'product_id'=>$sa['product_id'],
-            //         'quantity'=> $sa['qty'],
-            //         'price'=>$sa['at_price'], 
-            //         'amount'=>$sa['amount'], 
-            //         'type'=>'single', 
-            //         'invoice_date'=>$sa['datetime'],   
-            //         'unit'=>$sa['unit'],
-            //         'sub_unit'=>$sa['sub_unit'],
-            //         'conversion_unit_rate'=>$sa['conversion_unit_rate'],
-            //         'in_unit'=>$sa['in_unit'],
-            //         'invoice_type'=>$in_type, 
-            //         'purchased_price'=>$sa['at_price'],
-            //         'purchased_amount'=>$sa['at_price']*$sa['qty'],
-            //         'entry_type'=>'adjust',
-            //         'company_id'=>$sa['company_id']
-            //     ];
-
-            //     $InvoiceitemsModel->save($in_item);
-            // }
+ 
          
         }else{
             return redirect()->to(base_url('users/login'));

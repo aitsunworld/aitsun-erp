@@ -1,5 +1,7 @@
 <?php 
     use App\Models\InvoiceTaxes;
+    use App\Models\InvoiceTaxesVertical;
+
 
 function all_taxes_of_invoice($company_id,$invoice_id){
      $InvoiceTaxes=new InvoiceTaxes;
@@ -13,9 +15,39 @@ function all_taxes_of_invoice($company_id,$invoice_id){
 
 function insert_invoice_tax($invoice_id,$main_tax,$main_tax_percent_amt,$price,$invoice_date,$company_state,$state_of_supply){
     $InvoiceTaxes=new InvoiceTaxes;
+    $InvoiceTaxesVertical=new InvoiceTaxesVertical;
+
     $myid=session()->get('id');
     
     foreach (budpaina_tax($main_tax,$main_tax_percent_amt,$price,$company_state,$state_of_supply) as $bt) {
+
+        $check_vertical_tax_exist=$InvoiceTaxesVertical->where('invoice_id',$invoice_id)->first();
+
+        $tax_key_amount = str_replace(['%',' @ ','.'], '_', $bt['tax_name']).'tax_amount';
+        $tax_key_taxable = str_replace(['%',' @ ','.'], '_', $bt['tax_name']).'taxable_amount';
+
+  
+
+        if ($check_vertical_tax_exist) {
+            $vartical_tx_data=[
+                'invoice_id'=>$invoice_id, 
+                $tax_key_amount=>aitsun_round($check_vertical_tax_exist[$tax_key_amount]+$bt['tax_amount'],get_setting(company($myid),'round_of_value')),
+                $tax_key_taxable=>aitsun_round($check_vertical_tax_exist[$tax_key_taxable]+$bt['taxable_amount'],get_setting(company($myid),'round_of_value')),
+                'created_at'=>$invoice_date
+            ];
+
+            $InvoiceTaxesVertical->update($check_vertical_tax_exist['id'],$vartical_tx_data); 
+        }else{
+            $vartical_tx_data=[
+                'invoice_id'=>$invoice_id, 
+                $tax_key_amount=>aitsun_round($bt['tax_amount'],get_setting(company($myid),'round_of_value')),
+                $tax_key_taxable=>aitsun_round($bt['taxable_amount'],get_setting(company($myid),'round_of_value')),
+                'created_at'=>$invoice_date
+            ];
+
+            $InvoiceTaxesVertical->save($vartical_tx_data); 
+
+        }
 
         $check_tax_exist=$InvoiceTaxes->where('invoice_id',$invoice_id)->where('tax_name',$bt['tax_name'])->first();
         if ($check_tax_exist) {
@@ -47,6 +79,7 @@ function insert_invoice_tax($invoice_id,$main_tax,$main_tax_percent_amt,$price,$
 
 }
 
+
 function is_tax_available($tax,$from,$to){
     // $InvoiceTaxes=new InvoiceTaxes; 
     // if (!empty($from) && empty($to)) {
@@ -73,6 +106,7 @@ function is_tax_available($tax,$from,$to){
     
 }
 
+ 
 function budpaina_tax($main_tax,$tax_amt,$price,$company_state,$state_of_supply){
 
     $bt_array=array(); 
