@@ -15,7 +15,7 @@
                 <li class="breadcrumb-item active" aria-current="page">
                     <b class="page_heading text-dark">
                         <?php if ($view_type=='sales'): ?>
-                            <?= langg(get_setting(company($user['id']),'language'),'Sales'); ?> <?= serial_no(company($user['id']),'sales') ?>  - <?= serial_no_cash(company($user['id'])) ?>
+                            <?= langg(get_setting(company($user['id']),'language'),'Sales'); ?> 
                         <?php else: ?>
                             <?= langg(get_setting(company($user['id']),'language'),'Purchases'); ?>
                         <?php endif ?>
