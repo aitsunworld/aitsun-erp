@@ -1,0 +1,36 @@
+CRITICAL - 2025-06-14 08:37:32 --> Class "Picqer\Barcode\BarcodeGeneratorJPG" not found
+in APPPATH\Controllers\Generate_barcode.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Generate_barcode->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Generate_barcode))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-14 08:38:32 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in H:\xampp2\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 H:\xampp2\htdocs\aitsun-erp\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `lo...', 0)
+#1 H:\xampp2\htdocs\aitsun-erp\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 H:\xampp2\htdocs\aitsun-erp\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 H:\xampp2\htdocs\aitsun-erp\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 H:\xampp2\htdocs\aitsun-erp\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 H:\xampp2\htdocs\aitsun-erp\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 H:\xampp2\htdocs\aitsun-erp\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 H:\xampp2\htdocs\aitsun-erp\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 H:\xampp2\htdocs\aitsun-erp\app\Helpers\apanel_helper.php(5174): CodeIgniter\BaseModel->save(Array)
+#9 H:\xampp2\htdocs\aitsun-erp\app\Controllers\Products.php(770): add_log(Array)
+#10 H:\xampp2\htdocs\aitsun-erp\system\CodeIgniter.php(934): App\Controllers\Products->update_product('25371')
+#11 H:\xampp2\htdocs\aitsun-erp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+#12 H:\xampp2\htdocs\aitsun-erp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 H:\xampp2\htdocs\aitsun-erp\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2025-06-14 08:38:32 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`user_id`, `action`, `ip`, `mac`, `created_at`, `updated_at`, `company_id`) VALUES (:user_id:, :action:, :ip:, :mac:, :created_at:, :updated_at:, :company_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Helpers\apanel_helper.php(5174): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Products.php(770): add_log([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->update_product('25371')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
