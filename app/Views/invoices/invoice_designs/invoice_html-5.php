@@ -760,7 +760,7 @@ $darklight = adjustOpacity($baseColor, 0.03);
       
       
 
-      <p style="font-size:14px;">We are Concept Solutions LLC, a reputed IT company based in Oman, with a view of spreading world wide.
+      <p style="font-size:14px;">We are Concept Solutions, a reputed IT company based in Oman, with a view of spreading world wide.
       We are specialised in the field of Web design and development, Mobile application development, Domain registration, Web hosting, E-mail support, Graphic designing and Digital marketing, POS Software and Business software tool development.</p>
 
       <h2 style="color:var(--bg-color);">Know About Our Work</h2>
@@ -908,7 +908,7 @@ $darklight = adjustOpacity($baseColor, 0.03);
           Please respond to or approve the above proposal as soon as possible. <br> Hopefully we will be
 able to build a long-term mutually beneficial relationship. <br><br>
 Regards, <br>
-<span style="color:var(--bg-color);">Concept Solutions LLC</span> 
+<span style="color:var(--bg-color);">Concept Solutions</span> 
         </p>
       </div>
 
