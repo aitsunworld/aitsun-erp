@@ -327,7 +327,11 @@
                 <span class="my-auto cursor-pointer " data-bs-dismiss="modal" style="transform: rotate(45deg); font-size: 25px;">+</span>
             </div>
             
-            <div class="modal-body p-0">
+            <div class="modal-body p-0"> 
+                <?php if (!empty($pro['description'])): ?>
+                     <p class="mx-4 mb-4 mt-2"><?= nl2br($pro['description']) ?></p>
+                <?php endif ?>
+               
                 <div id="show_product_details<?= $pro['id']; ?>">
                     
                 </div>
