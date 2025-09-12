@@ -320,7 +320,7 @@
                                     </a>
 
 <div class="modal fade prod_modal" id="customModal<?= $pro['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog custom-modal">
+    <div class="custom-modal modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header pt-0 pb-0">
                 <h5 class="modal-title ps-2" id="exampleModalLabel"><?= $pro['product_name'] ?></h5>
